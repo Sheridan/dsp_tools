@@ -1,0 +1,2078 @@
+digraph g{
+graph [overlap=false, splines=ortho, ratio=0.5625, bgcolor="#0c041c", fontcolor="#ebf2ff", fontname=Roboto, fontsize=10];
+node [shape=box, style=filled, fontcolor="#ebf2ff", color="#ebf2ff"];
+edge [fontcolor="#ebf2ff", color="#ebf2ff"];
+
+  log [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Log</td>
+              </tr>
+              <tr>
+                <td><img src='icons/log.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲  🔥 </td></tr>
+             </table>
+             >, fillcolor="#0c3d11"];
+          
+  plant_fuel [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Plant fuel</td>
+              </tr>
+              <tr>
+                <td><img src='icons/plant_fuel.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲  🔥 </td></tr>
+             </table>
+             >, fillcolor="#0c3d11"];
+          
+  iron_ore [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Iron ore</td>
+              </tr>
+              <tr>
+                <td><img src='icons/iron_ore.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  copper_ore [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Copper ore</td>
+              </tr>
+              <tr>
+                <td><img src='icons/copper_ore.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  stone_ore [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Stone ore</td>
+              </tr>
+              <tr>
+                <td><img src='icons/stone_ore.png' /></td>
+                <td>Usages: 4</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  coal_ore [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Coal ore</td>
+              </tr>
+              <tr>
+                <td><img src='icons/coal_ore.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲  🔥 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  silicon_ore [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Silicon ore</td>
+              </tr>
+              <tr>
+                <td><img src='icons/silicon_ore.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  titanium_ore [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Titanium ore</td>
+              </tr>
+              <tr>
+                <td><img src='icons/titanium_ore.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  water [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Water</td>
+              </tr>
+              <tr>
+                <td><img src='icons/water.png' /></td>
+                <td>Usages: 4</td>
+              </tr>
+              <tr><td colspan="2"> 🎲  💧 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  crude_oil [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Crude oil</td>
+              </tr>
+              <tr>
+                <td><img src='icons/crude_oil.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🎲  💧  🔥 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  kimberlite_ore [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Kimberlite ore</td>
+              </tr>
+              <tr>
+                <td><img src='icons/kimberlite_ore.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  fractal_silicon [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Fractal silicon</td>
+              </tr>
+              <tr>
+                <td><img src='icons/fractal_silicon.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  optical_grating_crystal [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Optical grating crystal</td>
+              </tr>
+              <tr>
+                <td><img src='icons/optical_grating_crystal.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  spiniform_stalagmite_crystal [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Spiniform stalagmite crystal</td>
+              </tr>
+              <tr>
+                <td><img src='icons/spiniform_stalagmite_crystal.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  unipolar_magnet [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Unipolar magnet</td>
+              </tr>
+              <tr>
+                <td><img src='icons/unipolar_magnet.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🎲 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  fire_ice [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Fire Ice</td>
+              </tr>
+              <tr>
+                <td><img src='icons/fire_ice.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🎲  🔥 </td></tr>
+             </table>
+             >, fillcolor="#2b0004"];
+          
+  iron_ingot [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Iron ingot</td>
+              </tr>
+              <tr>
+                <td><img src='icons/iron_ingot.png' /></td>
+                <td>Usages: 20</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  copper_ingot [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Copper ingot</td>
+              </tr>
+              <tr>
+                <td><img src='icons/copper_ingot.png' /></td>
+                <td>Usages: 7</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  stone [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Stone</td>
+              </tr>
+              <tr>
+                <td><img src='icons/stone.png' /></td>
+                <td>Usages: 11</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  hydrogen [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Hydrogen</td>
+              </tr>
+              <tr>
+                <td><img src='icons/hydrogen.png' /></td>
+                <td>Usages: 9</td>
+              </tr>
+              <tr><td colspan="2"> 🔥  💧  🎲 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  deuterium [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Deuterium</td>
+              </tr>
+              <tr>
+                <td><img src='icons/deuterium.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🔥  💧  🎲 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  antimatter [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Antimatter</td>
+              </tr>
+              <tr>
+                <td><img src='icons/antimatter.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  energetic_graphite [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Energetic Graphite</td>
+              </tr>
+              <tr>
+                <td><img src='icons/energetic_graphite.png' /></td>
+                <td>Usages: 5</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  high_purity_silicon [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">High-Purity Silicon</td>
+              </tr>
+              <tr>
+                <td><img src='icons/high_purity_silicon.png' /></td>
+                <td>Usages: 5</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  titanium_ingot [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Titanium Ingot</td>
+              </tr>
+              <tr>
+                <td><img src='icons/titanium_ingot.png' /></td>
+                <td>Usages: 6</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  sulfuric_acid [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Sulfuric acid</td>
+              </tr>
+              <tr>
+                <td><img src='icons/sulfuric_acid.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🎲  💧 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  refined_oil [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Refined oil</td>
+              </tr>
+              <tr>
+                <td><img src='icons/refined_oil.png' /></td>
+                <td>Usages: 5</td>
+              </tr>
+              <tr><td colspan="2"> 🔥  💧 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  magnet [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Magnet</td>
+              </tr>
+              <tr>
+                <td><img src='icons/magnet.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  magnetic_coil [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Magnetic coil</td>
+              </tr>
+              <tr>
+                <td><img src='icons/magnetic_coil.png' /></td>
+                <td>Usages: 10</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  glass [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Glass</td>
+              </tr>
+              <tr>
+                <td><img src='icons/glass.png' /></td>
+                <td>Usages: 6</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  diamond [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Diamond</td>
+              </tr>
+              <tr>
+                <td><img src='icons/diamond.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  crystal_silicon [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Crystal silicon</td>
+              </tr>
+              <tr>
+                <td><img src='icons/crystal_silicon.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  titanium_alloy [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Titanium alloy</td>
+              </tr>
+              <tr>
+                <td><img src='icons/titanium_alloy.png' /></td>
+                <td>Usages: 11</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  steel [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Steel</td>
+              </tr>
+              <tr>
+                <td><img src='icons/steel.png' /></td>
+                <td>Usages: 12</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  circuit_board [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Circuit board</td>
+              </tr>
+              <tr>
+                <td><img src='icons/circuit_board.png' /></td>
+                <td>Usages: 15</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  prism [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Prism</td>
+              </tr>
+              <tr>
+                <td><img src='icons/prism.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  electric_motor [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Electric motor</td>
+              </tr>
+              <tr>
+                <td><img src='icons/electric_motor.png' /></td>
+                <td>Usages: 3</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  microcrystalline_component [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Microcrystalline component</td>
+              </tr>
+              <tr>
+                <td><img src='icons/microcrystalline_component.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  gear [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Gear</td>
+              </tr>
+              <tr>
+                <td><img src='icons/gear.png' /></td>
+                <td>Usages: 8</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  plasma_exciter [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Plasma exciter</td>
+              </tr>
+              <tr>
+                <td><img src='icons/plasma_exciter.png' /></td>
+                <td>Usages: 3</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  photon_combiner [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Photon Combiner</td>
+              </tr>
+              <tr>
+                <td><img src='icons/photon_combiner.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  electromagnetic_turbine [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Electromagnetic turbine</td>
+              </tr>
+              <tr>
+                <td><img src='icons/electromagnetic_turbine.png' /></td>
+                <td>Usages: 5</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  processor [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Processor</td>
+              </tr>
+              <tr>
+                <td><img src='icons/processor.png' /></td>
+                <td>Usages: 14</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  foundation [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Foundation</td>
+              </tr>
+              <tr>
+                <td><img src='icons/foundation.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#01362c"];
+          
+  critical_photon [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Critical photon</td>
+              </tr>
+              <tr>
+                <td><img src='icons/critical_photon.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  particle_container [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Particle container</td>
+              </tr>
+              <tr>
+                <td><img src='icons/particle_container.png' /></td>
+                <td>Usages: 5</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  super_magnetic_ring [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Super-magnetic ring</td>
+              </tr>
+              <tr>
+                <td><img src='icons/super_magnetic_ring.png' /></td>
+                <td>Usages: 9</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  graviton_lens [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Graviton lens</td>
+              </tr>
+              <tr>
+                <td><img src='icons/graviton_lens.png' /></td>
+                <td>Usages: 3</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  hydrogen_fuel_rod [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Hydrogen fuel rod</td>
+              </tr>
+              <tr>
+                <td><img src='icons/hydrogen_fuel_rod.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#01362c"];
+          
+  deuteron_fuel_rod [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Deuteron fuel rod</td>
+              </tr>
+              <tr>
+                <td><img src='icons/deuteron_fuel_rod.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#01362c"];
+          
+  antimatter_fuel_rod [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Antimatter fuel rod</td>
+              </tr>
+              <tr>
+                <td><img src='icons/antimatter_fuel_rod.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#01362c"];
+          
+  plastic [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Plastic</td>
+              </tr>
+              <tr>
+                <td><img src='icons/plastic.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  organic_crystal [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Organic crystal</td>
+              </tr>
+              <tr>
+                <td><img src='icons/organic_crystal.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  graphene [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Graphene</td>
+              </tr>
+              <tr>
+                <td><img src='icons/graphene.png' /></td>
+                <td>Usages: 8</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  thruster [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Thruster</td>
+              </tr>
+              <tr>
+                <td><img src='icons/thruster.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  reinforced_thruster [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Reinforced thruster</td>
+              </tr>
+              <tr>
+                <td><img src='icons/reinforced_thruster.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  casimir_crystal [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Casimir crystal</td>
+              </tr>
+              <tr>
+                <td><img src='icons/casimir_crystal.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  strange_matter [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Strange matter</td>
+              </tr>
+              <tr>
+                <td><img src='icons/strange_matter.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  titanium_crystal [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Titanium crystal</td>
+              </tr>
+              <tr>
+                <td><img src='icons/titanium_crystal.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  carbon_nanotube [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Carbon nanotube</td>
+              </tr>
+              <tr>
+                <td><img src='icons/carbon_nanotube.png' /></td>
+                <td>Usages: 3</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#200026"];
+          
+  annihilation_constraint_sphere [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Annihilation constraint sphere</td>
+              </tr>
+              <tr>
+                <td><img src='icons/annihilation_constraint_sphere.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  titanium_glass [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Titanium glass</td>
+              </tr>
+              <tr>
+                <td><img src='icons/titanium_glass.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  particle_broadband [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Particle broadband</td>
+              </tr>
+              <tr>
+                <td><img src='icons/particle_broadband.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  logistics_drone [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Logistics drone</td>
+              </tr>
+              <tr>
+                <td><img src='icons/logistics_drone.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#01362c"];
+          
+  space_warper [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Space warper</td>
+              </tr>
+              <tr>
+                <td><img src='icons/space_warper.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#01362c"];
+          
+  plane_filter [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Plane filter</td>
+              </tr>
+              <tr>
+                <td><img src='icons/plane_filter.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  quantum_chip [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Quantum chip</td>
+              </tr>
+              <tr>
+                <td><img src='icons/quantum_chip.png' /></td>
+                <td>Usages: 5</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  logistics_vessel [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Logistics vessel</td>
+              </tr>
+              <tr>
+                <td><img src='icons/logistics_vessel.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#01362c"];
+          
+  solar_sail [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Solar sail</td>
+              </tr>
+              <tr>
+                <td><img src='icons/solar_sail.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#01362c"];
+          
+  frame_material [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Frame material</td>
+              </tr>
+              <tr>
+                <td><img src='icons/frame_material.png' /></td>
+                <td>Usages: 5</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  dyson_sphere_component [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Dyson sphere component</td>
+              </tr>
+              <tr>
+                <td><img src='icons/dyson_sphere_component.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#200026"];
+          
+  small_carrier_rocket [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Small carrier rocket</td>
+              </tr>
+              <tr>
+                <td><img src='icons/small_carrier_rocket.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#01362c"];
+          
+  electromagnetic_matrix [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Electromagnetic matrix</td>
+              </tr>
+              <tr>
+                <td><img src='icons/electromagnetic_matrix.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#012036"];
+          
+  energy_matrix [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Energy matrix</td>
+              </tr>
+              <tr>
+                <td><img src='icons/energy_matrix.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#012036"];
+          
+  structure_matrix [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Structure matrix</td>
+              </tr>
+              <tr>
+                <td><img src='icons/structure_matrix.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#012036"];
+          
+  information_matrix [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Information matrix</td>
+              </tr>
+              <tr>
+                <td><img src='icons/information_matrix.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#012036"];
+          
+  gravity_matrix [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Gravity matrix</td>
+              </tr>
+              <tr>
+                <td><img src='icons/gravity_matrix.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#012036"];
+          
+  universe_matrix [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Universe matrix</td>
+              </tr>
+              <tr>
+                <td><img src='icons/universe_matrix.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#012036"];
+          
+  tesla_tower [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Tesla tower</td>
+              </tr>
+              <tr>
+                <td><img src='icons/tesla_tower.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  wireless_power_tower [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Wireless power tower</td>
+              </tr>
+              <tr>
+                <td><img src='icons/wireless_power_tower.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  satellite_substation [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Satellite substation</td>
+              </tr>
+              <tr>
+                <td><img src='icons/satellite_substation.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  wind_turbine [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Wind turbine</td>
+              </tr>
+              <tr>
+                <td><img src='icons/wind_turbine.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  thermal_power_station [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Thermal power station</td>
+              </tr>
+              <tr>
+                <td><img src='icons/thermal_power_station.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  solar_panel [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Solar panel</td>
+              </tr>
+              <tr>
+                <td><img src='icons/solar_panel.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  mini_fusion_power_station [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Mini fusion power station</td>
+              </tr>
+              <tr>
+                <td><img src='icons/mini_fusion_power_station.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  accumulator [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Accumulator</td>
+              </tr>
+              <tr>
+                <td><img src='icons/accumulator.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#01362c"];
+          
+  full_accumulator [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Full accumulator</td>
+              </tr>
+              <tr>
+                <td><img src='icons/full_accumulator.png' /></td>
+                <td>Usages: 2</td>
+              </tr>
+              <tr><td colspan="2"> 🔥 </td></tr>
+             </table>
+             >, fillcolor="#01362c"];
+          
+  energy_exchanger [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Energy exchanger</td>
+              </tr>
+              <tr>
+                <td><img src='icons/energy_exchanger.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  ray_receiver [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Ray receiver</td>
+              </tr>
+              <tr>
+                <td><img src='icons/ray_receiver.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  artificial_star [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Artificial star</td>
+              </tr>
+              <tr>
+                <td><img src='icons/artificial_star.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  conveyor_belt_mk_i [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Conveyor belt Mk.I</td>
+              </tr>
+              <tr>
+                <td><img src='icons/conveyor_belt_mk_i.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  conveyor_belt_mk_ii [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Conveyor belt Mk.II</td>
+              </tr>
+              <tr>
+                <td><img src='icons/conveyor_belt_mk_ii.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  conveyor_belt_mk_iii [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Conveyor belt Mk.III</td>
+              </tr>
+              <tr>
+                <td><img src='icons/conveyor_belt_mk_iii.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  splitter [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Splitter</td>
+              </tr>
+              <tr>
+                <td><img src='icons/splitter.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  storage_mk_i [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Storage Mk.I</td>
+              </tr>
+              <tr>
+                <td><img src='icons/storage_mk_i.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  storage_mk_ii [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Storage Mk.II</td>
+              </tr>
+              <tr>
+                <td><img src='icons/storage_mk_ii.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  storage_tank [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Storage tank</td>
+              </tr>
+              <tr>
+                <td><img src='icons/storage_tank.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  planetary_logistics_station [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Planetary logistics station</td>
+              </tr>
+              <tr>
+                <td><img src='icons/planetary_logistics_station.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  interstellar_logistics_station [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Interstellar logistics station</td>
+              </tr>
+              <tr>
+                <td><img src='icons/interstellar_logistics_station.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  orbit_collector [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Orbit collector</td>
+              </tr>
+              <tr>
+                <td><img src='icons/orbit_collector.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  em_rail_ejector [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">EM-Rail ejector</td>
+              </tr>
+              <tr>
+                <td><img src='icons/em_rail_ejector.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  sorter_mk_i [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Sorter Mk.I</td>
+              </tr>
+              <tr>
+                <td><img src='icons/sorter_mk_i.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  sorter_mk_ii [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Sorter Mk.II</td>
+              </tr>
+              <tr>
+                <td><img src='icons/sorter_mk_ii.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  sorter_mk_iii [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Sorter Mk.III</td>
+              </tr>
+              <tr>
+                <td><img src='icons/sorter_mk_iii.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  mining_machine [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Mining machine</td>
+              </tr>
+              <tr>
+                <td><img src='icons/mining_machine.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  water_pump [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Water pump</td>
+              </tr>
+              <tr>
+                <td><img src='icons/water_pump.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  oil_extractor [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Oil extractor</td>
+              </tr>
+              <tr>
+                <td><img src='icons/oil_extractor.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  oil_refinery [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Oil refinery</td>
+              </tr>
+              <tr>
+                <td><img src='icons/oil_refinery.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  miniature_particle_collider [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Miniature particle collider</td>
+              </tr>
+              <tr>
+                <td><img src='icons/miniature_particle_collider.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  matrix_lab [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Matrix lab</td>
+              </tr>
+              <tr>
+                <td><img src='icons/matrix_lab.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  vertical_launching_silo [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Vertical launching silo</td>
+              </tr>
+              <tr>
+                <td><img src='icons/vertical_launching_silo.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  assembling_machine_mk_i [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Assembling machine Mk.I</td>
+              </tr>
+              <tr>
+                <td><img src='icons/assembling_machine_mk_i.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  assembling_machine_mk_ii [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Assembling machine Mk.II</td>
+              </tr>
+              <tr>
+                <td><img src='icons/assembling_machine_mk_ii.png' /></td>
+                <td>Usages: 1</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  assembling_machine_mk_iii [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Assembling machine Mk.III</td>
+              </tr>
+              <tr>
+                <td><img src='icons/assembling_machine_mk_iii.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  smelter [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Smelter</td>
+              </tr>
+              <tr>
+                <td><img src='icons/smelter.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  chemical_plant [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Chemical plant</td>
+              </tr>
+              <tr>
+                <td><img src='icons/chemical_plant.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  fractionator [label=<
+             <table border="0" cellborder="0" cellspacing="0">
+              <tr>
+                <td colspan="2">Fractionator</td>
+              </tr>
+              <tr>
+                <td><img src='icons/fractionator.png' /></td>
+                <td>Usages: 0</td>
+              </tr>
+              
+             </table>
+             >, fillcolor="#424000"];
+          
+  stone_ore -> silicon_ore [color="#ffbca8"];
+          
+  iron_ore -> iron_ingot [color="#ffbca8"];
+          
+  copper_ore -> copper_ingot [color="#ffbca8"];
+          
+  stone_ore -> stone [color="#ffbca8"];
+          
+  crude_oil -> hydrogen [color="#e3a8ff"];
+          
+  refined_oil -> hydrogen [color="#e3a8ff"];
+          
+  hydrogen -> hydrogen [color="#e3a8ff"];
+          
+  fire_ice -> hydrogen [color="#ffa8ef"];
+          
+  critical_photon -> hydrogen [color="#a8efff"];
+          
+  hydrogen -> deuterium [color="#a8efff"];
+          
+  hydrogen -> deuterium [color="#a9a8ff"];
+          
+  critical_photon -> antimatter [color="#a8efff"];
+          
+  coal_ore -> energetic_graphite [color="#ffbca8"];
+          
+  refined_oil -> energetic_graphite [color="#e3a8ff"];
+          
+  hydrogen -> energetic_graphite [color="#e3a8ff"];
+          
+  silicon_ore -> high_purity_silicon [color="#ffbca8"];
+          
+  titanium_ore -> titanium_ingot [color="#ffbca8"];
+          
+  water -> sulfuric_acid [color="#ffa8ef"];
+          
+  stone_ore -> sulfuric_acid [color="#ffa8ef"];
+          
+  refined_oil -> sulfuric_acid [color="#ffa8ef"];
+          
+  crude_oil -> refined_oil [color="#e3a8ff"];
+          
+  iron_ore -> magnet [color="#ffbca8"];
+          
+  magnet -> magnetic_coil [color="#a8ffab"];
+          
+  copper_ingot -> magnetic_coil [color="#a8ffab"];
+          
+  stone_ore -> glass [color="#ffbca8"];
+          
+  energetic_graphite -> diamond [color="#ffbca8"];
+          
+  kimberlite_ore -> diamond [color="#ffbca8"];
+          
+  high_purity_silicon -> crystal_silicon [color="#ffbca8"];
+          
+  fractal_silicon -> crystal_silicon [color="#ffbca8"];
+          
+  titanium_ingot -> titanium_alloy [color="#ffbca8"];
+          
+  sulfuric_acid -> titanium_alloy [color="#ffbca8"];
+          
+  steel -> titanium_alloy [color="#ffbca8"];
+          
+  iron_ingot -> steel [color="#ffbca8"];
+          
+  iron_ingot -> circuit_board [color="#a8ffab"];
+          
+  copper_ingot -> circuit_board [color="#a8ffab"];
+          
+  glass -> prism [color="#a8ffab"];
+          
+  iron_ingot -> electric_motor [color="#a8ffab"];
+          
+  gear -> electric_motor [color="#a8ffab"];
+          
+  magnetic_coil -> electric_motor [color="#a8ffab"];
+          
+  copper_ingot -> microcrystalline_component [color="#a8ffab"];
+          
+  high_purity_silicon -> microcrystalline_component [color="#a8ffab"];
+          
+  iron_ingot -> gear [color="#a8ffab"];
+          
+  prism -> plasma_exciter [color="#a8ffab"];
+          
+  magnetic_coil -> plasma_exciter [color="#a8ffab"];
+          
+  prism -> photon_combiner [color="#a8ffab"];
+          
+  circuit_board -> photon_combiner [color="#a8ffab"];
+          
+  optical_grating_crystal -> photon_combiner [color="#a8ffab"];
+          
+  circuit_board -> photon_combiner [color="#a8ffab"];
+          
+  electric_motor -> electromagnetic_turbine [color="#a8ffab"];
+          
+  magnetic_coil -> electromagnetic_turbine [color="#a8ffab"];
+          
+  circuit_board -> processor [color="#a8ffab"];
+          
+  microcrystalline_component -> processor [color="#a8ffab"];
+          
+  steel -> foundation [color="#a8ffab"];
+          
+  stone -> foundation [color="#a8ffab"];
+          
+  electromagnetic_turbine -> particle_container [color="#a8ffab"];
+          
+  copper_ingot -> particle_container [color="#a8ffab"];
+          
+  graphene -> particle_container [color="#a8ffab"];
+          
+  unipolar_magnet -> particle_container [color="#a8ffab"];
+          
+  copper_ingot -> particle_container [color="#a8ffab"];
+          
+  electromagnetic_turbine -> super_magnetic_ring [color="#a8ffab"];
+          
+  magnet -> super_magnetic_ring [color="#a8ffab"];
+          
+  energetic_graphite -> super_magnetic_ring [color="#a8ffab"];
+          
+  diamond -> graviton_lens [color="#a8ffab"];
+          
+  strange_matter -> graviton_lens [color="#a8ffab"];
+          
+  hydrogen -> hydrogen_fuel_rod [color="#ffa8ef"];
+          
+  titanium_ingot -> hydrogen_fuel_rod [color="#ffa8ef"];
+          
+  titanium_alloy -> deuteron_fuel_rod [color="#a8ffab"];
+          
+  deuterium -> deuteron_fuel_rod [color="#a8ffab"];
+          
+  super_magnetic_ring -> deuteron_fuel_rod [color="#a8ffab"];
+          
+  antimatter -> antimatter_fuel_rod [color="#a8ffab"];
+          
+  hydrogen -> antimatter_fuel_rod [color="#a8ffab"];
+          
+  titanium_alloy -> antimatter_fuel_rod [color="#a8ffab"];
+          
+  annihilation_constraint_sphere -> antimatter_fuel_rod [color="#a8ffab"];
+          
+  refined_oil -> plastic [color="#ffa8ef"];
+          
+  energetic_graphite -> plastic [color="#ffa8ef"];
+          
+  refined_oil -> organic_crystal [color="#ffa8ef"];
+          
+  plastic -> organic_crystal [color="#ffa8ef"];
+          
+  water -> organic_crystal [color="#ffa8ef"];
+          
+  log -> organic_crystal [color="#ffa8ef"];
+          
+  plant_fuel -> organic_crystal [color="#ffa8ef"];
+          
+  water -> organic_crystal [color="#ffa8ef"];
+          
+  sulfuric_acid -> graphene [color="#ffa8ef"];
+          
+  energetic_graphite -> graphene [color="#ffa8ef"];
+          
+  fire_ice -> graphene [color="#ffa8ef"];
+          
+  steel -> thruster [color="#a8ffab"];
+          
+  copper_ingot -> thruster [color="#a8ffab"];
+          
+  titanium_alloy -> reinforced_thruster [color="#a8ffab"];
+          
+  electromagnetic_turbine -> reinforced_thruster [color="#a8ffab"];
+          
+  titanium_crystal -> casimir_crystal [color="#a8ffab"];
+          
+  graphene -> casimir_crystal [color="#a8ffab"];
+          
+  hydrogen -> casimir_crystal [color="#a8ffab"];
+          
+  optical_grating_crystal -> casimir_crystal [color="#a8ffab"];
+          
+  graphene -> casimir_crystal [color="#a8ffab"];
+          
+  hydrogen -> casimir_crystal [color="#a8ffab"];
+          
+  deuterium -> strange_matter [color="#a8efff"];
+          
+  iron_ingot -> strange_matter [color="#a8efff"];
+          
+  particle_container -> strange_matter [color="#a8efff"];
+          
+  titanium_ingot -> titanium_crystal [color="#a8ffab"];
+          
+  organic_crystal -> titanium_crystal [color="#a8ffab"];
+          
+  graphene -> carbon_nanotube [color="#ffa8ef"];
+          
+  titanium_ingot -> carbon_nanotube [color="#ffa8ef"];
+          
+  spiniform_stalagmite_crystal -> carbon_nanotube [color="#ffa8ef"];
+          
+  processor -> annihilation_constraint_sphere [color="#a8ffab"];
+          
+  particle_container -> annihilation_constraint_sphere [color="#a8ffab"];
+          
+  glass -> titanium_glass [color="#a8ffab"];
+          
+  titanium_ingot -> titanium_glass [color="#a8ffab"];
+          
+  water -> titanium_glass [color="#a8ffab"];
+          
+  carbon_nanotube -> particle_broadband [color="#a8ffab"];
+          
+  crystal_silicon -> particle_broadband [color="#a8ffab"];
+          
+  plastic -> particle_broadband [color="#a8ffab"];
+          
+  iron_ingot -> logistics_drone [color="#a8ffab"];
+          
+  processor -> logistics_drone [color="#a8ffab"];
+          
+  thruster -> logistics_drone [color="#a8ffab"];
+          
+  graviton_lens -> space_warper [color="#a8ffab"];
+          
+  gravity_matrix -> space_warper [color="#a8ffab"];
+          
+  casimir_crystal -> plane_filter [color="#a8ffab"];
+          
+  titanium_glass -> plane_filter [color="#a8ffab"];
+          
+  processor -> quantum_chip [color="#a8ffab"];
+          
+  plane_filter -> quantum_chip [color="#a8ffab"];
+          
+  processor -> logistics_vessel [color="#a8ffab"];
+          
+  titanium_alloy -> logistics_vessel [color="#a8ffab"];
+          
+  reinforced_thruster -> logistics_vessel [color="#a8ffab"];
+          
+  graphene -> solar_sail [color="#a8ffab"];
+          
+  photon_combiner -> solar_sail [color="#a8ffab"];
+          
+  carbon_nanotube -> frame_material [color="#a8ffab"];
+          
+  titanium_alloy -> frame_material [color="#a8ffab"];
+          
+  high_purity_silicon -> frame_material [color="#a8ffab"];
+          
+  frame_material -> dyson_sphere_component [color="#a8ffab"];
+          
+  processor -> dyson_sphere_component [color="#a8ffab"];
+          
+  solar_sail -> dyson_sphere_component [color="#a8ffab"];
+          
+  dyson_sphere_component -> small_carrier_rocket [color="#a8ffab"];
+          
+  deuteron_fuel_rod -> small_carrier_rocket [color="#a8ffab"];
+          
+  quantum_chip -> small_carrier_rocket [color="#a8ffab"];
+          
+  magnetic_coil -> electromagnetic_matrix [color="#62b3f5"];
+          
+  circuit_board -> electromagnetic_matrix [color="#62b3f5"];
+          
+  energetic_graphite -> energy_matrix [color="#62b3f5"];
+          
+  hydrogen -> energy_matrix [color="#62b3f5"];
+          
+  diamond -> structure_matrix [color="#62b3f5"];
+          
+  titanium_crystal -> structure_matrix [color="#62b3f5"];
+          
+  processor -> information_matrix [color="#62b3f5"];
+          
+  particle_broadband -> information_matrix [color="#62b3f5"];
+          
+  graviton_lens -> gravity_matrix [color="#62b3f5"];
+          
+  quantum_chip -> gravity_matrix [color="#62b3f5"];
+          
+  electromagnetic_matrix -> universe_matrix [color="#62b3f5"];
+          
+  energy_matrix -> universe_matrix [color="#62b3f5"];
+          
+  structure_matrix -> universe_matrix [color="#62b3f5"];
+          
+  information_matrix -> universe_matrix [color="#62b3f5"];
+          
+  gravity_matrix -> universe_matrix [color="#62b3f5"];
+          
+  antimatter -> universe_matrix [color="#62b3f5"];
+          
+  iron_ingot -> tesla_tower [color="#a8ffab"];
+          
+  magnetic_coil -> tesla_tower [color="#a8ffab"];
+          
+  tesla_tower -> wireless_power_tower [color="#a8ffab"];
+          
+  plasma_exciter -> wireless_power_tower [color="#a8ffab"];
+          
+  wireless_power_tower -> satellite_substation [color="#a8ffab"];
+          
+  super_magnetic_ring -> satellite_substation [color="#a8ffab"];
+          
+  frame_material -> satellite_substation [color="#a8ffab"];
+          
+  iron_ingot -> wind_turbine [color="#a8ffab"];
+          
+  gear -> wind_turbine [color="#a8ffab"];
+          
+  magnetic_coil -> wind_turbine [color="#a8ffab"];
+          
+  iron_ingot -> thermal_power_station [color="#a8ffab"];
+          
+  gear -> thermal_power_station [color="#a8ffab"];
+          
+  magnetic_coil -> thermal_power_station [color="#a8ffab"];
+          
+  stone -> thermal_power_station [color="#a8ffab"];
+          
+  copper_ingot -> solar_panel [color="#a8ffab"];
+          
+  high_purity_silicon -> solar_panel [color="#a8ffab"];
+          
+  circuit_board -> solar_panel [color="#a8ffab"];
+          
+  titanium_alloy -> mini_fusion_power_station [color="#a8ffab"];
+          
+  super_magnetic_ring -> mini_fusion_power_station [color="#a8ffab"];
+          
+  carbon_nanotube -> mini_fusion_power_station [color="#a8ffab"];
+          
+  processor -> mini_fusion_power_station [color="#a8ffab"];
+          
+  iron_ingot -> accumulator [color="#a8ffab"];
+          
+  super_magnetic_ring -> accumulator [color="#a8ffab"];
+          
+  crystal_silicon -> accumulator [color="#a8ffab"];
+          
+  full_accumulator -> accumulator [color="#98ff69"];
+          
+  accumulator -> full_accumulator [color="#98ff69"];
+          
+  titanium_alloy -> energy_exchanger [color="#a8ffab"];
+          
+  steel -> energy_exchanger [color="#a8ffab"];
+          
+  processor -> energy_exchanger [color="#a8ffab"];
+          
+  particle_container -> energy_exchanger [color="#a8ffab"];
+          
+  steel -> ray_receiver [color="#a8ffab"];
+          
+  high_purity_silicon -> ray_receiver [color="#a8ffab"];
+          
+  photon_combiner -> ray_receiver [color="#a8ffab"];
+          
+  processor -> ray_receiver [color="#a8ffab"];
+          
+  super_magnetic_ring -> ray_receiver [color="#a8ffab"];
+          
+  titanium_alloy -> artificial_star [color="#a8ffab"];
+          
+  frame_material -> artificial_star [color="#a8ffab"];
+          
+  annihilation_constraint_sphere -> artificial_star [color="#a8ffab"];
+          
+  quantum_chip -> artificial_star [color="#a8ffab"];
+          
+  iron_ingot -> conveyor_belt_mk_i [color="#a8ffab"];
+          
+  gear -> conveyor_belt_mk_i [color="#a8ffab"];
+          
+  conveyor_belt_mk_i -> conveyor_belt_mk_ii [color="#a8ffab"];
+          
+  electromagnetic_turbine -> conveyor_belt_mk_ii [color="#a8ffab"];
+          
+  conveyor_belt_mk_ii -> conveyor_belt_mk_iii [color="#a8ffab"];
+          
+  super_magnetic_ring -> conveyor_belt_mk_iii [color="#a8ffab"];
+          
+  graphene -> conveyor_belt_mk_iii [color="#a8ffab"];
+          
+  iron_ingot -> splitter [color="#a8ffab"];
+          
+  gear -> splitter [color="#a8ffab"];
+          
+  circuit_board -> splitter [color="#a8ffab"];
+          
+  iron_ingot -> storage_mk_i [color="#a8ffab"];
+          
+  stone -> storage_mk_i [color="#a8ffab"];
+          
+  steel -> storage_mk_ii [color="#a8ffab"];
+          
+  stone -> storage_mk_ii [color="#a8ffab"];
+          
+  iron_ingot -> storage_tank [color="#a8ffab"];
+          
+  stone -> storage_tank [color="#a8ffab"];
+          
+  glass -> storage_tank [color="#a8ffab"];
+          
+  steel -> planetary_logistics_station [color="#a8ffab"];
+          
+  titanium_ingot -> planetary_logistics_station [color="#a8ffab"];
+          
+  processor -> planetary_logistics_station [color="#a8ffab"];
+          
+  particle_container -> planetary_logistics_station [color="#a8ffab"];
+          
+  planetary_logistics_station -> interstellar_logistics_station [color="#a8ffab"];
+          
+  titanium_alloy -> interstellar_logistics_station [color="#a8ffab"];
+          
+  particle_container -> interstellar_logistics_station [color="#a8ffab"];
+          
+  interstellar_logistics_station -> orbit_collector [color="#a8ffab"];
+          
+  super_magnetic_ring -> orbit_collector [color="#a8ffab"];
+          
+  reinforced_thruster -> orbit_collector [color="#a8ffab"];
+          
+  full_accumulator -> orbit_collector [color="#a8ffab"];
+          
+  steel -> em_rail_ejector [color="#a8ffab"];
+          
+  gear -> em_rail_ejector [color="#a8ffab"];
+          
+  processor -> em_rail_ejector [color="#a8ffab"];
+          
+  super_magnetic_ring -> em_rail_ejector [color="#a8ffab"];
+          
+  iron_ingot -> sorter_mk_i [color="#a8ffab"];
+          
+  circuit_board -> sorter_mk_i [color="#a8ffab"];
+          
+  sorter_mk_i -> sorter_mk_ii [color="#a8ffab"];
+          
+  electric_motor -> sorter_mk_ii [color="#a8ffab"];
+          
+  sorter_mk_ii -> sorter_mk_iii [color="#a8ffab"];
+          
+  electromagnetic_turbine -> sorter_mk_iii [color="#a8ffab"];
+          
+  iron_ingot -> mining_machine [color="#a8ffab"];
+          
+  circuit_board -> mining_machine [color="#a8ffab"];
+          
+  magnetic_coil -> mining_machine [color="#a8ffab"];
+          
+  gear -> mining_machine [color="#a8ffab"];
+          
+  iron_ingot -> water_pump [color="#a8ffab"];
+          
+  circuit_board -> water_pump [color="#a8ffab"];
+          
+  electric_motor -> water_pump [color="#a8ffab"];
+          
+  stone -> water_pump [color="#a8ffab"];
+          
+  steel -> oil_extractor [color="#a8ffab"];
+          
+  circuit_board -> oil_extractor [color="#a8ffab"];
+          
+  plasma_exciter -> oil_extractor [color="#a8ffab"];
+          
+  stone -> oil_extractor [color="#a8ffab"];
+          
+  steel -> oil_refinery [color="#a8ffab"];
+          
+  circuit_board -> oil_refinery [color="#a8ffab"];
+          
+  plasma_exciter -> oil_refinery [color="#a8ffab"];
+          
+  stone -> oil_refinery [color="#a8ffab"];
+          
+  titanium_alloy -> miniature_particle_collider [color="#a8ffab"];
+          
+  frame_material -> miniature_particle_collider [color="#a8ffab"];
+          
+  super_magnetic_ring -> miniature_particle_collider [color="#a8ffab"];
+          
+  graphene -> miniature_particle_collider [color="#a8ffab"];
+          
+  processor -> miniature_particle_collider [color="#a8ffab"];
+          
+  iron_ingot -> matrix_lab [color="#a8ffab"];
+          
+  glass -> matrix_lab [color="#a8ffab"];
+          
+  circuit_board -> matrix_lab [color="#a8ffab"];
+          
+  magnetic_coil -> matrix_lab [color="#a8ffab"];
+          
+  titanium_alloy -> vertical_launching_silo [color="#a8ffab"];
+          
+  frame_material -> vertical_launching_silo [color="#a8ffab"];
+          
+  graviton_lens -> vertical_launching_silo [color="#a8ffab"];
+          
+  quantum_chip -> vertical_launching_silo [color="#a8ffab"];
+          
+  iron_ingot -> assembling_machine_mk_i [color="#a8ffab"];
+          
+  gear -> assembling_machine_mk_i [color="#a8ffab"];
+          
+  circuit_board -> assembling_machine_mk_i [color="#a8ffab"];
+          
+  assembling_machine_mk_i -> assembling_machine_mk_ii [color="#a8ffab"];
+          
+  graphene -> assembling_machine_mk_ii [color="#a8ffab"];
+          
+  processor -> assembling_machine_mk_ii [color="#a8ffab"];
+          
+  assembling_machine_mk_ii -> assembling_machine_mk_iii [color="#a8ffab"];
+          
+  particle_broadband -> assembling_machine_mk_iii [color="#a8ffab"];
+          
+  quantum_chip -> assembling_machine_mk_iii [color="#a8ffab"];
+          
+  iron_ingot -> smelter [color="#a8ffab"];
+          
+  stone -> smelter [color="#a8ffab"];
+          
+  circuit_board -> smelter [color="#a8ffab"];
+          
+  magnetic_coil -> smelter [color="#a8ffab"];
+          
+  steel -> chemical_plant [color="#a8ffab"];
+          
+  stone -> chemical_plant [color="#a8ffab"];
+          
+  circuit_board -> chemical_plant [color="#a8ffab"];
+          
+  glass -> chemical_plant [color="#a8ffab"];
+          
+  steel -> fractionator [color="#a8ffab"];
+          
+  stone -> fractionator [color="#a8ffab"];
+          
+  processor -> fractionator [color="#a8ffab"];
+          
+  glass -> fractionator [color="#a8ffab"];
+          }

@@ -1,0 +1,1562 @@
+{
+  "colors":
+  {
+    "background": "0c041c",
+    "font": "ebf2ff",
+
+    "ore": "2b0004",
+    "plant": "0c3d11",
+    "component": "200026",
+    "product": "01362c",
+    "building": "424000",
+    "matrix": "012036",
+
+    "matrix_lab": "62b3f5",
+    "mining_machine": "ffcea8",
+    "oil_extractor": "ffe8a8",
+    "hands": "ffffa8",
+    "smelter": "ffbca8",
+    "oil_refinery": "e3a8ff",
+    "chemical_plant": "ffa8ef",
+    "assembling_machine": "a8ffab",
+    "miniature_particle_collider": "a8efff",
+    "fractionator": "a9a8ff",
+    "ray_receiver": "ffa8a8",
+    "water_pump": "9fe2fc",
+    "orbit_collector": "d1fc9f",
+    "energy_exchanger": "98ff69"
+  },
+  "icons": {
+    "natural_generation": "🎲",
+    "fuel": "🔥",
+    "fluid": "💧"
+  },
+  "items":
+  {
+    "log":
+    {
+      "name": "Log",
+      "type": "plant",
+      "flags": ["natural_generation", "fuel"],
+      "recipes": [ { "assembler": "hands" } ],
+      "icon": "https://dsp-wiki.com/images/4/4a/Icon_Log.png"
+    },
+    "plant_fuel":
+    {
+      "name": "Plant fuel",
+      "type": "plant",
+      "flags": ["natural_generation", "fuel"],
+      "recipes": [ { "assembler": "hands" } ],
+      "icon": "https://dsp-wiki.com/images/6/6a/Icon_Plant_Fuel.png"
+    },
+    "iron_ore":
+    {
+      "name": "Iron ore",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/f/fc/Icon_Iron_Ore.png"
+    },
+    "copper_ore":
+    {
+      "name": "Copper ore",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/9/90/Icon_Copper_Ore.png"
+    },
+    "stone_ore":
+    {
+      "name": "Stone ore",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/2/2b/Icon_Stone_Ore.png"
+    },
+    "coal_ore":
+    {
+      "name": "Coal ore",
+      "type": "ore",
+      "flags": ["natural_generation", "fuel"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/f/f3/Icon_Coal_Ore.png"
+    },
+    "silicon_ore":
+    {
+      "name": "Silicon ore",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes":
+      [
+        {
+          "assembler": "mining_machine"
+        },
+        {
+          "assembler": "smelter",
+          "recipe": [ "stone_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/d/d4/Icon_Silicon_Ore.png"
+    },
+    "titanium_ore":
+    {
+      "name": "Titanium ore",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/9/91/Icon_Titanium_Ore.png"
+    },
+    "water":
+    {
+      "name": "Water",
+      "type": "ore",
+      "flags": ["natural_generation", "fluid"],
+      "recipes": [ { "assembler": "water_pump" } ],
+      "icon": "https://dsp-wiki.com/images/6/65/Icon_Water.png"
+    },
+    "crude_oil":
+    {
+      "name": "Crude oil",
+      "type": "ore",
+      "flags": ["natural_generation", "fluid", "fuel"],
+      "recipes": [ { "assembler": "oil_extractor" } ],
+      "icon": "https://dsp-wiki.com/images/8/8f/Icon_Crude_Oil.png"
+    },
+    "kimberlite_ore":
+    {
+      "name": "Kimberlite ore",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/5/55/Icon_Kimberlite_Ore.png"
+    },
+    "fractal_silicon":
+    {
+      "name": "Fractal silicon",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/3/35/Icon_Fractal_Silicon.png"
+    },
+    "optical_grating_crystal":
+    {
+      "name": "Optical grating crystal",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/a/ac/Icon_Optical_Grating_Crystal.png"
+    },
+    "spiniform_stalagmite_crystal":
+    {
+      "name": "Spiniform stalagmite crystal",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/b/bd/Icon_Spiniform_Stalagmite_Crystal.png"
+    },
+    "unipolar_magnet":
+    {
+      "name": "Unipolar magnet",
+      "type": "ore",
+      "flags": ["natural_generation"],
+      "recipes": [ { "assembler": "mining_machine" } ],
+      "icon": "https://dsp-wiki.com/images/a/a9/Icon_Unipolar_Magnet.png"
+    },
+    "fire_ice":
+    {
+      "name": "Fire Ice",
+      "type": "ore",
+      "flags": ["natural_generation", "fuel"],
+      "recipes": [ { "assembler": "mining_machine" }, { "assembler": "orbit_collector" } ],
+      "icon": "https://dsp-wiki.com/images/a/ab/Icon_Fire_Ice.png"
+    },
+    "iron_ingot":
+    {
+      "name": "Iron ingot",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "iron_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/f1/Icon_Iron_Ingot.png"
+    },
+    "copper_ingot":
+    {
+      "name": "Copper ingot",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "copper_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/e/ec/Icon_Copper_Ingot.png"
+    },
+    "stone":
+    {
+      "name": "Stone",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "stone_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/5a/Icon_Stone.png"
+    },
+    "hydrogen":
+    {
+      "name": "Hydrogen",
+      "type": "component",
+      "flags": ["fuel", "fluid", "natural_generation"],
+      "recipes":
+      [
+        {
+          "assembler": "oil_refinery",
+          "recipe": [ "crude_oil" ]
+        },
+        {
+          "assembler": "oil_refinery",
+          "recipe": [ "refined_oil", "hydrogen" ]
+        },
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "fire_ice" ]
+        },
+        {
+          "assembler": "miniature_particle_collider",
+          "recipe": [ "critical_photon" ]
+        },
+        { "assembler": "orbit_collector" }
+      ],
+      "icon": "https://dsp-wiki.com/images/4/42/Icon_Hydrogen.png"
+    },
+    "deuterium":
+    {
+      "name": "Deuterium",
+      "type": "component",
+      "flags": ["fuel", "fluid", "natural_generation"],
+      "recipes":
+      [
+        {
+          "assembler": "miniature_particle_collider",
+          "recipe": [ "hydrogen" ]
+        },
+        {
+          "assembler": "fractionator",
+          "recipe": [ "hydrogen" ]
+        },
+        { "assembler": "orbit_collector" }
+      ],
+      "icon": "https://dsp-wiki.com/images/4/4d/Icon_Deuterium.png"
+    },
+    "antimatter":
+    {
+      "name": "Antimatter",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "miniature_particle_collider",
+          "recipe": [ "critical_photon" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/78/Icon_Antimatter.png"
+    },
+    "energetic_graphite":
+    {
+      "name": "Energetic Graphite",
+      "type": "component",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "coal_ore" ]
+        },
+        {
+          "assembler": "oil_refinery",
+          "recipe": [ "refined_oil", "hydrogen" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/1/11/Icon_Energetic_Graphite.png"
+    },
+    "high_purity_silicon":
+    {
+      "name": "High-Purity Silicon",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "silicon_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/8a/Icon_High-Purity_Silicon.png"
+    },
+    "titanium_ingot":
+    {
+      "name": "Titanium Ingot",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "titanium_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/f1/Icon_Titanium_Ingot.png"
+    },
+    "sulfuric_acid":
+    {
+      "name": "Sulfuric acid",
+      "type": "component",
+      "flags": ["natural_generation", "fluid"],
+      "recipes":
+      [
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "water", "stone_ore", "refined_oil" ]
+        },
+        { "assembler": "water_pump" }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/53/Icon_Sulfuric_Acid.png"
+    },
+    "refined_oil":
+    {
+      "name": "Refined oil",
+      "type": "component",
+      "flags": ["fuel", "fluid"],
+      "recipes":
+      [
+        {
+          "assembler": "oil_refinery",
+          "recipe": [ "crude_oil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/f9/Icon_Refined_Oil.png"
+    },
+    "magnet":
+    {
+      "name": "Magnet",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "iron_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/c6/Icon_Magnet.png"
+    },
+    "magnetic_coil":
+    {
+      "name": "Magnetic coil",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "magnet", "copper_ingot" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/e/e5/Icon_Magnetic_Coil.png"
+    },
+    "glass":
+    {
+      "name": "Glass",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "stone_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/76/Icon_Glass.png"
+    },
+    "diamond":
+    {
+      "name": "Diamond",
+      "type": "component",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "energetic_graphite" ]
+        },
+        {
+          "assembler": "smelter",
+          "recipe": [ "kimberlite_ore" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/a/af/Icon_Diamond.png"
+    },
+    "crystal_silicon":
+    {
+      "name": "Crystal silicon",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "high_purity_silicon" ]
+        },
+        {
+          "assembler": "smelter",
+          "recipe": [ "fractal_silicon" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/2/2a/Icon_Crystal_Silicon.png"
+    },
+    "titanium_alloy":
+    {
+      "name": "Titanium alloy",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "titanium_ingot", "sulfuric_acid", "steel" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/85/Icon_Titanium_Alloy.png"
+    },
+    "steel":
+    {
+      "name": "Steel",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "smelter",
+          "recipe": [ "iron_ingot" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/3/38/Icon_Steel.png"
+    },
+    "circuit_board":
+    {
+      "name": "Circuit board",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "copper_ingot" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/2/2f/Icon_Circuit_Board.png"
+    },
+    "prism":
+    {
+      "name": "Prism",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "glass" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/d/d3/Icon_Prism.png"
+    },
+    "electric_motor":
+    {
+      "name": "Electric motor",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "gear", "magnetic_coil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/84/Icon_Electric_Motor.png"
+    },
+    "microcrystalline_component":
+    {
+      "name": "Microcrystalline component",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "copper_ingot", "high_purity_silicon" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/f5/Icon_Microcrystalline_Component.png"
+    },
+    "gear":
+    {
+      "name": "Gear",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/87/Icon_Gear.png"
+    },
+    "plasma_exciter":
+    {
+      "name": "Plasma exciter",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "prism", "magnetic_coil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/cc/Icon_Plasma_Exciter.png"
+    },
+    "photon_combiner":
+    {
+      "name": "Photon Combiner",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "prism", "circuit_board" ]
+        },
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "optical_grating_crystal", "circuit_board" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/9/93/Icon_Photon_Combiner.png"
+    },
+    "electromagnetic_turbine":
+    {
+      "name": "Electromagnetic turbine",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "electric_motor", "magnetic_coil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/53/Icon_Electromagnetic_Turbine.png"
+    },
+    "processor":
+    {
+      "name": "Processor",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "circuit_board", "microcrystalline_component" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/f1/Icon_Processor.png"
+    },
+    "foundation":
+    {
+      "name": "Foundation",
+      "type": "product",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "stone" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/6/60/Icon_Foundation.png"
+    },
+    "critical_photon":
+    {
+      "name": "Critical photon",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "ray_receiver"
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/9/92/Icon_Critical_Photon.png"
+    },
+    "particle_container":
+    {
+      "name": "Particle container",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "electromagnetic_turbine", "copper_ingot", "graphene" ]
+        },
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "unipolar_magnet", "copper_ingot" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/fd/Icon_Particle_Container.png"
+    },
+    "super_magnetic_ring":
+    {
+      "name": "Super-magnetic ring",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "electromagnetic_turbine", "magnet", "energetic_graphite" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/b/b4/Icon_Super-Magnetic_Ring.png"
+    },
+    "graviton_lens":
+    {
+      "name": "Graviton lens",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "diamond", "strange_matter" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/d/df/Icon_Graviton_Lens.png"
+    },
+    "hydrogen_fuel_rod":
+    {
+      "name": "Hydrogen fuel rod",
+      "type": "product",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "hydrogen", "titanium_ingot" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/2/2d/Icon_Hydrogen_Fuel_Rod.png"
+    },
+    "deuteron_fuel_rod":
+    {
+      "name": "Deuteron fuel rod",
+      "type": "product",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_alloy", "deuterium", "super_magnetic_ring" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/58/Icon_Deuteron_Fuel_Rod.png"
+    },
+    "antimatter_fuel_rod":
+    {
+      "name": "Antimatter fuel rod",
+      "type": "product",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "antimatter", "hydrogen", "titanium_alloy", "annihilation_constraint_sphere" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/1/1c/Icon_Antimatter_Fuel_Rod.png"
+    },
+    "plastic":
+    {
+      "name": "Plastic",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "refined_oil", "energetic_graphite" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/c8/Icon_Plastic.png"
+    },
+    "organic_crystal":
+    {
+      "name": "Organic crystal",
+      "type": "component",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "refined_oil", "plastic", "water" ]
+        },
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "log", "plant_fuel", "water" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/9/96/Icon_Organic_Crystal.png"
+    },
+    "graphene":
+    {
+      "name": "Graphene",
+      "type": "component",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "sulfuric_acid", "energetic_graphite" ]
+        },
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "fire_ice" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/a/af/Icon_Graphene.png"
+    },
+    "thruster":
+    {
+      "name": "Thruster",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "copper_ingot" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/e/ea/Icon_Thruster.png"
+    },
+    "reinforced_thruster":
+    {
+      "name": "Reinforced thruster",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_alloy", "electromagnetic_turbine" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/3/3d/Icon_Reinforced_Thruster.png"
+    },
+    "casimir_crystal":
+    {
+      "name": "Casimir crystal",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_crystal", "graphene", "hydrogen" ]
+        },
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "optical_grating_crystal", "graphene", "hydrogen" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/d/d7/Icon_Casimir_Crystal.png"
+    },
+    "strange_matter":
+    {
+      "name": "Strange matter",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "miniature_particle_collider",
+          "recipe": [ "deuterium", "iron_ingot", "particle_container" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/8f/Icon_Strange_Matter.png"
+    },
+    "titanium_crystal":
+    {
+      "name": "Titanium crystal",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_ingot", "organic_crystal" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/5b/Icon_Titanium_Crystal.png"
+    },
+    "carbon_nanotube":
+    {
+      "name": "Carbon nanotube",
+      "type": "component",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "graphene", "titanium_ingot" ]
+        },
+        {
+          "assembler": "chemical_plant",
+          "recipe": [ "spiniform_stalagmite_crystal" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/7c/Icon_Carbon_Nanotube.png"
+    },
+    "annihilation_constraint_sphere":
+    {
+      "name": "Annihilation constraint sphere",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "processor", "particle_container" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/3/37/Icon_Annihilation_Constraint_Sphere.png"
+    },
+    "titanium_glass":
+    {
+      "name": "Titanium glass",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "glass", "titanium_ingot", "water" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/56/Icon_Titanium_Glass.png"
+    },
+    "particle_broadband":
+    {
+      "name": "Particle broadband",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "carbon_nanotube", "crystal_silicon", "plastic" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/b/b6/Icon_Particle_Broadband.png"
+    },
+    "logistics_drone":
+    {
+      "name": "Logistics drone",
+      "type": "product",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "processor", "thruster" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/a/a2/Icon_Logistics_Drone.png"
+    },
+    "space_warper":
+    {
+      "name": "Space warper",
+      "type": "product",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "graviton_lens" ]
+        },
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "gravity_matrix" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/cb/Icon_Space_Warper.png"
+    },
+    "plane_filter":
+    {
+      "name": "Plane filter",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "casimir_crystal", "titanium_glass" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/1/15/Icon_Plane_Filter.png"
+    },
+    "quantum_chip":
+    {
+      "name": "Quantum chip",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "processor", "plane_filter" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/2/2f/Icon_Quantum_Chip.png"
+    },
+    "logistics_vessel":
+    {
+      "name": "Logistics vessel",
+      "type": "product",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "processor", "titanium_alloy", "reinforced_thruster" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/7e/Icon_Logistics_Vessel.png"
+    },
+    "solar_sail":
+    {
+      "name": "Solar sail",
+      "type": "product",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "graphene", "photon_combiner" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/50/Icon_Solar_Sail.png"
+    },
+    "frame_material":
+    {
+      "name": "Frame material",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "carbon_nanotube", "titanium_alloy", "high_purity_silicon" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/9/9d/Icon_Frame_Material.png"
+    },
+    "dyson_sphere_component":
+    {
+      "name": "Dyson sphere component",
+      "type": "component",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "frame_material", "processor", "solar_sail" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/ce/Icon_Dyson_Sphere_Component.png"
+    },
+    "small_carrier_rocket":
+    {
+      "name": "Small carrier rocket",
+      "type": "product",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "dyson_sphere_component", "deuteron_fuel_rod", "quantum_chip" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/1/1c/Icon_Small_Carrier_Rocket.png"
+    },
+    "electromagnetic_matrix":
+    {
+      "name": "Electromagnetic matrix",
+      "type": "matrix",
+      "recipes":
+      [
+        {
+          "assembler": "matrix_lab",
+          "recipe": [ "magnetic_coil", "circuit_board" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/0/0f/Icon_Electromagnetic_Matrix.png"
+    },
+    "energy_matrix":
+    {
+      "name": "Energy matrix",
+      "type": "matrix",
+      "recipes":
+      [
+        {
+          "assembler": "matrix_lab",
+          "recipe": [ "energetic_graphite", "hydrogen" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/83/Icon_Energy_Matrix.png"
+    },
+    "structure_matrix":
+    {
+      "name": "Structure matrix",
+      "type": "matrix",
+      "recipes":
+      [
+        {
+          "assembler": "matrix_lab",
+          "recipe": [ "diamond", "titanium_crystal" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/4/44/Icon_Structure_Matrix.png"
+    },
+    "information_matrix":
+    {
+      "name": "Information matrix",
+      "type": "matrix",
+      "recipes":
+      [
+        {
+          "assembler": "matrix_lab",
+          "recipe": [ "processor", "particle_broadband" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/ca/Icon_Information_Matrix.png"
+    },
+    "gravity_matrix":
+    {
+      "name": "Gravity matrix",
+      "type": "matrix",
+      "recipes":
+      [
+        {
+          "assembler": "matrix_lab",
+          "recipe": [ "graviton_lens", "quantum_chip" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/4/47/Icon_Gravity_Matrix.png"
+    },
+    "universe_matrix":
+    {
+      "name": "Universe matrix",
+      "type": "matrix",
+      "recipes":
+      [
+        {
+          "assembler": "matrix_lab",
+          "recipe": [ "electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix", "gravity_matrix", "antimatter" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/fc/Icon_Universe_Matrix.png"
+    },
+    "tesla_tower":
+    {
+      "name": "Tesla tower",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "magnetic_coil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/f1/Icon_Tesla_Tower.png"
+    },
+    "wireless_power_tower":
+    {
+      "name": "Wireless power tower",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "tesla_tower", "plasma_exciter" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/c7/Icon_Wireless_Power_Tower.png"
+    },
+    "satellite_substation":
+    {
+      "name": "Satellite substation",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "wireless_power_tower", "super_magnetic_ring", "frame_material" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/d/d7/Icon_Satellite_Substation.png"
+    },
+    "wind_turbine":
+    {
+      "name": "Wind turbine",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "gear", "magnetic_coil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/1/14/Icon_Wind_Turbine.png"
+    },
+    "thermal_power_station":
+    {
+      "name": "Thermal power station",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "gear", "magnetic_coil", "stone" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/0/05/Icon_Thermal_Power_Station.png"
+    },
+    "solar_panel":
+    {
+      "name": "Solar panel",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "copper_ingot", "high_purity_silicon", "circuit_board" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/77/Icon_Solar_Panel.png"
+    },
+    "mini_fusion_power_station":
+    {
+      "name": "Mini fusion power station",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_alloy", "super_magnetic_ring", "carbon_nanotube", "processor" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/5/54/Icon_Mini_Fusion_Power_Station.png"
+    },
+    "accumulator":
+    {
+      "name": "Accumulator",
+      "type": "product",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "super_magnetic_ring", "crystal_silicon" ]
+        },
+        {
+            "assembler": "energy_exchanger",
+            "recipe": ["full_accumulator"]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/71/Icon_Accumulator.png"
+    },
+    "full_accumulator":
+    {
+      "name": "Full accumulator",
+      "type": "product",
+      "flags": ["fuel"],
+      "recipes":
+      [
+        {
+          "assembler": "energy_exchanger",
+          "recipe": [ "accumulator" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/6/67/Icon_Full_Accumulator.png"
+    },
+    "energy_exchanger":
+    {
+      "name": "Energy exchanger",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_alloy", "steel", "processor", "particle_container" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/6/64/Icon_Energy_Exchanger.png"
+    },
+    "ray_receiver":
+    {
+      "name": "Ray receiver",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "high_purity_silicon", "photon_combiner", "processor", "super_magnetic_ring" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/7b/Icon_Ray_Receiver.png"
+    },
+    "artificial_star":
+    {
+      "name": "Artificial star",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_alloy", "frame_material", "annihilation_constraint_sphere", "quantum_chip" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/b/b6/Icon_Artificial_Star.png"
+    },
+    "conveyor_belt_mk_i":
+    {
+      "name": "Conveyor belt Mk.I",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "gear" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/78/Icon_Conveyor_Belt_Mk.I.png"
+    },
+    "conveyor_belt_mk_ii":
+    {
+      "name": "Conveyor belt Mk.II",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "conveyor_belt_mk_i", "electromagnetic_turbine" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/3/38/Icon_Conveyor_Belt_Mk.II.png"
+    },
+    "conveyor_belt_mk_iii":
+    {
+      "name": "Conveyor belt Mk.III",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "conveyor_belt_mk_ii", "super_magnetic_ring", "graphene" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/1/18/Icon_Conveyor_Belt_Mk.III.png"
+    },
+    "splitter":
+    {
+      "name": "Splitter",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "gear", "circuit_board" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/d/d6/Icon_Splitter.png"
+    },
+    "storage_mk_i":
+    {
+      "name": "Storage Mk.I",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "stone" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/6/68/Icon_Storage_Mk.I.png"
+    },
+    "storage_mk_ii":
+    {
+      "name": "Storage Mk.II",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "stone" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/e/e2/Icon_Storage_Mk.II.png"
+    },
+    "storage_tank":
+    {
+      "name": "Storage tank",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "stone", "glass" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/0/00/Icon_Storage_Tank.png"
+    },
+    "planetary_logistics_station":
+    {
+      "name": "Planetary logistics station",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "titanium_ingot", "processor", "particle_container" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/e/e5/Icon_Planetary_Logistics_Station.png"
+    },
+    "interstellar_logistics_station":
+    {
+      "name": "Interstellar logistics station",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "planetary_logistics_station", "titanium_alloy", "particle_container" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/6/6c/Icon_Interstellar_Logistics_Station.png"
+    },
+    "orbit_collector":
+    {
+      "name": "Orbit collector",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "interstellar_logistics_station", "super_magnetic_ring", "reinforced_thruster", "full_accumulator" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/c7/Icon_Orbit_Collector.png"
+    },
+    "em_rail_ejector":
+    {
+      "name": "EM-Rail ejector",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "gear", "processor", "super_magnetic_ring" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/a/a2/Icon_EM-Rail_Ejector.png"
+    },
+    "sorter_mk_i":
+    {
+      "name": "Sorter Mk.I",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "circuit_board" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/4/4f/Icon_Sorter_Mk.I.png"
+    },
+    "sorter_mk_ii":
+    {
+      "name": "Sorter Mk.II",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "sorter_mk_i", "electric_motor" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/2/25/Icon_Sorter_Mk.II.png"
+    },
+    "sorter_mk_iii":
+    {
+      "name": "Sorter Mk.III",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "sorter_mk_ii", "electromagnetic_turbine" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/b/b5/Icon_Sorter_Mk.III.png"
+    },
+    "mining_machine":
+    {
+      "name": "Mining machine",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "circuit_board", "magnetic_coil", "gear" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/c/cf/Icon_Mining_Machine.png"
+    },
+    "water_pump":
+    {
+      "name": "Water pump",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "circuit_board", "electric_motor", "stone" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/6/69/Icon_Water_Pump.png"
+    },
+    "oil_extractor":
+    {
+      "name": "Oil extractor",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "circuit_board", "plasma_exciter", "stone" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/8f/Icon_Oil_Extractor.png"
+    },
+    "oil_refinery":
+    {
+      "name": "Oil refinery",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "circuit_board", "plasma_exciter", "stone" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/7/74/Icon_Oil_Refinery.png"
+    },
+    "miniature_particle_collider":
+    {
+      "name": "Miniature particle collider",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_alloy", "frame_material", "super_magnetic_ring", "graphene", "processor" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/a/aa/Icon_Miniature_Particle_Collider.png"
+    },
+    "matrix_lab":
+    {
+      "name": "Matrix lab",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "glass", "circuit_board", "magnetic_coil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/b/b7/Icon_Matrix_Lab.png"
+    },
+    "vertical_launching_silo":
+    {
+      "name": "Vertical launching silo",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "titanium_alloy", "frame_material", "graviton_lens", "quantum_chip" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/0/05/Icon_Vertical_Launching_Silo.png"
+    },
+    "assembling_machine_mk_i":
+    {
+      "name": "Assembling machine Mk.I",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "gear", "circuit_board" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/8e/Icon_Assembling_Machine_Mk.I.png"
+    },
+    "assembling_machine_mk_ii":
+    {
+      "name": "Assembling machine Mk.II",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "assembling_machine_mk_i", "graphene", "processor" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/9/93/Icon_Assembling_Machine_Mk.II.png"
+    },
+    "assembling_machine_mk_iii":
+    {
+      "name": "Assembling machine Mk.III",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "assembling_machine_mk_ii", "particle_broadband", "quantum_chip" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/8/8c/Icon_Assembling_Machine_Mk.III.png"
+    },
+    "smelter":
+    {
+      "name": "Smelter",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "iron_ingot", "stone", "circuit_board", "magnetic_coil" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/e/e6/Icon_Smelter.png"
+    },
+    "chemical_plant":
+    {
+      "name": "Chemical plant",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "stone", "circuit_board", "glass" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/f/f9/Icon_Chemical_Plant.png"
+    },
+    "fractionator":
+    {
+      "name": "Fractionator",
+      "type": "building",
+      "recipes":
+      [
+        {
+          "assembler": "assembling_machine",
+          "recipe": [ "steel", "stone", "processor", "glass" ]
+        }
+      ],
+      "icon": "https://dsp-wiki.com/images/2/28/Icon_Fractionator.png"
+    }
+  }
+}
