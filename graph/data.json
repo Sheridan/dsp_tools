@@ -1,30 +1,41 @@
 {
   "colors":
   {
-    "background": "0c041c",
-    "font": "ebf2ff",
-
-    "ore": "2b0004",
-    "plant": "0c3d11",
-    "component": "200026",
-    "product": "2c4c70",
-    "building": "424000",
-    "matrix": "012036",
-
-    "matrix_lab": "62b3f5",
-    "mining_machine": "ffcea8",
-    "oil_extractor": "ffe8a8",
-    "hands": "ffffa8",
-    "smelter": "ffbca8",
-    "oil_refinery": "450873",
-    "chemical_plant": "ffa8ef",
-    "assembling_machine": "1f8042",
-    "miniature_particle_collider": "a8efff",
-    "fractionator": "a9a8ff",
-    "ray_receiver": "ffa8a8",
-    "water_pump": "9fe2fc",
-    "orbit_collector": "d1fc9f",
-    "energy_exchanger": "98ff69"
+    "main":
+    {
+      "background": "0c041c",
+      "font": "ebf2ff"
+    },
+    "nodes":
+    {
+      "ore": "2b0004",
+      "plant": "0c3d11",
+      "component": "200026",
+      "product": "2c4c70",
+      "building": "424000",
+      "matrix": "012036",
+      "tech": "4d4736"
+    },
+    "edges":
+    {
+      "matrix_lab": "62b3f5",
+      "mining_machine": "ffcea8",
+      "oil_extractor": "ffe8a8",
+      "hands": "ffffa8",
+      "smelter": "ffbca8",
+      "oil_refinery": "450873",
+      "chemical_plant": "ffa8ef",
+      "assembling_machine": "1f8042",
+      "miniature_particle_collider": "a8efff",
+      "fractionator": "a9a8ff",
+      "ray_receiver": "ffa8a8",
+      "water_pump": "9fe2fc",
+      "orbit_collector": "d1fc9f",
+      "energy_exchanger": "98ff69",
+      "tech": "4d4736",
+      "unlocks": "33585c",
+      "resources": "335c3b"
+    }
   },
   "icons":
   {
@@ -1627,6 +1638,553 @@
         }
       ],
       "icon": "https://dsp-wiki.com/images/2/28/Icon_Fractionator.png"
+    }
+  },
+  "technologies":
+  {
+    "dyson_sphere_program":
+    {
+      "name": "Dyson sphere program",
+      "requirements": [],
+      "resources": [],
+      "unlocks": [],
+      "icon": "https://dsp-wiki.com/images/4/43/Tech_Dyson_Sphere_Program.png"
+    },
+    "electromagnetism":
+    {
+        "name": "Electromagnetism",
+        "requirements": ["dyson_sphere_program"],
+        "resources": ["magnetic_coil"],
+        "unlocks": ["wind_turbine", "tesla_tower", "mining_machine"],
+        "icon": "https://dsp-wiki.com/images/3/33/Tech_Electromagnetism.png"
+    },
+    "basic_logistics_system":
+    {
+        "name": "Basic logistics system",
+        "requirements": ["electromagnetism"],
+        "resources": ["gear", "circuit_board"],
+        "unlocks": ["conveyor_belt_mk_i", "storage_mk_i", "sorter_mk_i"],
+        "icon": "https://dsp-wiki.com/images/c/c7/Tech_Basic_Logistics_System.png"
+    },
+    "automatic_metallurgy":
+    {
+        "name": "Automatic metallurgy",
+        "requirements": ["electromagnetism"],
+        "resources": ["magnetic_coil", "circuit_board"],
+        "unlocks": ["smelter", "glass"],
+        "icon": "https://dsp-wiki.com/images/b/b2/Tech_Automatic_Metallurgy.png"
+    },
+    "electromagnetic_matrix":
+    {
+        "name": "Electromagnetic matrix",
+        "requirements": ["electromagnetism"],
+        "resources": ["magnetic_coil", "circuit_board"],
+        "unlocks": ["electromagnetic_matrix", "matrix_lab"],
+        "icon": "https://dsp-wiki.com/images/e/e5/Tech_Electromagnetic_Matrix.png"
+    },
+    "basic_assembling_processes":
+    {
+        "name": "Basic assembling processes",
+        "requirements": ["electromagnetism"],
+        "resources": ["gear", "circuit_board"],
+        "unlocks": ["assembling_machine_mk_i"],
+        "icon": "https://dsp-wiki.com/images/d/df/Tech_Basic_Assembling_Processes.png"
+    },
+    "fluid_storage_encapsulation":
+    {
+        "name": "Fluid storage encapsulation",
+        "requirements": ["electromagnetism"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["storage_tank", "water_pump"],
+        "icon": "https://dsp-wiki.com/images/1/1c/Tech_Fluid_Storage_Encapsulation.png"
+    },
+    "high_efficiency_plasma_control":
+    {
+        "name": "High-efficiency plasma control",
+        "requirements": ["electromagnetism"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["prism", "plasma_exciter", "wireless_power_tower"],
+        "icon": "https://dsp-wiki.com/images/c/cb/Tech_High-Efficiency_Plasma_Control.png"
+    },
+    "electromagnetic_drive":
+    {
+        "name": "Electromagnetic drive",
+        "requirements": ["electromagnetism"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["electric_motor"],
+        "icon": "https://dsp-wiki.com/images/7/71/Tech_Electromagnetic_Drive.png"
+    },
+    "improved_logistics_system":
+    {
+        "name": "Improved logistics system",
+        "requirements": ["basic_logistics_system"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["splitter", "sorter_mk_ii"],
+        "icon": "https://dsp-wiki.com/images/c/ce/Tech_Improved_Logistics_System.png"
+    },
+    "steel_smelting":
+    {
+        "name": "Steel smelting",
+        "requirements": ["automatic_metallurgy"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["steel"],
+        "icon": "https://dsp-wiki.com/images/1/19/Tech_Steel_Smelting.png"
+    },
+    "smelting_purification":
+    {
+        "name": "Smelting purification",
+        "requirements": ["automatic_metallurgy"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["silicon_ore", "high_purity_silicon", "energetic_graphite"],
+        "icon": "https://dsp-wiki.com/images/3/3e/Tech_Smelting_Purification.png"
+    },
+    "thermal_power":
+    {
+        "name": "Thermal power",
+        "requirements": ["basic_assembling_processes"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["thermal_power_station"],
+        "icon": "https://dsp-wiki.com/images/7/70/Tech_Thermal_Power.png"
+    },
+    "plasma_extract_refining":
+    {
+        "name": "Plasma extract refining",
+        "requirements": ["electromagnetic_matrix"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["oil_extractor", "oil_refinery"],
+        "icon": "https://dsp-wiki.com/images/2/2c/Tech_Plasma_Extract_Refining.png"
+    },
+    "environment_modification":
+    {
+        "name": "Environment modification",
+        "requirements": ["steel_smelting"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["foundation"],
+        "icon": "https://dsp-wiki.com/images/0/02/Tech_Environment_Modification.png"
+    },
+    "crystal_smelting":
+    {
+        "name": "Crystal smelting",
+        "requirements": ["smelting_purification"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["diamond"],
+        "icon": "https://dsp-wiki.com/images/9/94/Tech_Crystal_Smelting.png"
+    },
+    "solar_collection":
+    {
+        "name": "Solar collection",
+        "requirements": ["basic_assembling_processes"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["solar_panel"],
+        "icon": "https://dsp-wiki.com/images/7/78/Tech_Solar_Collection.png"
+    },
+    "semiconductor_material":
+    {
+        "name": "Semiconductor material",
+        "requirements": ["basic_assembling_processes"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["microcrystalline_component"],
+        "icon": "https://dsp-wiki.com/images/d/d7/Tech_Semiconductor_Material.png"
+    },
+    "deuterium_fractionation":
+    {
+        "name": "Deuterium fractionation",
+        "requirements": ["thermal_power"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["fractionator"],
+        "icon": "https://dsp-wiki.com/images/e/e2/Tech_Deuterium_Fractionation.png"
+    },
+    "basic_chemical_engineering":
+    {
+        "name": "Basic chemical engineering",
+        "requirements": ["fluid_storage_encapsulation", "plasma_extract_refining"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["chemical_plant", "plastic", "sulfuric_acid"],
+        "icon": "https://dsp-wiki.com/images/1/13/Tech_Basic_Chemical_Engineering.png"
+    },
+    "energy_matrix":
+    {
+        "name": "Energy matrix",
+        "requirements": ["plasma_extract_refining"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["energy_matrix"],
+        "icon": "https://dsp-wiki.com/images/6/67/Tech_Energy_Matrix.png"
+    },
+    "magnetic_levitation_technology":
+    {
+        "name": "Magnetic levitation technology",
+        "requirements": ["electromagnetic_drive"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["electromagnetic_turbine"],
+        "icon": "https://dsp-wiki.com/images/d/d8/Tech_Magnetic_Levitation_Technology.png"
+    },
+    "high_efficiency_logistics_system":
+    {
+        "name": "High-efficiency logistics system",
+        "requirements": ["improved_logistics_system"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["conveyor_belt_mk_ii", "storage_mk_ii", "sorter_mk_ii"],
+        "icon": "https://dsp-wiki.com/images/a/af/Tech_High-Efficiency_Logistics_System.png"
+    },
+    "titanium_smelting":
+    {
+        "name": "Titanium smelting",
+        "requirements": ["steel_smelting"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["titanium_ingot"],
+        "icon": "https://dsp-wiki.com/images/c/cd/Tech_Titanium_Smelting.png"
+    },
+    "energy_storage":
+    {
+        "name": "Energy storage",
+        "requirements": ["crystal_smelting", "solar_collection"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["accumulator"],
+        "icon": "https://dsp-wiki.com/images/1/18/Tech_Energy_Storage.png"
+    },
+    "photon_frequency_conversion":
+    {
+        "name": "Photon frequency conversion",
+        "requirements": ["solar_collection"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["photon_combiner"],
+        "icon": "https://dsp-wiki.com/images/a/a2/Tech_Photon_Frequency_Conversion.png"
+    },
+    "processor":
+    {
+        "name": "Processor",
+        "requirements": ["semiconductor_material"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["processor"],
+        "icon": "https://dsp-wiki.com/images/3/31/Tech_Processor.png"
+    },
+    "applied_superconductor":
+    {
+        "name": "Applied superconductor",
+        "requirements": ["basic_chemical_engineering"],
+        "resources": ["electromagnetic_matrix"],
+        "unlocks": ["graphene"],
+        "icon": "https://dsp-wiki.com/images/5/5d/Tech_Applied_Superconductor.png"
+    },
+    "polymer_chemical_engineering":
+    {
+        "name": "Polymer chemical engineering",
+        "requirements": ["basic_chemical_engineering"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["organic_crystal"],
+        "icon": "https://dsp-wiki.com/images/7/75/Tech_Polymer_Chemical_Engineering.png"
+    },
+    "x_ray_cracking":
+    {
+        "name": "X-Ray cracking",
+        "requirements": ["basic_chemical_engineering", "plasma_extract_refining"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": [],
+        "icon": "https://dsp-wiki.com/images/3/34/Tech_X-Ray_Cracking.png"
+    },
+    "hydrogen_fuel_rod":
+    {
+        "name": "Hydrogen fuel rod",
+        "requirements": ["energy_matrix"],
+        "resources": ["energy_matrix"],
+        "unlocks": ["hydrogen_fuel_rod"],
+        "icon": "https://dsp-wiki.com/images/5/51/Tech_Hydrogen_Fuel_Rod.png"
+    },
+    "super_magnetic_field_generator":
+    {
+        "name": "Super magnetic field generator",
+        "requirements": ["magnetic_levitation_technology"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["super_magnetic_ring"],
+        "icon": "https://dsp-wiki.com/images/1/16/Tech_Super_Magnetic_Field_Generator.png"
+    },
+    "planetary_logistics_system":
+    {
+        "name": "Planetary logistics system",
+        "requirements": ["high_efficiency_logistics_system"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["planetary_logistics_station", "logistics_drone", "conveyor_belt_mk_iii"],
+        "icon": "https://dsp-wiki.com/images/9/97/Tech_Planetary_Logistics_System.png"
+    },
+    "solar_sail_orbit_system":
+    {
+        "name": "Solar sail orbit system",
+        "requirements": ["photon_frequency_conversion"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["solar_sail", "em_rail_ejector"],
+        "icon": "https://dsp-wiki.com/images/4/47/Tech_Solar_Sail_Orbit_System.png"
+    },
+    "high_speed_assembling_processes":
+    {
+        "name": "High-Speed assembling processes",
+        "requirements": ["processor", "basic_assembling_processes"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["assembling_machine_mk_ii"],
+        "icon": "https://dsp-wiki.com/images/2/29/Tech_High-Speed_Assembling_Processes.png"
+    },
+    "high_strength_crystal":
+    {
+        "name": "High-Strength crystal",
+        "requirements": ["polymer_chemical_engineering"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["titanium_crystal"],
+        "icon": "https://dsp-wiki.com/images/7/7f/Tech_High-Strength_Crystal.png"
+    },
+    "thruster":
+    {
+        "name": "Thruster",
+        "requirements": ["hydrogen_fuel_rod"],
+        "resources": ["energy_matrix"],
+        "unlocks": ["thruster"],
+        "icon": "https://dsp-wiki.com/images/0/09/Tech_Thruster.png"
+    },
+    "magnetic_particle_trap":
+    {
+        "name": "Magnetic particle trap",
+        "requirements": ["magnetic_levitation_technology"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["particle_container"],
+        "icon": "https://dsp-wiki.com/images/9/99/Tech_Magnetic_Particle_Trap.png"
+    },
+    "high_strength_titanium_alloy":
+    {
+        "name": "High-strength titanium alloy",
+        "requirements": ["titanium_smelting"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["titanium_alloy"],
+        "icon": "https://dsp-wiki.com/images/4/4d/Tech_High-strength_Titanium_Alloy.png"
+    },
+    "high_strength_lightweight_structure":
+    {
+        "name": "High-strength lightweight structure",
+        "requirements": ["solar_sail_orbit_system"],
+        "resources": ["electromagnetic_matrix", "structure_matrix"],
+        "unlocks": ["frame_material", "dyson_sphere_component"],
+        "icon": "https://dsp-wiki.com/images/3/3e/Tech_High-Strength_Lightweight_Structure.png"
+    },
+    "ray_receiver":
+    {
+        "name": "Ray receiver",
+        "requirements": ["solar_sail_orbit_system"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["ray_receiver"],
+        "icon": "https://dsp-wiki.com/images/b/bf/Tech_Ray_Receiver.png"
+    },
+    "mini_fusion_power_generation":
+    {
+        "name": "Mini fusion power generation",
+        "requirements": ["deuterium_fractionation"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["mini_fusion_power_station", "hydrogen_fuel_rod"],
+        "icon": "https://dsp-wiki.com/images/5/5a/Tech_Mini_Fusion_Power_Generation.png"
+    },
+    "high_strength_material":
+    {
+        "name": "High-Strength material",
+        "requirements": ["applied_superconductor"],
+        "resources": ["energy_matrix", "structure_matrix"],
+        "unlocks": ["carbon_nanotube"],
+        "icon": "https://dsp-wiki.com/images/1/19/Tech_High-Strength_Material.png"
+    },
+    "structure_matrix":
+    {
+        "name": "Structure matrix",
+        "requirements": ["high_strength_crystal"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["structure_matrix"],
+        "icon": "https://dsp-wiki.com/images/5/5b/Tech_Structure_Matrix.png"
+    },
+    "reinforced_thruster":
+    {
+        "name": "Reinforced thruster",
+        "requirements": ["thruster"],
+        "resources": ["energy_matrix"],
+        "unlocks": ["reinforced_thruster"],
+        "icon": "https://dsp-wiki.com/images/f/f6/Tech_Reinforced_Thruster.png"
+    },
+    "interstellar_logistics_system":
+    {
+        "name": "Interstellar logistics system",
+        "requirements": ["planetary_logistics_system", "high_strength_titanium_alloy"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["interstellar_logistics_station", "logistics_vessel"],
+        "icon": "https://dsp-wiki.com/images/0/0a/Tech_Interstellar_Logistics_System.png"
+    },
+    "interstellar_power_transmission":
+    {
+        "name": "Interstellar power transmission",
+        "requirements": ["planetary_logistics_system", "high_strength_titanium_alloy"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["energy_exchanger"],
+        "icon": "https://dsp-wiki.com/images/1/1f/Tech_Interstellar_Power_Transmission.png"
+    },
+    "particle_control_technology":
+    {
+        "name": "Particle control technology",
+        "requirements": ["high_strength_material"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["particle_broadband", "crystal_silicon"],
+        "icon": "https://dsp-wiki.com/images/7/7a/Tech_Particle_Control_Technology.png"
+    },
+    "high_strength_glass":
+    {
+        "name": "High-Strength glass",
+        "requirements": ["high_strength_material"],
+        "resources": ["energy_matrix", "structure_matrix"],
+        "unlocks": ["titanium_glass"],
+        "icon": "https://dsp-wiki.com/images/2/28/Tech_High-Strength_Glass.png"
+    },
+    "casimir_crystal":
+    {
+        "name": "Casimir crystal",
+        "requirements": ["structure_matrix"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["casimir_crystal"],
+        "icon": "https://dsp-wiki.com/images/6/61/Tech_Casimir_Crystal.png"
+    },
+    "miniature_particle_collider":
+    {
+        "name": "Miniature particle collider",
+        "requirements": ["structure_matrix"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["miniature_particle_collider", "deuterium"],
+        "icon": "https://dsp-wiki.com/images/0/0c/Tech_Miniature_Particle_Collider.png"
+    },
+    "satellite_power_distribution_system":
+    {
+        "name": "Satellite power distribution system",
+        "requirements": ["super_magnetic_field_generator"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["satellite_substation"],
+        "icon": "https://dsp-wiki.com/images/5/59/Tech_Satellite_Power_Distribution_System.png"
+    },
+    "gas_giants_exploration":
+    {
+        "name": "Gas giants exploration",
+        "requirements": ["interstellar_logistics_system", "interstellar_power_transmission"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["orbit_collector"],
+        "icon": "https://dsp-wiki.com/images/d/d4/Tech_Gas_Giants_Exploration.png"
+    },
+    "information_matrix":
+    {
+        "name": "Information matrix",
+        "requirements": ["processor", "particle_control_technology"],
+        "resources": ["electromagnetic_matrix", "energy_matrix"],
+        "unlocks": ["information_matrix"],
+        "icon": "https://dsp-wiki.com/images/e/ef/Tech_Information_Matrix.png"
+    },
+    "wave_function_interference":
+    {
+        "name": "Wave function interference",
+        "requirements": ["high_strength_glass", "casimir_crystal"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "information_matrix"],
+        "unlocks": ["plane_filter"],
+        "icon": "https://dsp-wiki.com/images/3/39/Tech_Wave_Function_Interference.png"
+    },
+    "strange_matter":
+    {
+        "name": "Strange matter",
+        "requirements": ["miniature_particle_collider"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["strange_matter"],
+        "icon": "https://dsp-wiki.com/images/5/56/Tech_Strange_Matter.png"
+    },
+    "vertical_launching_silo":
+    {
+        "name": "Vertical launching silo",
+        "requirements": ["miniature_particle_collider"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix"],
+        "unlocks": ["vertical_launching_silo", "small_carrier_rocket"],
+        "icon": "https://dsp-wiki.com/images/4/49/Tech_Vertical_Launching_Silo.png"
+    },
+    "quantum_chip":
+    {
+        "name": "Quantum chip",
+        "requirements": ["wave_function_interference", "information_matrix"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "information_matrix"],
+        "unlocks": ["quantum_chip"],
+        "icon": "https://dsp-wiki.com/images/5/58/Tech_Quantum_Chip.png"
+    },
+    "gravitational_wave_refraction":
+    {
+        "name": "Gravitational wave refraction",
+        "requirements": ["magnetic_particle_trap", "strange_matter"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["graviton_lens", "space_warper"],
+        "icon": "https://dsp-wiki.com/images/d/d1/Tech_Gravitational_Wave_Refraction.png"
+    },
+    "dyson_sphere_stress_system":
+    {
+        "name": "Dyson sphere stress system",
+        "requirements": ["vertical_launching_silo"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix", "gravity_matrix"],
+        "unlocks": [],
+        "icon": "https://dsp-wiki.com/images/a/ad/Tech_Dyson_Sphere_Stress_System.png"
+    },
+    "planetary_ionosphere_utilization":
+    {
+        "name": "Planetary ionosphere utilization",
+        "requirements": ["ray_receiver"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "gravity_matrix"],
+        "unlocks": [],
+        "icon": "https://dsp-wiki.com/images/a/a4/Tech_Planetary_Ionosphere_Utilization.png"
+    },
+    "quantum_printing_technology":
+    {
+        "name": "Quantum printing technology",
+        "requirements": ["quantum_chip", "high_speed_assembling_processes"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix"],
+        "unlocks": ["assembling_machine_mk_iii"],
+        "icon": "https://dsp-wiki.com/images/2/2c/Tech_Quantum_Printing_Technology.png"
+    },
+    "gravity_matrix":
+    {
+        "name": "Gravity matrix",
+        "requirements": ["gravitational_wave_refraction", "quantum_chip"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix"],
+        "unlocks": ["gravity_matrix"],
+        "icon": "https://dsp-wiki.com/images/2/2f/Tech_Gravity_Matrix.png"
+    },
+    "dirac_inversion_mechanism":
+    {
+        "name": "Dirac inversion mechanism",
+        "requirements": ["planetary_ionosphere_utilization"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix", "gravity_matrix"],
+        "unlocks": [],
+        "icon": "https://dsp-wiki.com/images/0/03/Tech_Dirac_Inversion_Mechanism.png"
+    },
+    "controlled_annihilation_reaction":
+    {
+        "name": "Controlled annihilation reaction",
+        "requirements": ["dirac_inversion_mechanism"],
+        "resources": ["electromagnetic_matrix", "gravity_matrix"],
+        "unlocks": ["annihilation_constraint_sphere", "antimatter_fuel_rod"],
+        "icon": "https://dsp-wiki.com/images/a/a9/Tech_Controlled_Annihilation_Reaction.png"
+    },
+    "artificial_star":
+    {
+        "name": "Artificial star",
+        "requirements": ["controlled_annihilation_reaction"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix", "gravity_matrix"],
+        "unlocks": ["artificial_star"],
+        "icon": "https://dsp-wiki.com/images/1/1f/Tech_Artificial_Star.png"
+    },
+    "universe_matrix":
+    {
+        "name": "Universe matrix",
+        "requirements": ["dirac_inversion_mechanism"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix", "gravity_matrix"],
+        "unlocks": ["universe_matrix"],
+        "icon": "https://dsp-wiki.com/images/c/ce/Tech_Universe_Matrix.png"
+    },
+    "mission_completed":
+    {
+        "name": "Mission completed",
+        "requirements": ["universe_matrix"],
+        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix", "gravity_matrix"],
+        "unlocks": [],
+        "icon": "https://dsp-wiki.com/images/3/32/Tech_Mission_Completed%21.png"
     }
   }
 }

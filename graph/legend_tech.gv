@@ -1,0 +1,5 @@
+digraph g {
+  graph [overlap=false, splines=ortho, ratio=auto, bgcolor="#0c041c", fontcolor="#ebf2ff", fillcolor="#0c041c", fontname=Roboto, fontsize=10];
+  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
+  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=1];
+  }
