@@ -30,7 +30,10 @@
   {
     "natural_generation": "🎲",
     "fuel": "🔥",
-    "fluid": "💧"
+    "fluid": "💧",
+    "energy_generator": "⚡️",
+    "transport": "🚚",
+    "dyson": "🪐"
   },
   "legend":
   {
@@ -38,7 +41,10 @@
     {
       "natural_generation": "Resources",
       "fuel": "Fuel",
-      "fluid": "Fluid"
+      "fluid": "Fluid",
+      "energy_generator": "Generators",
+      "transport": "Transport",
+      "dyson": "Dyson components"
     },
     "colors":
     {
@@ -890,6 +896,7 @@
     {
       "name": "Logistics drone",
       "type": "product",
+      "flags": ["transport"],
       "recipes":
       [
         {
@@ -946,6 +953,7 @@
     {
       "name": "Logistics vessel",
       "type": "product",
+      "flags": ["transport"],
       "recipes":
       [
         {
@@ -959,6 +967,7 @@
     {
       "name": "Solar sail",
       "type": "product",
+      "flags": ["dyson"],
       "recipes":
       [
         {
@@ -998,6 +1007,7 @@
     {
       "name": "Small carrier rocket",
       "type": "product",
+      "flags": ["dyson"],
       "recipes":
       [
         {
@@ -1128,6 +1138,7 @@
     {
       "name": "Wind turbine",
       "type": "building",
+      "flags": ["energy_generator"],
       "recipes":
       [
         {
@@ -1141,6 +1152,7 @@
     {
       "name": "Thermal power station",
       "type": "building",
+      "flags": ["energy_generator"],
       "recipes":
       [
         {
@@ -1154,6 +1166,7 @@
     {
       "name": "Solar panel",
       "type": "building",
+      "flags": ["energy_generator"],
       "recipes":
       [
         {
@@ -1166,6 +1179,7 @@
     "mini_fusion_power_station":
     {
       "name": "Mini fusion power station",
+      "flags": ["energy_generator"],
       "type": "building",
       "recipes":
       [
@@ -1211,6 +1225,7 @@
     {
       "name": "Energy exchanger",
       "type": "building",
+      "flags": ["energy_generator"],
       "recipes":
       [
         {
@@ -1224,6 +1239,7 @@
     {
       "name": "Ray receiver",
       "type": "building",
+      "flags": ["energy_generator"],
       "recipes":
       [
         {
@@ -1237,6 +1253,7 @@
     {
       "name": "Artificial star",
       "type": "building",
+      "flags": ["energy_generator"],
       "recipes":
       [
         {

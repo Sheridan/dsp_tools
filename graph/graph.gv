@@ -767,7 +767,7 @@ digraph g {
                 <td><img src='icons/logistics_drone.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#2c4c70"];
   space_warper [label=<
@@ -815,7 +815,7 @@ digraph g {
                 <td><img src='icons/logistics_vessel.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#2c4c70"];
   solar_sail [label=<
@@ -827,7 +827,7 @@ digraph g {
                 <td><img src='icons/solar_sail.png' /></td>
                 <td>Usages: 1</td>
               </tr>
-              
+              <tr><td colspan="2"> 🪐 </td></tr>
              </table>
              >, fillcolor="#2c4c70"];
   frame_material [label=<
@@ -863,7 +863,7 @@ digraph g {
                 <td><img src='icons/small_carrier_rocket.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 🪐 </td></tr>
              </table>
              >, fillcolor="#2c4c70"];
   electromagnetic_matrix [label=<
@@ -983,7 +983,7 @@ digraph g {
                 <td><img src='icons/wind_turbine.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> ⚡️ </td></tr>
              </table>
              >, fillcolor="#424000"];
   thermal_power_station [label=<
@@ -995,7 +995,7 @@ digraph g {
                 <td><img src='icons/thermal_power_station.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> ⚡️ </td></tr>
              </table>
              >, fillcolor="#424000"];
   solar_panel [label=<
@@ -1007,7 +1007,7 @@ digraph g {
                 <td><img src='icons/solar_panel.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> ⚡️ </td></tr>
              </table>
              >, fillcolor="#424000"];
   mini_fusion_power_station [label=<
@@ -1019,7 +1019,7 @@ digraph g {
                 <td><img src='icons/mini_fusion_power_station.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> ⚡️ </td></tr>
              </table>
              >, fillcolor="#424000"];
   accumulator [label=<
@@ -1055,7 +1055,7 @@ digraph g {
                 <td><img src='icons/energy_exchanger.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> ⚡️ </td></tr>
              </table>
              >, fillcolor="#424000"];
   ray_receiver [label=<
@@ -1067,7 +1067,7 @@ digraph g {
                 <td><img src='icons/ray_receiver.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> ⚡️ </td></tr>
              </table>
              >, fillcolor="#424000"];
   artificial_star [label=<
@@ -1079,7 +1079,7 @@ digraph g {
                 <td><img src='icons/artificial_star.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> ⚡️ </td></tr>
              </table>
              >, fillcolor="#424000"];
   conveyor_belt_mk_i [label=<
