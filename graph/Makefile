@@ -1,6 +1,7 @@
 
 compile:
-	./generator.py
+	./generator.py ${img_type}
+	dot   -T${img_type} -o legend.${img_type} legend.gv
 	dot   -T${img_type} -o production_dot.${img_type} graph.gv
 	neato -T${img_type} -Gsep=0.1 -o production_neato.${img_type} graph.gv
 	# twopi -T${img_type} -o production_twopi.${img_type} graph.gv

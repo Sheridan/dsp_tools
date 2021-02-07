@@ -7,7 +7,7 @@
     "ore": "2b0004",
     "plant": "0c3d11",
     "component": "200026",
-    "product": "01362c",
+    "product": "2c4c70",
     "building": "424000",
     "matrix": "012036",
 
@@ -16,9 +16,9 @@
     "oil_extractor": "ffe8a8",
     "hands": "ffffa8",
     "smelter": "ffbca8",
-    "oil_refinery": "e3a8ff",
+    "oil_refinery": "450873",
     "chemical_plant": "ffa8ef",
-    "assembling_machine": "a8ffab",
+    "assembling_machine": "1f8042",
     "miniature_particle_collider": "a8efff",
     "fractionator": "a9a8ff",
     "ray_receiver": "ffa8a8",
@@ -26,10 +26,49 @@
     "orbit_collector": "d1fc9f",
     "energy_exchanger": "98ff69"
   },
-  "icons": {
+  "icons":
+  {
     "natural_generation": "🎲",
     "fuel": "🔥",
     "fluid": "💧"
+  },
+  "legend":
+  {
+    "icons":
+    {
+      "natural_generation": "Resources",
+      "fuel": "Fuel",
+      "fluid": "Fluid"
+    },
+    "colors":
+    {
+      "nodes":
+      {
+        "ore": "Ore",
+        "plant": "Plant",
+        "component": "Component",
+        "product": "End product",
+        "building": "Building",
+        "matrix": "Matrix"
+      },
+      "edges":
+      {
+        "matrix_lab": "Matrix lab",
+        "mining_machine": "Miner",
+        "oil_extractor": "Oil extractor",
+        "hands": "Hands",
+        "smelter": "Smelter",
+        "oil_refinery": "Refinery",
+        "chemical_plant": "Chemical",
+        "assembling_machine": "Assembler",
+        "miniature_particle_collider": "Collider",
+        "fractionator": "Fractionator",
+        "ray_receiver": "Ray receiver",
+        "water_pump": "Pump",
+        "orbit_collector": "Orbit collector",
+        "energy_exchanger": "Energy exchanger"
+      }
+    }
   },
   "items":
   {

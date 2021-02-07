@@ -1,8 +1,7 @@
-digraph g{
-graph [overlap=false, splines=ortho, ratio=0.5625, bgcolor="#0c041c", fontcolor="#ebf2ff", fontname=Roboto, fontsize=10];
-node [shape=box, style=filled, fontcolor="#ebf2ff", color="#ebf2ff"];
-edge [fontcolor="#ebf2ff", color="#ebf2ff"];
-
+digraph g {
+  graph [overlap=false, splines=ortho, ratio=0.5625, bgcolor="#0c041c", fontcolor="#ebf2ff", fontname=Roboto, fontsize=10];
+  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
+  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=4];
   log [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -15,7 +14,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲  🔥 </td></tr>
              </table>
              >, fillcolor="#0c3d11"];
-          
   plant_fuel [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -28,7 +26,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲  🔥 </td></tr>
              </table>
              >, fillcolor="#0c3d11"];
-          
   iron_ore [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -41,7 +38,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   copper_ore [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -54,7 +50,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   stone_ore [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -67,7 +62,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   coal_ore [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -80,7 +74,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲  🔥 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   silicon_ore [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -93,7 +86,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   titanium_ore [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -106,7 +98,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   water [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -119,7 +110,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲  💧 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   crude_oil [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -132,7 +122,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲  💧  🔥 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   kimberlite_ore [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -145,7 +134,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   fractal_silicon [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -158,7 +146,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   optical_grating_crystal [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -171,7 +158,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   spiniform_stalagmite_crystal [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -184,7 +170,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   unipolar_magnet [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -197,7 +182,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   fire_ice [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -210,7 +194,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲  🔥 </td></tr>
              </table>
              >, fillcolor="#2b0004"];
-          
   iron_ingot [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -223,7 +206,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   copper_ingot [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -236,7 +218,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   stone [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -249,7 +230,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   hydrogen [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -262,7 +242,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥  💧  🎲 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   deuterium [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -275,7 +254,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥  💧  🎲 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   antimatter [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -288,7 +266,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   energetic_graphite [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -301,7 +278,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   high_purity_silicon [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -314,7 +290,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   titanium_ingot [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -327,7 +302,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   sulfuric_acid [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -340,7 +314,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🎲  💧 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   refined_oil [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -353,7 +326,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥  💧 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   magnet [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -366,7 +338,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   magnetic_coil [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -379,7 +350,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   glass [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -392,7 +362,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   diamond [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -405,7 +374,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   crystal_silicon [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -418,7 +386,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   titanium_alloy [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -431,7 +398,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   steel [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -444,7 +410,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   circuit_board [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -457,7 +422,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   prism [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -470,7 +434,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   electric_motor [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -483,7 +446,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   microcrystalline_component [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -496,7 +458,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   gear [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -509,7 +470,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   plasma_exciter [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -522,7 +482,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   photon_combiner [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -535,7 +494,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   electromagnetic_turbine [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -548,7 +506,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   processor [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -561,7 +518,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   foundation [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -573,8 +529,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   critical_photon [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -587,7 +542,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   particle_container [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -600,7 +554,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   super_magnetic_ring [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -613,7 +566,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   graviton_lens [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -626,7 +578,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   hydrogen_fuel_rod [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -638,8 +589,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   deuteron_fuel_rod [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -651,8 +601,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   antimatter_fuel_rod [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -664,8 +613,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   plastic [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -678,7 +626,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   organic_crystal [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -691,7 +638,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   graphene [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -704,7 +650,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   thruster [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -717,7 +662,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   reinforced_thruster [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -730,7 +674,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   casimir_crystal [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -743,7 +686,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   strange_matter [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -756,7 +698,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   titanium_crystal [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -769,7 +710,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   carbon_nanotube [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -782,7 +722,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
              >, fillcolor="#200026"];
-          
   annihilation_constraint_sphere [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -795,7 +734,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   titanium_glass [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -808,7 +746,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   particle_broadband [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -821,7 +758,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   logistics_drone [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -833,8 +769,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   space_warper [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -846,8 +781,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   plane_filter [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -860,7 +794,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   quantum_chip [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -873,7 +806,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   logistics_vessel [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -885,8 +817,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   solar_sail [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -898,8 +829,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   frame_material [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -912,7 +842,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   dyson_sphere_component [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -925,7 +854,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#200026"];
-          
   small_carrier_rocket [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -937,8 +865,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   electromagnetic_matrix [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -951,7 +878,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#012036"];
-          
   energy_matrix [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -964,7 +890,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#012036"];
-          
   structure_matrix [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -977,7 +902,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#012036"];
-          
   information_matrix [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -990,7 +914,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#012036"];
-          
   gravity_matrix [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1003,7 +926,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#012036"];
-          
   universe_matrix [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1016,7 +938,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#012036"];
-          
   tesla_tower [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1029,7 +950,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   wireless_power_tower [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1042,7 +962,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   satellite_substation [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1055,7 +974,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   wind_turbine [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1068,7 +986,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   thermal_power_station [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1081,7 +998,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   solar_panel [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1094,7 +1010,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   mini_fusion_power_station [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1107,7 +1022,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   accumulator [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1119,8 +1033,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   full_accumulator [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1132,8 +1045,7 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               </tr>
               <tr><td colspan="2"> 🔥 </td></tr>
              </table>
-             >, fillcolor="#01362c"];
-          
+             >, fillcolor="#2c4c70"];
   energy_exchanger [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1146,7 +1058,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   ray_receiver [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1159,7 +1070,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   artificial_star [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1172,7 +1082,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   conveyor_belt_mk_i [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1185,7 +1094,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   conveyor_belt_mk_ii [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1198,7 +1106,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   conveyor_belt_mk_iii [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1211,7 +1118,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   splitter [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1224,7 +1130,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   storage_mk_i [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1237,7 +1142,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   storage_mk_ii [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1250,7 +1154,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   storage_tank [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1263,7 +1166,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   planetary_logistics_station [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1276,7 +1178,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   interstellar_logistics_station [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1289,7 +1190,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   orbit_collector [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1302,7 +1202,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   em_rail_ejector [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1315,7 +1214,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   sorter_mk_i [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1328,7 +1226,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   sorter_mk_ii [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1341,7 +1238,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   sorter_mk_iii [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1354,7 +1250,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   mining_machine [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1367,7 +1262,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   water_pump [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1380,7 +1274,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   oil_extractor [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1393,7 +1286,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   oil_refinery [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1406,7 +1298,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   miniature_particle_collider [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1419,7 +1310,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   matrix_lab [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1432,7 +1322,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   vertical_launching_silo [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1445,7 +1334,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   assembling_machine_mk_i [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1458,7 +1346,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   assembling_machine_mk_ii [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1471,7 +1358,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   assembling_machine_mk_iii [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1484,7 +1370,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   smelter [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1497,7 +1382,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   chemical_plant [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1510,7 +1394,6 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   fractionator [label=<
              <table border="0" cellborder="0" cellspacing="0">
               <tr>
@@ -1523,556 +1406,281 @@ edge [fontcolor="#ebf2ff", color="#ebf2ff"];
               
              </table>
              >, fillcolor="#424000"];
-          
   stone_ore -> silicon_ore [color="#ffbca8"];
-          
   iron_ore -> iron_ingot [color="#ffbca8"];
-          
   copper_ore -> copper_ingot [color="#ffbca8"];
-          
   stone_ore -> stone [color="#ffbca8"];
-          
-  crude_oil -> hydrogen [color="#e3a8ff"];
-          
-  refined_oil -> hydrogen [color="#e3a8ff"];
-          
-  hydrogen -> hydrogen [color="#e3a8ff"];
-          
+  crude_oil -> hydrogen [color="#450873"];
+  refined_oil -> hydrogen [color="#450873"];
+  hydrogen -> hydrogen [color="#450873"];
   fire_ice -> hydrogen [color="#ffa8ef"];
-          
   critical_photon -> hydrogen [color="#a8efff"];
-          
   hydrogen -> deuterium [color="#a8efff"];
-          
   hydrogen -> deuterium [color="#a9a8ff"];
-          
   critical_photon -> antimatter [color="#a8efff"];
-          
   coal_ore -> energetic_graphite [color="#ffbca8"];
-          
-  refined_oil -> energetic_graphite [color="#e3a8ff"];
-          
-  hydrogen -> energetic_graphite [color="#e3a8ff"];
-          
+  refined_oil -> energetic_graphite [color="#450873"];
+  hydrogen -> energetic_graphite [color="#450873"];
   silicon_ore -> high_purity_silicon [color="#ffbca8"];
-          
   titanium_ore -> titanium_ingot [color="#ffbca8"];
-          
   water -> sulfuric_acid [color="#ffa8ef"];
-          
   stone_ore -> sulfuric_acid [color="#ffa8ef"];
-          
   refined_oil -> sulfuric_acid [color="#ffa8ef"];
-          
-  crude_oil -> refined_oil [color="#e3a8ff"];
-          
+  crude_oil -> refined_oil [color="#450873"];
   iron_ore -> magnet [color="#ffbca8"];
-          
-  magnet -> magnetic_coil [color="#a8ffab"];
-          
-  copper_ingot -> magnetic_coil [color="#a8ffab"];
-          
+  magnet -> magnetic_coil [color="#1f8042"];
+  copper_ingot -> magnetic_coil [color="#1f8042"];
   stone_ore -> glass [color="#ffbca8"];
-          
   energetic_graphite -> diamond [color="#ffbca8"];
-          
   kimberlite_ore -> diamond [color="#ffbca8"];
-          
   high_purity_silicon -> crystal_silicon [color="#ffbca8"];
-          
   fractal_silicon -> crystal_silicon [color="#ffbca8"];
-          
   titanium_ingot -> titanium_alloy [color="#ffbca8"];
-          
   sulfuric_acid -> titanium_alloy [color="#ffbca8"];
-          
   steel -> titanium_alloy [color="#ffbca8"];
-          
   iron_ingot -> steel [color="#ffbca8"];
-          
-  iron_ingot -> circuit_board [color="#a8ffab"];
-          
-  copper_ingot -> circuit_board [color="#a8ffab"];
-          
-  glass -> prism [color="#a8ffab"];
-          
-  iron_ingot -> electric_motor [color="#a8ffab"];
-          
-  gear -> electric_motor [color="#a8ffab"];
-          
-  magnetic_coil -> electric_motor [color="#a8ffab"];
-          
-  copper_ingot -> microcrystalline_component [color="#a8ffab"];
-          
-  high_purity_silicon -> microcrystalline_component [color="#a8ffab"];
-          
-  iron_ingot -> gear [color="#a8ffab"];
-          
-  prism -> plasma_exciter [color="#a8ffab"];
-          
-  magnetic_coil -> plasma_exciter [color="#a8ffab"];
-          
-  prism -> photon_combiner [color="#a8ffab"];
-          
-  circuit_board -> photon_combiner [color="#a8ffab"];
-          
-  optical_grating_crystal -> photon_combiner [color="#a8ffab"];
-          
-  circuit_board -> photon_combiner [color="#a8ffab"];
-          
-  electric_motor -> electromagnetic_turbine [color="#a8ffab"];
-          
-  magnetic_coil -> electromagnetic_turbine [color="#a8ffab"];
-          
-  circuit_board -> processor [color="#a8ffab"];
-          
-  microcrystalline_component -> processor [color="#a8ffab"];
-          
-  steel -> foundation [color="#a8ffab"];
-          
-  stone -> foundation [color="#a8ffab"];
-          
-  electromagnetic_turbine -> particle_container [color="#a8ffab"];
-          
-  copper_ingot -> particle_container [color="#a8ffab"];
-          
-  graphene -> particle_container [color="#a8ffab"];
-          
-  unipolar_magnet -> particle_container [color="#a8ffab"];
-          
-  copper_ingot -> particle_container [color="#a8ffab"];
-          
-  electromagnetic_turbine -> super_magnetic_ring [color="#a8ffab"];
-          
-  magnet -> super_magnetic_ring [color="#a8ffab"];
-          
-  energetic_graphite -> super_magnetic_ring [color="#a8ffab"];
-          
-  diamond -> graviton_lens [color="#a8ffab"];
-          
-  strange_matter -> graviton_lens [color="#a8ffab"];
-          
+  iron_ingot -> circuit_board [color="#1f8042"];
+  copper_ingot -> circuit_board [color="#1f8042"];
+  glass -> prism [color="#1f8042"];
+  iron_ingot -> electric_motor [color="#1f8042"];
+  gear -> electric_motor [color="#1f8042"];
+  magnetic_coil -> electric_motor [color="#1f8042"];
+  copper_ingot -> microcrystalline_component [color="#1f8042"];
+  high_purity_silicon -> microcrystalline_component [color="#1f8042"];
+  iron_ingot -> gear [color="#1f8042"];
+  prism -> plasma_exciter [color="#1f8042"];
+  magnetic_coil -> plasma_exciter [color="#1f8042"];
+  prism -> photon_combiner [color="#1f8042"];
+  circuit_board -> photon_combiner [color="#1f8042"];
+  optical_grating_crystal -> photon_combiner [color="#1f8042"];
+  circuit_board -> photon_combiner [color="#1f8042"];
+  electric_motor -> electromagnetic_turbine [color="#1f8042"];
+  magnetic_coil -> electromagnetic_turbine [color="#1f8042"];
+  circuit_board -> processor [color="#1f8042"];
+  microcrystalline_component -> processor [color="#1f8042"];
+  steel -> foundation [color="#1f8042"];
+  stone -> foundation [color="#1f8042"];
+  electromagnetic_turbine -> particle_container [color="#1f8042"];
+  copper_ingot -> particle_container [color="#1f8042"];
+  graphene -> particle_container [color="#1f8042"];
+  unipolar_magnet -> particle_container [color="#1f8042"];
+  copper_ingot -> particle_container [color="#1f8042"];
+  electromagnetic_turbine -> super_magnetic_ring [color="#1f8042"];
+  magnet -> super_magnetic_ring [color="#1f8042"];
+  energetic_graphite -> super_magnetic_ring [color="#1f8042"];
+  diamond -> graviton_lens [color="#1f8042"];
+  strange_matter -> graviton_lens [color="#1f8042"];
   hydrogen -> hydrogen_fuel_rod [color="#ffa8ef"];
-          
   titanium_ingot -> hydrogen_fuel_rod [color="#ffa8ef"];
-          
-  titanium_alloy -> deuteron_fuel_rod [color="#a8ffab"];
-          
-  deuterium -> deuteron_fuel_rod [color="#a8ffab"];
-          
-  super_magnetic_ring -> deuteron_fuel_rod [color="#a8ffab"];
-          
-  antimatter -> antimatter_fuel_rod [color="#a8ffab"];
-          
-  hydrogen -> antimatter_fuel_rod [color="#a8ffab"];
-          
-  titanium_alloy -> antimatter_fuel_rod [color="#a8ffab"];
-          
-  annihilation_constraint_sphere -> antimatter_fuel_rod [color="#a8ffab"];
-          
+  titanium_alloy -> deuteron_fuel_rod [color="#1f8042"];
+  deuterium -> deuteron_fuel_rod [color="#1f8042"];
+  super_magnetic_ring -> deuteron_fuel_rod [color="#1f8042"];
+  antimatter -> antimatter_fuel_rod [color="#1f8042"];
+  hydrogen -> antimatter_fuel_rod [color="#1f8042"];
+  titanium_alloy -> antimatter_fuel_rod [color="#1f8042"];
+  annihilation_constraint_sphere -> antimatter_fuel_rod [color="#1f8042"];
   refined_oil -> plastic [color="#ffa8ef"];
-          
   energetic_graphite -> plastic [color="#ffa8ef"];
-          
   refined_oil -> organic_crystal [color="#ffa8ef"];
-          
   plastic -> organic_crystal [color="#ffa8ef"];
-          
   water -> organic_crystal [color="#ffa8ef"];
-          
   log -> organic_crystal [color="#ffa8ef"];
-          
   plant_fuel -> organic_crystal [color="#ffa8ef"];
-          
   water -> organic_crystal [color="#ffa8ef"];
-          
   sulfuric_acid -> graphene [color="#ffa8ef"];
-          
   energetic_graphite -> graphene [color="#ffa8ef"];
-          
   fire_ice -> graphene [color="#ffa8ef"];
-          
-  steel -> thruster [color="#a8ffab"];
-          
-  copper_ingot -> thruster [color="#a8ffab"];
-          
-  titanium_alloy -> reinforced_thruster [color="#a8ffab"];
-          
-  electromagnetic_turbine -> reinforced_thruster [color="#a8ffab"];
-          
-  titanium_crystal -> casimir_crystal [color="#a8ffab"];
-          
-  graphene -> casimir_crystal [color="#a8ffab"];
-          
-  hydrogen -> casimir_crystal [color="#a8ffab"];
-          
-  optical_grating_crystal -> casimir_crystal [color="#a8ffab"];
-          
-  graphene -> casimir_crystal [color="#a8ffab"];
-          
-  hydrogen -> casimir_crystal [color="#a8ffab"];
-          
+  steel -> thruster [color="#1f8042"];
+  copper_ingot -> thruster [color="#1f8042"];
+  titanium_alloy -> reinforced_thruster [color="#1f8042"];
+  electromagnetic_turbine -> reinforced_thruster [color="#1f8042"];
+  titanium_crystal -> casimir_crystal [color="#1f8042"];
+  graphene -> casimir_crystal [color="#1f8042"];
+  hydrogen -> casimir_crystal [color="#1f8042"];
+  optical_grating_crystal -> casimir_crystal [color="#1f8042"];
+  graphene -> casimir_crystal [color="#1f8042"];
+  hydrogen -> casimir_crystal [color="#1f8042"];
   deuterium -> strange_matter [color="#a8efff"];
-          
   iron_ingot -> strange_matter [color="#a8efff"];
-          
   particle_container -> strange_matter [color="#a8efff"];
-          
-  titanium_ingot -> titanium_crystal [color="#a8ffab"];
-          
-  organic_crystal -> titanium_crystal [color="#a8ffab"];
-          
+  titanium_ingot -> titanium_crystal [color="#1f8042"];
+  organic_crystal -> titanium_crystal [color="#1f8042"];
   graphene -> carbon_nanotube [color="#ffa8ef"];
-          
   titanium_ingot -> carbon_nanotube [color="#ffa8ef"];
-          
   spiniform_stalagmite_crystal -> carbon_nanotube [color="#ffa8ef"];
-          
-  processor -> annihilation_constraint_sphere [color="#a8ffab"];
-          
-  particle_container -> annihilation_constraint_sphere [color="#a8ffab"];
-          
-  glass -> titanium_glass [color="#a8ffab"];
-          
-  titanium_ingot -> titanium_glass [color="#a8ffab"];
-          
-  water -> titanium_glass [color="#a8ffab"];
-          
-  carbon_nanotube -> particle_broadband [color="#a8ffab"];
-          
-  crystal_silicon -> particle_broadband [color="#a8ffab"];
-          
-  plastic -> particle_broadband [color="#a8ffab"];
-          
-  iron_ingot -> logistics_drone [color="#a8ffab"];
-          
-  processor -> logistics_drone [color="#a8ffab"];
-          
-  thruster -> logistics_drone [color="#a8ffab"];
-          
-  graviton_lens -> space_warper [color="#a8ffab"];
-          
-  gravity_matrix -> space_warper [color="#a8ffab"];
-          
-  casimir_crystal -> plane_filter [color="#a8ffab"];
-          
-  titanium_glass -> plane_filter [color="#a8ffab"];
-          
-  processor -> quantum_chip [color="#a8ffab"];
-          
-  plane_filter -> quantum_chip [color="#a8ffab"];
-          
-  processor -> logistics_vessel [color="#a8ffab"];
-          
-  titanium_alloy -> logistics_vessel [color="#a8ffab"];
-          
-  reinforced_thruster -> logistics_vessel [color="#a8ffab"];
-          
-  graphene -> solar_sail [color="#a8ffab"];
-          
-  photon_combiner -> solar_sail [color="#a8ffab"];
-          
-  carbon_nanotube -> frame_material [color="#a8ffab"];
-          
-  titanium_alloy -> frame_material [color="#a8ffab"];
-          
-  high_purity_silicon -> frame_material [color="#a8ffab"];
-          
-  frame_material -> dyson_sphere_component [color="#a8ffab"];
-          
-  processor -> dyson_sphere_component [color="#a8ffab"];
-          
-  solar_sail -> dyson_sphere_component [color="#a8ffab"];
-          
-  dyson_sphere_component -> small_carrier_rocket [color="#a8ffab"];
-          
-  deuteron_fuel_rod -> small_carrier_rocket [color="#a8ffab"];
-          
-  quantum_chip -> small_carrier_rocket [color="#a8ffab"];
-          
+  processor -> annihilation_constraint_sphere [color="#1f8042"];
+  particle_container -> annihilation_constraint_sphere [color="#1f8042"];
+  glass -> titanium_glass [color="#1f8042"];
+  titanium_ingot -> titanium_glass [color="#1f8042"];
+  water -> titanium_glass [color="#1f8042"];
+  carbon_nanotube -> particle_broadband [color="#1f8042"];
+  crystal_silicon -> particle_broadband [color="#1f8042"];
+  plastic -> particle_broadband [color="#1f8042"];
+  iron_ingot -> logistics_drone [color="#1f8042"];
+  processor -> logistics_drone [color="#1f8042"];
+  thruster -> logistics_drone [color="#1f8042"];
+  graviton_lens -> space_warper [color="#1f8042"];
+  gravity_matrix -> space_warper [color="#1f8042"];
+  casimir_crystal -> plane_filter [color="#1f8042"];
+  titanium_glass -> plane_filter [color="#1f8042"];
+  processor -> quantum_chip [color="#1f8042"];
+  plane_filter -> quantum_chip [color="#1f8042"];
+  processor -> logistics_vessel [color="#1f8042"];
+  titanium_alloy -> logistics_vessel [color="#1f8042"];
+  reinforced_thruster -> logistics_vessel [color="#1f8042"];
+  graphene -> solar_sail [color="#1f8042"];
+  photon_combiner -> solar_sail [color="#1f8042"];
+  carbon_nanotube -> frame_material [color="#1f8042"];
+  titanium_alloy -> frame_material [color="#1f8042"];
+  high_purity_silicon -> frame_material [color="#1f8042"];
+  frame_material -> dyson_sphere_component [color="#1f8042"];
+  processor -> dyson_sphere_component [color="#1f8042"];
+  solar_sail -> dyson_sphere_component [color="#1f8042"];
+  dyson_sphere_component -> small_carrier_rocket [color="#1f8042"];
+  deuteron_fuel_rod -> small_carrier_rocket [color="#1f8042"];
+  quantum_chip -> small_carrier_rocket [color="#1f8042"];
   magnetic_coil -> electromagnetic_matrix [color="#62b3f5"];
-          
   circuit_board -> electromagnetic_matrix [color="#62b3f5"];
-          
   energetic_graphite -> energy_matrix [color="#62b3f5"];
-          
   hydrogen -> energy_matrix [color="#62b3f5"];
-          
   diamond -> structure_matrix [color="#62b3f5"];
-          
   titanium_crystal -> structure_matrix [color="#62b3f5"];
-          
   processor -> information_matrix [color="#62b3f5"];
-          
   particle_broadband -> information_matrix [color="#62b3f5"];
-          
   graviton_lens -> gravity_matrix [color="#62b3f5"];
-          
   quantum_chip -> gravity_matrix [color="#62b3f5"];
-          
   electromagnetic_matrix -> universe_matrix [color="#62b3f5"];
-          
   energy_matrix -> universe_matrix [color="#62b3f5"];
-          
   structure_matrix -> universe_matrix [color="#62b3f5"];
-          
   information_matrix -> universe_matrix [color="#62b3f5"];
-          
   gravity_matrix -> universe_matrix [color="#62b3f5"];
-          
   antimatter -> universe_matrix [color="#62b3f5"];
-          
-  iron_ingot -> tesla_tower [color="#a8ffab"];
-          
-  magnetic_coil -> tesla_tower [color="#a8ffab"];
-          
-  tesla_tower -> wireless_power_tower [color="#a8ffab"];
-          
-  plasma_exciter -> wireless_power_tower [color="#a8ffab"];
-          
-  wireless_power_tower -> satellite_substation [color="#a8ffab"];
-          
-  super_magnetic_ring -> satellite_substation [color="#a8ffab"];
-          
-  frame_material -> satellite_substation [color="#a8ffab"];
-          
-  iron_ingot -> wind_turbine [color="#a8ffab"];
-          
-  gear -> wind_turbine [color="#a8ffab"];
-          
-  magnetic_coil -> wind_turbine [color="#a8ffab"];
-          
-  iron_ingot -> thermal_power_station [color="#a8ffab"];
-          
-  gear -> thermal_power_station [color="#a8ffab"];
-          
-  magnetic_coil -> thermal_power_station [color="#a8ffab"];
-          
-  stone -> thermal_power_station [color="#a8ffab"];
-          
-  copper_ingot -> solar_panel [color="#a8ffab"];
-          
-  high_purity_silicon -> solar_panel [color="#a8ffab"];
-          
-  circuit_board -> solar_panel [color="#a8ffab"];
-          
-  titanium_alloy -> mini_fusion_power_station [color="#a8ffab"];
-          
-  super_magnetic_ring -> mini_fusion_power_station [color="#a8ffab"];
-          
-  carbon_nanotube -> mini_fusion_power_station [color="#a8ffab"];
-          
-  processor -> mini_fusion_power_station [color="#a8ffab"];
-          
-  iron_ingot -> accumulator [color="#a8ffab"];
-          
-  super_magnetic_ring -> accumulator [color="#a8ffab"];
-          
-  crystal_silicon -> accumulator [color="#a8ffab"];
-          
+  iron_ingot -> tesla_tower [color="#1f8042"];
+  magnetic_coil -> tesla_tower [color="#1f8042"];
+  tesla_tower -> wireless_power_tower [color="#1f8042"];
+  plasma_exciter -> wireless_power_tower [color="#1f8042"];
+  wireless_power_tower -> satellite_substation [color="#1f8042"];
+  super_magnetic_ring -> satellite_substation [color="#1f8042"];
+  frame_material -> satellite_substation [color="#1f8042"];
+  iron_ingot -> wind_turbine [color="#1f8042"];
+  gear -> wind_turbine [color="#1f8042"];
+  magnetic_coil -> wind_turbine [color="#1f8042"];
+  iron_ingot -> thermal_power_station [color="#1f8042"];
+  gear -> thermal_power_station [color="#1f8042"];
+  magnetic_coil -> thermal_power_station [color="#1f8042"];
+  stone -> thermal_power_station [color="#1f8042"];
+  copper_ingot -> solar_panel [color="#1f8042"];
+  high_purity_silicon -> solar_panel [color="#1f8042"];
+  circuit_board -> solar_panel [color="#1f8042"];
+  titanium_alloy -> mini_fusion_power_station [color="#1f8042"];
+  super_magnetic_ring -> mini_fusion_power_station [color="#1f8042"];
+  carbon_nanotube -> mini_fusion_power_station [color="#1f8042"];
+  processor -> mini_fusion_power_station [color="#1f8042"];
+  iron_ingot -> accumulator [color="#1f8042"];
+  super_magnetic_ring -> accumulator [color="#1f8042"];
+  crystal_silicon -> accumulator [color="#1f8042"];
   full_accumulator -> accumulator [color="#98ff69"];
-          
   accumulator -> full_accumulator [color="#98ff69"];
-          
-  titanium_alloy -> energy_exchanger [color="#a8ffab"];
-          
-  steel -> energy_exchanger [color="#a8ffab"];
-          
-  processor -> energy_exchanger [color="#a8ffab"];
-          
-  particle_container -> energy_exchanger [color="#a8ffab"];
-          
-  steel -> ray_receiver [color="#a8ffab"];
-          
-  high_purity_silicon -> ray_receiver [color="#a8ffab"];
-          
-  photon_combiner -> ray_receiver [color="#a8ffab"];
-          
-  processor -> ray_receiver [color="#a8ffab"];
-          
-  super_magnetic_ring -> ray_receiver [color="#a8ffab"];
-          
-  titanium_alloy -> artificial_star [color="#a8ffab"];
-          
-  frame_material -> artificial_star [color="#a8ffab"];
-          
-  annihilation_constraint_sphere -> artificial_star [color="#a8ffab"];
-          
-  quantum_chip -> artificial_star [color="#a8ffab"];
-          
-  iron_ingot -> conveyor_belt_mk_i [color="#a8ffab"];
-          
-  gear -> conveyor_belt_mk_i [color="#a8ffab"];
-          
-  conveyor_belt_mk_i -> conveyor_belt_mk_ii [color="#a8ffab"];
-          
-  electromagnetic_turbine -> conveyor_belt_mk_ii [color="#a8ffab"];
-          
-  conveyor_belt_mk_ii -> conveyor_belt_mk_iii [color="#a8ffab"];
-          
-  super_magnetic_ring -> conveyor_belt_mk_iii [color="#a8ffab"];
-          
-  graphene -> conveyor_belt_mk_iii [color="#a8ffab"];
-          
-  iron_ingot -> splitter [color="#a8ffab"];
-          
-  gear -> splitter [color="#a8ffab"];
-          
-  circuit_board -> splitter [color="#a8ffab"];
-          
-  iron_ingot -> storage_mk_i [color="#a8ffab"];
-          
-  stone -> storage_mk_i [color="#a8ffab"];
-          
-  steel -> storage_mk_ii [color="#a8ffab"];
-          
-  stone -> storage_mk_ii [color="#a8ffab"];
-          
-  iron_ingot -> storage_tank [color="#a8ffab"];
-          
-  stone -> storage_tank [color="#a8ffab"];
-          
-  glass -> storage_tank [color="#a8ffab"];
-          
-  steel -> planetary_logistics_station [color="#a8ffab"];
-          
-  titanium_ingot -> planetary_logistics_station [color="#a8ffab"];
-          
-  processor -> planetary_logistics_station [color="#a8ffab"];
-          
-  particle_container -> planetary_logistics_station [color="#a8ffab"];
-          
-  planetary_logistics_station -> interstellar_logistics_station [color="#a8ffab"];
-          
-  titanium_alloy -> interstellar_logistics_station [color="#a8ffab"];
-          
-  particle_container -> interstellar_logistics_station [color="#a8ffab"];
-          
-  interstellar_logistics_station -> orbit_collector [color="#a8ffab"];
-          
-  super_magnetic_ring -> orbit_collector [color="#a8ffab"];
-          
-  reinforced_thruster -> orbit_collector [color="#a8ffab"];
-          
-  full_accumulator -> orbit_collector [color="#a8ffab"];
-          
-  steel -> em_rail_ejector [color="#a8ffab"];
-          
-  gear -> em_rail_ejector [color="#a8ffab"];
-          
-  processor -> em_rail_ejector [color="#a8ffab"];
-          
-  super_magnetic_ring -> em_rail_ejector [color="#a8ffab"];
-          
-  iron_ingot -> sorter_mk_i [color="#a8ffab"];
-          
-  circuit_board -> sorter_mk_i [color="#a8ffab"];
-          
-  sorter_mk_i -> sorter_mk_ii [color="#a8ffab"];
-          
-  electric_motor -> sorter_mk_ii [color="#a8ffab"];
-          
-  sorter_mk_ii -> sorter_mk_iii [color="#a8ffab"];
-          
-  electromagnetic_turbine -> sorter_mk_iii [color="#a8ffab"];
-          
-  iron_ingot -> mining_machine [color="#a8ffab"];
-          
-  circuit_board -> mining_machine [color="#a8ffab"];
-          
-  magnetic_coil -> mining_machine [color="#a8ffab"];
-          
-  gear -> mining_machine [color="#a8ffab"];
-          
-  iron_ingot -> water_pump [color="#a8ffab"];
-          
-  circuit_board -> water_pump [color="#a8ffab"];
-          
-  electric_motor -> water_pump [color="#a8ffab"];
-          
-  stone -> water_pump [color="#a8ffab"];
-          
-  steel -> oil_extractor [color="#a8ffab"];
-          
-  circuit_board -> oil_extractor [color="#a8ffab"];
-          
-  plasma_exciter -> oil_extractor [color="#a8ffab"];
-          
-  stone -> oil_extractor [color="#a8ffab"];
-          
-  steel -> oil_refinery [color="#a8ffab"];
-          
-  circuit_board -> oil_refinery [color="#a8ffab"];
-          
-  plasma_exciter -> oil_refinery [color="#a8ffab"];
-          
-  stone -> oil_refinery [color="#a8ffab"];
-          
-  titanium_alloy -> miniature_particle_collider [color="#a8ffab"];
-          
-  frame_material -> miniature_particle_collider [color="#a8ffab"];
-          
-  super_magnetic_ring -> miniature_particle_collider [color="#a8ffab"];
-          
-  graphene -> miniature_particle_collider [color="#a8ffab"];
-          
-  processor -> miniature_particle_collider [color="#a8ffab"];
-          
-  iron_ingot -> matrix_lab [color="#a8ffab"];
-          
-  glass -> matrix_lab [color="#a8ffab"];
-          
-  circuit_board -> matrix_lab [color="#a8ffab"];
-          
-  magnetic_coil -> matrix_lab [color="#a8ffab"];
-          
-  titanium_alloy -> vertical_launching_silo [color="#a8ffab"];
-          
-  frame_material -> vertical_launching_silo [color="#a8ffab"];
-          
-  graviton_lens -> vertical_launching_silo [color="#a8ffab"];
-          
-  quantum_chip -> vertical_launching_silo [color="#a8ffab"];
-          
-  iron_ingot -> assembling_machine_mk_i [color="#a8ffab"];
-          
-  gear -> assembling_machine_mk_i [color="#a8ffab"];
-          
-  circuit_board -> assembling_machine_mk_i [color="#a8ffab"];
-          
-  assembling_machine_mk_i -> assembling_machine_mk_ii [color="#a8ffab"];
-          
-  graphene -> assembling_machine_mk_ii [color="#a8ffab"];
-          
-  processor -> assembling_machine_mk_ii [color="#a8ffab"];
-          
-  assembling_machine_mk_ii -> assembling_machine_mk_iii [color="#a8ffab"];
-          
-  particle_broadband -> assembling_machine_mk_iii [color="#a8ffab"];
-          
-  quantum_chip -> assembling_machine_mk_iii [color="#a8ffab"];
-          
-  iron_ingot -> smelter [color="#a8ffab"];
-          
-  stone -> smelter [color="#a8ffab"];
-          
-  circuit_board -> smelter [color="#a8ffab"];
-          
-  magnetic_coil -> smelter [color="#a8ffab"];
-          
-  steel -> chemical_plant [color="#a8ffab"];
-          
-  stone -> chemical_plant [color="#a8ffab"];
-          
-  circuit_board -> chemical_plant [color="#a8ffab"];
-          
-  glass -> chemical_plant [color="#a8ffab"];
-          
-  steel -> fractionator [color="#a8ffab"];
-          
-  stone -> fractionator [color="#a8ffab"];
-          
-  processor -> fractionator [color="#a8ffab"];
-          
-  glass -> fractionator [color="#a8ffab"];
-          }
+  titanium_alloy -> energy_exchanger [color="#1f8042"];
+  steel -> energy_exchanger [color="#1f8042"];
+  processor -> energy_exchanger [color="#1f8042"];
+  particle_container -> energy_exchanger [color="#1f8042"];
+  steel -> ray_receiver [color="#1f8042"];
+  high_purity_silicon -> ray_receiver [color="#1f8042"];
+  photon_combiner -> ray_receiver [color="#1f8042"];
+  processor -> ray_receiver [color="#1f8042"];
+  super_magnetic_ring -> ray_receiver [color="#1f8042"];
+  titanium_alloy -> artificial_star [color="#1f8042"];
+  frame_material -> artificial_star [color="#1f8042"];
+  annihilation_constraint_sphere -> artificial_star [color="#1f8042"];
+  quantum_chip -> artificial_star [color="#1f8042"];
+  iron_ingot -> conveyor_belt_mk_i [color="#1f8042"];
+  gear -> conveyor_belt_mk_i [color="#1f8042"];
+  conveyor_belt_mk_i -> conveyor_belt_mk_ii [color="#1f8042"];
+  electromagnetic_turbine -> conveyor_belt_mk_ii [color="#1f8042"];
+  conveyor_belt_mk_ii -> conveyor_belt_mk_iii [color="#1f8042"];
+  super_magnetic_ring -> conveyor_belt_mk_iii [color="#1f8042"];
+  graphene -> conveyor_belt_mk_iii [color="#1f8042"];
+  iron_ingot -> splitter [color="#1f8042"];
+  gear -> splitter [color="#1f8042"];
+  circuit_board -> splitter [color="#1f8042"];
+  iron_ingot -> storage_mk_i [color="#1f8042"];
+  stone -> storage_mk_i [color="#1f8042"];
+  steel -> storage_mk_ii [color="#1f8042"];
+  stone -> storage_mk_ii [color="#1f8042"];
+  iron_ingot -> storage_tank [color="#1f8042"];
+  stone -> storage_tank [color="#1f8042"];
+  glass -> storage_tank [color="#1f8042"];
+  steel -> planetary_logistics_station [color="#1f8042"];
+  titanium_ingot -> planetary_logistics_station [color="#1f8042"];
+  processor -> planetary_logistics_station [color="#1f8042"];
+  particle_container -> planetary_logistics_station [color="#1f8042"];
+  planetary_logistics_station -> interstellar_logistics_station [color="#1f8042"];
+  titanium_alloy -> interstellar_logistics_station [color="#1f8042"];
+  particle_container -> interstellar_logistics_station [color="#1f8042"];
+  interstellar_logistics_station -> orbit_collector [color="#1f8042"];
+  super_magnetic_ring -> orbit_collector [color="#1f8042"];
+  reinforced_thruster -> orbit_collector [color="#1f8042"];
+  full_accumulator -> orbit_collector [color="#1f8042"];
+  steel -> em_rail_ejector [color="#1f8042"];
+  gear -> em_rail_ejector [color="#1f8042"];
+  processor -> em_rail_ejector [color="#1f8042"];
+  super_magnetic_ring -> em_rail_ejector [color="#1f8042"];
+  iron_ingot -> sorter_mk_i [color="#1f8042"];
+  circuit_board -> sorter_mk_i [color="#1f8042"];
+  sorter_mk_i -> sorter_mk_ii [color="#1f8042"];
+  electric_motor -> sorter_mk_ii [color="#1f8042"];
+  sorter_mk_ii -> sorter_mk_iii [color="#1f8042"];
+  electromagnetic_turbine -> sorter_mk_iii [color="#1f8042"];
+  iron_ingot -> mining_machine [color="#1f8042"];
+  circuit_board -> mining_machine [color="#1f8042"];
+  magnetic_coil -> mining_machine [color="#1f8042"];
+  gear -> mining_machine [color="#1f8042"];
+  iron_ingot -> water_pump [color="#1f8042"];
+  circuit_board -> water_pump [color="#1f8042"];
+  electric_motor -> water_pump [color="#1f8042"];
+  stone -> water_pump [color="#1f8042"];
+  steel -> oil_extractor [color="#1f8042"];
+  circuit_board -> oil_extractor [color="#1f8042"];
+  plasma_exciter -> oil_extractor [color="#1f8042"];
+  stone -> oil_extractor [color="#1f8042"];
+  steel -> oil_refinery [color="#1f8042"];
+  circuit_board -> oil_refinery [color="#1f8042"];
+  plasma_exciter -> oil_refinery [color="#1f8042"];
+  stone -> oil_refinery [color="#1f8042"];
+  titanium_alloy -> miniature_particle_collider [color="#1f8042"];
+  frame_material -> miniature_particle_collider [color="#1f8042"];
+  super_magnetic_ring -> miniature_particle_collider [color="#1f8042"];
+  graphene -> miniature_particle_collider [color="#1f8042"];
+  processor -> miniature_particle_collider [color="#1f8042"];
+  iron_ingot -> matrix_lab [color="#1f8042"];
+  glass -> matrix_lab [color="#1f8042"];
+  circuit_board -> matrix_lab [color="#1f8042"];
+  magnetic_coil -> matrix_lab [color="#1f8042"];
+  titanium_alloy -> vertical_launching_silo [color="#1f8042"];
+  frame_material -> vertical_launching_silo [color="#1f8042"];
+  graviton_lens -> vertical_launching_silo [color="#1f8042"];
+  quantum_chip -> vertical_launching_silo [color="#1f8042"];
+  iron_ingot -> assembling_machine_mk_i [color="#1f8042"];
+  gear -> assembling_machine_mk_i [color="#1f8042"];
+  circuit_board -> assembling_machine_mk_i [color="#1f8042"];
+  assembling_machine_mk_i -> assembling_machine_mk_ii [color="#1f8042"];
+  graphene -> assembling_machine_mk_ii [color="#1f8042"];
+  processor -> assembling_machine_mk_ii [color="#1f8042"];
+  assembling_machine_mk_ii -> assembling_machine_mk_iii [color="#1f8042"];
+  particle_broadband -> assembling_machine_mk_iii [color="#1f8042"];
+  quantum_chip -> assembling_machine_mk_iii [color="#1f8042"];
+  iron_ingot -> smelter [color="#1f8042"];
+  stone -> smelter [color="#1f8042"];
+  circuit_board -> smelter [color="#1f8042"];
+  magnetic_coil -> smelter [color="#1f8042"];
+  steel -> chemical_plant [color="#1f8042"];
+  stone -> chemical_plant [color="#1f8042"];
+  circuit_board -> chemical_plant [color="#1f8042"];
+  glass -> chemical_plant [color="#1f8042"];
+  steel -> fractionator [color="#1f8042"];
+  stone -> fractionator [color="#1f8042"];
+  processor -> fractionator [color="#1f8042"];
+  glass -> fractionator [color="#1f8042"];
+subgraph cluster_0 { label="Legend"; legend [image="legend.png", label="", shape="none"]; }
+}
