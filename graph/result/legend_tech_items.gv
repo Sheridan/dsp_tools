@@ -1,0 +1,37 @@
+digraph g {
+  graph [overlap=false, splines=ortho, ratio=auto, bgcolor="#0c041c", fontcolor="#ebf2ff", fillcolor="#0c041c", rankdir="TB" fontname=Roboto, fontsize=10];
+  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
+  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=1];
+types [label="Types", fillcolor="#0c041c"]; assemblers [label="Relations", fillcolor="#0c041c"]; flags [label="Flags", fillcolor="#0c041c"];   natural_generation [label="🎲 Resources", fillcolor="#0c041c"]; flags ->natural_generation [penwidth=1];
+  fuel [label="🔥 Fuel", fillcolor="#0c041c"]; flags ->fuel [penwidth=1];
+  fluid [label="💧 Fluid", fillcolor="#0c041c"]; flags ->fluid [penwidth=1];
+  energy_generator [label="⚡️ Generators", fillcolor="#0c041c"]; flags ->energy_generator [penwidth=1];
+  transport [label="🚚 Transport", fillcolor="#0c041c"]; flags ->transport [penwidth=1];
+  dyson [label="🪐 Dyson components", fillcolor="#0c041c"]; flags ->dyson [penwidth=1];
+  storage [label="📦 Storage", fillcolor="#0c041c"]; flags ->storage [penwidth=1];
+  ore [label="Ore", fillcolor="#2b0004"];
+  types -> ore [penwidth=1];
+  plant [label="Plant", fillcolor="#0c3d11"];
+  types -> plant [penwidth=1];
+  component [label="Component", fillcolor="#200026"];
+  types -> component [penwidth=1];
+  product [label="End product", fillcolor="#2c4c70"];
+  types -> product [penwidth=1];
+  building [label="Building", fillcolor="#424000"];
+  types -> building [penwidth=1];
+  matrix [label="Matrix", fillcolor="#012036"];
+  types -> matrix [penwidth=1];
+  tech [label="Technology", fillcolor="#4d4736"];
+  types -> tech [penwidth=1];
+  matrix_lab_a [label="Matrix lab", fillcolor="#0c041c"]; matrix_lab_b [shape=point]; assemblers -> matrix_lab_a [penwidth=1]; matrix_lab_a -> matrix_lab_b [color="#62b3f5"]; 
+  smelter_a [label="Smelter", fillcolor="#0c041c"]; smelter_b [shape=point]; assemblers -> smelter_a [penwidth=1]; smelter_a -> smelter_b [color="#ffbca8"]; 
+  oil_refinery_a [label="Refinery", fillcolor="#0c041c"]; oil_refinery_b [shape=point]; assemblers -> oil_refinery_a [penwidth=1]; oil_refinery_a -> oil_refinery_b [color="#450873"]; 
+  chemical_plant_a [label="Chemical", fillcolor="#0c041c"]; chemical_plant_b [shape=point]; assemblers -> chemical_plant_a [penwidth=1]; chemical_plant_a -> chemical_plant_b [color="#ffa8ef"]; 
+  assembling_machine_a [label="Assembler", fillcolor="#0c041c"]; assembling_machine_b [shape=point]; assemblers -> assembling_machine_a [penwidth=1]; assembling_machine_a -> assembling_machine_b [color="#1f8042"]; 
+  miniature_particle_collider_a [label="Collider", fillcolor="#0c041c"]; miniature_particle_collider_b [shape=point]; assemblers -> miniature_particle_collider_a [penwidth=1]; miniature_particle_collider_a -> miniature_particle_collider_b [color="#a8efff"]; 
+  fractionator_a [label="Fractionator", fillcolor="#0c041c"]; fractionator_b [shape=point]; assemblers -> fractionator_a [penwidth=1]; fractionator_a -> fractionator_b [color="#a9a8ff"]; 
+  energy_exchanger_a [label="Energy exchanger", fillcolor="#0c041c"]; energy_exchanger_b [shape=point]; assemblers -> energy_exchanger_a [penwidth=1]; energy_exchanger_a -> energy_exchanger_b [color="#98ff69"]; 
+  tech_a [label="Technology", fillcolor="#0c041c"]; tech_b [shape=point]; assemblers -> tech_a [penwidth=1]; tech_a -> tech_b [color="#4d4736"]; 
+  unlocks_a [label="Unlocks", fillcolor="#0c041c"]; unlocks_b [shape=point]; assemblers -> unlocks_a [penwidth=1]; unlocks_a -> unlocks_b [color="#33585c"]; 
+  resources_a [label="Research resources", fillcolor="#0c041c"]; resources_b [shape=point]; assemblers -> resources_a [penwidth=1]; resources_a -> resources_b [color="#335c3b"]; 
+  }

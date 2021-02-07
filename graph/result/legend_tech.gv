@@ -1,0 +1,8 @@
+digraph g {
+  graph [overlap=false, splines=ortho, ratio=auto, bgcolor="#0c041c", fontcolor="#ebf2ff", fillcolor="#0c041c", rankdir="TB" fontname=Roboto, fontsize=10];
+  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
+  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=1];
+types [label="Types", fillcolor="#0c041c"]; assemblers [label="Relations", fillcolor="#0c041c"]; flags [label="Flags", fillcolor="#0c041c"];   tech [label="Technology", fillcolor="#4d4736"];
+  types -> tech [penwidth=1];
+  tech_a [label="Technology", fillcolor="#0c041c"]; tech_b [shape=point]; assemblers -> tech_a [penwidth=1]; tech_a -> tech_b [color="#4d4736"]; 
+  }

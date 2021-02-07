@@ -68,7 +68,8 @@
         "component": "Component",
         "product": "End product",
         "building": "Building",
-        "matrix": "Matrix"
+        "matrix": "Matrix",
+        "tech": "Technology"
       },
       "edges":
       {
@@ -85,7 +86,10 @@
         "ray_receiver": "Ray receiver",
         "water_pump": "Pump",
         "orbit_collector": "Orbit collector",
-        "energy_exchanger": "Energy exchanger"
+        "energy_exchanger": "Energy exchanger",
+        "tech": "Technology",
+        "unlocks": "Unlocks",
+        "resources": "Research resources"
       }
     }
   },
@@ -2182,7 +2186,7 @@
     {
         "name": "Mission completed",
         "requirements": ["universe_matrix"],
-        "resources": ["electromagnetic_matrix", "energy_matrix", "structure_matrix", "information_matrix", "gravity_matrix"],
+        "resources": ["universe_matrix"],
         "unlocks": [],
         "icon": "https://dsp-wiki.com/images/3/32/Tech_Mission_Completed%21.png"
     }
