@@ -1091,7 +1091,7 @@ digraph g {
                 <td><img src='icons/conveyor_belt_mk_i.png' /></td>
                 <td>Usages: 1</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#424000"];
   conveyor_belt_mk_ii [label=<
@@ -1103,7 +1103,7 @@ digraph g {
                 <td><img src='icons/conveyor_belt_mk_ii.png' /></td>
                 <td>Usages: 1</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#424000"];
   conveyor_belt_mk_iii [label=<
@@ -1115,7 +1115,7 @@ digraph g {
                 <td><img src='icons/conveyor_belt_mk_iii.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#424000"];
   splitter [label=<
@@ -1127,7 +1127,7 @@ digraph g {
                 <td><img src='icons/splitter.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#424000"];
   storage_mk_i [label=<
@@ -1139,7 +1139,7 @@ digraph g {
                 <td><img src='icons/storage_mk_i.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 📦 </td></tr>
              </table>
              >, fillcolor="#424000"];
   storage_mk_ii [label=<
@@ -1151,7 +1151,7 @@ digraph g {
                 <td><img src='icons/storage_mk_ii.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 📦 </td></tr>
              </table>
              >, fillcolor="#424000"];
   storage_tank [label=<
@@ -1163,7 +1163,7 @@ digraph g {
                 <td><img src='icons/storage_tank.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 📦 </td></tr>
              </table>
              >, fillcolor="#424000"];
   planetary_logistics_station [label=<
@@ -1175,7 +1175,7 @@ digraph g {
                 <td><img src='icons/planetary_logistics_station.png' /></td>
                 <td>Usages: 1</td>
               </tr>
-              
+              <tr><td colspan="2"> 📦 </td></tr>
              </table>
              >, fillcolor="#424000"];
   interstellar_logistics_station [label=<
@@ -1187,7 +1187,7 @@ digraph g {
                 <td><img src='icons/interstellar_logistics_station.png' /></td>
                 <td>Usages: 1</td>
               </tr>
-              
+              <tr><td colspan="2"> 📦 </td></tr>
              </table>
              >, fillcolor="#424000"];
   orbit_collector [label=<
@@ -1223,7 +1223,7 @@ digraph g {
                 <td><img src='icons/sorter_mk_i.png' /></td>
                 <td>Usages: 1</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#424000"];
   sorter_mk_ii [label=<
@@ -1235,7 +1235,7 @@ digraph g {
                 <td><img src='icons/sorter_mk_ii.png' /></td>
                 <td>Usages: 1</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#424000"];
   sorter_mk_iii [label=<
@@ -1247,7 +1247,7 @@ digraph g {
                 <td><img src='icons/sorter_mk_iii.png' /></td>
                 <td>Usages: 0</td>
               </tr>
-              
+              <tr><td colspan="2"> 🚚 </td></tr>
              </table>
              >, fillcolor="#424000"];
   mining_machine [label=<

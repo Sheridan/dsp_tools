@@ -8,6 +8,7 @@ types [label="Types", fillcolor="#0c041c"]; assemblers [label="Assemblers", fill
   energy_generator [label="⚡️ Generators", fillcolor="#0c041c"]; flags ->energy_generator [penwidth=1];
   transport [label="🚚 Transport", fillcolor="#0c041c"]; flags ->transport [penwidth=1];
   dyson [label="🪐 Dyson components", fillcolor="#0c041c"]; flags ->dyson [penwidth=1];
+  storage [label="📦 Storage", fillcolor="#0c041c"]; flags ->storage [penwidth=1];
   ore [label="Ore", fillcolor="#2b0004"]; types -> ore [penwidth=1];
   plant [label="Plant", fillcolor="#0c3d11"]; types -> plant [penwidth=1];
   component [label="Component", fillcolor="#200026"]; types -> component [penwidth=1];
