@@ -1,902 +1,158 @@
 digraph g {
-  graph [overlap=false, splines=ortho, ratio=0.5625, bgcolor="#0c041c", fontcolor="#ebf2ff", fillcolor="#0c041c", rankdir="LR" fontname=Roboto, fontsize=10];
-  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
-  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=1];
-  tech_dyson_sphere_program [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Dyson sphere program</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_dyson_sphere_program_64.png' /></td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_electromagnetism [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Electromagnetism</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_electromagnetism_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_wind_turbine_32.png' /></td><td><img src='icons/items_tesla_tower_32.png' /></td><td><img src='icons/items_mining_machine_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_magnetic_coil_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_basic_logistics_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Basic logistics system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_basic_logistics_system_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_conveyor_belt_mk_i_32.png' /></td><td><img src='icons/items_storage_mk_i_32.png' /></td><td><img src='icons/items_sorter_mk_i_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_gear_32.png' /></td><td><img src='icons/items_circuit_board_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_automatic_metallurgy [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Automatic metallurgy</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_automatic_metallurgy_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_smelter_32.png' /></td><td><img src='icons/items_glass_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_magnetic_coil_32.png' /></td><td><img src='icons/items_circuit_board_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_electromagnetic_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Electromagnetic matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_electromagnetic_matrix_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_matrix_lab_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_magnetic_coil_32.png' /></td><td><img src='icons/items_circuit_board_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_basic_assembling_processes [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Basic assembling processes</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_basic_assembling_processes_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_assembling_machine_mk_i_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_gear_32.png' /></td><td><img src='icons/items_circuit_board_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_fluid_storage_encapsulation [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Fluid storage encapsulation</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_fluid_storage_encapsulation_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_storage_tank_32.png' /></td><td><img src='icons/items_water_pump_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_efficiency_plasma_control [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-efficiency plasma control</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_efficiency_plasma_control_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_prism_32.png' /></td><td><img src='icons/items_plasma_exciter_32.png' /></td><td><img src='icons/items_wireless_power_tower_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_electromagnetic_drive [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Electromagnetic drive</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_electromagnetic_drive_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electric_motor_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_improved_logistics_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Improved logistics system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_improved_logistics_system_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_splitter_32.png' /></td><td><img src='icons/items_sorter_mk_ii_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_steel_smelting [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Steel smelting</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_steel_smelting_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_steel_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_smelting_purification [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Smelting purification</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_smelting_purification_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_silicon_ore_32.png' /></td><td><img src='icons/items_high_purity_silicon_32.png' /></td><td><img src='icons/items_energetic_graphite_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_thermal_power [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Thermal power</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_thermal_power_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_thermal_power_station_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_plasma_extract_refining [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Plasma extract refining</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_plasma_extract_refining_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_oil_extractor_32.png' /></td><td><img src='icons/items_oil_refinery_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_environment_modification [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Environment modification</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_environment_modification_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_foundation_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_crystal_smelting [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Crystal smelting</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_crystal_smelting_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_diamond_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_solar_collection [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Solar collection</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_solar_collection_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_solar_panel_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_semiconductor_material [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Semiconductor material</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_semiconductor_material_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_microcrystalline_component_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_deuterium_fractionation [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Deuterium fractionation</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_deuterium_fractionation_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_fractionator_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_basic_chemical_engineering [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Basic chemical engineering</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_basic_chemical_engineering_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_chemical_plant_32.png' /></td><td><img src='icons/items_plastic_32.png' /></td><td><img src='icons/items_sulfuric_acid_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_energy_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Energy matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_energy_matrix_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_magnetic_levitation_technology [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Magnetic levitation technology</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_magnetic_levitation_technology_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_turbine_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_efficiency_logistics_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-efficiency logistics system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_efficiency_logistics_system_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_conveyor_belt_mk_ii_32.png' /></td><td><img src='icons/items_storage_mk_ii_32.png' /></td><td><img src='icons/items_sorter_mk_ii_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_titanium_smelting [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Titanium smelting</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_titanium_smelting_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_titanium_ingot_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_energy_storage [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Energy storage</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_energy_storage_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_accumulator_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_photon_frequency_conversion [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Photon frequency conversion</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_photon_frequency_conversion_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_photon_combiner_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_processor [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Processor</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_processor_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_processor_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_applied_superconductor [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Applied superconductor</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_applied_superconductor_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_graphene_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_polymer_chemical_engineering [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Polymer chemical engineering</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_polymer_chemical_engineering_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_organic_crystal_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_x_ray_cracking [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>X-Ray cracking</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_x_ray_cracking_64.png' /></td>
-              </tr>
-              
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_hydrogen_fuel_rod [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Hydrogen fuel rod</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_hydrogen_fuel_rod_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_hydrogen_fuel_rod_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_super_magnetic_field_generator [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Super magnetic field generator</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_super_magnetic_field_generator_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_super_magnetic_ring_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_planetary_logistics_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Planetary logistics system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_planetary_logistics_system_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_planetary_logistics_station_32.png' /></td><td><img src='icons/items_logistics_drone_32.png' /></td><td><img src='icons/items_conveyor_belt_mk_iii_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_solar_sail_orbit_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Solar sail orbit system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_solar_sail_orbit_system_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_solar_sail_32.png' /></td><td><img src='icons/items_em_rail_ejector_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_speed_assembling_processes [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-Speed assembling processes</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_speed_assembling_processes_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_assembling_machine_mk_ii_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_strength_crystal [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-Strength crystal</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_strength_crystal_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_titanium_crystal_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_thruster [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Thruster</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_thruster_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_thruster_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_magnetic_particle_trap [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Magnetic particle trap</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_magnetic_particle_trap_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_particle_container_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_strength_titanium_alloy [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-strength titanium alloy</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_strength_titanium_alloy_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_titanium_alloy_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_strength_lightweight_structure [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-strength lightweight structure</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_strength_lightweight_structure_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_frame_material_32.png' /></td><td><img src='icons/items_dyson_sphere_component_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_ray_receiver [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Ray receiver</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_ray_receiver_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_ray_receiver_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_mini_fusion_power_generation [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Mini fusion power generation</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_mini_fusion_power_generation_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_mini_fusion_power_station_32.png' /></td><td><img src='icons/items_hydrogen_fuel_rod_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_strength_material [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-Strength material</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_strength_material_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_carbon_nanotube_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_structure_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Structure matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_structure_matrix_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_reinforced_thruster [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Reinforced thruster</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_reinforced_thruster_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_reinforced_thruster_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_interstellar_logistics_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Interstellar logistics system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_interstellar_logistics_system_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_interstellar_logistics_station_32.png' /></td><td><img src='icons/items_logistics_vessel_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_interstellar_power_transmission [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Interstellar power transmission</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_interstellar_power_transmission_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_energy_exchanger_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_particle_control_technology [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Particle control technology</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_particle_control_technology_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_particle_broadband_32.png' /></td><td><img src='icons/items_crystal_silicon_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_high_strength_glass [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>High-Strength glass</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_high_strength_glass_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_titanium_glass_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_casimir_crystal [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Casimir crystal</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_casimir_crystal_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_casimir_crystal_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_miniature_particle_collider [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Miniature particle collider</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_miniature_particle_collider_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_miniature_particle_collider_32.png' /></td><td><img src='icons/items_deuterium_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_satellite_power_distribution_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Satellite power distribution system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_satellite_power_distribution_system_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_satellite_substation_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_gas_giants_exploration [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Gas giants exploration</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_gas_giants_exploration_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_orbit_collector_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_information_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Information matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_information_matrix_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_information_matrix_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_wave_function_interference [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Wave function interference</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_wave_function_interference_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_plane_filter_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_strange_matter [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Strange matter</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_strange_matter_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_strange_matter_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_vertical_launching_silo [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Vertical launching silo</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_vertical_launching_silo_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_vertical_launching_silo_32.png' /></td><td><img src='icons/items_small_carrier_rocket_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_quantum_chip [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Quantum chip</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_quantum_chip_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_quantum_chip_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_gravitational_wave_refraction [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Gravitational wave refraction</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_gravitational_wave_refraction_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_graviton_lens_32.png' /></td><td><img src='icons/items_space_warper_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_dyson_sphere_stress_system [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Dyson sphere stress system</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_dyson_sphere_stress_system_64.png' /></td>
-              </tr>
-              
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td><td><img src='icons/items_gravity_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_planetary_ionosphere_utilization [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Planetary ionosphere utilization</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_planetary_ionosphere_utilization_64.png' /></td>
-              </tr>
-              
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td><td><img src='icons/items_gravity_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_quantum_printing_technology [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Quantum printing technology</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_quantum_printing_technology_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_assembling_machine_mk_iii_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_gravity_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Gravity matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_gravity_matrix_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_gravity_matrix_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_dirac_inversion_mechanism [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Dirac inversion mechanism</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_dirac_inversion_mechanism_64.png' /></td>
-              </tr>
-              
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td><td><img src='icons/items_gravity_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_controlled_annihilation_reaction [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Controlled annihilation reaction</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_controlled_annihilation_reaction_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_annihilation_constraint_sphere_32.png' /></td><td><img src='icons/items_antimatter_fuel_rod_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_gravity_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_artificial_star [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Artificial star</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_artificial_star_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_artificial_star_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td><td><img src='icons/items_gravity_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_universe_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Universe matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_universe_matrix_64.png' /></td>
-              </tr>
-              <tr><td>Unlocks</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_universe_matrix_32.png' /></td></tr></table></td></tr>
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_electromagnetic_matrix_32.png' /></td><td><img src='icons/items_energy_matrix_32.png' /></td><td><img src='icons/items_structure_matrix_32.png' /></td><td><img src='icons/items_information_matrix_32.png' /></td><td><img src='icons/items_gravity_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_mission_completed [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>Mission completed</td>
-              </tr>
-              <tr>
-                <td><img src='icons/technologies_mission_completed_64.png' /></td>
-              </tr>
-              
-              <tr><td>Resources</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr><td><img src='icons/items_universe_matrix_32.png' /></td></tr></table></td></tr>
-             </table>
-             >, fillcolor="#4d4736"];
-  tech_dyson_sphere_program -> tech_electromagnetism [color="#4d4736"];
-  tech_electromagnetism -> tech_basic_logistics_system [color="#4d4736"];
-  tech_electromagnetism -> tech_automatic_metallurgy [color="#4d4736"];
-  tech_electromagnetism -> tech_electromagnetic_matrix [color="#4d4736"];
-  tech_electromagnetism -> tech_basic_assembling_processes [color="#4d4736"];
-  tech_electromagnetism -> tech_fluid_storage_encapsulation [color="#4d4736"];
-  tech_electromagnetism -> tech_high_efficiency_plasma_control [color="#4d4736"];
-  tech_electromagnetism -> tech_electromagnetic_drive [color="#4d4736"];
-  tech_basic_logistics_system -> tech_improved_logistics_system [color="#4d4736"];
-  tech_automatic_metallurgy -> tech_steel_smelting [color="#4d4736"];
-  tech_automatic_metallurgy -> tech_smelting_purification [color="#4d4736"];
-  tech_basic_assembling_processes -> tech_thermal_power [color="#4d4736"];
-  tech_electromagnetic_matrix -> tech_plasma_extract_refining [color="#4d4736"];
-  tech_steel_smelting -> tech_environment_modification [color="#4d4736"];
-  tech_smelting_purification -> tech_crystal_smelting [color="#4d4736"];
-  tech_basic_assembling_processes -> tech_solar_collection [color="#4d4736"];
-  tech_basic_assembling_processes -> tech_semiconductor_material [color="#4d4736"];
-  tech_thermal_power -> tech_deuterium_fractionation [color="#4d4736"];
-  tech_fluid_storage_encapsulation -> tech_basic_chemical_engineering [color="#4d4736"];
-  tech_plasma_extract_refining -> tech_basic_chemical_engineering [color="#4d4736"];
-  tech_plasma_extract_refining -> tech_energy_matrix [color="#4d4736"];
-  tech_electromagnetic_drive -> tech_magnetic_levitation_technology [color="#4d4736"];
-  tech_improved_logistics_system -> tech_high_efficiency_logistics_system [color="#4d4736"];
-  tech_steel_smelting -> tech_titanium_smelting [color="#4d4736"];
-  tech_crystal_smelting -> tech_energy_storage [color="#4d4736"];
-  tech_solar_collection -> tech_energy_storage [color="#4d4736"];
-  tech_solar_collection -> tech_photon_frequency_conversion [color="#4d4736"];
-  tech_semiconductor_material -> tech_processor [color="#4d4736"];
-  tech_basic_chemical_engineering -> tech_applied_superconductor [color="#4d4736"];
-  tech_basic_chemical_engineering -> tech_polymer_chemical_engineering [color="#4d4736"];
-  tech_basic_chemical_engineering -> tech_x_ray_cracking [color="#4d4736"];
-  tech_plasma_extract_refining -> tech_x_ray_cracking [color="#4d4736"];
-  tech_energy_matrix -> tech_hydrogen_fuel_rod [color="#4d4736"];
-  tech_magnetic_levitation_technology -> tech_super_magnetic_field_generator [color="#4d4736"];
-  tech_high_efficiency_logistics_system -> tech_planetary_logistics_system [color="#4d4736"];
-  tech_photon_frequency_conversion -> tech_solar_sail_orbit_system [color="#4d4736"];
-  tech_processor -> tech_high_speed_assembling_processes [color="#4d4736"];
-  tech_basic_assembling_processes -> tech_high_speed_assembling_processes [color="#4d4736"];
-  tech_polymer_chemical_engineering -> tech_high_strength_crystal [color="#4d4736"];
-  tech_hydrogen_fuel_rod -> tech_thruster [color="#4d4736"];
-  tech_magnetic_levitation_technology -> tech_magnetic_particle_trap [color="#4d4736"];
-  tech_titanium_smelting -> tech_high_strength_titanium_alloy [color="#4d4736"];
-  tech_solar_sail_orbit_system -> tech_high_strength_lightweight_structure [color="#4d4736"];
-  tech_solar_sail_orbit_system -> tech_ray_receiver [color="#4d4736"];
-  tech_deuterium_fractionation -> tech_mini_fusion_power_generation [color="#4d4736"];
-  tech_applied_superconductor -> tech_high_strength_material [color="#4d4736"];
-  tech_high_strength_crystal -> tech_structure_matrix [color="#4d4736"];
-  tech_thruster -> tech_reinforced_thruster [color="#4d4736"];
-  tech_planetary_logistics_system -> tech_interstellar_logistics_system [color="#4d4736"];
-  tech_high_strength_titanium_alloy -> tech_interstellar_logistics_system [color="#4d4736"];
-  tech_planetary_logistics_system -> tech_interstellar_power_transmission [color="#4d4736"];
-  tech_high_strength_titanium_alloy -> tech_interstellar_power_transmission [color="#4d4736"];
-  tech_high_strength_material -> tech_particle_control_technology [color="#4d4736"];
-  tech_high_strength_material -> tech_high_strength_glass [color="#4d4736"];
-  tech_structure_matrix -> tech_casimir_crystal [color="#4d4736"];
-  tech_structure_matrix -> tech_miniature_particle_collider [color="#4d4736"];
-  tech_super_magnetic_field_generator -> tech_satellite_power_distribution_system [color="#4d4736"];
-  tech_interstellar_logistics_system -> tech_gas_giants_exploration [color="#4d4736"];
-  tech_interstellar_power_transmission -> tech_gas_giants_exploration [color="#4d4736"];
-  tech_processor -> tech_information_matrix [color="#4d4736"];
-  tech_particle_control_technology -> tech_information_matrix [color="#4d4736"];
-  tech_high_strength_glass -> tech_wave_function_interference [color="#4d4736"];
-  tech_casimir_crystal -> tech_wave_function_interference [color="#4d4736"];
-  tech_miniature_particle_collider -> tech_strange_matter [color="#4d4736"];
-  tech_miniature_particle_collider -> tech_vertical_launching_silo [color="#4d4736"];
-  tech_wave_function_interference -> tech_quantum_chip [color="#4d4736"];
-  tech_information_matrix -> tech_quantum_chip [color="#4d4736"];
-  tech_magnetic_particle_trap -> tech_gravitational_wave_refraction [color="#4d4736"];
-  tech_strange_matter -> tech_gravitational_wave_refraction [color="#4d4736"];
-  tech_vertical_launching_silo -> tech_dyson_sphere_stress_system [color="#4d4736"];
-  tech_ray_receiver -> tech_planetary_ionosphere_utilization [color="#4d4736"];
-  tech_quantum_chip -> tech_quantum_printing_technology [color="#4d4736"];
-  tech_high_speed_assembling_processes -> tech_quantum_printing_technology [color="#4d4736"];
-  tech_gravitational_wave_refraction -> tech_gravity_matrix [color="#4d4736"];
-  tech_quantum_chip -> tech_gravity_matrix [color="#4d4736"];
-  tech_planetary_ionosphere_utilization -> tech_dirac_inversion_mechanism [color="#4d4736"];
-  tech_dirac_inversion_mechanism -> tech_controlled_annihilation_reaction [color="#4d4736"];
-  tech_controlled_annihilation_reaction -> tech_artificial_star [color="#4d4736"];
-  tech_dirac_inversion_mechanism -> tech_universe_matrix [color="#4d4736"];
-  tech_universe_matrix -> tech_mission_completed [color="#4d4736"];
-subgraph cluster_0 { label="Legend"; legend [image="result/legend_tech.png", label="", shape="none"]; }
+  graph [ overlap="false"  fontname="Roboto"  fontsize="16"  splines="ortho"  ratio="0.5625"  rankdir="LR"  fontcolor="#ebf2ff"  bgcolor="#0c041c"  fillcolor="#0c041c" ];
+  node [ fontname="Roboto"  fontsize="16"  shape="box"  style="rounded,filled"  fontcolor="#ebf2ff"  color="#ebf2ff" ];
+  edge [ fontname="Roboto"  fontsize="16"  fontcolor="#ebf2ff"  color="#ebf2ff"  penwidth="3"  minlen="1" ];
+  subgraph cluster_0 { label="Legend"; legend [image="result/legend_tech.png" label="" shape="none"]; }
+  tech1_dyson_sphere_program [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Dyson sphere program</td></tr> <tr> <td><img src='icons/tech1_96.png' /></td> </tr> </table>> fillcolor="#4b1c57"];
+  tech1001_electromagnetism [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Electromagnetism</td></tr> <tr> <td><img src='icons/tech1001_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/mining-drill_48.png' /></td> <td><img src='icons/tesla-coil_48.png' /></td> <td><img src='icons/wind-turbine_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/magnetism-wire_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1002_electromagnetic_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Electromagnetic matrix</td></tr> <tr> <td><img src='icons/tech1002_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/lab_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/circuit-board_48.png' /></td> <td><img src='icons/magnetism-wire_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1101_high_efficiency_plasma_control [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-efficiency plasma control</td></tr> <tr> <td><img src='icons/tech1101_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/plasma-generator_48.png' /></td> <td><img src='icons/charging-pole_48.png' /></td> <td><img src='icons/prism_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1102_plasma_extract_refining [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Plasma extract refining</td></tr> <tr> <td><img src='icons/tech1102_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/hydrogen_48.png' /></td> <td><img src='icons/oil-extractor_48.png' /></td> <td><img src='icons/oil-refinery_48.png' /></td> <td><img src='icons/refined-oil_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1103_x_ray_cracking [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>X-ray cracking</td></tr> <tr> <td><img src='icons/tech1103_96.png' /></td> </tr> <tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1111_energy_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Energy matrix</td></tr> <tr> <td><img src='icons/tech1111_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1112_hydrogen_fuel_rod [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Hydrogen fuel rod</td></tr> <tr> <td><img src='icons/tech1112_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/hydrogen-energy-fuel_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1113_thruster [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Thruster</td></tr> <tr> <td><img src='icons/tech1113_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/fuel-thruster_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1114_reinforced_thruster [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Reinforced thruster</td></tr> <tr> <td><img src='icons/tech1114_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/ion-thruster_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1120_fluid_storage_encapsulation [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Fluid storage encapsulation</td></tr> <tr> <td><img src='icons/tech1120_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/storage-tank_48.png' /></td> <td><img src='icons/water-pump_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1121_basic_chemical_engineering [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Basic chemical engineering</td></tr> <tr> <td><img src='icons/tech1121_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/chemical-plant_48.png' /></td> <td><img src='icons/plastic_48.png' /></td> <td><img src='icons/sulphuric-acid_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1122_polymer_chemical_engineering [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Polymer chemical engineering</td></tr> <tr> <td><img src='icons/tech1122_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/crystal-rubber_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1123_high_strength_crystal [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-strength crystal</td></tr> <tr> <td><img src='icons/tech1123_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/titan-crystal_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1124_structure_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Structure matrix</td></tr> <tr> <td><img src='icons/tech1124_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1125_casimir_crystal [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Casimir crystal</td></tr> <tr> <td><img src='icons/tech1125_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/casimir-crystal_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1126_high_strength_glass [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-strength glass</td></tr> <tr> <td><img src='icons/tech1126_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/titan-glass_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1131_applied_superconductor [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Applied superconductor</td></tr> <tr> <td><img src='icons/tech1131_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/graphene_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1132_high_strength_material [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-strength material</td></tr> <tr> <td><img src='icons/tech1132_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/nanotube_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1133_particle_control_technology [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Particle control technology</td></tr> <tr> <td><img src='icons/tech1133_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/particle-wide-band_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1134_deuterium_fractionation [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Deuterium fractionation</td></tr> <tr> <td><img src='icons/tech1134_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/deuterium_48.png' /></td> <td><img src='icons/fractionator_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1141_wave_function_interference [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Wave function interference</td></tr> <tr> <td><img src='icons/tech1141_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/plane-filter_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1142_miniature_particle_collider [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Miniature particle collider</td></tr> <tr> <td><img src='icons/tech1142_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/hadron-collider_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1143_strange_matter [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Strange matter</td></tr> <tr> <td><img src='icons/tech1143_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/strange-matter-generator_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1144_artificial_star [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Artificial star</td></tr> <tr> <td><img src='icons/tech1144_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/fusion-reactor_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/g-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1145_controlled_annihilation_reaction [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Controlled annihilation reaction</td></tr> <tr> <td><img src='icons/tech1145_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/antimatter-energy-fuel_48.png' /></td> <td><img src='icons/fusion-capacitor_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/g-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1201_basic_assembling_processes [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Basic assembling processes</td></tr> <tr> <td><img src='icons/tech1201_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/assembler-1_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/circuit-board_48.png' /></td> <td><img src='icons/gear-wheel_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1202_high_speed_assembling_processes [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-speed assembling processes</td></tr> <tr> <td><img src='icons/tech1202_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/assembler-2_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1203_quantum_printing_technology [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Quantum printing technology</td></tr> <tr> <td><img src='icons/tech1203_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/assembler-3_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1302_processor [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Processor</td></tr> <tr> <td><img src='icons/tech1302_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/processor_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1303_quantum_chip [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Quantum chip</td></tr> <tr> <td><img src='icons/tech1303_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/quantum-processor_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1311_semiconductor_material [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Semiconductor material</td></tr> <tr> <td><img src='icons/tech1311_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/micro-component_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1312_information_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Information matrix</td></tr> <tr> <td><img src='icons/tech1312_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/i-matrix_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1401_automatic_metallurgy [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Automatic metallurgy</td></tr> <tr> <td><img src='icons/tech1401_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/smelter_48.png' /></td> <td><img src='icons/glass_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/circuit-board_48.png' /></td> <td><img src='icons/magnetism-wire_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1402_smelting_purification [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Smelting purification</td></tr> <tr> <td><img src='icons/tech1402_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/graphite_48.png' /></td> <td><img src='icons/silicium-ore_48.png' /></td> <td><img src='icons/silicium-single-crystal_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1403_crystal_smelting [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Crystal smelting</td></tr> <tr> <td><img src='icons/tech1403_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/diamond_48.png' /></td> <td><img src='icons/silicium-high-purity_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1411_steel_smelting [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Steel smelting</td></tr> <tr> <td><img src='icons/tech1411_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/steel-plate_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1412_thermal_power [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Thermal power</td></tr> <tr> <td><img src='icons/tech1412_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/fuel-plant_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1413_titanium_smelting [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Titanium smelting</td></tr> <tr> <td><img src='icons/tech1413_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/titanium-plate_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1414_high_strength_titanium_alloy [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-strength titanium alloy</td></tr> <tr> <td><img src='icons/tech1414_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/titanium-alloy_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1415_environment_modification [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Environment Modification</td></tr> <tr> <td><img src='icons/tech1415_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/terrain-tool_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1416_mini_fusion_power_generation [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Mini fusion power generation</td></tr> <tr> <td><img src='icons/tech1416_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/deuterium-energy-fuel_48.png' /></td> <td><img src='icons/fusion-power-station_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1501_solar_collection [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Solar collection</td></tr> <tr> <td><img src='icons/tech1501_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/solar-panel_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1502_photon_frequency_conversion [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Photon frequency conversion</td></tr> <tr> <td><img src='icons/tech1502_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/photo-shifter_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1503_solar_sail_orbit_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Solar sail orbit system</td></tr> <tr> <td><img src='icons/tech1503_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/em-rail-ejector_48.png' /></td> <td><img src='icons/solar-collector_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1504_ray_receiver [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Ray receiver</td></tr> <tr> <td><img src='icons/tech1504_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/ray-receiver_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1505_planetary_ionosphere_utilization [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Planetary ionosphere utilization</td></tr> <tr> <td><img src='icons/tech1505_96.png' /></td> </tr> <tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/g-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1506_dirac_inversion_mechanism [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Dirac inversion mechanism</td></tr> <tr> <td><img src='icons/tech1506_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/anti-matter_48.png' /></td> <td><img src='icons/photon-capacitor-full_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/g-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1507_universe_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Universe matrix</td></tr> <tr> <td><img src='icons/tech1507_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/u-matrix_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/g-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1508_mission_completed_ [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Mission completed!</td></tr> <tr> <td><img src='icons/tech1508_96.png' /></td> </tr> <tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/u-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1511_energy_storage [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Energy storage</td></tr> <tr> <td><img src='icons/tech1511_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/accumulator_48.png' /></td> <td><img src='icons/accumulator-full_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1512_interstellar_power_transmission [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Interstellar power transmission</td></tr> <tr> <td><img src='icons/tech1512_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/energy-exchanger_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1521_high_strength_lightweight_structure [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-strength lightweight structure</td></tr> <tr> <td><img src='icons/tech1521_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/dyson-sphere-component_48.png' /></td> <td><img src='icons/frame-material_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1522_vertical_launching_silo [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Vertical launching silo</td></tr> <tr> <td><img src='icons/tech1522_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/rocket_48.png' /></td> <td><img src='icons/vertical-launching-silo_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1523_dyson_sphere_stress_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Dyson sphere stress system</td></tr> <tr> <td><img src='icons/tech1523_96.png' /></td> </tr> <tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/g-matrix_48.png' /></td> <td><img src='icons/i-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1601_basic_logistics_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Basic logistics system</td></tr> <tr> <td><img src='icons/tech1601_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/belt-1_48.png' /></td> <td><img src='icons/inserter-1_48.png' /></td> <td><img src='icons/storage-1_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/circuit-board_48.png' /></td> <td><img src='icons/gear-wheel_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1602_improved_logistics_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Improved logistics system</td></tr> <tr> <td><img src='icons/tech1602_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/inserter-2_48.png' /></td> <td><img src='icons/splitter-4dir_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1603_high_efficiency_logistics_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>High-efficiency logistics system</td></tr> <tr> <td><img src='icons/tech1603_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/belt-2_48.png' /></td> <td><img src='icons/inserter-3_48.png' /></td> <td><img src='icons/storage-2_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1604_planetary_logistics_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Planetary logistics system</td></tr> <tr> <td><img src='icons/tech1604_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/belt-3_48.png' /></td> <td><img src='icons/logistic-drone_48.png' /></td> <td><img src='icons/logistic-station_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1605_interstellar_logistics_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Interstellar logistics system</td></tr> <tr> <td><img src='icons/tech1605_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/interstellar-logistic-station_48.png' /></td> <td><img src='icons/logistic-vessel_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1606_gas_giants_exploitation [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Gas giants exploitation</td></tr> <tr> <td><img src='icons/tech1606_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/orbital-collector_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1701_electromagnetic_drive [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Electromagnetic drive</td></tr> <tr> <td><img src='icons/tech1701_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/electric-motor_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1702_magnetic_levitation_technology [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Magnetic levitation technology</td></tr> <tr> <td><img src='icons/tech1702_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/mag-turbine_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1703_magnetic_particle_trap [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Magnetic particle trap</td></tr> <tr> <td><img src='icons/tech1703_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/partical-capacitor_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1704_gravitational_wave_refraction [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Gravitational wave refraction</td></tr> <tr> <td><img src='icons/tech1704_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/gravity-lens_48.png' /></td> <td><img src='icons/space-warper_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1705_gravity_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Gravity matrix</td></tr> <tr> <td><img src='icons/tech1705_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/g-matrix_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1711_super_magnetic_field_generator [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Super magnetic field generator</td></tr> <tr> <td><img src='icons/tech1711_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/hyper-magnetism-ring_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1712_satellite_power_distribution_system [label=<<table border='0' cellborder='0' cellspacing='0'> <tr><td>Satellite power distribution system</td></tr> <tr> <td><img src='icons/tech1712_96.png' /></td> </tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/orbital-substation_48.png' /></td> </tr> </table> </td></tr><tr> <td> <table border='0' cellborder='0' cellspacing='0'> <tr> <td><img src='icons/c-matrix_48.png' /></td> <td><img src='icons/e-matrix_48.png' /></td> <td><img src='icons/t-matrix_48.png' /></td> </tr> </table> </td></tr></table>> fillcolor="#4b1c57"];
+  tech1_dyson_sphere_program -> tech1001_electromagnetism [color="#36325b"];
+  tech1001_electromagnetism -> tech1002_electromagnetic_matrix [color="#36325b"];
+  tech1001_electromagnetism -> tech1101_high_efficiency_plasma_control [color="#36325b"];
+  tech1120_fluid_storage_encapsulation -> tech1102_plasma_extract_refining [color="#36325b"];
+  tech1101_high_efficiency_plasma_control -> tech1102_plasma_extract_refining [color="#36325b"];
+  tech1121_basic_chemical_engineering -> tech1103_x_ray_cracking [color="#36325b"];
+  tech1102_plasma_extract_refining -> tech1103_x_ray_cracking [color="#36325b"];
+  tech1102_plasma_extract_refining -> tech1111_energy_matrix [color="#36325b"];
+  tech1111_energy_matrix -> tech1112_hydrogen_fuel_rod [color="#36325b"];
+  tech1112_hydrogen_fuel_rod -> tech1113_thruster [color="#36325b"];
+  tech1113_thruster -> tech1114_reinforced_thruster [color="#36325b"];
+  tech1001_electromagnetism -> tech1120_fluid_storage_encapsulation [color="#36325b"];
+  tech1120_fluid_storage_encapsulation -> tech1121_basic_chemical_engineering [color="#36325b"];
+  tech1102_plasma_extract_refining -> tech1121_basic_chemical_engineering [color="#36325b"];
+  tech1121_basic_chemical_engineering -> tech1122_polymer_chemical_engineering [color="#36325b"];
+  tech1122_polymer_chemical_engineering -> tech1123_high_strength_crystal [color="#36325b"];
+  tech1123_high_strength_crystal -> tech1124_structure_matrix [color="#36325b"];
+  tech1124_structure_matrix -> tech1125_casimir_crystal [color="#36325b"];
+  tech1132_high_strength_material -> tech1126_high_strength_glass [color="#36325b"];
+  tech1121_basic_chemical_engineering -> tech1131_applied_superconductor [color="#36325b"];
+  tech1131_applied_superconductor -> tech1132_high_strength_material [color="#36325b"];
+  tech1132_high_strength_material -> tech1133_particle_control_technology [color="#36325b"];
+  tech1412_thermal_power -> tech1134_deuterium_fractionation [color="#36325b"];
+  tech1102_plasma_extract_refining -> tech1134_deuterium_fractionation [color="#36325b"];
+  tech1126_high_strength_glass -> tech1141_wave_function_interference [color="#36325b"];
+  tech1125_casimir_crystal -> tech1141_wave_function_interference [color="#36325b"];
+  tech1124_structure_matrix -> tech1142_miniature_particle_collider [color="#36325b"];
+  tech1142_miniature_particle_collider -> tech1143_strange_matter [color="#36325b"];
+  tech1145_controlled_annihilation_reaction -> tech1144_artificial_star [color="#36325b"];
+  tech1506_dirac_inversion_mechanism -> tech1145_controlled_annihilation_reaction [color="#36325b"];
+  tech1001_electromagnetism -> tech1201_basic_assembling_processes [color="#36325b"];
+  tech1201_basic_assembling_processes -> tech1202_high_speed_assembling_processes [color="#36325b"];
+  tech1302_processor -> tech1202_high_speed_assembling_processes [color="#36325b"];
+  tech1202_high_speed_assembling_processes -> tech1203_quantum_printing_technology [color="#36325b"];
+  tech1303_quantum_chip -> tech1203_quantum_printing_technology [color="#36325b"];
+  tech1311_semiconductor_material -> tech1302_processor [color="#36325b"];
+  tech1312_information_matrix -> tech1303_quantum_chip [color="#36325b"];
+  tech1141_wave_function_interference -> tech1303_quantum_chip [color="#36325b"];
+  tech1201_basic_assembling_processes -> tech1311_semiconductor_material [color="#36325b"];
+  tech1302_processor -> tech1312_information_matrix [color="#36325b"];
+  tech1133_particle_control_technology -> tech1312_information_matrix [color="#36325b"];
+  tech1001_electromagnetism -> tech1401_automatic_metallurgy [color="#36325b"];
+  tech1401_automatic_metallurgy -> tech1402_smelting_purification [color="#36325b"];
+  tech1402_smelting_purification -> tech1403_crystal_smelting [color="#36325b"];
+  tech1401_automatic_metallurgy -> tech1411_steel_smelting [color="#36325b"];
+  tech1201_basic_assembling_processes -> tech1412_thermal_power [color="#36325b"];
+  tech1411_steel_smelting -> tech1413_titanium_smelting [color="#36325b"];
+  tech1413_titanium_smelting -> tech1414_high_strength_titanium_alloy [color="#36325b"];
+  tech1411_steel_smelting -> tech1415_environment_modification [color="#36325b"];
+  tech1134_deuterium_fractionation -> tech1416_mini_fusion_power_generation [color="#36325b"];
+  tech1402_smelting_purification -> tech1501_solar_collection [color="#36325b"];
+  tech1002_electromagnetic_matrix -> tech1501_solar_collection [color="#36325b"];
+  tech1201_basic_assembling_processes -> tech1501_solar_collection [color="#36325b"];
+  tech1501_solar_collection -> tech1502_photon_frequency_conversion [color="#36325b"];
+  tech1502_photon_frequency_conversion -> tech1503_solar_sail_orbit_system [color="#36325b"];
+  tech1503_solar_sail_orbit_system -> tech1504_ray_receiver [color="#36325b"];
+  tech1504_ray_receiver -> tech1505_planetary_ionosphere_utilization [color="#36325b"];
+  tech1505_planetary_ionosphere_utilization -> tech1506_dirac_inversion_mechanism [color="#36325b"];
+  tech1506_dirac_inversion_mechanism -> tech1507_universe_matrix [color="#36325b"];
+  tech1507_universe_matrix -> tech1508_mission_completed_ [color="#36325b"];
+  tech1403_crystal_smelting -> tech1511_energy_storage [color="#36325b"];
+  tech1501_solar_collection -> tech1511_energy_storage [color="#36325b"];
+  tech1414_high_strength_titanium_alloy -> tech1512_interstellar_power_transmission [color="#36325b"];
+  tech1511_energy_storage -> tech1512_interstellar_power_transmission [color="#36325b"];
+  tech1503_solar_sail_orbit_system -> tech1521_high_strength_lightweight_structure [color="#36325b"];
+  tech1521_high_strength_lightweight_structure -> tech1522_vertical_launching_silo [color="#36325b"];
+  tech1522_vertical_launching_silo -> tech1523_dyson_sphere_stress_system [color="#36325b"];
+  tech1001_electromagnetism -> tech1601_basic_logistics_system [color="#36325b"];
+  tech1601_basic_logistics_system -> tech1602_improved_logistics_system [color="#36325b"];
+  tech1602_improved_logistics_system -> tech1603_high_efficiency_logistics_system [color="#36325b"];
+  tech1603_high_efficiency_logistics_system -> tech1604_planetary_logistics_system [color="#36325b"];
+  tech1604_planetary_logistics_system -> tech1605_interstellar_logistics_system [color="#36325b"];
+  tech1414_high_strength_titanium_alloy -> tech1605_interstellar_logistics_system [color="#36325b"];
+  tech1605_interstellar_logistics_system -> tech1606_gas_giants_exploitation [color="#36325b"];
+  tech1512_interstellar_power_transmission -> tech1606_gas_giants_exploitation [color="#36325b"];
+  tech1001_electromagnetism -> tech1701_electromagnetic_drive [color="#36325b"];
+  tech1701_electromagnetic_drive -> tech1702_magnetic_levitation_technology [color="#36325b"];
+  tech1702_magnetic_levitation_technology -> tech1703_magnetic_particle_trap [color="#36325b"];
+  tech1143_strange_matter -> tech1704_gravitational_wave_refraction [color="#36325b"];
+  tech1703_magnetic_particle_trap -> tech1704_gravitational_wave_refraction [color="#36325b"];
+  tech1303_quantum_chip -> tech1705_gravity_matrix [color="#36325b"];
+  tech1704_gravitational_wave_refraction -> tech1705_gravity_matrix [color="#36325b"];
+  tech1702_magnetic_levitation_technology -> tech1711_super_magnetic_field_generator [color="#36325b"];
+  tech1711_super_magnetic_field_generator -> tech1712_satellite_power_distribution_system [color="#36325b"];
 }

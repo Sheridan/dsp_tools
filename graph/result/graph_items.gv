@@ -1,1803 +1,397 @@
 digraph g {
-  graph [overlap=false, splines=ortho, ratio=0.5625, bgcolor="#0c041c", fontcolor="#ebf2ff", fillcolor="#0c041c", rankdir="TB" fontname=Roboto, fontsize=10];
-  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
-  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=4];
-  item_log [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Log</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_log_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲  🔥 </td></tr>
-             </table>
-             >, fillcolor="#0c3d11"];
-  item_plant_fuel [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Plant fuel</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_plant_fuel_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲  🔥 </td></tr>
-             </table>
-             >, fillcolor="#0c3d11"];
-  item_iron_ore [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Iron ore</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_iron_ore_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_copper_ore [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Copper ore</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_copper_ore_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_stone_ore [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Stone ore</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_stone_ore_64.png' /></td>
-                <td>Usages: 4</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_coal_ore [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Coal ore</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_coal_ore_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲  🔥 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_silicon_ore [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Silicon ore</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_silicon_ore_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Smelting purification</td></tr><tr><td colspan="2"><img src="icons/technologies_smelting_purification_32.png" /></td></tr>
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_titanium_ore [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Titanium ore</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_titanium_ore_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_water [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Water</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_water_64.png' /></td>
-                <td>Usages: 4</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲  💧 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_crude_oil [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Crude oil</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_crude_oil_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲  💧  🔥 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_kimberlite_ore [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Kimberlite ore</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_kimberlite_ore_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_fractal_silicon [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Fractal silicon</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_fractal_silicon_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_optical_grating_crystal [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Optical grating crystal</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_optical_grating_crystal_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_spiniform_stalagmite_crystal [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Spiniform stalagmite crystal</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_spiniform_stalagmite_crystal_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_unipolar_magnet [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Unipolar magnet</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_unipolar_magnet_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_fire_ice [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Fire Ice</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_fire_ice_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🎲  🔥 </td></tr>
-             </table>
-             >, fillcolor="#2b0004"];
-  item_iron_ingot [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Iron ingot</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_iron_ingot_64.png' /></td>
-                <td>Usages: 20</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_copper_ingot [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Copper ingot</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_copper_ingot_64.png' /></td>
-                <td>Usages: 7</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_stone [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Stone</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_stone_64.png' /></td>
-                <td>Usages: 11</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_hydrogen [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Hydrogen</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_hydrogen_64.png' /></td>
-                <td>Usages: 9</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🔥  💧  🎲 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_deuterium [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Deuterium</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_deuterium_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Miniature particle collider</td></tr><tr><td colspan="2"><img src="icons/technologies_miniature_particle_collider_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥  💧  🎲 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_antimatter [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Antimatter</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_antimatter_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_energetic_graphite [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Energetic Graphite</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_energetic_graphite_64.png' /></td>
-                <td>Usages: 5</td>
-              </tr>
-              <tr><td colspan="2">Smelting purification</td></tr><tr><td colspan="2"><img src="icons/technologies_smelting_purification_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_high_purity_silicon [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">High-Purity Silicon</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_high_purity_silicon_64.png' /></td>
-                <td>Usages: 5</td>
-              </tr>
-              <tr><td colspan="2">Smelting purification</td></tr><tr><td colspan="2"><img src="icons/technologies_smelting_purification_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_titanium_ingot [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Titanium Ingot</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_titanium_ingot_64.png' /></td>
-                <td>Usages: 6</td>
-              </tr>
-              <tr><td colspan="2">Titanium smelting</td></tr><tr><td colspan="2"><img src="icons/technologies_titanium_smelting_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_sulfuric_acid [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Sulfuric acid</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_sulfuric_acid_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Basic chemical engineering</td></tr><tr><td colspan="2"><img src="icons/technologies_basic_chemical_engineering_32.png" /></td></tr>
-              <tr><td colspan="2"> 🎲  💧 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_refined_oil [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Refined oil</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_refined_oil_64.png' /></td>
-                <td>Usages: 5</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🔥  💧 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_magnet [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Magnet</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_magnet_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_magnetic_coil [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Magnetic coil</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_magnetic_coil_64.png' /></td>
-                <td>Usages: 10</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_glass [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Glass</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_glass_64.png' /></td>
-                <td>Usages: 6</td>
-              </tr>
-              <tr><td colspan="2">Automatic metallurgy</td></tr><tr><td colspan="2"><img src="icons/technologies_automatic_metallurgy_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_diamond [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Diamond</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_diamond_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Crystal smelting</td></tr><tr><td colspan="2"><img src="icons/technologies_crystal_smelting_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_crystal_silicon [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Crystal silicon</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_crystal_silicon_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Particle control technology</td></tr><tr><td colspan="2"><img src="icons/technologies_particle_control_technology_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_titanium_alloy [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Titanium alloy</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_titanium_alloy_64.png' /></td>
-                <td>Usages: 11</td>
-              </tr>
-              <tr><td colspan="2">High-strength titanium alloy</td></tr><tr><td colspan="2"><img src="icons/technologies_high_strength_titanium_alloy_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_steel [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Steel</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_steel_64.png' /></td>
-                <td>Usages: 12</td>
-              </tr>
-              <tr><td colspan="2">Steel smelting</td></tr><tr><td colspan="2"><img src="icons/technologies_steel_smelting_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_circuit_board [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Circuit board</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_circuit_board_64.png' /></td>
-                <td>Usages: 15</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_prism [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Prism</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_prism_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">High-efficiency plasma control</td></tr><tr><td colspan="2"><img src="icons/technologies_high_efficiency_plasma_control_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_electric_motor [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Electric motor</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_electric_motor_64.png' /></td>
-                <td>Usages: 3</td>
-              </tr>
-              <tr><td colspan="2">Electromagnetic drive</td></tr><tr><td colspan="2"><img src="icons/technologies_electromagnetic_drive_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_microcrystalline_component [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Microcrystalline component</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_microcrystalline_component_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Semiconductor material</td></tr><tr><td colspan="2"><img src="icons/technologies_semiconductor_material_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_gear [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Gear</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_gear_64.png' /></td>
-                <td>Usages: 8</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_plasma_exciter [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Plasma exciter</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_plasma_exciter_64.png' /></td>
-                <td>Usages: 3</td>
-              </tr>
-              <tr><td colspan="2">High-efficiency plasma control</td></tr><tr><td colspan="2"><img src="icons/technologies_high_efficiency_plasma_control_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_photon_combiner [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Photon Combiner</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_photon_combiner_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Photon frequency conversion</td></tr><tr><td colspan="2"><img src="icons/technologies_photon_frequency_conversion_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_electromagnetic_turbine [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Electromagnetic turbine</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_electromagnetic_turbine_64.png' /></td>
-                <td>Usages: 5</td>
-              </tr>
-              <tr><td colspan="2">Magnetic levitation technology</td></tr><tr><td colspan="2"><img src="icons/technologies_magnetic_levitation_technology_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_processor [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Processor</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_processor_64.png' /></td>
-                <td>Usages: 14</td>
-              </tr>
-              <tr><td colspan="2">Processor</td></tr><tr><td colspan="2"><img src="icons/technologies_processor_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_foundation [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Foundation</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_foundation_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Environment modification</td></tr><tr><td colspan="2"><img src="icons/technologies_environment_modification_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_critical_photon [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Critical photon</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_critical_photon_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_particle_container [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Particle container</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_particle_container_64.png' /></td>
-                <td>Usages: 5</td>
-              </tr>
-              <tr><td colspan="2">Magnetic particle trap</td></tr><tr><td colspan="2"><img src="icons/technologies_magnetic_particle_trap_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_super_magnetic_ring [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Super-magnetic ring</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_super_magnetic_ring_64.png' /></td>
-                <td>Usages: 9</td>
-              </tr>
-              <tr><td colspan="2">Super magnetic field generator</td></tr><tr><td colspan="2"><img src="icons/technologies_super_magnetic_field_generator_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_graviton_lens [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Graviton lens</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_graviton_lens_64.png' /></td>
-                <td>Usages: 3</td>
-              </tr>
-              <tr><td colspan="2">Gravitational wave refraction</td></tr><tr><td colspan="2"><img src="icons/technologies_gravitational_wave_refraction_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_hydrogen_fuel_rod [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Hydrogen fuel rod</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_hydrogen_fuel_rod_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Hydrogen fuel rod</td></tr><tr><td colspan="2"><img src="icons/technologies_hydrogen_fuel_rod_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_deuteron_fuel_rod [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Deuteron fuel rod</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_deuteron_fuel_rod_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_antimatter_fuel_rod [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Antimatter fuel rod</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_antimatter_fuel_rod_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Controlled annihilation reaction</td></tr><tr><td colspan="2"><img src="icons/technologies_controlled_annihilation_reaction_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_plastic [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Plastic</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_plastic_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Basic chemical engineering</td></tr><tr><td colspan="2"><img src="icons/technologies_basic_chemical_engineering_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_organic_crystal [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Organic crystal</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_organic_crystal_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Polymer chemical engineering</td></tr><tr><td colspan="2"><img src="icons/technologies_polymer_chemical_engineering_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_graphene [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Graphene</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_graphene_64.png' /></td>
-                <td>Usages: 8</td>
-              </tr>
-              <tr><td colspan="2">Applied superconductor</td></tr><tr><td colspan="2"><img src="icons/technologies_applied_superconductor_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_thruster [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Thruster</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_thruster_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Thruster</td></tr><tr><td colspan="2"><img src="icons/technologies_thruster_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_reinforced_thruster [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Reinforced thruster</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_reinforced_thruster_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Reinforced thruster</td></tr><tr><td colspan="2"><img src="icons/technologies_reinforced_thruster_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_casimir_crystal [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Casimir crystal</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_casimir_crystal_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Casimir crystal</td></tr><tr><td colspan="2"><img src="icons/technologies_casimir_crystal_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_strange_matter [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Strange matter</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_strange_matter_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Strange matter</td></tr><tr><td colspan="2"><img src="icons/technologies_strange_matter_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_titanium_crystal [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Titanium crystal</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_titanium_crystal_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">High-Strength crystal</td></tr><tr><td colspan="2"><img src="icons/technologies_high_strength_crystal_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_carbon_nanotube [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Carbon nanotube</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_carbon_nanotube_64.png' /></td>
-                <td>Usages: 3</td>
-              </tr>
-              <tr><td colspan="2">High-Strength material</td></tr><tr><td colspan="2"><img src="icons/technologies_high_strength_material_32.png" /></td></tr>
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#200026"];
-  item_annihilation_constraint_sphere [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Annihilation constraint sphere</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_annihilation_constraint_sphere_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Controlled annihilation reaction</td></tr><tr><td colspan="2"><img src="icons/technologies_controlled_annihilation_reaction_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_titanium_glass [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Titanium glass</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_titanium_glass_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">High-Strength glass</td></tr><tr><td colspan="2"><img src="icons/technologies_high_strength_glass_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_particle_broadband [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Particle broadband</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_particle_broadband_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Particle control technology</td></tr><tr><td colspan="2"><img src="icons/technologies_particle_control_technology_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_logistics_drone [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Logistics drone</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_logistics_drone_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Planetary logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_planetary_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_space_warper [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Space warper</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_space_warper_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Gravitational wave refraction</td></tr><tr><td colspan="2"><img src="icons/technologies_gravitational_wave_refraction_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_plane_filter [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Plane filter</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_plane_filter_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Wave function interference</td></tr><tr><td colspan="2"><img src="icons/technologies_wave_function_interference_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_quantum_chip [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Quantum chip</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_quantum_chip_64.png' /></td>
-                <td>Usages: 5</td>
-              </tr>
-              <tr><td colspan="2">Quantum chip</td></tr><tr><td colspan="2"><img src="icons/technologies_quantum_chip_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_logistics_vessel [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Logistics vessel</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_logistics_vessel_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Interstellar logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_interstellar_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_solar_sail [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Solar sail</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_solar_sail_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Solar sail orbit system</td></tr><tr><td colspan="2"><img src="icons/technologies_solar_sail_orbit_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🪐 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_frame_material [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Frame material</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_frame_material_64.png' /></td>
-                <td>Usages: 5</td>
-              </tr>
-              <tr><td colspan="2">High-strength lightweight structure</td></tr><tr><td colspan="2"><img src="icons/technologies_high_strength_lightweight_structure_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_dyson_sphere_component [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Dyson sphere component</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_dyson_sphere_component_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">High-strength lightweight structure</td></tr><tr><td colspan="2"><img src="icons/technologies_high_strength_lightweight_structure_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#200026"];
-  item_small_carrier_rocket [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Small carrier rocket</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_small_carrier_rocket_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Vertical launching silo</td></tr><tr><td colspan="2"><img src="icons/technologies_vertical_launching_silo_32.png" /></td></tr>
-              <tr><td colspan="2"> 🪐 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_electromagnetic_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Electromagnetic matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_electromagnetic_matrix_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Electromagnetic matrix</td></tr><tr><td colspan="2"><img src="icons/technologies_electromagnetic_matrix_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#012036"];
-  item_energy_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Energy matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_energy_matrix_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Energy matrix</td></tr><tr><td colspan="2"><img src="icons/technologies_energy_matrix_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#012036"];
-  item_structure_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Structure matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_structure_matrix_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Structure matrix</td></tr><tr><td colspan="2"><img src="icons/technologies_structure_matrix_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#012036"];
-  item_information_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Information matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_information_matrix_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Information matrix</td></tr><tr><td colspan="2"><img src="icons/technologies_information_matrix_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#012036"];
-  item_gravity_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Gravity matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_gravity_matrix_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              <tr><td colspan="2">Gravity matrix</td></tr><tr><td colspan="2"><img src="icons/technologies_gravity_matrix_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#012036"];
-  item_universe_matrix [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Universe matrix</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_universe_matrix_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Universe matrix</td></tr><tr><td colspan="2"><img src="icons/technologies_universe_matrix_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#012036"];
-  item_tesla_tower [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Tesla tower</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_tesla_tower_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Electromagnetism</td></tr><tr><td colspan="2"><img src="icons/technologies_electromagnetism_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_wireless_power_tower [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Wireless power tower</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_wireless_power_tower_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">High-efficiency plasma control</td></tr><tr><td colspan="2"><img src="icons/technologies_high_efficiency_plasma_control_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_satellite_substation [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Satellite substation</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_satellite_substation_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Satellite power distribution system</td></tr><tr><td colspan="2"><img src="icons/technologies_satellite_power_distribution_system_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_wind_turbine [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Wind turbine</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_wind_turbine_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Electromagnetism</td></tr><tr><td colspan="2"><img src="icons/technologies_electromagnetism_32.png" /></td></tr>
-              <tr><td colspan="2"> ⚡️ </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_thermal_power_station [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Thermal power station</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_thermal_power_station_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Thermal power</td></tr><tr><td colspan="2"><img src="icons/technologies_thermal_power_32.png" /></td></tr>
-              <tr><td colspan="2"> ⚡️ </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_solar_panel [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Solar panel</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_solar_panel_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Solar collection</td></tr><tr><td colspan="2"><img src="icons/technologies_solar_collection_32.png" /></td></tr>
-              <tr><td colspan="2"> ⚡️ </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_mini_fusion_power_station [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Mini fusion power station</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_mini_fusion_power_station_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Mini fusion power generation</td></tr><tr><td colspan="2"><img src="icons/technologies_mini_fusion_power_generation_32.png" /></td></tr>
-              <tr><td colspan="2"> ⚡️ </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_accumulator [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Accumulator</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_accumulator_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Energy storage</td></tr><tr><td colspan="2"><img src="icons/technologies_energy_storage_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_full_accumulator [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Full accumulator</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_full_accumulator_64.png' /></td>
-                <td>Usages: 2</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🔥 </td></tr>
-             </table>
-             >, fillcolor="#2c4c70"];
-  item_energy_exchanger [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Energy exchanger</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_energy_exchanger_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Interstellar power transmission</td></tr><tr><td colspan="2"><img src="icons/technologies_interstellar_power_transmission_32.png" /></td></tr>
-              <tr><td colspan="2"> ⚡️ </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_ray_receiver [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Ray receiver</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_ray_receiver_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Ray receiver</td></tr><tr><td colspan="2"><img src="icons/technologies_ray_receiver_32.png" /></td></tr>
-              <tr><td colspan="2"> ⚡️ </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_artificial_star [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Artificial star</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_artificial_star_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Artificial star</td></tr><tr><td colspan="2"><img src="icons/technologies_artificial_star_32.png" /></td></tr>
-              <tr><td colspan="2"> ⚡️ </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_conveyor_belt_mk_i [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Conveyor belt Mk.I</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_conveyor_belt_mk_i_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Basic logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_basic_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_conveyor_belt_mk_ii [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Conveyor belt Mk.II</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_conveyor_belt_mk_ii_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">High-efficiency logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_high_efficiency_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_conveyor_belt_mk_iii [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Conveyor belt Mk.III</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_conveyor_belt_mk_iii_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Planetary logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_planetary_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_splitter [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Splitter</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_splitter_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Improved logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_improved_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_storage_mk_i [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Storage Mk.I</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_storage_mk_i_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Basic logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_basic_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 📦 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_storage_mk_ii [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Storage Mk.II</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_storage_mk_ii_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">High-efficiency logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_high_efficiency_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 📦 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_storage_tank [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Storage tank</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_storage_tank_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Fluid storage encapsulation</td></tr><tr><td colspan="2"><img src="icons/technologies_fluid_storage_encapsulation_32.png" /></td></tr>
-              <tr><td colspan="2"> 📦 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_planetary_logistics_station [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Planetary logistics station</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_planetary_logistics_station_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Planetary logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_planetary_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 📦 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_interstellar_logistics_station [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Interstellar logistics station</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_interstellar_logistics_station_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Interstellar logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_interstellar_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 📦 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_orbit_collector [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Orbit collector</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_orbit_collector_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Gas giants exploration</td></tr><tr><td colspan="2"><img src="icons/technologies_gas_giants_exploration_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_em_rail_ejector [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">EM-Rail ejector</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_em_rail_ejector_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Solar sail orbit system</td></tr><tr><td colspan="2"><img src="icons/technologies_solar_sail_orbit_system_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_sorter_mk_i [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Sorter Mk.I</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_sorter_mk_i_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Basic logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_basic_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_sorter_mk_ii [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Sorter Mk.II</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_sorter_mk_ii_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Improved logistics system</td></tr><tr><td colspan="2"><img src="icons/technologies_improved_logistics_system_32.png" /></td></tr>
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_sorter_mk_iii [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Sorter Mk.III</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_sorter_mk_iii_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              
-              <tr><td colspan="2"> 🚚 </td></tr>
-             </table>
-             >, fillcolor="#424000"];
-  item_mining_machine [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Mining machine</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_mining_machine_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Electromagnetism</td></tr><tr><td colspan="2"><img src="icons/technologies_electromagnetism_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_water_pump [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Water pump</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_water_pump_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Fluid storage encapsulation</td></tr><tr><td colspan="2"><img src="icons/technologies_fluid_storage_encapsulation_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_oil_extractor [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Oil extractor</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_oil_extractor_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Plasma extract refining</td></tr><tr><td colspan="2"><img src="icons/technologies_plasma_extract_refining_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_oil_refinery [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Oil refinery</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_oil_refinery_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Plasma extract refining</td></tr><tr><td colspan="2"><img src="icons/technologies_plasma_extract_refining_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_miniature_particle_collider [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Miniature particle collider</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_miniature_particle_collider_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Miniature particle collider</td></tr><tr><td colspan="2"><img src="icons/technologies_miniature_particle_collider_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_matrix_lab [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Matrix lab</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_matrix_lab_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Electromagnetic matrix</td></tr><tr><td colspan="2"><img src="icons/technologies_electromagnetic_matrix_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_vertical_launching_silo [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Vertical launching silo</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_vertical_launching_silo_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Vertical launching silo</td></tr><tr><td colspan="2"><img src="icons/technologies_vertical_launching_silo_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_assembling_machine_mk_i [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Assembling machine Mk.I</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_assembling_machine_mk_i_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">Basic assembling processes</td></tr><tr><td colspan="2"><img src="icons/technologies_basic_assembling_processes_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_assembling_machine_mk_ii [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Assembling machine Mk.II</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_assembling_machine_mk_ii_64.png' /></td>
-                <td>Usages: 1</td>
-              </tr>
-              <tr><td colspan="2">High-Speed assembling processes</td></tr><tr><td colspan="2"><img src="icons/technologies_high_speed_assembling_processes_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_assembling_machine_mk_iii [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Assembling machine Mk.III</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_assembling_machine_mk_iii_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Quantum printing technology</td></tr><tr><td colspan="2"><img src="icons/technologies_quantum_printing_technology_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_smelter [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Smelter</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_smelter_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Automatic metallurgy</td></tr><tr><td colspan="2"><img src="icons/technologies_automatic_metallurgy_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_chemical_plant [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Chemical plant</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_chemical_plant_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Basic chemical engineering</td></tr><tr><td colspan="2"><img src="icons/technologies_basic_chemical_engineering_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_fractionator [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">Fractionator</td>
-              </tr>
-              <tr>
-                <td><img src='icons/items_fractionator_64.png' /></td>
-                <td>Usages: 0</td>
-              </tr>
-              <tr><td colspan="2">Deuterium fractionation</td></tr><tr><td colspan="2"><img src="icons/technologies_deuterium_fractionation_32.png" /></td></tr>
-              
-             </table>
-             >, fillcolor="#424000"];
-  item_stone_ore -> item_silicon_ore [color="#ffbca8"];
-  item_iron_ore -> item_iron_ingot [color="#ffbca8"];
-  item_copper_ore -> item_copper_ingot [color="#ffbca8"];
-  item_stone_ore -> item_stone [color="#ffbca8"];
-  item_crude_oil -> item_hydrogen [color="#450873"];
-  item_refined_oil -> item_hydrogen [color="#450873"];
-  item_hydrogen -> item_hydrogen [color="#450873"];
-  item_fire_ice -> item_hydrogen [color="#ffa8ef"];
-  item_critical_photon -> item_hydrogen [color="#a8efff"];
-  item_hydrogen -> item_deuterium [color="#a8efff"];
-  item_hydrogen -> item_deuterium [color="#a9a8ff"];
-  item_critical_photon -> item_antimatter [color="#a8efff"];
-  item_coal_ore -> item_energetic_graphite [color="#ffbca8"];
-  item_refined_oil -> item_energetic_graphite [color="#450873"];
-  item_hydrogen -> item_energetic_graphite [color="#450873"];
-  item_silicon_ore -> item_high_purity_silicon [color="#ffbca8"];
-  item_titanium_ore -> item_titanium_ingot [color="#ffbca8"];
-  item_water -> item_sulfuric_acid [color="#ffa8ef"];
-  item_stone_ore -> item_sulfuric_acid [color="#ffa8ef"];
-  item_refined_oil -> item_sulfuric_acid [color="#ffa8ef"];
-  item_crude_oil -> item_refined_oil [color="#450873"];
-  item_iron_ore -> item_magnet [color="#ffbca8"];
-  item_magnet -> item_magnetic_coil [color="#1f8042"];
-  item_copper_ingot -> item_magnetic_coil [color="#1f8042"];
-  item_stone_ore -> item_glass [color="#ffbca8"];
-  item_energetic_graphite -> item_diamond [color="#ffbca8"];
-  item_kimberlite_ore -> item_diamond [color="#ffbca8"];
-  item_high_purity_silicon -> item_crystal_silicon [color="#ffbca8"];
-  item_fractal_silicon -> item_crystal_silicon [color="#ffbca8"];
-  item_titanium_ingot -> item_titanium_alloy [color="#ffbca8"];
-  item_sulfuric_acid -> item_titanium_alloy [color="#ffbca8"];
-  item_steel -> item_titanium_alloy [color="#ffbca8"];
-  item_iron_ingot -> item_steel [color="#ffbca8"];
-  item_iron_ingot -> item_circuit_board [color="#1f8042"];
-  item_copper_ingot -> item_circuit_board [color="#1f8042"];
-  item_glass -> item_prism [color="#1f8042"];
-  item_iron_ingot -> item_electric_motor [color="#1f8042"];
-  item_gear -> item_electric_motor [color="#1f8042"];
-  item_magnetic_coil -> item_electric_motor [color="#1f8042"];
-  item_copper_ingot -> item_microcrystalline_component [color="#1f8042"];
-  item_high_purity_silicon -> item_microcrystalline_component [color="#1f8042"];
-  item_iron_ingot -> item_gear [color="#1f8042"];
-  item_prism -> item_plasma_exciter [color="#1f8042"];
-  item_magnetic_coil -> item_plasma_exciter [color="#1f8042"];
-  item_prism -> item_photon_combiner [color="#1f8042"];
-  item_circuit_board -> item_photon_combiner [color="#1f8042"];
-  item_optical_grating_crystal -> item_photon_combiner [color="#1f8042"];
-  item_circuit_board -> item_photon_combiner [color="#1f8042"];
-  item_electric_motor -> item_electromagnetic_turbine [color="#1f8042"];
-  item_magnetic_coil -> item_electromagnetic_turbine [color="#1f8042"];
-  item_circuit_board -> item_processor [color="#1f8042"];
-  item_microcrystalline_component -> item_processor [color="#1f8042"];
-  item_steel -> item_foundation [color="#1f8042"];
-  item_stone -> item_foundation [color="#1f8042"];
-  item_electromagnetic_turbine -> item_particle_container [color="#1f8042"];
-  item_copper_ingot -> item_particle_container [color="#1f8042"];
-  item_graphene -> item_particle_container [color="#1f8042"];
-  item_unipolar_magnet -> item_particle_container [color="#1f8042"];
-  item_copper_ingot -> item_particle_container [color="#1f8042"];
-  item_electromagnetic_turbine -> item_super_magnetic_ring [color="#1f8042"];
-  item_magnet -> item_super_magnetic_ring [color="#1f8042"];
-  item_energetic_graphite -> item_super_magnetic_ring [color="#1f8042"];
-  item_diamond -> item_graviton_lens [color="#1f8042"];
-  item_strange_matter -> item_graviton_lens [color="#1f8042"];
-  item_hydrogen -> item_hydrogen_fuel_rod [color="#ffa8ef"];
-  item_titanium_ingot -> item_hydrogen_fuel_rod [color="#ffa8ef"];
-  item_titanium_alloy -> item_deuteron_fuel_rod [color="#1f8042"];
-  item_deuterium -> item_deuteron_fuel_rod [color="#1f8042"];
-  item_super_magnetic_ring -> item_deuteron_fuel_rod [color="#1f8042"];
-  item_antimatter -> item_antimatter_fuel_rod [color="#1f8042"];
-  item_hydrogen -> item_antimatter_fuel_rod [color="#1f8042"];
-  item_titanium_alloy -> item_antimatter_fuel_rod [color="#1f8042"];
-  item_annihilation_constraint_sphere -> item_antimatter_fuel_rod [color="#1f8042"];
-  item_refined_oil -> item_plastic [color="#ffa8ef"];
-  item_energetic_graphite -> item_plastic [color="#ffa8ef"];
-  item_refined_oil -> item_organic_crystal [color="#ffa8ef"];
-  item_plastic -> item_organic_crystal [color="#ffa8ef"];
-  item_water -> item_organic_crystal [color="#ffa8ef"];
-  item_log -> item_organic_crystal [color="#ffa8ef"];
-  item_plant_fuel -> item_organic_crystal [color="#ffa8ef"];
-  item_water -> item_organic_crystal [color="#ffa8ef"];
-  item_sulfuric_acid -> item_graphene [color="#ffa8ef"];
-  item_energetic_graphite -> item_graphene [color="#ffa8ef"];
-  item_fire_ice -> item_graphene [color="#ffa8ef"];
-  item_steel -> item_thruster [color="#1f8042"];
-  item_copper_ingot -> item_thruster [color="#1f8042"];
-  item_titanium_alloy -> item_reinforced_thruster [color="#1f8042"];
-  item_electromagnetic_turbine -> item_reinforced_thruster [color="#1f8042"];
-  item_titanium_crystal -> item_casimir_crystal [color="#1f8042"];
-  item_graphene -> item_casimir_crystal [color="#1f8042"];
-  item_hydrogen -> item_casimir_crystal [color="#1f8042"];
-  item_optical_grating_crystal -> item_casimir_crystal [color="#1f8042"];
-  item_graphene -> item_casimir_crystal [color="#1f8042"];
-  item_hydrogen -> item_casimir_crystal [color="#1f8042"];
-  item_deuterium -> item_strange_matter [color="#a8efff"];
-  item_iron_ingot -> item_strange_matter [color="#a8efff"];
-  item_particle_container -> item_strange_matter [color="#a8efff"];
-  item_titanium_ingot -> item_titanium_crystal [color="#1f8042"];
-  item_organic_crystal -> item_titanium_crystal [color="#1f8042"];
-  item_graphene -> item_carbon_nanotube [color="#ffa8ef"];
-  item_titanium_ingot -> item_carbon_nanotube [color="#ffa8ef"];
-  item_spiniform_stalagmite_crystal -> item_carbon_nanotube [color="#ffa8ef"];
-  item_processor -> item_annihilation_constraint_sphere [color="#1f8042"];
-  item_particle_container -> item_annihilation_constraint_sphere [color="#1f8042"];
-  item_glass -> item_titanium_glass [color="#1f8042"];
-  item_titanium_ingot -> item_titanium_glass [color="#1f8042"];
-  item_water -> item_titanium_glass [color="#1f8042"];
-  item_carbon_nanotube -> item_particle_broadband [color="#1f8042"];
-  item_crystal_silicon -> item_particle_broadband [color="#1f8042"];
-  item_plastic -> item_particle_broadband [color="#1f8042"];
-  item_iron_ingot -> item_logistics_drone [color="#1f8042"];
-  item_processor -> item_logistics_drone [color="#1f8042"];
-  item_thruster -> item_logistics_drone [color="#1f8042"];
-  item_graviton_lens -> item_space_warper [color="#1f8042"];
-  item_gravity_matrix -> item_space_warper [color="#1f8042"];
-  item_casimir_crystal -> item_plane_filter [color="#1f8042"];
-  item_titanium_glass -> item_plane_filter [color="#1f8042"];
-  item_processor -> item_quantum_chip [color="#1f8042"];
-  item_plane_filter -> item_quantum_chip [color="#1f8042"];
-  item_processor -> item_logistics_vessel [color="#1f8042"];
-  item_titanium_alloy -> item_logistics_vessel [color="#1f8042"];
-  item_reinforced_thruster -> item_logistics_vessel [color="#1f8042"];
-  item_graphene -> item_solar_sail [color="#1f8042"];
-  item_photon_combiner -> item_solar_sail [color="#1f8042"];
-  item_carbon_nanotube -> item_frame_material [color="#1f8042"];
-  item_titanium_alloy -> item_frame_material [color="#1f8042"];
-  item_high_purity_silicon -> item_frame_material [color="#1f8042"];
-  item_frame_material -> item_dyson_sphere_component [color="#1f8042"];
-  item_processor -> item_dyson_sphere_component [color="#1f8042"];
-  item_solar_sail -> item_dyson_sphere_component [color="#1f8042"];
-  item_dyson_sphere_component -> item_small_carrier_rocket [color="#1f8042"];
-  item_deuteron_fuel_rod -> item_small_carrier_rocket [color="#1f8042"];
-  item_quantum_chip -> item_small_carrier_rocket [color="#1f8042"];
-  item_magnetic_coil -> item_electromagnetic_matrix [color="#62b3f5"];
-  item_circuit_board -> item_electromagnetic_matrix [color="#62b3f5"];
-  item_energetic_graphite -> item_energy_matrix [color="#62b3f5"];
-  item_hydrogen -> item_energy_matrix [color="#62b3f5"];
-  item_diamond -> item_structure_matrix [color="#62b3f5"];
-  item_titanium_crystal -> item_structure_matrix [color="#62b3f5"];
-  item_processor -> item_information_matrix [color="#62b3f5"];
-  item_particle_broadband -> item_information_matrix [color="#62b3f5"];
-  item_graviton_lens -> item_gravity_matrix [color="#62b3f5"];
-  item_quantum_chip -> item_gravity_matrix [color="#62b3f5"];
-  item_electromagnetic_matrix -> item_universe_matrix [color="#62b3f5"];
-  item_energy_matrix -> item_universe_matrix [color="#62b3f5"];
-  item_structure_matrix -> item_universe_matrix [color="#62b3f5"];
-  item_information_matrix -> item_universe_matrix [color="#62b3f5"];
-  item_gravity_matrix -> item_universe_matrix [color="#62b3f5"];
-  item_antimatter -> item_universe_matrix [color="#62b3f5"];
-  item_iron_ingot -> item_tesla_tower [color="#1f8042"];
-  item_magnetic_coil -> item_tesla_tower [color="#1f8042"];
-  item_tesla_tower -> item_wireless_power_tower [color="#1f8042"];
-  item_plasma_exciter -> item_wireless_power_tower [color="#1f8042"];
-  item_wireless_power_tower -> item_satellite_substation [color="#1f8042"];
-  item_super_magnetic_ring -> item_satellite_substation [color="#1f8042"];
-  item_frame_material -> item_satellite_substation [color="#1f8042"];
-  item_iron_ingot -> item_wind_turbine [color="#1f8042"];
-  item_gear -> item_wind_turbine [color="#1f8042"];
-  item_magnetic_coil -> item_wind_turbine [color="#1f8042"];
-  item_iron_ingot -> item_thermal_power_station [color="#1f8042"];
-  item_gear -> item_thermal_power_station [color="#1f8042"];
-  item_magnetic_coil -> item_thermal_power_station [color="#1f8042"];
-  item_stone -> item_thermal_power_station [color="#1f8042"];
-  item_copper_ingot -> item_solar_panel [color="#1f8042"];
-  item_high_purity_silicon -> item_solar_panel [color="#1f8042"];
-  item_circuit_board -> item_solar_panel [color="#1f8042"];
-  item_titanium_alloy -> item_mini_fusion_power_station [color="#1f8042"];
-  item_super_magnetic_ring -> item_mini_fusion_power_station [color="#1f8042"];
-  item_carbon_nanotube -> item_mini_fusion_power_station [color="#1f8042"];
-  item_processor -> item_mini_fusion_power_station [color="#1f8042"];
-  item_iron_ingot -> item_accumulator [color="#1f8042"];
-  item_super_magnetic_ring -> item_accumulator [color="#1f8042"];
-  item_crystal_silicon -> item_accumulator [color="#1f8042"];
-  item_full_accumulator -> item_accumulator [color="#98ff69"];
-  item_accumulator -> item_full_accumulator [color="#98ff69"];
-  item_titanium_alloy -> item_energy_exchanger [color="#1f8042"];
-  item_steel -> item_energy_exchanger [color="#1f8042"];
-  item_processor -> item_energy_exchanger [color="#1f8042"];
-  item_particle_container -> item_energy_exchanger [color="#1f8042"];
-  item_steel -> item_ray_receiver [color="#1f8042"];
-  item_high_purity_silicon -> item_ray_receiver [color="#1f8042"];
-  item_photon_combiner -> item_ray_receiver [color="#1f8042"];
-  item_processor -> item_ray_receiver [color="#1f8042"];
-  item_super_magnetic_ring -> item_ray_receiver [color="#1f8042"];
-  item_titanium_alloy -> item_artificial_star [color="#1f8042"];
-  item_frame_material -> item_artificial_star [color="#1f8042"];
-  item_annihilation_constraint_sphere -> item_artificial_star [color="#1f8042"];
-  item_quantum_chip -> item_artificial_star [color="#1f8042"];
-  item_iron_ingot -> item_conveyor_belt_mk_i [color="#1f8042"];
-  item_gear -> item_conveyor_belt_mk_i [color="#1f8042"];
-  item_conveyor_belt_mk_i -> item_conveyor_belt_mk_ii [color="#1f8042"];
-  item_electromagnetic_turbine -> item_conveyor_belt_mk_ii [color="#1f8042"];
-  item_conveyor_belt_mk_ii -> item_conveyor_belt_mk_iii [color="#1f8042"];
-  item_super_magnetic_ring -> item_conveyor_belt_mk_iii [color="#1f8042"];
-  item_graphene -> item_conveyor_belt_mk_iii [color="#1f8042"];
-  item_iron_ingot -> item_splitter [color="#1f8042"];
-  item_gear -> item_splitter [color="#1f8042"];
-  item_circuit_board -> item_splitter [color="#1f8042"];
-  item_iron_ingot -> item_storage_mk_i [color="#1f8042"];
-  item_stone -> item_storage_mk_i [color="#1f8042"];
-  item_steel -> item_storage_mk_ii [color="#1f8042"];
-  item_stone -> item_storage_mk_ii [color="#1f8042"];
-  item_iron_ingot -> item_storage_tank [color="#1f8042"];
-  item_stone -> item_storage_tank [color="#1f8042"];
-  item_glass -> item_storage_tank [color="#1f8042"];
-  item_steel -> item_planetary_logistics_station [color="#1f8042"];
-  item_titanium_ingot -> item_planetary_logistics_station [color="#1f8042"];
-  item_processor -> item_planetary_logistics_station [color="#1f8042"];
-  item_particle_container -> item_planetary_logistics_station [color="#1f8042"];
-  item_planetary_logistics_station -> item_interstellar_logistics_station [color="#1f8042"];
-  item_titanium_alloy -> item_interstellar_logistics_station [color="#1f8042"];
-  item_particle_container -> item_interstellar_logistics_station [color="#1f8042"];
-  item_interstellar_logistics_station -> item_orbit_collector [color="#1f8042"];
-  item_super_magnetic_ring -> item_orbit_collector [color="#1f8042"];
-  item_reinforced_thruster -> item_orbit_collector [color="#1f8042"];
-  item_full_accumulator -> item_orbit_collector [color="#1f8042"];
-  item_steel -> item_em_rail_ejector [color="#1f8042"];
-  item_gear -> item_em_rail_ejector [color="#1f8042"];
-  item_processor -> item_em_rail_ejector [color="#1f8042"];
-  item_super_magnetic_ring -> item_em_rail_ejector [color="#1f8042"];
-  item_iron_ingot -> item_sorter_mk_i [color="#1f8042"];
-  item_circuit_board -> item_sorter_mk_i [color="#1f8042"];
-  item_sorter_mk_i -> item_sorter_mk_ii [color="#1f8042"];
-  item_electric_motor -> item_sorter_mk_ii [color="#1f8042"];
-  item_sorter_mk_ii -> item_sorter_mk_iii [color="#1f8042"];
-  item_electromagnetic_turbine -> item_sorter_mk_iii [color="#1f8042"];
-  item_iron_ingot -> item_mining_machine [color="#1f8042"];
-  item_circuit_board -> item_mining_machine [color="#1f8042"];
-  item_magnetic_coil -> item_mining_machine [color="#1f8042"];
-  item_gear -> item_mining_machine [color="#1f8042"];
-  item_iron_ingot -> item_water_pump [color="#1f8042"];
-  item_circuit_board -> item_water_pump [color="#1f8042"];
-  item_electric_motor -> item_water_pump [color="#1f8042"];
-  item_stone -> item_water_pump [color="#1f8042"];
-  item_steel -> item_oil_extractor [color="#1f8042"];
-  item_circuit_board -> item_oil_extractor [color="#1f8042"];
-  item_plasma_exciter -> item_oil_extractor [color="#1f8042"];
-  item_stone -> item_oil_extractor [color="#1f8042"];
-  item_steel -> item_oil_refinery [color="#1f8042"];
-  item_circuit_board -> item_oil_refinery [color="#1f8042"];
-  item_plasma_exciter -> item_oil_refinery [color="#1f8042"];
-  item_stone -> item_oil_refinery [color="#1f8042"];
-  item_titanium_alloy -> item_miniature_particle_collider [color="#1f8042"];
-  item_frame_material -> item_miniature_particle_collider [color="#1f8042"];
-  item_super_magnetic_ring -> item_miniature_particle_collider [color="#1f8042"];
-  item_graphene -> item_miniature_particle_collider [color="#1f8042"];
-  item_processor -> item_miniature_particle_collider [color="#1f8042"];
-  item_iron_ingot -> item_matrix_lab [color="#1f8042"];
-  item_glass -> item_matrix_lab [color="#1f8042"];
-  item_circuit_board -> item_matrix_lab [color="#1f8042"];
-  item_magnetic_coil -> item_matrix_lab [color="#1f8042"];
-  item_titanium_alloy -> item_vertical_launching_silo [color="#1f8042"];
-  item_frame_material -> item_vertical_launching_silo [color="#1f8042"];
-  item_graviton_lens -> item_vertical_launching_silo [color="#1f8042"];
-  item_quantum_chip -> item_vertical_launching_silo [color="#1f8042"];
-  item_iron_ingot -> item_assembling_machine_mk_i [color="#1f8042"];
-  item_gear -> item_assembling_machine_mk_i [color="#1f8042"];
-  item_circuit_board -> item_assembling_machine_mk_i [color="#1f8042"];
-  item_assembling_machine_mk_i -> item_assembling_machine_mk_ii [color="#1f8042"];
-  item_graphene -> item_assembling_machine_mk_ii [color="#1f8042"];
-  item_processor -> item_assembling_machine_mk_ii [color="#1f8042"];
-  item_assembling_machine_mk_ii -> item_assembling_machine_mk_iii [color="#1f8042"];
-  item_particle_broadband -> item_assembling_machine_mk_iii [color="#1f8042"];
-  item_quantum_chip -> item_assembling_machine_mk_iii [color="#1f8042"];
-  item_iron_ingot -> item_smelter [color="#1f8042"];
-  item_stone -> item_smelter [color="#1f8042"];
-  item_circuit_board -> item_smelter [color="#1f8042"];
-  item_magnetic_coil -> item_smelter [color="#1f8042"];
-  item_steel -> item_chemical_plant [color="#1f8042"];
-  item_stone -> item_chemical_plant [color="#1f8042"];
-  item_circuit_board -> item_chemical_plant [color="#1f8042"];
-  item_glass -> item_chemical_plant [color="#1f8042"];
-  item_steel -> item_fractionator [color="#1f8042"];
-  item_stone -> item_fractionator [color="#1f8042"];
-  item_processor -> item_fractionator [color="#1f8042"];
-  item_glass -> item_fractionator [color="#1f8042"];
-subgraph cluster_0 { label="Legend"; legend [image="result/legend_items.png", label="", shape="none"]; }
+  graph [ overlap="false"  fontname="Roboto"  fontsize="16"  splines="ortho"  ratio="0.5625"  rankdir="TB"  fontcolor="#ebf2ff"  bgcolor="#0c041c"  fillcolor="#0c041c" ];
+  node [ fontname="Roboto"  fontsize="16"  shape="box"  style="rounded,filled"  fontcolor="#ebf2ff"  color="#ebf2ff" ];
+  edge [ fontname="Roboto"  fontsize="16"  fontcolor="#ebf2ff"  color="#ebf2ff"  penwidth="3"  minlen="1" ];
+  subgraph cluster_0 { label="Legend"; legend [image="result/legend_items.png" label="" shape="none"]; }
+  accumulator_accumulator [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Accumulator</td> </tr> <tr> <td><img src='icons/accumulator_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔋 🤚 🏠 </td> </tr></table>> fillcolor="#71195c"];
+  accumulator_full_accumulator_full_ [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Accumulator(full)</td> </tr> <tr> <td><img src='icons/accumulator-full_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🔋 🏠 </td> </tr></table>> fillcolor="#71195c"];
+  anti_matter_antimatter [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Antimatter</td> </tr> <tr> <td><img src='icons/anti-matter_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#20141f"];
+  antimatter_energy_fuel_antimatter_fuel_rod [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Antimatter fuel rod</td> </tr> <tr> <td><img src='icons/antimatter-energy-fuel_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🧊 </td> </tr></table>> fillcolor="#1f133a"];
+  assembler_1_assembling_machine_mk_i [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Assembling machine Mk.I</td> </tr> <tr> <td><img src='icons/assembler-1_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1201_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#294419"];
+  assembler_2_assembling_machine_mk_ii [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Assembling machine Mk.II</td> </tr> <tr> <td><img src='icons/assembler-2_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#294419"];
+  assembler_3_assembling_machine_mk_iii [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Assembling machine Mk.III</td> </tr> <tr> <td><img src='icons/assembler-3_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#294419"];
+  bamboo_crystal_spiniform_stalagmite_crystal [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Spiniform stalagmite crystal</td> </tr> <tr> <td><img src='icons/bamboo-crystal_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  belt_1_conveyor_belt_mk_i [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Conveyor belt MK.I</td> </tr> <tr> <td><img src='icons/belt-1_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1601_48.png' /></td></tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  belt_2_conveyor_belt_mk_ii [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Conveyor belt MK.II</td> </tr> <tr> <td><img src='icons/belt-2_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  belt_3_conveyor_belt_mk_iii [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Conveyor belt MK.III</td> </tr> <tr> <td><img src='icons/belt-3_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  c_matrix_structure_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Structure matrix</td> </tr> <tr> <td><img src='icons/c-matrix_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#1f2b1a"];
+  casimir_crystal_casimir_crystal [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Casimir crystal</td> </tr> <tr> <td><img src='icons/casimir-crystal_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  charging_pole_wireless_power_tower [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Wireless power tower</td> </tr> <tr> <td><img src='icons/charging-pole_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> ⚡️ 🤚 🏠 </td> </tr></table>> fillcolor="#711f37"];
+  chemical_plant_chemical_plant [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Chemical plant</td> </tr> <tr> <td><img src='icons/chemical-plant_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#403088"];
+  circuit_board_circuit_board [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Circuit board</td> </tr> <tr> <td><img src='icons/circuit-board_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 15</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  coal_ore_coal_ore [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Coal ore</td> </tr> <tr> <td><img src='icons/coal-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🎲 </td> </tr></table>> fillcolor="#431025"];
+  copper_ore_copper_ore [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Copper ore</td> </tr> <tr> <td><img src='icons/copper-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  copper_plate_copper_ingot [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Copper ingot</td> </tr> <tr> <td><img src='icons/copper-plate_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 7</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  crystal_rubber_organic_crystal [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Organic crystal</td> </tr> <tr> <td><img src='icons/crystal-rubber_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🤚 🎲 </td> </tr></table>> fillcolor="#20141f"];
+  deuterium_deuterium [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Deuterium</td> </tr> <tr> <td><img src='icons/deuterium_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🎲 💧 </td> </tr></table>> fillcolor="#20141f"];
+  deuterium_energy_fuel_deuteron_fuel_rod [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Deuteron fuel rod</td> </tr> <tr> <td><img src='icons/deuterium-energy-fuel_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🧊 🤚 </td> </tr></table>> fillcolor="#1f133a"];
+  diamond_diamond [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Diamond</td> </tr> <tr> <td><img src='icons/diamond_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 </td> </tr></table>> fillcolor="#20141f"];
+  diamond_ore_kimberlite_ore [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Kimberlite ore</td> </tr> <tr> <td><img src='icons/diamond-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  dyson_sphere_component_dyson_sphere_component [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Dyson sphere component</td> </tr> <tr> <td><img src='icons/dyson-sphere-component_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  e_matrix_energy_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Energy matrix</td> </tr> <tr> <td><img src='icons/e-matrix_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#1f2b1a"];
+  electric_motor_electric_motor [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Electric motor</td> </tr> <tr> <td><img src='icons/electric-motor_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 3</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  em_rail_ejector_em_rail_ejector [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>EM-Rail Ejector</td> </tr> <tr> <td><img src='icons/em-rail-ejector_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#28425c"];
+  energy_exchanger_energy_exchanger [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Energy exchanger</td> </tr> <tr> <td><img src='icons/energy-exchanger_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> ⚡️ 🤚 🏠 </td> </tr></table>> fillcolor="#711f37"];
+  fractal_silica_fractal_silicon [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Fractal silicon</td> </tr> <tr> <td><img src='icons/fractal-silica_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  fractionator_fractionator [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Fractionator</td> </tr> <tr> <td><img src='icons/fractionator_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#3821b1"];
+  frame_material_frame_material [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Frame material</td> </tr> <tr> <td><img src='icons/frame-material_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 5</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  fuel_plant_thermal_power_station [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Thermal power station</td> </tr> <tr> <td><img src='icons/fuel-plant_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1412_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 🌪️ 🏠 </td> </tr></table>> fillcolor="#732215"];
+  fuel_thruster_thruster [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Thruster</td> </tr> <tr> <td><img src='icons/fuel-thruster_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  fusion_capacitor_annihilation_constraint_sphere [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Annihilation constraint sphere</td> </tr> <tr> <td><img src='icons/fusion-capacitor_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  fusion_power_station_mini_fusion_power_station [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Mini fusion power station</td> </tr> <tr> <td><img src='icons/fusion-power-station_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🌪️ 🏠 </td> </tr></table>> fillcolor="#732215"];
+  fusion_reactor_artificial_star [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Artificial star</td> </tr> <tr> <td><img src='icons/fusion-reactor_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🌪️ 🏠 </td> </tr></table>> fillcolor="#732215"];
+  g_matrix_gravity_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Gravity matrix</td> </tr> <tr> <td><img src='icons/g-matrix_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#1f2b1a"];
+  gas_hydrate_fire_ice [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Fire ice</td> </tr> <tr> <td><img src='icons/gas-hydrate_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🎲 </td> </tr></table>> fillcolor="#431025"];
+  gear_wheel_gear [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Gear</td> </tr> <tr> <td><img src='icons/gear-wheel_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 8</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  glass_glass [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Glass</td> </tr> <tr> <td><img src='icons/glass_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 6</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  graphene_graphene [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Graphene</td> </tr> <tr> <td><img src='icons/graphene_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 8</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 </td> </tr></table>> fillcolor="#20141f"];
+  graphite_energetic_graphite [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Energetic graphite</td> </tr> <tr> <td><img src='icons/graphite_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 5</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  grating_ore_optical_grating_crystal [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Optical grating crystal</td> </tr> <tr> <td><img src='icons/grating-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  gravity_lens_graviton_lens [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Graviton lens</td> </tr> <tr> <td><img src='icons/gravity-lens_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 3</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  hadron_collider_miniature_particle_collider [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Miniature particle collider</td> </tr> <tr> <td><img src='icons/hadron-collider_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#280e66"];
+  hydrogen_hydrogen [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Hydrogen</td> </tr> <tr> <td><img src='icons/hydrogen_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 9</td></tr> <tr><td>Recipes: 4</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🎲 💧 </td> </tr></table>> fillcolor="#20141f"];
+  hydrogen_energy_fuel_hydrogen_fuel_rod [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Hydrogen fuel rod</td> </tr> <tr> <td><img src='icons/hydrogen-energy-fuel_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 30</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🧊 🤚 </td> </tr></table>> fillcolor="#1f133a"];
+  hyper_magnetism_ring_super_magnetic_ring [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Super-magnetic ring</td> </tr> <tr> <td><img src='icons/hyper-magnetism-ring_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 9</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  i_matrix_information_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Information matrix</td> </tr> <tr> <td><img src='icons/i-matrix_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#1f2b1a"];
+  inserter_1_sorter_mk_i [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Sorter MK.I</td> </tr> <tr> <td><img src='icons/inserter-1_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1601_48.png' /></td></tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  inserter_2_sorter_mk_ii [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Sorter MK.II</td> </tr> <tr> <td><img src='icons/inserter-2_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1602_48.png' /></td></tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  inserter_3_sorter_mk_iii [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Sorter MK.III</td> </tr> <tr> <td><img src='icons/inserter-3_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  interstellar_logistic_station_interstellar_logistics_station [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Interstellar Logistics Station</td> </tr> <tr> <td><img src='icons/interstellar-logistic-station_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  ion_thruster_reinforced_thruster [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Reinforced thruster</td> </tr> <tr> <td><img src='icons/ion-thruster_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  iron_ore_iron_ore [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Iron ore</td> </tr> <tr> <td><img src='icons/iron-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  iron_plate_iron_ingot [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Iron ingot</td> </tr> <tr> <td><img src='icons/iron-plate_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 20</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  lab_matrix_lab [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Matrix lab</td> </tr> <tr> <td><img src='icons/lab_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1002_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#152a38"];
+  logistic_drone_logistics_drone [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Logistics drone</td> </tr> <tr> <td><img src='icons/logistic-drone_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 </td> </tr></table>> fillcolor="#361d32"];
+  logistic_station_planetary_logistics_station [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Planetary Logistics Station</td> </tr> <tr> <td><img src='icons/logistic-station_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  logistic_vessel_logistics_vessel [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Logistics vessel</td> </tr> <tr> <td><img src='icons/logistic-vessel_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 </td> </tr></table>> fillcolor="#361d32"];
+  mag_turbine_electromagnetic_turbine [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Electromagnetic turbine</td> </tr> <tr> <td><img src='icons/mag-turbine_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 5</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  magnet_magnet [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Magnet</td> </tr> <tr> <td><img src='icons/magnet_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  magnetism_wire_magnetic_coil [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Magnetic coil</td> </tr> <tr> <td><img src='icons/magnetism-wire_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 10</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  micro_component_microcrystalline_component [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Microcrystalline component</td> </tr> <tr> <td><img src='icons/micro-component_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  mining_drill_mining_machine [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Mining machine</td> </tr> <tr> <td><img src='icons/mining-drill_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1001_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#4b391b"];
+  mono_mag_ore_unipolar_magnet [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Unipolar magnet</td> </tr> <tr> <td><img src='icons/mono-mag-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  nanotube_carbon_nanotube [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Carbon nanotube</td> </tr> <tr> <td><img src='icons/nanotube_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 3</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 </td> </tr></table>> fillcolor="#20141f"];
+  oil_crude_oil [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Crude oil</td> </tr> <tr> <td><img src='icons/oil_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🎲 💧 </td> </tr></table>> fillcolor="#431025"];
+  oil_extractor_oil_extractor [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Oil extractor</td> </tr> <tr> <td><img src='icons/oil-extractor_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#561b92"];
+  oil_refinery_oil_refinery [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Oil refinery</td> </tr> <tr> <td><img src='icons/oil-refinery_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#264541"];
+  orbital_collector_orbit_collector [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Orbit collector</td> </tr> <tr> <td><img src='icons/orbital-collector_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  orbital_substation_satellite_substation [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Satellite substation</td> </tr> <tr> <td><img src='icons/orbital-substation_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> ⚡️ 🤚 🏠 </td> </tr></table>> fillcolor="#711f37"];
+  partical_capacitor_particle_container [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Particle container</td> </tr> <tr> <td><img src='icons/partical-capacitor_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 5</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  particle_wide_band_particle_broadband [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Particle broadband</td> </tr> <tr> <td><img src='icons/particle-wide-band_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  photo_shifter_photon_combiner [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Photon combiner</td> </tr> <tr> <td><img src='icons/photo-shifter_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  photon_capacitor_full_critical_photon [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Critical photon</td> </tr> <tr> <td><img src='icons/photon-capacitor-full_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#20141f"];
+  plane_filter_plane_filter [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Plane filter</td> </tr> <tr> <td><img src='icons/plane-filter_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  plant_fuel_plant_fuel [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Plant fuel</td> </tr> <tr> <td><img src='icons/plant-fuel_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 500</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🎲 </td> </tr></table>> fillcolor="#431025"];
+  plasma_generator_plasma_exciter [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Plasma exciter</td> </tr> <tr> <td><img src='icons/plasma-generator_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 3</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1101_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  plastic_plastic [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Plastic</td> </tr> <tr> <td><img src='icons/plastic_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#20141f"];
+  prism_prism [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Prism</td> </tr> <tr> <td><img src='icons/prism_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  processor_processor [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Processor</td> </tr> <tr> <td><img src='icons/processor_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 14</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  quantum_processor_quantum_chip [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Quantum chip</td> </tr> <tr> <td><img src='icons/quantum-processor_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 5</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  ray_receiver_ray_receiver [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Ray receiver</td> </tr> <tr> <td><img src='icons/ray-receiver_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🌪️ 🏠 </td> </tr></table>> fillcolor="#732215"];
+  refined_oil_refined_oil [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Refined oil</td> </tr> <tr> <td><img src='icons/refined-oil_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 5</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 💧 </td> </tr></table>> fillcolor="#20141f"];
+  rocket_small_carrier_rocket [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Small carrier rocket</td> </tr> <tr> <td><img src='icons/rocket_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🧊 🤚 </td> </tr></table>> fillcolor="#1f133a"];
+  silicium_high_purity_crystal_silicon [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Crystal silicon</td> </tr> <tr> <td><img src='icons/silicium-high-purity_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#20141f"];
+  silicium_ore_silicon_ore [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Silicon ore</td> </tr> <tr> <td><img src='icons/silicium-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  silicium_single_crystal_high_purity_silicon [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>High-purity silicon</td> </tr> <tr> <td><img src='icons/silicium-single-crystal_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 5</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  smelter_smelter [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Smelter</td> </tr> <tr> <td><img src='icons/smelter_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1401_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#4c271e"];
+  solar_collector_solar_sail [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Solar sail</td> </tr> <tr> <td><img src='icons/solar-collector_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🧊 🤚 </td> </tr></table>> fillcolor="#1f133a"];
+  solar_panel_solar_panel [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Solar panel</td> </tr> <tr> <td><img src='icons/solar-panel_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1501_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 🌪️ 🏠 </td> </tr></table>> fillcolor="#732215"];
+  space_warper_space_warper [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Space warper</td> </tr> <tr> <td><img src='icons/space-warper_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 2</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#58374a"];
+  splitter_4dir_splitter_4_direction_ [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Splitter(4-direction)</td> </tr> <tr> <td><img src='icons/splitter-4dir_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1602_48.png' /></td></tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  steel_plate_steel [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Steel</td> </tr> <tr> <td><img src='icons/steel-plate_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 12</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#20141f"];
+  stone_brick_stone [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Stone</td> </tr> <tr> <td><img src='icons/stone-brick_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 11</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  stone_ore_stone_ore [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Stone ore</td> </tr> <tr> <td><img src='icons/stone-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 4</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  storage_1_storage_mk_i [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Storage MK.I</td> </tr> <tr> <td><img src='icons/storage-1_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  storage_2_storage_mk_ii [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Storage MK.II</td> </tr> <tr> <td><img src='icons/storage-2_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  storage_tank_storage_tank [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Storage tank</td> </tr> <tr> <td><img src='icons/storage-tank_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1120_48.png' /></td></tr> <tr> <td colspan='2'> 🚚 🤚 🏠 </td> </tr></table>> fillcolor="#361d32"];
+  strange_matter_generator_strange_matter [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Strange matter</td> </tr> <tr> <td><img src='icons/strange-matter-generator_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 50</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#20141f"];
+  sulphuric_acid_sulfuric_acid [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Sulfuric acid</td> </tr> <tr> <td><img src='icons/sulphuric-acid_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 💧 </td> </tr></table>> fillcolor="#20141f"];
+  t_matrix_electromagnetic_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Electromagnetic matrix</td> </tr> <tr> <td><img src='icons/t-matrix_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#1f2b1a"];
+  terrain_tool_foundation [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Foundation</td> </tr> <tr> <td><img src='icons/terrain-tool_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 1000</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#58374a"];
+  tesla_coil_tesla_tower [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Tesla tower</td> </tr> <tr> <td><img src='icons/tesla-coil_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1001_48.png' /></td></tr> <tr> <td colspan='2'> ⚡️ 🤚 🏠 </td> </tr></table>> fillcolor="#711f37"];
+  titan_crystal_titanium_crystal [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Titanium crystal</td> </tr> <tr> <td><img src='icons/titan-crystal_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 2</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  titan_glass_titanium_glass [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Titanium glass</td> </tr> <tr> <td><img src='icons/titan-glass_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  titanium_alloy_titanium_alloy [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Titanium alloy</td> </tr> <tr> <td><img src='icons/titanium-alloy_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 11</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#20141f"];
+  titanium_ore_titanium_ore [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Titanium ore</td> </tr> <tr> <td><img src='icons/titanium-ore_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 </td> </tr></table>> fillcolor="#431025"];
+  titanium_plate_titanium_ingot [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Titanium ingot</td> </tr> <tr> <td><img src='icons/titanium-plate_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 6</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 </td> </tr></table>> fillcolor="#20141f"];
+  u_matrix_universe_matrix [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Universe matrix</td> </tr> <tr> <td><img src='icons/u-matrix_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 200</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> </td> </tr></table>> fillcolor="#1f2b1a"];
+  vertical_launching_silo_vertical_launching_silo [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Vertical launching silo</td> </tr> <tr> <td><img src='icons/vertical-launching-silo_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 10</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#28425c"];
+  water_water [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Water</td> </tr> <tr> <td><img src='icons/water_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 4</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🎲 💧 </td> </tr></table>> fillcolor="#431025"];
+  water_pump_water_pump [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Water pump</td> </tr> <tr> <td><img src='icons/water-pump_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🤚 🏠 </td> </tr></table>> fillcolor="#2e3472"];
+  wind_turbine_wind_turbine [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Wind turbine</td> </tr> <tr> <td><img src='icons/wind-turbine_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 20</td></tr> <tr><td>Used in: 0</td></tr> <tr><td>Recipes: 1</td></tr> </table> </td> </tr> <tr><td colspan='2'><img src='icons/tech1001_48.png' /></td></tr> <tr> <td colspan='2'> 🤚 🌪️ 🏠 </td> </tr></table>> fillcolor="#732215"];
+  wood_log [label=<<table border='0' cellborder='0' cellspacing='0'> <tr> <td colspan='2'>Log</td> </tr> <tr> <td><img src='icons/wood_96.png' /></td> <td> <table border='0' cellborder='0' cellspacing='0'> <tr><td>Stack: 100</td></tr> <tr><td>Used in: 1</td></tr> <tr><td>Recipes: 0</td></tr> </table> </td> </tr> <tr> <td colspan='2'> 🔥 🎲 </td> </tr></table>> fillcolor="#431025"];
+  hyper_magnetism_ring_super_magnetic_ring -> accumulator_accumulator [color="#80d24d"];
+  iron_plate_iron_ingot -> accumulator_accumulator [color="#80d24d"];
+  silicium_high_purity_crystal_silicon -> accumulator_accumulator [color="#80d24d"];
+  photon_capacitor_full_critical_photon -> anti_matter_antimatter [color="#9196db"];
+  anti_matter_antimatter -> antimatter_energy_fuel_antimatter_fuel_rod [color="#80d24d"];
+  fusion_capacitor_annihilation_constraint_sphere -> antimatter_energy_fuel_antimatter_fuel_rod [color="#80d24d"];
+  hydrogen_hydrogen -> antimatter_energy_fuel_antimatter_fuel_rod [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> antimatter_energy_fuel_antimatter_fuel_rod [color="#80d24d"];
+  circuit_board_circuit_board -> assembler_1_assembling_machine_mk_i [color="#80d24d"];
+  gear_wheel_gear -> assembler_1_assembling_machine_mk_i [color="#80d24d"];
+  iron_plate_iron_ingot -> assembler_1_assembling_machine_mk_i [color="#80d24d"];
+  assembler_1_assembling_machine_mk_i -> assembler_2_assembling_machine_mk_ii [color="#80d24d"];
+  graphene_graphene -> assembler_2_assembling_machine_mk_ii [color="#80d24d"];
+  processor_processor -> assembler_2_assembling_machine_mk_ii [color="#80d24d"];
+  assembler_2_assembling_machine_mk_ii -> assembler_3_assembling_machine_mk_iii [color="#80d24d"];
+  particle_wide_band_particle_broadband -> assembler_3_assembling_machine_mk_iii [color="#80d24d"];
+  quantum_processor_quantum_chip -> assembler_3_assembling_machine_mk_iii [color="#80d24d"];
+  gear_wheel_gear -> belt_1_conveyor_belt_mk_i [color="#80d24d"];
+  iron_plate_iron_ingot -> belt_1_conveyor_belt_mk_i [color="#80d24d"];
+  belt_1_conveyor_belt_mk_i -> belt_2_conveyor_belt_mk_ii [color="#80d24d"];
+  mag_turbine_electromagnetic_turbine -> belt_2_conveyor_belt_mk_ii [color="#80d24d"];
+  belt_2_conveyor_belt_mk_ii -> belt_3_conveyor_belt_mk_iii [color="#80d24d"];
+  graphene_graphene -> belt_3_conveyor_belt_mk_iii [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> belt_3_conveyor_belt_mk_iii [color="#80d24d"];
+  diamond_diamond -> c_matrix_structure_matrix [color="#80bdc9"];
+  titan_crystal_titanium_crystal -> c_matrix_structure_matrix [color="#80bdc9"];
+  graphene_graphene -> casimir_crystal_casimir_crystal [color="#80d24d"];
+  hydrogen_hydrogen -> casimir_crystal_casimir_crystal [color="#80d24d"];
+  titan_crystal_titanium_crystal -> casimir_crystal_casimir_crystal [color="#80d24d"];
+  graphene_graphene -> casimir_crystal_casimir_crystal [color="#80d24d"];
+  grating_ore_optical_grating_crystal -> casimir_crystal_casimir_crystal [color="#80d24d"];
+  hydrogen_hydrogen -> casimir_crystal_casimir_crystal [color="#80d24d"];
+  plasma_generator_plasma_exciter -> charging_pole_wireless_power_tower [color="#80d24d"];
+  tesla_coil_tesla_tower -> charging_pole_wireless_power_tower [color="#80d24d"];
+  circuit_board_circuit_board -> chemical_plant_chemical_plant [color="#80d24d"];
+  glass_glass -> chemical_plant_chemical_plant [color="#80d24d"];
+  steel_plate_steel -> chemical_plant_chemical_plant [color="#80d24d"];
+  stone_brick_stone -> chemical_plant_chemical_plant [color="#80d24d"];
+  copper_plate_copper_ingot -> circuit_board_circuit_board [color="#80d24d"];
+  iron_plate_iron_ingot -> circuit_board_circuit_board [color="#80d24d"];
+  copper_ore_copper_ore -> copper_plate_copper_ingot [color="#c6aa8c"];
+  plastic_plastic -> crystal_rubber_organic_crystal [color="#d266db"];
+  refined_oil_refined_oil -> crystal_rubber_organic_crystal [color="#d266db"];
+  water_water -> crystal_rubber_organic_crystal [color="#d266db"];
+  plant_fuel_plant_fuel -> crystal_rubber_organic_crystal [color="#80d24d"];
+  water_water -> crystal_rubber_organic_crystal [color="#80d24d"];
+  wood_log -> crystal_rubber_organic_crystal [color="#80d24d"];
+  hydrogen_hydrogen -> deuterium_deuterium [color="#9196db"];
+  hydrogen_hydrogen -> deuterium_deuterium [color="#cab548"];
+  deuterium_deuterium -> deuterium_energy_fuel_deuteron_fuel_rod [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> deuterium_energy_fuel_deuteron_fuel_rod [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> deuterium_energy_fuel_deuteron_fuel_rod [color="#80d24d"];
+  graphite_energetic_graphite -> diamond_diamond [color="#c6aa8c"];
+  diamond_ore_kimberlite_ore -> diamond_diamond [color="#c6aa8c"];
+  frame_material_frame_material -> dyson_sphere_component_dyson_sphere_component [color="#80d24d"];
+  processor_processor -> dyson_sphere_component_dyson_sphere_component [color="#80d24d"];
+  solar_collector_solar_sail -> dyson_sphere_component_dyson_sphere_component [color="#80d24d"];
+  graphite_energetic_graphite -> e_matrix_energy_matrix [color="#80bdc9"];
+  hydrogen_hydrogen -> e_matrix_energy_matrix [color="#80bdc9"];
+  gear_wheel_gear -> electric_motor_electric_motor [color="#80d24d"];
+  iron_plate_iron_ingot -> electric_motor_electric_motor [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> electric_motor_electric_motor [color="#80d24d"];
+  gear_wheel_gear -> em_rail_ejector_em_rail_ejector [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> em_rail_ejector_em_rail_ejector [color="#80d24d"];
+  processor_processor -> em_rail_ejector_em_rail_ejector [color="#80d24d"];
+  steel_plate_steel -> em_rail_ejector_em_rail_ejector [color="#80d24d"];
+  partical_capacitor_particle_container -> energy_exchanger_energy_exchanger [color="#80d24d"];
+  processor_processor -> energy_exchanger_energy_exchanger [color="#80d24d"];
+  steel_plate_steel -> energy_exchanger_energy_exchanger [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> energy_exchanger_energy_exchanger [color="#80d24d"];
+  glass_glass -> fractionator_fractionator [color="#80d24d"];
+  processor_processor -> fractionator_fractionator [color="#80d24d"];
+  steel_plate_steel -> fractionator_fractionator [color="#80d24d"];
+  stone_brick_stone -> fractionator_fractionator [color="#80d24d"];
+  nanotube_carbon_nanotube -> frame_material_frame_material [color="#80d24d"];
+  silicium_single_crystal_high_purity_silicon -> frame_material_frame_material [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> frame_material_frame_material [color="#80d24d"];
+  gear_wheel_gear -> fuel_plant_thermal_power_station [color="#80d24d"];
+  iron_plate_iron_ingot -> fuel_plant_thermal_power_station [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> fuel_plant_thermal_power_station [color="#80d24d"];
+  stone_brick_stone -> fuel_plant_thermal_power_station [color="#80d24d"];
+  copper_plate_copper_ingot -> fuel_thruster_thruster [color="#80d24d"];
+  steel_plate_steel -> fuel_thruster_thruster [color="#80d24d"];
+  partical_capacitor_particle_container -> fusion_capacitor_annihilation_constraint_sphere [color="#80d24d"];
+  processor_processor -> fusion_capacitor_annihilation_constraint_sphere [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> fusion_power_station_mini_fusion_power_station [color="#80d24d"];
+  nanotube_carbon_nanotube -> fusion_power_station_mini_fusion_power_station [color="#80d24d"];
+  processor_processor -> fusion_power_station_mini_fusion_power_station [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> fusion_power_station_mini_fusion_power_station [color="#80d24d"];
+  frame_material_frame_material -> fusion_reactor_artificial_star [color="#80d24d"];
+  fusion_capacitor_annihilation_constraint_sphere -> fusion_reactor_artificial_star [color="#80d24d"];
+  quantum_processor_quantum_chip -> fusion_reactor_artificial_star [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> fusion_reactor_artificial_star [color="#80d24d"];
+  gravity_lens_graviton_lens -> g_matrix_gravity_matrix [color="#80bdc9"];
+  quantum_processor_quantum_chip -> g_matrix_gravity_matrix [color="#80bdc9"];
+  iron_plate_iron_ingot -> gear_wheel_gear [color="#80d24d"];
+  stone_ore_stone_ore -> glass_glass [color="#c6aa8c"];
+  graphite_energetic_graphite -> graphene_graphene [color="#d266db"];
+  sulphuric_acid_sulfuric_acid -> graphene_graphene [color="#d266db"];
+  gas_hydrate_fire_ice -> graphene_graphene [color="#d266db"];
+  coal_ore_coal_ore -> graphite_energetic_graphite [color="#c6aa8c"];
+  hydrogen_hydrogen -> graphite_energetic_graphite [color="#dd80a8"];
+  refined_oil_refined_oil -> graphite_energetic_graphite [color="#dd80a8"];
+  diamond_diamond -> gravity_lens_graviton_lens [color="#80d24d"];
+  strange_matter_generator_strange_matter -> gravity_lens_graviton_lens [color="#80d24d"];
+  frame_material_frame_material -> hadron_collider_miniature_particle_collider [color="#80d24d"];
+  graphene_graphene -> hadron_collider_miniature_particle_collider [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> hadron_collider_miniature_particle_collider [color="#80d24d"];
+  processor_processor -> hadron_collider_miniature_particle_collider [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> hadron_collider_miniature_particle_collider [color="#80d24d"];
+  gas_hydrate_fire_ice -> hydrogen_hydrogen [color="#d266db"];
+  photon_capacitor_full_critical_photon -> hydrogen_hydrogen [color="#9196db"];
+  oil_crude_oil -> hydrogen_hydrogen [color="#dd80a8"];
+  hydrogen_hydrogen -> hydrogen_hydrogen [color="#dd80a8"];
+  refined_oil_refined_oil -> hydrogen_hydrogen [color="#dd80a8"];
+  hydrogen_hydrogen -> hydrogen_energy_fuel_hydrogen_fuel_rod [color="#80d24d"];
+  titanium_plate_titanium_ingot -> hydrogen_energy_fuel_hydrogen_fuel_rod [color="#80d24d"];
+  graphite_energetic_graphite -> hyper_magnetism_ring_super_magnetic_ring [color="#80d24d"];
+  mag_turbine_electromagnetic_turbine -> hyper_magnetism_ring_super_magnetic_ring [color="#80d24d"];
+  magnet_magnet -> hyper_magnetism_ring_super_magnetic_ring [color="#80d24d"];
+  particle_wide_band_particle_broadband -> i_matrix_information_matrix [color="#80bdc9"];
+  processor_processor -> i_matrix_information_matrix [color="#80bdc9"];
+  circuit_board_circuit_board -> inserter_1_sorter_mk_i [color="#80d24d"];
+  iron_plate_iron_ingot -> inserter_1_sorter_mk_i [color="#80d24d"];
+  electric_motor_electric_motor -> inserter_2_sorter_mk_ii [color="#80d24d"];
+  inserter_1_sorter_mk_i -> inserter_2_sorter_mk_ii [color="#80d24d"];
+  inserter_2_sorter_mk_ii -> inserter_3_sorter_mk_iii [color="#80d24d"];
+  mag_turbine_electromagnetic_turbine -> inserter_3_sorter_mk_iii [color="#80d24d"];
+  logistic_station_planetary_logistics_station -> interstellar_logistic_station_interstellar_logistics_station [color="#80d24d"];
+  partical_capacitor_particle_container -> interstellar_logistic_station_interstellar_logistics_station [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> interstellar_logistic_station_interstellar_logistics_station [color="#80d24d"];
+  mag_turbine_electromagnetic_turbine -> ion_thruster_reinforced_thruster [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> ion_thruster_reinforced_thruster [color="#80d24d"];
+  iron_ore_iron_ore -> iron_plate_iron_ingot [color="#c6aa8c"];
+  circuit_board_circuit_board -> lab_matrix_lab [color="#80d24d"];
+  glass_glass -> lab_matrix_lab [color="#80d24d"];
+  iron_plate_iron_ingot -> lab_matrix_lab [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> lab_matrix_lab [color="#80d24d"];
+  fuel_thruster_thruster -> logistic_drone_logistics_drone [color="#80d24d"];
+  iron_plate_iron_ingot -> logistic_drone_logistics_drone [color="#80d24d"];
+  processor_processor -> logistic_drone_logistics_drone [color="#80d24d"];
+  partical_capacitor_particle_container -> logistic_station_planetary_logistics_station [color="#80d24d"];
+  processor_processor -> logistic_station_planetary_logistics_station [color="#80d24d"];
+  steel_plate_steel -> logistic_station_planetary_logistics_station [color="#80d24d"];
+  titanium_plate_titanium_ingot -> logistic_station_planetary_logistics_station [color="#80d24d"];
+  ion_thruster_reinforced_thruster -> logistic_vessel_logistics_vessel [color="#80d24d"];
+  processor_processor -> logistic_vessel_logistics_vessel [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> logistic_vessel_logistics_vessel [color="#80d24d"];
+  electric_motor_electric_motor -> mag_turbine_electromagnetic_turbine [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> mag_turbine_electromagnetic_turbine [color="#80d24d"];
+  iron_ore_iron_ore -> magnet_magnet [color="#c6aa8c"];
+  copper_plate_copper_ingot -> magnetism_wire_magnetic_coil [color="#80d24d"];
+  magnet_magnet -> magnetism_wire_magnetic_coil [color="#80d24d"];
+  copper_plate_copper_ingot -> micro_component_microcrystalline_component [color="#80d24d"];
+  silicium_single_crystal_high_purity_silicon -> micro_component_microcrystalline_component [color="#80d24d"];
+  circuit_board_circuit_board -> mining_drill_mining_machine [color="#80d24d"];
+  gear_wheel_gear -> mining_drill_mining_machine [color="#80d24d"];
+  iron_plate_iron_ingot -> mining_drill_mining_machine [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> mining_drill_mining_machine [color="#80d24d"];
+  graphene_graphene -> nanotube_carbon_nanotube [color="#d266db"];
+  titanium_plate_titanium_ingot -> nanotube_carbon_nanotube [color="#d266db"];
+  bamboo_crystal_spiniform_stalagmite_crystal -> nanotube_carbon_nanotube [color="#d266db"];
+  circuit_board_circuit_board -> oil_extractor_oil_extractor [color="#80d24d"];
+  plasma_generator_plasma_exciter -> oil_extractor_oil_extractor [color="#80d24d"];
+  steel_plate_steel -> oil_extractor_oil_extractor [color="#80d24d"];
+  stone_brick_stone -> oil_extractor_oil_extractor [color="#80d24d"];
+  circuit_board_circuit_board -> oil_refinery_oil_refinery [color="#80d24d"];
+  plasma_generator_plasma_exciter -> oil_refinery_oil_refinery [color="#80d24d"];
+  steel_plate_steel -> oil_refinery_oil_refinery [color="#80d24d"];
+  stone_brick_stone -> oil_refinery_oil_refinery [color="#80d24d"];
+  accumulator_full_accumulator_full_ -> orbital_collector_orbit_collector [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> orbital_collector_orbit_collector [color="#80d24d"];
+  interstellar_logistic_station_interstellar_logistics_station -> orbital_collector_orbit_collector [color="#80d24d"];
+  ion_thruster_reinforced_thruster -> orbital_collector_orbit_collector [color="#80d24d"];
+  charging_pole_wireless_power_tower -> orbital_substation_satellite_substation [color="#80d24d"];
+  frame_material_frame_material -> orbital_substation_satellite_substation [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> orbital_substation_satellite_substation [color="#80d24d"];
+  copper_plate_copper_ingot -> partical_capacitor_particle_container [color="#80d24d"];
+  graphene_graphene -> partical_capacitor_particle_container [color="#80d24d"];
+  mag_turbine_electromagnetic_turbine -> partical_capacitor_particle_container [color="#80d24d"];
+  copper_plate_copper_ingot -> partical_capacitor_particle_container [color="#80d24d"];
+  mono_mag_ore_unipolar_magnet -> partical_capacitor_particle_container [color="#80d24d"];
+  nanotube_carbon_nanotube -> particle_wide_band_particle_broadband [color="#80d24d"];
+  plastic_plastic -> particle_wide_band_particle_broadband [color="#80d24d"];
+  silicium_high_purity_crystal_silicon -> particle_wide_band_particle_broadband [color="#80d24d"];
+  circuit_board_circuit_board -> photo_shifter_photon_combiner [color="#80d24d"];
+  prism_prism -> photo_shifter_photon_combiner [color="#80d24d"];
+  circuit_board_circuit_board -> photo_shifter_photon_combiner [color="#80d24d"];
+  grating_ore_optical_grating_crystal -> photo_shifter_photon_combiner [color="#80d24d"];
+  casimir_crystal_casimir_crystal -> plane_filter_plane_filter [color="#80d24d"];
+  titan_glass_titanium_glass -> plane_filter_plane_filter [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> plasma_generator_plasma_exciter [color="#80d24d"];
+  prism_prism -> plasma_generator_plasma_exciter [color="#80d24d"];
+  graphite_energetic_graphite -> plastic_plastic [color="#d266db"];
+  refined_oil_refined_oil -> plastic_plastic [color="#d266db"];
+  glass_glass -> prism_prism [color="#80d24d"];
+  circuit_board_circuit_board -> processor_processor [color="#80d24d"];
+  micro_component_microcrystalline_component -> processor_processor [color="#80d24d"];
+  plane_filter_plane_filter -> quantum_processor_quantum_chip [color="#80d24d"];
+  processor_processor -> quantum_processor_quantum_chip [color="#80d24d"];
+  hyper_magnetism_ring_super_magnetic_ring -> ray_receiver_ray_receiver [color="#80d24d"];
+  photo_shifter_photon_combiner -> ray_receiver_ray_receiver [color="#80d24d"];
+  processor_processor -> ray_receiver_ray_receiver [color="#80d24d"];
+  silicium_single_crystal_high_purity_silicon -> ray_receiver_ray_receiver [color="#80d24d"];
+  steel_plate_steel -> ray_receiver_ray_receiver [color="#80d24d"];
+  oil_crude_oil -> refined_oil_refined_oil [color="#dd80a8"];
+  deuterium_energy_fuel_deuteron_fuel_rod -> rocket_small_carrier_rocket [color="#80d24d"];
+  dyson_sphere_component_dyson_sphere_component -> rocket_small_carrier_rocket [color="#80d24d"];
+  quantum_processor_quantum_chip -> rocket_small_carrier_rocket [color="#80d24d"];
+  silicium_single_crystal_high_purity_silicon -> silicium_high_purity_crystal_silicon [color="#c6aa8c"];
+  fractal_silica_fractal_silicon -> silicium_high_purity_crystal_silicon [color="#80d24d"];
+  stone_ore_stone_ore -> silicium_ore_silicon_ore [color="#c6aa8c"];
+  silicium_ore_silicon_ore -> silicium_single_crystal_high_purity_silicon [color="#c6aa8c"];
+  circuit_board_circuit_board -> smelter_smelter [color="#80d24d"];
+  iron_plate_iron_ingot -> smelter_smelter [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> smelter_smelter [color="#80d24d"];
+  stone_brick_stone -> smelter_smelter [color="#80d24d"];
+  graphene_graphene -> solar_collector_solar_sail [color="#80d24d"];
+  photo_shifter_photon_combiner -> solar_collector_solar_sail [color="#80d24d"];
+  circuit_board_circuit_board -> solar_panel_solar_panel [color="#80d24d"];
+  copper_plate_copper_ingot -> solar_panel_solar_panel [color="#80d24d"];
+  silicium_single_crystal_high_purity_silicon -> solar_panel_solar_panel [color="#80d24d"];
+  gravity_lens_graviton_lens -> space_warper_space_warper [color="#80d24d"];
+  g_matrix_gravity_matrix -> space_warper_space_warper [color="#80d24d"];
+  circuit_board_circuit_board -> splitter_4dir_splitter_4_direction_ [color="#80d24d"];
+  gear_wheel_gear -> splitter_4dir_splitter_4_direction_ [color="#80d24d"];
+  iron_plate_iron_ingot -> splitter_4dir_splitter_4_direction_ [color="#80d24d"];
+  iron_plate_iron_ingot -> steel_plate_steel [color="#c6aa8c"];
+  stone_ore_stone_ore -> stone_brick_stone [color="#c6aa8c"];
+  iron_plate_iron_ingot -> storage_1_storage_mk_i [color="#80d24d"];
+  stone_brick_stone -> storage_1_storage_mk_i [color="#80d24d"];
+  steel_plate_steel -> storage_2_storage_mk_ii [color="#80d24d"];
+  stone_brick_stone -> storage_2_storage_mk_ii [color="#80d24d"];
+  glass_glass -> storage_tank_storage_tank [color="#80d24d"];
+  iron_plate_iron_ingot -> storage_tank_storage_tank [color="#80d24d"];
+  stone_brick_stone -> storage_tank_storage_tank [color="#80d24d"];
+  deuterium_deuterium -> strange_matter_generator_strange_matter [color="#9196db"];
+  iron_plate_iron_ingot -> strange_matter_generator_strange_matter [color="#9196db"];
+  partical_capacitor_particle_container -> strange_matter_generator_strange_matter [color="#9196db"];
+  refined_oil_refined_oil -> sulphuric_acid_sulfuric_acid [color="#d266db"];
+  stone_ore_stone_ore -> sulphuric_acid_sulfuric_acid [color="#d266db"];
+  water_water -> sulphuric_acid_sulfuric_acid [color="#d266db"];
+  circuit_board_circuit_board -> t_matrix_electromagnetic_matrix [color="#80bdc9"];
+  magnetism_wire_magnetic_coil -> t_matrix_electromagnetic_matrix [color="#80bdc9"];
+  steel_plate_steel -> terrain_tool_foundation [color="#80d24d"];
+  stone_brick_stone -> terrain_tool_foundation [color="#80d24d"];
+  iron_plate_iron_ingot -> tesla_coil_tesla_tower [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> tesla_coil_tesla_tower [color="#80d24d"];
+  crystal_rubber_organic_crystal -> titan_crystal_titanium_crystal [color="#80d24d"];
+  titanium_plate_titanium_ingot -> titan_crystal_titanium_crystal [color="#80d24d"];
+  glass_glass -> titan_glass_titanium_glass [color="#80d24d"];
+  titanium_plate_titanium_ingot -> titan_glass_titanium_glass [color="#80d24d"];
+  water_water -> titan_glass_titanium_glass [color="#80d24d"];
+  steel_plate_steel -> titanium_alloy_titanium_alloy [color="#c6aa8c"];
+  sulphuric_acid_sulfuric_acid -> titanium_alloy_titanium_alloy [color="#c6aa8c"];
+  titanium_plate_titanium_ingot -> titanium_alloy_titanium_alloy [color="#c6aa8c"];
+  titanium_ore_titanium_ore -> titanium_plate_titanium_ingot [color="#c6aa8c"];
+  anti_matter_antimatter -> u_matrix_universe_matrix [color="#80bdc9"];
+  c_matrix_structure_matrix -> u_matrix_universe_matrix [color="#80bdc9"];
+  e_matrix_energy_matrix -> u_matrix_universe_matrix [color="#80bdc9"];
+  g_matrix_gravity_matrix -> u_matrix_universe_matrix [color="#80bdc9"];
+  i_matrix_information_matrix -> u_matrix_universe_matrix [color="#80bdc9"];
+  t_matrix_electromagnetic_matrix -> u_matrix_universe_matrix [color="#80bdc9"];
+  frame_material_frame_material -> vertical_launching_silo_vertical_launching_silo [color="#80d24d"];
+  gravity_lens_graviton_lens -> vertical_launching_silo_vertical_launching_silo [color="#80d24d"];
+  quantum_processor_quantum_chip -> vertical_launching_silo_vertical_launching_silo [color="#80d24d"];
+  titanium_alloy_titanium_alloy -> vertical_launching_silo_vertical_launching_silo [color="#80d24d"];
+  circuit_board_circuit_board -> water_pump_water_pump [color="#80d24d"];
+  electric_motor_electric_motor -> water_pump_water_pump [color="#80d24d"];
+  iron_plate_iron_ingot -> water_pump_water_pump [color="#80d24d"];
+  stone_brick_stone -> water_pump_water_pump [color="#80d24d"];
+  gear_wheel_gear -> wind_turbine_wind_turbine [color="#80d24d"];
+  iron_plate_iron_ingot -> wind_turbine_wind_turbine [color="#80d24d"];
+  magnetism_wire_magnetic_coil -> wind_turbine_wind_turbine [color="#80d24d"];
 }

@@ -5,23 +5,26 @@ import json
 import requests
 import os.path
 import sys
+import re
 from wand.image import Image
 
-unknown_icon = "https://dsp-wiki.com/images/1/10/Icon_Unknown.png"
-icon_size = 64
+main_icon_size = 96
+list_icon_size = 48
 
-class CGenerator:
-  def __init__(self):
-    with open('data.json') as json_file:
-      self.data = json.load(json_file)
-    self.used_assemblers_keys = []
-    self.used_types_keys = []
-    self.graphs_list = []
+class CIcon:
+  def __init__(self, key, url):
+    self.__url = url
+    self.__key = key
+    self.download()
 
-  def download_icon(self, icon_url, icon_filename):
-    if not os.path.isfile(icon_filename):
-      with open(icon_filename, 'wb') as icon_file:
-        response = requests.get(icon_url, stream=True)
+  def __gen_filename(self, size = 0):
+    return 'icons/{0}.png'.format(self.__key) if size == 0 else 'icons/{0}_{1}.png'.format(self.__key, size)
+
+  def download(self):
+    if not os.path.isfile(self.__gen_filename()):
+      print("Downloading icon for {0} ({1})".format(self.__key, self.__url))
+      with open(self.__gen_filename(), 'wb') as icon_file:
+        response = requests.get(self.__url, stream=True)
         if not response.ok:
             print(response)
         for block in response.iter_content(1024):
@@ -29,227 +32,446 @@ class CGenerator:
                 break
             icon_file.write(block)
 
-  def get_icon_filename(self, group, key, size):
-    icon_filename = 'icons/{0}_{1}.png'.format(group, key)
-    sized_icon_filename = 'icons/{0}_{1}_{2}.png'.format(group, key, size)
-    if key in self.data[group]:
-      item = self.data[group][key]
-      self.download_icon(item["icon"], icon_filename)
-    else:
-      icon_filename = 'icons/unknown.png'.format(group, key)
-      sized_icon_filename = 'icons/unknown_{0}.png'.format(size)
-      self.download_icon(unknown_icon, icon_filename)
-    if not os.path.isfile(sized_icon_filename):
-      with Image(filename=icon_filename) as img:
-        img.transform(resize='{0}x{0}>'.format(size))
-        img.save(filename=sized_icon_filename)
-    return sized_icon_filename
+  def filename(self, size):
+    if not os.path.isfile(self.__gen_filename(size)):
+      print("Resizing icon for {0} to {1}".format(self.__key, size))
+      with Image(filename=self.__gen_filename()) as img:
+        img.transform(resize='{0}x{0}'.format(size))
+        img.save(filename=self.__gen_filename(size))
+    return self.__gen_filename(size)
 
-  def get_color(self, group, name):
-    # print(name)
-    return self.data["colors"][group][name]
+class CItem:
+  def __init__(self, key, icon_url, data):
+    self.__key = key
+    self.__data = data
+    self.__icon = CIcon(self.__key, icon_url)
+    self.__recipes = []
+    self.__used_in = []
+    self.__tech = None
 
-  def get_flags_icons(self, item):
-    if "flags" in item:
-      flags=""
-      for flag in item["flags"]:
-        flags += " {0} ".format(self.data["icons"][flag])
-      return '<tr><td colspan="2">{0}</td></tr>'.format(flags)
-    return ''
+  def __eq__(self, other):
+    return self.__key == other.key()
 
-  def count_usage(self, target_item_key):
-    count = 0
-    for item_key in self.data["items"]:
-      item = self.data["items"][item_key]
-      for recipe in item["recipes"]:
-        if "recipe" in recipe:
-          for recipe_item in recipe["recipe"]:
-            if target_item_key == recipe_item:
-              count+=1
-    return count
+  def node_name(self):
+    return '{0}_{1}'.format(self.key(), self.name())
 
-  def get_item_tech(self, item_key):
-    for tech_key in self.data["technologies"]:
-      tech = self.data["technologies"][tech_key]
-      if item_key in tech["unlocks"]:
-        return '<tr><td colspan="2">{0}</td></tr><tr><td colspan="2"><img src="{1}" /></td></tr>'.format(tech["name"], self.get_icon_filename("technologies", tech_key, 32))
-    return ''
+  def key(self):
+    return self.__key
 
-  def generate_items_nodes(self, gv_file):
-    for item_key in self.data["items"]:
-      print("Generating node {}".format(item_key))
-      item = self.data["items"][item_key]
-      self.used_types_keys.append(item["type"])
-      gv_file.write("""  item_{0} [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td colspan="2">{1}</td>
-              </tr>
-              <tr>
-                <td><img src='{2}' /></td>
-                <td>Usages: {5}</td>
-              </tr>
-              {6}
-              {4}
-             </table>
-             >, fillcolor="#{3}"];
-""".format(
-            item_key,
-            item["name"],
-            self.get_icon_filename("items", item_key, 64),
-            self.get_color("nodes", item["type"]),
-            self.get_flags_icons(item),
-            self.count_usage(item_key),
-            self.get_item_tech(item_key)
-          ))
+  def icon(self):
+    return self.__icon
 
-  def generate_items_edges(self, gv_file):
-    for item_key in self.data["items"]:
-      print("Generating edge {}".format(item_key))
-      item = self.data["items"][item_key]
-      for recipe in item["recipes"]:
-        print("Recipe {}".format(recipe["assembler"]))
-        if "recipe" in recipe:
-          for recipe_item in recipe["recipe"]:
-            self.used_assemblers_keys.append(recipe["assembler"])
-            gv_file.write('  item_{1} -> item_{0} [color="#{2}"];\n'.format(
-                item_key,
-                recipe_item,
-                self.get_color("edges", recipe["assembler"])))
+  def name(self):
+    return self.__data["name"]
 
-  def generate_options(self, gv_file, splines, ratio, minlen, rankdir):
-      gv_file.write('  graph [overlap=false, splines={2}, ratio={3}, bgcolor="#{0}", fontcolor="#{1}", fillcolor="#{0}", rankdir="{4}" fontname=Roboto, fontsize=10];\n'.format(
-        self.get_color("main", "background"),
-        self.get_color("main", "font"),
-        splines,
-        ratio,
-        rankdir))
-      gv_file.write('  node [shape=box, style="rounded,filled", fontcolor="#{0}", color="#{0}"];\n'.format(
-            self.get_color("main", "font")))
-      gv_file.write('  edge [fontcolor="#{0}", color="#{0}", penwidth=3, minlen={1}];\n'.format(
-            self.get_color("main", "font"),
-            minlen))
+  def type(self):
+    return self.__data["type"]
 
-  def get_tech_res_gv_html(self, tech, group):
-    icons = []
-    for item in tech[group]:
-      icons.append("<td><img src='{0}' /></td>".format(self.get_icon_filename("items", item, 32)))
-    result = ""
-    if len(icons) > 0:
-      result = '<tr><td>{0}</td></tr><tr><td><table border="0" cellborder="0" cellspacing="0"><tr>{1}</tr></table></td></tr>'.format(group.title(), "".join(icons))
+  def has_pretech(self):
+    return 'preTech' in self.__data
+
+  def pretech(self):
+    return self.__data['preTech']
+
+  def set_tech(self, tech):
+    self.__tech = tech
+
+  def tech(self):
+    return self.__tech
+
+  def has_tech(self):
+    return self.__tech != None
+
+  def set_recipes(self, recipes):
+    self.__recipes = recipes
+
+  def set_used_in(self, used_in):
+    self.__used_in = used_in
+
+  def recipes(self):
+    return self.__recipes
+
+  def stack_size(self):
+    return self.__data["stackSize"]
+
+  def used_in(self):
+    return self.__used_in
+
+  def flags(self):
+    flags = []
+    for key in ["canBuild", "isFluid", "heatValue"]:
+      if key in self.__data and self.__data[key]:
+        flags.append(key)
+    for key in ["Logistics", "Natural resource", "Power storage", "Power transmission", "Power facility", "End product"]:
+      if self.type() == key:
+        flags.append(key)
+    if "miningFrom" in self.__data:
+      flags.append("Natural resource")
+    for recipe in self.recipes():
+      flags += recipe.flags()
+    return set(flags)
+
+
+class CRecipe:
+  def __init__(self, key, data):
+    self.__key = key
+    self.__data = data
+    self.__sources = []
+    self.__results = []
+
+  def add_source(self, item, count):
+    self.__sources.append({'item': item, 'count': count})
+
+  def add_result(self, item, count):
+    self.__results.append({'item': item, 'count': count})
+
+  def sources(self):
+    return self.__sources
+
+  def results(self):
+    return self.__results
+
+  def type(self):
+    return self.__data["type"]
+
+  def flags(self):
+    flags = []
+    for key in ["handcraft"]:
+      if key in self.__data and self.__data[key]:
+        flags.append(key)
+    return flags
+
+class CTech:
+  def __init__(self, key, icon_url, data):
+    self.__key = key
+    self.__data = data
+    self.__icon = CIcon(self.__key, icon_url)
+    self.__unlocks = []
+    self.__parents = []
+    self.__resources = []
+
+  def node_name(self):
+    return '{0}_{1}'.format(self.key(), self.name())
+
+  def key(self):
+    return self.__key
+
+  def icon(self):
+    return self.__icon
+
+  def name(self):
+    return self.__data["name"]
+
+  def set_unlocks(self, unlocks):
+    self.__unlocks = unlocks
+
+  def set_parents(self, parents):
+    self.__parents = parents
+
+  def set_resources(self, resources):
+    self.__resources = resources
+
+  def unlocks(self):
+    return self.__unlocks
+
+  def parents(self):
+    return self.__parents
+
+  def resources(self):
+    return self.__resources
+
+class CData:
+  def __init__(self):
+    with open('data.json') as json_file:
+      self.__data = json.load(json_file)
+    with open('dump.json') as json_file:
+      self.__dump = json.load(json_file)
+
+  def has_icon(self, key):
+    return key in self.__data['mapping']['icons']
+
+  def get_icon_url(self, key):
+    return self.__data['mapping']['icons'][key]
+
+  def get_item_recipes(self, item_key):
+      recipes = []
+      for recipe_key in self.__dump['recipe']:
+        recipe_data = self.__dump['recipe'][recipe_key]
+        for result_item_key in recipe_data['results']:
+          if result_item_key == item_key:
+            recipe = CRecipe(recipe_key, recipe_data)
+            for src_item_key in recipe_data['items']:
+              recipe.add_source(self.get_item(src_item_key, False), recipe_data['items'][src_item_key])
+            for res_item_key in recipe_data['results']:
+              recipe.add_result(self.get_item(res_item_key, False), recipe_data['results'][res_item_key])
+            recipes.append(recipe)
+      return recipes
+
+  def get_item_used_in(self, item_key):
+    result = []
+    for recipe_key in self.__dump['recipe']:
+      recipe_data = self.__dump['recipe'][recipe_key]
+      for src_item_key in recipe_data['items']:
+        if item_key == src_item_key:
+          for res_item_key in recipe_data['results']:
+            if self.has_icon(res_item_key):
+              result.append(self.get_item(res_item_key, False))
     return result
 
-  def generate_tech_nodes(self, gv_file):
-    self.used_types_keys.append("tech")
-    for tech_key in self.data["technologies"]:
-      print("Generating node {}".format(tech_key))
-      tech = self.data["technologies"][tech_key]
+  def get_item_tech(self, item_key):
+    for tech_key in self.__dump['tech']:
+      if 'addItems' in self.__dump['tech'][tech_key]:
+        for tech_unlock_key in self.__dump['tech'][tech_key]['addItems']:
+          if tech_unlock_key == item_key:
+            return self.get_tech(tech_key, False)
+    return None
 
-      gv_file.write("""  tech_{0} [label=<
-             <table border="0" cellborder="0" cellspacing="0">
-              <tr>
-                <td>{1}</td>
-              </tr>
-              <tr>
-                <td><img src='{2}' /></td>
-              </tr>
-              {4}
-              {5}
-             </table>
-             >, fillcolor="#{3}"];
-""".format(
-          tech_key,
-          tech["name"],
-          self.get_icon_filename("technologies", tech_key, 64),
-          self.get_color("nodes", "tech"),
-          self.get_tech_res_gv_html(tech, "unlocks"),
-          self.get_tech_res_gv_html(tech, "resources")))
+  def get_item(self, item_key, with_full_info):
+    item = CItem(item_key, self.get_icon_url(item_key), self.__dump['item'][item_key])
+    if with_full_info and self.has_icon(item_key):
+      item.set_recipes(self.get_item_recipes(item_key))
+      item.set_used_in(self.get_item_used_in(item_key))
+      item.set_tech(self.get_item_tech(item_key))
+    return item
 
-  def generate_tech_edges(self, gv_file):
-    self.used_assemblers_keys.append("tech")
-    if "items" in self.graphs_list:
-      self.used_assemblers_keys.append("unlocks")
-      self.used_assemblers_keys.append("resources")
-    for tech_key in self.data["technologies"]:
-      print("Generating edge {}".format(tech_key))
-      tech = self.data["technologies"][tech_key]
-      for parent_tech_key in tech["requirements"]:
-        gv_file.write('  tech_{0} -> tech_{1} [color="#{2}"];\n'.format(
-            parent_tech_key,
-            tech_key,
-            self.get_color("edges", "tech")))
-      if "items" in self.graphs_list:
-        for item_key in tech["unlocks"]:
-          gv_file.write('  tech_{0} -> item_{1} [color="#{2}"];\n'.format(
-              tech_key,
-              item_key,
-              self.get_color("edges", "unlocks")))
-        for item_key in tech["resources"]:
-          gv_file.write('  item_{1} -> tech_{0} [color="#{2}"];\n'.format(
-              tech_key,
-              item_key,
-              self.get_color("edges", "resources")))
+  def get_tech_parents(self, tech_key):
+    result = []
+    if 'preTechs' in self.__dump['tech'][tech_key]:
+      for tech_parent_key in self.__dump['tech'][tech_key]['preTechs']:
+        result.append(self.get_tech(tech_parent_key, False))
+    return result
 
-  def generate_graph(self, graphs_list):
-    self.graphs_list = graphs_list
-    self.used_types_keys = []
-    self.used_assemblers_keys = []
-    with open('result/graph_{0}.gv'.format('_'.join(self.graphs_list)), "w") as gv_file:
-      gv_file.write("digraph g {\n")
-      self.generate_options(gv_file, "ortho", 9/16, 4 if "items" in self.graphs_list else 1, "TB" if "items" in self.graphs_list else "LR")
-      if "items" in self.graphs_list:
-        self.generate_items_nodes(gv_file)
-        self.generate_items_edges(gv_file)
-      if "tech" in self.graphs_list:
-        self.generate_tech_nodes(gv_file)
-        self.generate_tech_edges(gv_file)
-      gv_file.write('subgraph cluster_0 {{ label="Legend"; legend [image="result/legend_{1}.{0}", label="", shape="none"]; }}\n'.format(sys.argv[1], '_'.join(self.graphs_list)))
-      gv_file.write("}\n")
-    self.generate_legend()
+  def get_tech_unlocks(self, tech_key):
+    result = []
+    if 'addItems' in self.__dump['tech'][tech_key]:
+      for tech_unlock_key in self.__dump['tech'][tech_key]['addItems']:
+        result.append(self.get_item(tech_unlock_key, False))
+    for item in self.item_list():
+      if item.has_pretech() and item.pretech() == self.__dump['tech'][tech_key]['name'] and item not in result:
+        result.append(item)
+    return result
 
-  def generate_legend(self):
-    with open('result/legend_{0}.gv'.format('_'.join(self.graphs_list)), "w") as gv_file:
-      gv_file.write('digraph g {\n')
-      self.generate_options(gv_file, "ortho", "auto", 1, "TB")
-      gv_file.write('types [label="Types", fillcolor="#{0}"]; assemblers [label="Relations", fillcolor="#{0}"]; flags [label="Flags", fillcolor="#{0}"]; '.format(
-            self.get_color("main", "background")
-          ))
-      if "items" in self.graphs_list:
-        for icon_key in self.data["legend"]["icons"]:
-          gv_file.write('  {0} [label="{1} {2}", fillcolor="#{3}"]; flags ->{0} [penwidth=1];\n'.format(
-                icon_key,
-                self.data["icons"][icon_key],
-                self.data["legend"]["icons"][icon_key],
-                self.get_color("main", "background")
-              ))
-      used_nodes_keys = set(self.used_types_keys)
-      for node_color_key in self.data["legend"]["colors"]["nodes"]:
-        if node_color_key in used_nodes_keys:
-          gv_file.write('  {0} [label="{1}", fillcolor="#{2}"];\n'.format(
-                node_color_key,
-                self.data["legend"]["colors"]["nodes"][node_color_key],
-                self.get_color("nodes", node_color_key)
-              ))
-          gv_file.write('  types -> {0} [penwidth=1];\n'.format(
-                node_color_key,
-                self.data["legend"]["colors"]["nodes"][node_color_key],
-                self.get_color("nodes", node_color_key)
-              ))
-      used_edges_keys = set(self.used_assemblers_keys)
-      for edge_color_key in self.data["legend"]["colors"]["edges"]:
-        if edge_color_key in used_edges_keys:
-          gv_file.write('  {0}_a [label="{1}", fillcolor="#{2}"]; {0}_b [shape=point]; assemblers -> {0}_a [penwidth=1]; {0}_a -> {0}_b [color="#{3}"]; \n'.format(
-                edge_color_key,
-                self.data["legend"]["colors"]["edges"][edge_color_key],
-                self.get_color("main", "background"),
-                self.get_color("edges", edge_color_key)
-              ))
-      gv_file.write("  }\n")
+  def get_tech_resources(self, tech_key):
+    result = []
+    if 'items' in self.__dump['tech'][tech_key]:
+      for tech_resource_key in self.__dump['tech'][tech_key]['items']:
+        result.append({'item': self.get_item(tech_resource_key, False), 'count': self.__dump['tech'][tech_key]['items'][tech_resource_key] })
+    return result
+
+  def get_tech(self, tech_key, with_full_info):
+    tech = CTech(tech_key, self.get_icon_url(tech_key), self.__dump['tech'][tech_key])
+    if with_full_info:
+      tech.set_parents(self.get_tech_parents(tech_key))
+      tech.set_unlocks(self.get_tech_unlocks(tech_key))
+      tech.set_resources(self.get_tech_resources(tech_key))
+    return tech
+
+  def item_list(self):
+    result = []
+    for item_key in self.__dump['item']:
+      if self.has_icon(item_key):
+        result.append(self.get_item(item_key, True))
+    return result
+
+  def tech_list(self):
+    result = []
+    for tech_key in self.__dump['tech']:
+      if self.has_icon(tech_key):
+        result.append(self.get_tech(tech_key, True))
+    return result
+
+  def get_flag(self, flag):
+    return self.__data["flags"][flag]
+
+class CGraphviz:
+  def __init__(self, name):
+    self.__name = name
+    self.__legend_cache = {}
+    print("Generating graph {0}".format(self.__name))
+    self.__graph = open('result/graph_{0}.gv'.format(self.__name), "w")
+    self.__legend = open('result/legend_{0}.gv'.format(self.__name), "w")
+    with open('options.json') as json_file:
+      self.__options = json.load(json_file)
+    self.__graph.write('digraph g {\n')
+    self.__legend.write('digraph g {\n')
+    self.__generate_graph_options()
+    self.__generate_legend_options()
+    self.__graph.write('  subgraph cluster_0 {{ label="Legend"; legend [image="result/legend_{1}.{0}" label="" shape="none"]; }}\n'.format(sys.argv[1], self.__name))
+
+  def __del__(self):
+    self.__graph.write('}\n')
+    self.__graph.close()
+    self.__legend.write('}\n')
+    self.__legend.close()
+
+  def __normalize_name(self, name):
+    return re.sub('[^0-9a-z]+', '_', name.lower())
+
+  def __get_color(self, color_name):
+    if color_name in self.__options['colors']:
+      return self.__options['colors'][color_name]
+    print('Need to add color {0}'.format(color_name))
+    return self.__options['colors']['background']
+
+  def __generate_graph_options(self):
+    for group in self.__options['graphviz']['default']:
+      self.__graph.write('  {0} ['.format(group))
+      for option_key in self.__options['graphviz']['default'][group]:
+        option_value = self.__options['graphviz']['default'][group][option_key]
+        if self.__name in self.__options['graphviz'] and group in self.__options['graphviz'][self.__name] and option_key in self.__options['graphviz'][self.__name][group]:
+          option_value = self.__options['graphviz'][self.__name][group][option_key]
+        if 'color' in option_key:
+          option_value = self.__get_color(option_value)
+        self.__graph.write(' {0}="{1}" '.format(option_key, option_value))
+      self.__graph.write('];\n')
+
+  def __generate_legend_options(self):
+    for group in self.__options['graphviz']['default']:
+      self.__legend.write('  {0} ['.format(group))
+      for option_key in self.__options['graphviz']['default'][group]:
+        option_value = self.__options['graphviz']['default'][group][option_key]
+        if 'legend' in self.__options['graphviz'] and group in self.__options['graphviz']['legend'] and option_key in self.__options['graphviz']['legend'][group]:
+          option_value = self.__options['graphviz']['legend'][group][option_key]
+        if 'color' in option_key:
+          option_value = self.__get_color(option_value)
+        self.__legend.write(' {0}="{1}" '.format(option_key, option_value))
+      self.__legend.write('];\n')
+
+  def append_entity_node(self, name, label, color):
+    self.__graph.write('  {0} [label=<{1}> fillcolor="{2}"];\n'.format(self.__normalize_name(name), " ".join(label.split()), self.__get_color(color)))
+
+  def append_entity_edge(self, name_from, name_to, color):
+     self.__graph.write('  {0} -> {1} [color="{2}"];\n'.format(self.__normalize_name(name_from), self.__normalize_name(name_to), self.__get_color(color)))
+
+  def __append_legend_point_node(self, name):
+    self.__legend.write('  {0} [label="" shape="point" fillcolor="{1}" color="{1}"];\n'.format(self.__normalize_name(name), self.__get_color("background")))
+
+  def __append_legend_node(self, name, label, color):
+    self.__legend.write('  {0} [label="{1}" fillcolor="{2}"];\n'.format(self.__normalize_name(name), label, self.__get_color(color)))
+
+  def __append_legend_edge(self, type, name, color):
+     self.__legend.write('  {0} -> {1} [color="{2}"];\n'.format(self.__normalize_name(type), self.__normalize_name(name), self.__get_color(color)))
+
+  def __append_legend_type(self, type):
+    if type not in self.__legend_cache:
+      self.__legend_cache[type] = []
+      self.__append_legend_node(self.__normalize_name(type), type, "background")
+
+  def append_legend_node(self, type, color):
+    self.__append_legend_type(type)
+    if color not in self.__legend_cache[type]:
+      self.__legend_cache[type].append(color)
+      self.__append_legend_node(color, color, color)
+      self.__append_legend_edge(type, color, "font")
+
+  def append_legend_flag_node(self, flag_name, flag_icon):
+    type = "Flags"
+    self.__append_legend_type(type)
+    if flag_name not in self.__legend_cache[type]:
+      self.__legend_cache[type].append(flag_name)
+      self.__append_legend_node('flag_{0}'.format(flag_name), '{0}\n{1}'.format(flag_icon, flag_name), "background")
+      self.__append_legend_edge(type, 'flag_{0}'.format(flag_name), "font")
+
+  def append_legend_edge(self, type, color):
+    self.__append_legend_type(type)
+    if color not in self.__legend_cache[type]:
+      self.__legend_cache[type].append(color)
+      self.__append_legend_node('a_{}'.format(color), color, color)
+      self.__append_legend_edge(type, 'a_{}'.format(color), "font")
+      self.__append_legend_point_node('b_{}'.format(color))
+      self.__append_legend_edge('a_{}'.format(color), 'b_{}'.format(color), color)
+
+class CGenerator:
+  def __init__(self, graph_list):
+    self.__graph_list = graph_list
+    self.__name = '_'.join(self.__graph_list)
+    self.__data = CData()
+    self.__graph = CGraphviz(self.__name)
+
+  def __load_template(self, name):
+    with open('templates/{0}.html'.format(name), 'r') as file:
+      return file.read().replace('\n', '')
+
+  def __generate_items_nodes(self):
+    print("Generating items nodes")
+    for item in self.__data.item_list():
+      self.__graph.append_entity_node(
+          item.node_name(),
+          self.__load_template('item_node').format(
+            label = item.name(),
+            icon = item.icon().filename(main_icon_size),
+            stack_size = item.stack_size(),
+            flags = " ".join(list(map(lambda flag: self.__data.get_flag(flag)['icon'] , item.flags()))),
+            used_in_count = len(item.used_in()),
+            recipes_count = len(item.recipes()),
+            tech_icon = self.__load_template('item_tech_icon').format(
+                tech_icon = item.tech().icon().filename(list_icon_size)
+              ) if item.has_tech() else " "
+          ),
+          item.type()
+        )
+      for flag in item.flags():
+        self.__graph.append_legend_flag_node(self.__data.get_flag(flag)['name'], self.__data.get_flag(flag)['icon'])
+      self.__graph.append_legend_node("Item and buildings types", item.type())
+
+  def __generate_items_edges(self):
+    print("Generating items edges")
+    for item_to in self.__data.item_list():
+      for recipe in item_to.recipes():
+        for item_from in recipe.sources():
+          self.__graph.append_entity_edge(item_from['item'].node_name(), item_to.node_name(), recipe.type())
+          self.__graph.append_legend_edge("Relations", recipe.type())
+
+  def __generate_tech_nodes(self):
+    print("Generating tech nodes")
+    for tech in self.__data.tech_list():
+      self.__graph.append_entity_node(
+          tech.node_name(),
+          self.__load_template('tech_node').format(
+            label = tech.name(),
+            icon = tech.icon().filename(main_icon_size),
+            unlocks = self.__load_template('icon_list').format(
+              icon_list = " ".join(list(map(lambda item: self.__load_template('icon_list_item').format(
+                icon = item.icon().filename(list_icon_size)
+              ), tech.unlocks())))
+            ) if len(tech.unlocks()) > 0 else " ",
+            resources = self.__load_template('icon_list').format(
+              icon_list = " ".join(list(map(lambda item: self.__load_template('icon_list_item').format(
+                icon = item['item'].icon().filename(list_icon_size)
+              ), tech.resources())))
+            ) if len(tech.resources()) > 0 else " "
+          ),
+          "Technology"
+        )
+      self.__graph.append_legend_node("Item and buildings types", "Technology")
+
+  def __generate_tech_edges(self):
+    print("Generating tech edges")
+    for tech_to in self.__data.tech_list():
+      for tech_from in tech_to.parents():
+        self.__graph.append_entity_edge(tech_from.node_name(), tech_to.node_name(), "Technology relation")
+    self.__graph.append_legend_edge("Relations", "Technology relation")
+
+  def __generate_tech_items_edges(self):
+    print("Generating tech <-> items edges")
+    for tech in self.__data.tech_list():
+        for unlock in tech.unlocks():
+          self.__graph.append_entity_edge(tech.node_name(), unlock.node_name(), "Unlock")
+        self.__graph.append_legend_edge("Relations", "Unlock")
+        for resource in tech.resources():
+          self.__graph.append_entity_edge(resource['item'].node_name(), tech.node_name(), "Research resource")
+        self.__graph.append_legend_edge("Relations", "Research resource")
 
   def main(self):
-    self.generate_graph(["items"])
-    self.generate_graph(["tech"])
-    self.generate_graph(["tech", "items"])
+    if "items" in self.__graph_list:
+      self.__generate_items_nodes()
+      self.__generate_items_edges()
+    if "tech" in self.__graph_list:
+      self.__generate_tech_nodes()
+      self.__generate_tech_edges()
+    if "items" in self.__graph_list and "tech" in self.__graph_list:
+      self.__generate_tech_items_edges()
 
-g = CGenerator()
-g.main()
+
+for graphs in [["items"], ["tech"], ["tech", "items"]]:
+  CGenerator(graphs).main()

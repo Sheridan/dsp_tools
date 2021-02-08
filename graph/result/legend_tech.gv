@@ -1,8 +1,13 @@
 digraph g {
-  graph [overlap=false, splines=ortho, ratio=auto, bgcolor="#0c041c", fontcolor="#ebf2ff", fillcolor="#0c041c", rankdir="TB" fontname=Roboto, fontsize=10];
-  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
-  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=1];
-types [label="Types", fillcolor="#0c041c"]; assemblers [label="Relations", fillcolor="#0c041c"]; flags [label="Flags", fillcolor="#0c041c"];   tech [label="Technology", fillcolor="#4d4736"];
-  types -> tech [penwidth=1];
-  tech_a [label="Technology", fillcolor="#0c041c"]; tech_b [shape=point]; assemblers -> tech_a [penwidth=1]; tech_a -> tech_b [color="#4d4736"]; 
-  }
+  graph [ overlap="false"  fontname="Roboto"  fontsize="16"  splines="ortho"  ratio="auto"  rankdir="TB"  fontcolor="#ebf2ff"  bgcolor="#0c041c"  fillcolor="#0c041c" ];
+  node [ fontname="Roboto"  fontsize="16"  shape="box"  style="rounded,filled"  fontcolor="#ebf2ff"  color="#ebf2ff" ];
+  edge [ fontname="Roboto"  fontsize="16"  fontcolor="#ebf2ff"  color="#ebf2ff"  penwidth="2"  minlen="2" ];
+  item_and_buildings_types [label="Item and buildings types" fillcolor="#0c041c"];
+  technology [label="Technology" fillcolor="#4b1c57"];
+  item_and_buildings_types -> technology [color="#ebf2ff"];
+  relations [label="Relations" fillcolor="#0c041c"];
+  a_technology_relation [label="Technology relation" fillcolor="#36325b"];
+  relations -> a_technology_relation [color="#ebf2ff"];
+  b_technology_relation [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_technology_relation -> b_technology_relation [color="#36325b"];
+}

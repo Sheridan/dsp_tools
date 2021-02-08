@@ -1,32 +1,106 @@
 digraph g {
-  graph [overlap=false, splines=ortho, ratio=auto, bgcolor="#0c041c", fontcolor="#ebf2ff", fillcolor="#0c041c", rankdir="TB" fontname=Roboto, fontsize=10];
-  node [shape=box, style="rounded,filled", fontcolor="#ebf2ff", color="#ebf2ff"];
-  edge [fontcolor="#ebf2ff", color="#ebf2ff", penwidth=3, minlen=1];
-types [label="Types", fillcolor="#0c041c"]; assemblers [label="Relations", fillcolor="#0c041c"]; flags [label="Flags", fillcolor="#0c041c"];   natural_generation [label="🎲 Resources", fillcolor="#0c041c"]; flags ->natural_generation [penwidth=1];
-  fuel [label="🔥 Fuel", fillcolor="#0c041c"]; flags ->fuel [penwidth=1];
-  fluid [label="💧 Fluid", fillcolor="#0c041c"]; flags ->fluid [penwidth=1];
-  energy_generator [label="⚡️ Generators", fillcolor="#0c041c"]; flags ->energy_generator [penwidth=1];
-  transport [label="🚚 Transport", fillcolor="#0c041c"]; flags ->transport [penwidth=1];
-  dyson [label="🪐 Dyson components", fillcolor="#0c041c"]; flags ->dyson [penwidth=1];
-  storage [label="📦 Storage", fillcolor="#0c041c"]; flags ->storage [penwidth=1];
-  ore [label="Ore", fillcolor="#2b0004"];
-  types -> ore [penwidth=1];
-  plant [label="Plant", fillcolor="#0c3d11"];
-  types -> plant [penwidth=1];
-  component [label="Component", fillcolor="#200026"];
-  types -> component [penwidth=1];
-  product [label="End product", fillcolor="#2c4c70"];
-  types -> product [penwidth=1];
-  building [label="Building", fillcolor="#424000"];
-  types -> building [penwidth=1];
-  matrix [label="Matrix", fillcolor="#012036"];
-  types -> matrix [penwidth=1];
-  matrix_lab_a [label="Matrix lab", fillcolor="#0c041c"]; matrix_lab_b [shape=point]; assemblers -> matrix_lab_a [penwidth=1]; matrix_lab_a -> matrix_lab_b [color="#62b3f5"]; 
-  smelter_a [label="Smelter", fillcolor="#0c041c"]; smelter_b [shape=point]; assemblers -> smelter_a [penwidth=1]; smelter_a -> smelter_b [color="#ffbca8"]; 
-  oil_refinery_a [label="Refinery", fillcolor="#0c041c"]; oil_refinery_b [shape=point]; assemblers -> oil_refinery_a [penwidth=1]; oil_refinery_a -> oil_refinery_b [color="#450873"]; 
-  chemical_plant_a [label="Chemical", fillcolor="#0c041c"]; chemical_plant_b [shape=point]; assemblers -> chemical_plant_a [penwidth=1]; chemical_plant_a -> chemical_plant_b [color="#ffa8ef"]; 
-  assembling_machine_a [label="Assembler", fillcolor="#0c041c"]; assembling_machine_b [shape=point]; assemblers -> assembling_machine_a [penwidth=1]; assembling_machine_a -> assembling_machine_b [color="#1f8042"]; 
-  miniature_particle_collider_a [label="Collider", fillcolor="#0c041c"]; miniature_particle_collider_b [shape=point]; assemblers -> miniature_particle_collider_a [penwidth=1]; miniature_particle_collider_a -> miniature_particle_collider_b [color="#a8efff"]; 
-  fractionator_a [label="Fractionator", fillcolor="#0c041c"]; fractionator_b [shape=point]; assemblers -> fractionator_a [penwidth=1]; fractionator_a -> fractionator_b [color="#a9a8ff"]; 
-  energy_exchanger_a [label="Energy exchanger", fillcolor="#0c041c"]; energy_exchanger_b [shape=point]; assemblers -> energy_exchanger_a [penwidth=1]; energy_exchanger_a -> energy_exchanger_b [color="#98ff69"]; 
-  }
+  graph [ overlap="false"  fontname="Roboto"  fontsize="16"  splines="ortho"  ratio="auto"  rankdir="TB"  fontcolor="#ebf2ff"  bgcolor="#0c041c"  fillcolor="#0c041c" ];
+  node [ fontname="Roboto"  fontsize="16"  shape="box"  style="rounded,filled"  fontcolor="#ebf2ff"  color="#ebf2ff" ];
+  edge [ fontname="Roboto"  fontsize="16"  fontcolor="#ebf2ff"  color="#ebf2ff"  penwidth="2"  minlen="2" ];
+  flags [label="Flags" fillcolor="#0c041c"];
+  flag_power_storage [label="🔋
+Power storage" fillcolor="#0c041c"];
+  flags -> flag_power_storage [color="#ebf2ff"];
+  flag_hand_craft [label="🤚
+Hand craft" fillcolor="#0c041c"];
+  flags -> flag_hand_craft [color="#ebf2ff"];
+  flag_building [label="🏠
+Building" fillcolor="#0c041c"];
+  flags -> flag_building [color="#ebf2ff"];
+  item_and_buildings_types [label="Item and buildings types" fillcolor="#0c041c"];
+  power_storage [label="Power storage" fillcolor="#71195c"];
+  item_and_buildings_types -> power_storage [color="#ebf2ff"];
+  flag_fuel [label="🔥
+Fuel" fillcolor="#0c041c"];
+  flags -> flag_fuel [color="#ebf2ff"];
+  material [label="Material" fillcolor="#20141f"];
+  item_and_buildings_types -> material [color="#ebf2ff"];
+  flag_end_product [label="🧊
+End product" fillcolor="#0c041c"];
+  flags -> flag_end_product [color="#ebf2ff"];
+  end_product [label="End product" fillcolor="#1f133a"];
+  item_and_buildings_types -> end_product [color="#ebf2ff"];
+  assembler [label="Assembler" fillcolor="#294419"];
+  item_and_buildings_types -> assembler [color="#ebf2ff"];
+  flag_natural_resource [label="🎲
+Natural resource" fillcolor="#0c041c"];
+  flags -> flag_natural_resource [color="#ebf2ff"];
+  natural_resource [label="Natural resource" fillcolor="#431025"];
+  item_and_buildings_types -> natural_resource [color="#ebf2ff"];
+  flag_logistics [label="🚚
+Logistics" fillcolor="#0c041c"];
+  flags -> flag_logistics [color="#ebf2ff"];
+  logistics [label="Logistics" fillcolor="#361d32"];
+  item_and_buildings_types -> logistics [color="#ebf2ff"];
+  science_matrix [label="Science matrix" fillcolor="#1f2b1a"];
+  item_and_buildings_types -> science_matrix [color="#ebf2ff"];
+  flag_power_transmission [label="⚡️
+Power transmission" fillcolor="#0c041c"];
+  flags -> flag_power_transmission [color="#ebf2ff"];
+  power_transmission [label="Power transmission" fillcolor="#711f37"];
+  item_and_buildings_types -> power_transmission [color="#ebf2ff"];
+  chemical_facility [label="Chemical facility" fillcolor="#403088"];
+  item_and_buildings_types -> chemical_facility [color="#ebf2ff"];
+  component [label="Component" fillcolor="#58374a"];
+  item_and_buildings_types -> component [color="#ebf2ff"];
+  flag_fluid [label="💧
+Fluid" fillcolor="#0c041c"];
+  flags -> flag_fluid [color="#ebf2ff"];
+  production_facility [label="Production facility" fillcolor="#28425c"];
+  item_and_buildings_types -> production_facility [color="#ebf2ff"];
+  fractionation_facility [label="Fractionation facility" fillcolor="#3821b1"];
+  item_and_buildings_types -> fractionation_facility [color="#ebf2ff"];
+  flag_power_facility [label="🌪️
+Power facility" fillcolor="#0c041c"];
+  flags -> flag_power_facility [color="#ebf2ff"];
+  power_facility [label="Power facility" fillcolor="#732215"];
+  item_and_buildings_types -> power_facility [color="#ebf2ff"];
+  particle_collider [label="Particle collider" fillcolor="#280e66"];
+  item_and_buildings_types -> particle_collider [color="#ebf2ff"];
+  research_facility [label="Research facility" fillcolor="#152a38"];
+  item_and_buildings_types -> research_facility [color="#ebf2ff"];
+  mining_facility [label="Mining facility" fillcolor="#4b391b"];
+  item_and_buildings_types -> mining_facility [color="#ebf2ff"];
+  oil_extraction_facility [label="Oil extraction facility" fillcolor="#561b92"];
+  item_and_buildings_types -> oil_extraction_facility [color="#ebf2ff"];
+  refining_facility [label="Refining facility" fillcolor="#264541"];
+  item_and_buildings_types -> refining_facility [color="#ebf2ff"];
+  smelting_facility [label="Smelting facility" fillcolor="#4c271e"];
+  item_and_buildings_types -> smelting_facility [color="#ebf2ff"];
+  water_pumping_facility [label="Water pumping facility" fillcolor="#2e3472"];
+  item_and_buildings_types -> water_pumping_facility [color="#ebf2ff"];
+  relations [label="Relations" fillcolor="#0c041c"];
+  a_assemble [label="Assemble" fillcolor="#80d24d"];
+  relations -> a_assemble [color="#ebf2ff"];
+  b_assemble [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_assemble -> b_assemble [color="#80d24d"];
+  a_particle [label="Particle" fillcolor="#9196db"];
+  relations -> a_particle [color="#ebf2ff"];
+  b_particle [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_particle -> b_particle [color="#9196db"];
+  a_research [label="Research" fillcolor="#80bdc9"];
+  relations -> a_research [color="#ebf2ff"];
+  b_research [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_research -> b_research [color="#80bdc9"];
+  a_smelt [label="Smelt" fillcolor="#c6aa8c"];
+  relations -> a_smelt [color="#ebf2ff"];
+  b_smelt [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_smelt -> b_smelt [color="#c6aa8c"];
+  a_chemical [label="Chemical" fillcolor="#d266db"];
+  relations -> a_chemical [color="#ebf2ff"];
+  b_chemical [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_chemical -> b_chemical [color="#d266db"];
+  a_fractionate [label="Fractionate" fillcolor="#cab548"];
+  relations -> a_fractionate [color="#ebf2ff"];
+  b_fractionate [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_fractionate -> b_fractionate [color="#cab548"];
+  a_refine [label="Refine" fillcolor="#dd80a8"];
+  relations -> a_refine [color="#ebf2ff"];
+  b_refine [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
+  a_refine -> b_refine [color="#dd80a8"];
+}

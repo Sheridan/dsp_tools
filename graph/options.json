@@ -1,0 +1,105 @@
+{
+  "graphviz":
+  {
+    "default":
+    {
+      "graph":
+      {
+        "overlap": "false",
+        "fontname": "Roboto",
+        "fontsize": 16,
+        "splines": "ortho",
+        "ratio": "0.5625",
+        "rankdir": "TB",
+        "fontcolor": "font",
+        "bgcolor": "background",
+        "fillcolor": "background"
+      },
+      "node":
+      {
+        "fontname": "Roboto",
+        "fontsize": 16,
+        "shape": "box",
+        "style": "rounded,filled",
+        "fontcolor": "font",
+        "color": "font"
+      },
+      "edge":
+      {
+        "fontname": "Roboto",
+        "fontsize": 16,
+        "fontcolor": "font",
+        "color": "font",
+        "penwidth": 3,
+        "minlen": 1
+      }
+    },
+    "tech":
+    {
+      "graph":
+      {
+        "rankdir": "LR"
+      }
+    },
+    "tech_items":
+    {
+      "graph":
+      {
+        "rankdir": "TB"
+      }
+    },
+    "legend":
+    {
+      "graph":
+      {
+        "ratio": "auto",
+        "rankdir": "TB"
+      },
+      "edge":
+      {
+        "minlen": 2,
+        "penwidth": 2
+      }
+    }
+  },
+  "colors":
+  {
+      "background"             : "#0c041c",
+      "font"                   : "#ebf2ff",
+
+      "Technology"             : "#4b1c57",
+      "Technology relation"    : "#36325b",
+
+      "Assembler"              : "#294419",
+      "Component"              : "#58374a",
+      "End product"            : "#1f133a",
+      "Logistics"              : "#361d32",
+      "Material"               : "#20141f",
+      "Natural resource"       : "#431025",
+
+      "Chemical facility"      : "#403088",
+      "Fractionation facility" : "#3821b1",
+      "Mining facility"        : "#4b391b",
+      "Oil extraction facility": "#561b92",
+      "Particle collider"      : "#280e66",
+      "Power facility"         : "#732215",
+      "Power storage"          : "#71195c",
+      "Power transmission"     : "#711f37",
+      "Production facility"    : "#28425c",
+      "Refining facility"      : "#264541",
+      "Research facility"      : "#152a38",
+      "Science matrix"         : "#1f2b1a",
+      "Smelting facility"      : "#4c271e",
+      "Water pumping facility" : "#2e3472",
+
+      "Assemble"               : "#80d24d",
+      "Chemical"               : "#d266db",
+      "Fractionate"            : "#cab548",
+      "Particle"               : "#9196db",
+      "Refine"                 : "#dd80a8",
+      "Research"               : "#80bdc9",
+      "Smelt"                  : "#c6aa8c",
+      "Unlock"                 : "#e4724b",
+      "Research resource"      : "#76c78f"
+  }
+}
