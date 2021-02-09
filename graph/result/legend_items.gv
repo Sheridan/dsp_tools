@@ -3,15 +3,18 @@ digraph g {
   node [ fontname="Roboto"  fontsize="16"  shape="box"  style="rounded,filled"  fontcolor="#ebf2ff"  color="#ebf2ff" ];
   edge [ fontname="Roboto"  fontsize="16"  fontcolor="#ebf2ff"  color="#ebf2ff"  penwidth="2"  minlen="2" ];
   flags [label="Flags" fillcolor="#0c041c"];
-  flag_power_storage [label="🔋
-Power storage" fillcolor="#0c041c"];
-  flags -> flag_power_storage [color="#ebf2ff"];
-  flag_hand_craft [label="🤚
-Hand craft" fillcolor="#0c041c"];
-  flags -> flag_hand_craft [color="#ebf2ff"];
+  flag_voiced [label="🔊
+Voiced" fillcolor="#0c041c"];
+  flags -> flag_voiced [color="#ebf2ff"];
   flag_building [label="🏠
 Building" fillcolor="#0c041c"];
   flags -> flag_building [color="#ebf2ff"];
+  flag_hand_craft [label="🤚
+Hand craft" fillcolor="#0c041c"];
+  flags -> flag_hand_craft [color="#ebf2ff"];
+  flag_power_storage [label="🔋
+Power storage" fillcolor="#0c041c"];
+  flags -> flag_power_storage [color="#ebf2ff"];
   item_and_buildings_types [label="Item and buildings types" fillcolor="#0c041c"];
   power_storage [label="Power storage" fillcolor="#71195c"];
   item_and_buildings_types -> power_storage [color="#ebf2ff"];
@@ -25,6 +28,12 @@ End product" fillcolor="#0c041c"];
   flags -> flag_end_product [color="#ebf2ff"];
   end_product [label="End product" fillcolor="#1f133a"];
   item_and_buildings_types -> end_product [color="#ebf2ff"];
+  flag_assembler [label="🛠
+Assembler" fillcolor="#0c041c"];
+  flags -> flag_assembler [color="#ebf2ff"];
+  flag_consumer [label="🔌
+Consumer" fillcolor="#0c041c"];
+  flags -> flag_consumer [color="#ebf2ff"];
   assembler [label="Assembler" fillcolor="#294419"];
   item_and_buildings_types -> assembler [color="#ebf2ff"];
   flag_natural_resource [label="🎲
@@ -64,6 +73,9 @@ Power facility" fillcolor="#0c041c"];
   item_and_buildings_types -> particle_collider [color="#ebf2ff"];
   research_facility [label="Research facility" fillcolor="#152a38"];
   item_and_buildings_types -> research_facility [color="#ebf2ff"];
+  flag_miner [label="⛏
+Miner" fillcolor="#0c041c"];
+  flags -> flag_miner [color="#ebf2ff"];
   mining_facility [label="Mining facility" fillcolor="#4b391b"];
   item_and_buildings_types -> mining_facility [color="#ebf2ff"];
   oil_extraction_facility [label="Oil extraction facility" fillcolor="#561b92"];
@@ -72,6 +84,12 @@ Power facility" fillcolor="#0c041c"];
   item_and_buildings_types -> refining_facility [color="#ebf2ff"];
   smelting_facility [label="Smelting facility" fillcolor="#4c271e"];
   item_and_buildings_types -> smelting_facility [color="#ebf2ff"];
+  flag_splitter [label="🔀
+Splitter" fillcolor="#0c041c"];
+  flags -> flag_splitter [color="#ebf2ff"];
+  flag_storage [label="📦
+Storage" fillcolor="#0c041c"];
+  flags -> flag_storage [color="#ebf2ff"];
   water_pumping_facility [label="Water pumping facility" fillcolor="#2e3472"];
   item_and_buildings_types -> water_pumping_facility [color="#ebf2ff"];
   relations [label="Relations" fillcolor="#0c041c"];

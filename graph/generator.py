@@ -7,8 +7,10 @@ import os.path
 import sys
 import re
 from wand.image import Image
+from wand.drawing import Drawing
+from wand.color import Color
 
-main_icon_size = 96
+main_icon_size = 128
 list_icon_size = 48
 
 class CIcon:
@@ -40,6 +42,24 @@ class CIcon:
         img.save(filename=self.__gen_filename(size))
     return self.__gen_filename(size)
 
+  def subscribed(self, size, text):
+    filename = 'icons/{0}_{1}_{2}.png'.format(self.__key, size, text)
+    if not os.path.isfile(filename):
+      print("Subscribing icon {0} ({1}) with {2}".format(self.__key, size, text))
+      with Drawing() as draw:
+        with Image(filename=self.filename(size)) as img:
+          draw.font_family = 'Roboto'
+          draw.font_weight = 800
+          draw.font_size = 24
+          draw.fill_color = Color('#36ffd0')
+          draw.stroke_color = Color('#09002b')
+          draw.stroke_width = 1
+          draw.stroke_antialias = True
+          draw.text(4, int(img.height - 8), '{0}'.format(text))
+          draw(img)
+          img.save(filename = filename)
+    return filename
+
 class CItem:
   def __init__(self, key, icon_url, data):
     self.__key = key
@@ -48,6 +68,7 @@ class CItem:
     self.__recipes = []
     self.__used_in = []
     self.__tech = None
+    self.__prefab = {}
 
   def __eq__(self, other):
     return self.__key == other.key()
@@ -66,6 +87,12 @@ class CItem:
 
   def type(self):
     return self.__data["type"]
+
+  def set_prefab(self, prefab):
+    self.__prefab = prefab
+
+  def prefab(self):
+    return self.__prefab
 
   def has_pretech(self):
     return 'preTech' in self.__data
@@ -107,6 +134,9 @@ class CItem:
         flags.append(key)
     if "miningFrom" in self.__data:
       flags.append("Natural resource")
+    for key in ["hasAudio", "isPowerConsumer", "isAssembler", "isStorage", "isTank", "isSplitter", "minerPeriod"]:
+      if key in self.__prefab and self.__prefab[key]:
+        flags.append(key)
     for recipe in self.recipes():
       flags += recipe.flags()
     return set(flags)
@@ -118,6 +148,7 @@ class CRecipe:
     self.__data = data
     self.__sources = []
     self.__results = []
+    self.__assembler = None
 
   def add_source(self, item, count):
     self.__sources.append({'item': item, 'count': count})
@@ -133,6 +164,15 @@ class CRecipe:
 
   def type(self):
     return self.__data["type"]
+
+  def time(self):
+    return self.__data["timeSpend"]/60
+
+  def set_assembler(self, assembler):
+    self.__assembler = assembler
+
+  def assembler(self):
+    return self.__assembler
 
   def flags(self):
     flags = []
@@ -161,6 +201,9 @@ class CTech:
 
   def name(self):
     return self.__data["name"]
+
+  def haches(self):
+    return self.__data["hashNeeded"]
 
   def set_unlocks(self, unlocks):
     self.__unlocks = unlocks
@@ -193,6 +236,17 @@ class CData:
   def get_icon_url(self, key):
     return self.__data['mapping']['icons'][key]
 
+  def get_assembler(self, name):
+    return {
+        'Assemble': self.get_item('assembler-1', False),
+        'Chemical': self.get_item('chemical-plant', False),
+        'Fractionate': self.get_item('fractionator', False),
+        'Particle': self.get_item('hadron-collider', False),
+        'Refine': self.get_item('oil-refinery', False),
+        'Research': self.get_item('lab', False),
+        'Smelt': self.get_item('smelter', False)
+    }[name]
+
   def get_item_recipes(self, item_key):
       recipes = []
       for recipe_key in self.__dump['recipe']:
@@ -204,6 +258,7 @@ class CData:
               recipe.add_source(self.get_item(src_item_key, False), recipe_data['items'][src_item_key])
             for res_item_key in recipe_data['results']:
               recipe.add_result(self.get_item(res_item_key, False), recipe_data['results'][res_item_key])
+            recipe.set_assembler(self.get_assembler(recipe_data['type']))
             recipes.append(recipe)
       return recipes
 
@@ -226,12 +281,19 @@ class CData:
             return self.get_tech(tech_key, False)
     return None
 
+  def get_item_prefab(self, item_key):
+    for prefab_key in self.__dump['prefab']:
+      if prefab_key == item_key:
+        return self.__dump['prefab'][prefab_key]
+    return {}
+
   def get_item(self, item_key, with_full_info):
     item = CItem(item_key, self.get_icon_url(item_key), self.__dump['item'][item_key])
     if with_full_info and self.has_icon(item_key):
       item.set_recipes(self.get_item_recipes(item_key))
       item.set_used_in(self.get_item_used_in(item_key))
       item.set_tech(self.get_item_tech(item_key))
+      item.set_prefab(self.get_item_prefab(item_key))
     return item
 
   def get_tech_parents(self, tech_key):
@@ -395,6 +457,24 @@ class CGenerator:
   def __generate_items_nodes(self):
     print("Generating items nodes")
     for item in self.__data.item_list():
+      recipes_list = []
+      for recipe in item.recipes():
+        recipe_icons = []
+        for src_item in recipe.sources():
+          recipe_icons.append(
+            self.__load_template('icon_list_item').format(
+              icon = src_item['item'].icon().subscribed(list_icon_size, src_item['count'])
+            )
+          )
+        recipes_list.append(
+          self.__load_template('item_recipe').format(
+            recipe = self.__load_template('icon_list').format(
+              icon_list = " ".join(recipe_icons)
+            ),
+            time = recipe.time(),
+            assembler_icon = recipe.assembler().icon().filename(list_icon_size)
+          )
+        )
       self.__graph.append_entity_node(
           item.node_name(),
           self.__load_template('item_node').format(
@@ -406,7 +486,8 @@ class CGenerator:
             recipes_count = len(item.recipes()),
             tech_icon = self.__load_template('item_tech_icon').format(
                 tech_icon = item.tech().icon().filename(list_icon_size)
-              ) if item.has_tech() else " "
+              ) if item.has_tech() else " ",
+            recipes = " ".join(recipes_list)
           ),
           item.type()
         )
@@ -430,6 +511,7 @@ class CGenerator:
           self.__load_template('tech_node').format(
             label = tech.name(),
             icon = tech.icon().filename(main_icon_size),
+            haches = tech.haches(),
             unlocks = self.__load_template('icon_list').format(
               icon_list = " ".join(list(map(lambda item: self.__load_template('icon_list_item').format(
                 icon = item.icon().filename(list_icon_size)
@@ -437,7 +519,7 @@ class CGenerator:
             ) if len(tech.unlocks()) > 0 else " ",
             resources = self.__load_template('icon_list').format(
               icon_list = " ".join(list(map(lambda item: self.__load_template('icon_list_item').format(
-                icon = item['item'].icon().filename(list_icon_size)
+                icon = item['item'].icon().subscribed(list_icon_size, item['count'])
               ), tech.resources())))
             ) if len(tech.resources()) > 0 else " "
           ),
