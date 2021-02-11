@@ -2,123 +2,50 @@ digraph g {
   graph [ overlap="false"  fontname="Roboto"  fontsize="16"  splines="ortho"  ratio="auto"  rankdir="TB"  fontcolor="#ebf2ff"  bgcolor="#0c041c"  fillcolor="#0c041c" ];
   node [ fontname="Roboto"  fontsize="16"  shape="box"  style="rounded,filled"  fontcolor="#ebf2ff"  color="#ebf2ff" ];
   edge [ fontname="Roboto"  fontsize="16"  fontcolor="#ebf2ff"  color="#ebf2ff"  penwidth="2"  minlen="2" ];
-  flags [label="Flags" fillcolor="#0c041c"];
-  flag_voiced [label="🔊
-Voiced" fillcolor="#0c041c"];
-  flags -> flag_voiced [color="#ebf2ff"];
-  flag_building [label="🏠
-Building" fillcolor="#0c041c"];
-  flags -> flag_building [color="#ebf2ff"];
-  flag_hand_craft [label="🤚
-Hand craft" fillcolor="#0c041c"];
-  flags -> flag_hand_craft [color="#ebf2ff"];
-  flag_power_storage [label="🔋
-Power storage" fillcolor="#0c041c"];
-  flags -> flag_power_storage [color="#ebf2ff"];
-  item_and_buildings_types [label="Item and buildings types" fillcolor="#0c041c"];
-  power_storage [label="Power storage" fillcolor="#71195c"];
-  item_and_buildings_types -> power_storage [color="#ebf2ff"];
-  flag_fuel [label="🔥
-Fuel" fillcolor="#0c041c"];
-  flags -> flag_fuel [color="#ebf2ff"];
-  material [label="Material" fillcolor="#20141f"];
-  item_and_buildings_types -> material [color="#ebf2ff"];
-  flag_end_product [label="🧊
-End product" fillcolor="#0c041c"];
-  flags -> flag_end_product [color="#ebf2ff"];
-  end_product [label="End product" fillcolor="#1f133a"];
-  item_and_buildings_types -> end_product [color="#ebf2ff"];
-  flag_assembler [label="🛠
-Assembler" fillcolor="#0c041c"];
-  flags -> flag_assembler [color="#ebf2ff"];
-  flag_consumer [label="🔌
-Consumer" fillcolor="#0c041c"];
-  flags -> flag_consumer [color="#ebf2ff"];
-  assembler [label="Assembler" fillcolor="#294419"];
-  item_and_buildings_types -> assembler [color="#ebf2ff"];
-  flag_natural_resource [label="🎲
-Natural resource" fillcolor="#0c041c"];
-  flags -> flag_natural_resource [color="#ebf2ff"];
-  natural_resource [label="Natural resource" fillcolor="#431025"];
-  item_and_buildings_types -> natural_resource [color="#ebf2ff"];
-  flag_logistics [label="🚚
-Logistics" fillcolor="#0c041c"];
-  flags -> flag_logistics [color="#ebf2ff"];
-  logistics [label="Logistics" fillcolor="#361d32"];
-  item_and_buildings_types -> logistics [color="#ebf2ff"];
-  science_matrix [label="Science matrix" fillcolor="#1f2b1a"];
-  item_and_buildings_types -> science_matrix [color="#ebf2ff"];
-  flag_power_transmission [label="⚡️
-Power transmission" fillcolor="#0c041c"];
-  flags -> flag_power_transmission [color="#ebf2ff"];
-  power_transmission [label="Power transmission" fillcolor="#711f37"];
-  item_and_buildings_types -> power_transmission [color="#ebf2ff"];
-  chemical_facility [label="Chemical facility" fillcolor="#403088"];
-  item_and_buildings_types -> chemical_facility [color="#ebf2ff"];
-  component [label="Component" fillcolor="#58374a"];
-  item_and_buildings_types -> component [color="#ebf2ff"];
-  flag_fluid [label="💧
-Fluid" fillcolor="#0c041c"];
-  flags -> flag_fluid [color="#ebf2ff"];
-  production_facility [label="Production facility" fillcolor="#28425c"];
-  item_and_buildings_types -> production_facility [color="#ebf2ff"];
-  fractionation_facility [label="Fractionation facility" fillcolor="#3821b1"];
-  item_and_buildings_types -> fractionation_facility [color="#ebf2ff"];
-  flag_power_facility [label="🌪️
-Power facility" fillcolor="#0c041c"];
-  flags -> flag_power_facility [color="#ebf2ff"];
-  power_facility [label="Power facility" fillcolor="#732215"];
-  item_and_buildings_types -> power_facility [color="#ebf2ff"];
-  particle_collider [label="Particle collider" fillcolor="#280e66"];
-  item_and_buildings_types -> particle_collider [color="#ebf2ff"];
-  research_facility [label="Research facility" fillcolor="#152a38"];
-  item_and_buildings_types -> research_facility [color="#ebf2ff"];
-  flag_miner [label="⛏
-Miner" fillcolor="#0c041c"];
-  flags -> flag_miner [color="#ebf2ff"];
-  mining_facility [label="Mining facility" fillcolor="#4b391b"];
-  item_and_buildings_types -> mining_facility [color="#ebf2ff"];
-  oil_extraction_facility [label="Oil extraction facility" fillcolor="#561b92"];
-  item_and_buildings_types -> oil_extraction_facility [color="#ebf2ff"];
-  refining_facility [label="Refining facility" fillcolor="#264541"];
-  item_and_buildings_types -> refining_facility [color="#ebf2ff"];
-  smelting_facility [label="Smelting facility" fillcolor="#4c271e"];
-  item_and_buildings_types -> smelting_facility [color="#ebf2ff"];
-  flag_splitter [label="🔀
-Splitter" fillcolor="#0c041c"];
-  flags -> flag_splitter [color="#ebf2ff"];
-  flag_storage [label="📦
-Storage" fillcolor="#0c041c"];
-  flags -> flag_storage [color="#ebf2ff"];
-  water_pumping_facility [label="Water pumping facility" fillcolor="#2e3472"];
-  item_and_buildings_types -> water_pumping_facility [color="#ebf2ff"];
-  relations [label="Relations" fillcolor="#0c041c"];
-  a_assemble [label="Assemble" fillcolor="#80d24d"];
-  relations -> a_assemble [color="#ebf2ff"];
-  b_assemble [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
-  a_assemble -> b_assemble [color="#80d24d"];
-  a_particle [label="Particle" fillcolor="#9196db"];
-  relations -> a_particle [color="#ebf2ff"];
-  b_particle [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
-  a_particle -> b_particle [color="#9196db"];
-  a_research [label="Research" fillcolor="#80bdc9"];
-  relations -> a_research [color="#ebf2ff"];
-  b_research [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
-  a_research -> b_research [color="#80bdc9"];
-  a_smelt [label="Smelt" fillcolor="#c6aa8c"];
-  relations -> a_smelt [color="#ebf2ff"];
-  b_smelt [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
-  a_smelt -> b_smelt [color="#c6aa8c"];
-  a_chemical [label="Chemical" fillcolor="#d266db"];
-  relations -> a_chemical [color="#ebf2ff"];
-  b_chemical [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
-  a_chemical -> b_chemical [color="#d266db"];
-  a_fractionate [label="Fractionate" fillcolor="#cab548"];
-  relations -> a_fractionate [color="#ebf2ff"];
-  b_fractionate [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
-  a_fractionate -> b_fractionate [color="#cab548"];
-  a_refine [label="Refine" fillcolor="#dd80a8"];
-  relations -> a_refine [color="#ebf2ff"];
-  b_refine [label="" shape="point" fillcolor="#0c041c" color="#0c041c"];
-  a_refine -> b_refine [color="#dd80a8"];
+  group_colored_nodes [label="Nodes colors" fillcolor="#0c041c"];
+  colored_nodes_power_storage [label="Power storage" fillcolor="#71195c"];  group_colored_nodes -> colored_nodes_power_storage [color="#ebf2ff"];
+  group_flag_nodes [label="Flags" fillcolor="#0c041c"];
+  flag_nodes_power_storage [label="🔋: Power storage" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_power_storage [color="#ebf2ff"];
+  flag_nodes_voiced [label="🔊: Voiced" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_voiced [color="#ebf2ff"];
+  flag_nodes_building [label="🏠: Building" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_building [color="#ebf2ff"];
+  flag_nodes_hand_craft [label="🤚: Hand craft" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_hand_craft [color="#ebf2ff"];
+  flag_nodes_fuel [label="🔥: Fuel" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_fuel [color="#ebf2ff"];
+  colored_nodes_material [label="Material" fillcolor="#20141f"];  group_colored_nodes -> colored_nodes_material [color="#ebf2ff"];
+  colored_nodes_end_product [label="End product" fillcolor="#1f133a"];  group_colored_nodes -> colored_nodes_end_product [color="#ebf2ff"];
+  flag_nodes_end_product [label="🧊: End product" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_end_product [color="#ebf2ff"];
+  colored_nodes_assembler [label="Assembler" fillcolor="#294419"];  group_colored_nodes -> colored_nodes_assembler [color="#ebf2ff"];
+  flag_nodes_consumer [label="🔌: Consumer" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_consumer [color="#ebf2ff"];
+  flag_nodes_assembler [label="🛠: Assembler" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_assembler [color="#ebf2ff"];
+  colored_nodes_natural_resource [label="Natural resource" fillcolor="#431025"];  group_colored_nodes -> colored_nodes_natural_resource [color="#ebf2ff"];
+  flag_nodes_natural_resource [label="🎲: Natural resource" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_natural_resource [color="#ebf2ff"];
+  colored_nodes_logistics [label="Logistics" fillcolor="#361d32"];  group_colored_nodes -> colored_nodes_logistics [color="#ebf2ff"];
+  flag_nodes_logistics [label="🚚: Logistics" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_logistics [color="#ebf2ff"];
+  colored_nodes_science_matrix [label="Science matrix" fillcolor="#1f2b1a"];  group_colored_nodes -> colored_nodes_science_matrix [color="#ebf2ff"];
+  colored_nodes_power_transmission [label="Power transmission" fillcolor="#711f37"];  group_colored_nodes -> colored_nodes_power_transmission [color="#ebf2ff"];
+  flag_nodes_power_transmission [label="⚡️: Power transmission" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_power_transmission [color="#ebf2ff"];
+  colored_nodes_chemical_facility [label="Chemical facility" fillcolor="#403088"];  group_colored_nodes -> colored_nodes_chemical_facility [color="#ebf2ff"];
+  colored_nodes_component [label="Component" fillcolor="#58374a"];  group_colored_nodes -> colored_nodes_component [color="#ebf2ff"];
+  flag_nodes_fluid [label="💧: Fluid" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_fluid [color="#ebf2ff"];
+  colored_nodes_production_facility [label="Production facility" fillcolor="#28425c"];  group_colored_nodes -> colored_nodes_production_facility [color="#ebf2ff"];
+  colored_nodes_fractionation_facility [label="Fractionation facility" fillcolor="#3821b1"];  group_colored_nodes -> colored_nodes_fractionation_facility [color="#ebf2ff"];
+  colored_nodes_power_facility [label="Power facility" fillcolor="#732215"];  group_colored_nodes -> colored_nodes_power_facility [color="#ebf2ff"];
+  flag_nodes_power_facility [label="🌪️: Power facility" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_power_facility [color="#ebf2ff"];
+  colored_nodes_particle_collider [label="Particle collider" fillcolor="#280e66"];  group_colored_nodes -> colored_nodes_particle_collider [color="#ebf2ff"];
+  colored_nodes_research_facility [label="Research facility" fillcolor="#152a38"];  group_colored_nodes -> colored_nodes_research_facility [color="#ebf2ff"];
+  colored_nodes_mining_facility [label="Mining facility" fillcolor="#4b391b"];  group_colored_nodes -> colored_nodes_mining_facility [color="#ebf2ff"];
+  flag_nodes_miner [label="⛏: Miner" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_miner [color="#ebf2ff"];
+  colored_nodes_oil_extraction_facility [label="Oil extraction facility" fillcolor="#561b92"];  group_colored_nodes -> colored_nodes_oil_extraction_facility [color="#ebf2ff"];
+  colored_nodes_refining_facility [label="Refining facility" fillcolor="#264541"];  group_colored_nodes -> colored_nodes_refining_facility [color="#ebf2ff"];
+  colored_nodes_smelting_facility [label="Smelting facility" fillcolor="#4c271e"];  group_colored_nodes -> colored_nodes_smelting_facility [color="#ebf2ff"];
+  flag_nodes_splitter [label="🔀: Splitter" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_splitter [color="#ebf2ff"];
+  flag_nodes_storage [label="📦: Storage" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_storage [color="#ebf2ff"];
+  colored_nodes_water_pumping_facility [label="Water pumping facility" fillcolor="#2e3472"];  group_colored_nodes -> colored_nodes_water_pumping_facility [color="#ebf2ff"];
+  group_colored_edges [label="Arrows colors" fillcolor="#0c041c"];
+  point_assemble [label="" shape="point"];  colored_edges_assemble [label="Assemble" fillcolor="#0c041c"];  colored_edges_assemble -> point_assemble [color="#80d24d"];  group_colored_edges -> colored_edges_assemble [color="#ebf2ff"];
+  point_particle [label="" shape="point"];  colored_edges_particle [label="Particle" fillcolor="#0c041c"];  colored_edges_particle -> point_particle [color="#9196db"];  group_colored_edges -> colored_edges_particle [color="#ebf2ff"];
+  point_research [label="" shape="point"];  colored_edges_research [label="Research" fillcolor="#0c041c"];  colored_edges_research -> point_research [color="#80bdc9"];  group_colored_edges -> colored_edges_research [color="#ebf2ff"];
+  point_smelt [label="" shape="point"];  colored_edges_smelt [label="Smelt" fillcolor="#0c041c"];  colored_edges_smelt -> point_smelt [color="#c6aa8c"];  group_colored_edges -> colored_edges_smelt [color="#ebf2ff"];
+  point_chemical [label="" shape="point"];  colored_edges_chemical [label="Chemical" fillcolor="#0c041c"];  colored_edges_chemical -> point_chemical [color="#d266db"];  group_colored_edges -> colored_edges_chemical [color="#ebf2ff"];
+  point_fractionate [label="" shape="point"];  colored_edges_fractionate [label="Fractionate" fillcolor="#0c041c"];  colored_edges_fractionate -> point_fractionate [color="#cab548"];  group_colored_edges -> colored_edges_fractionate [color="#ebf2ff"];
+  point_refine [label="" shape="point"];  colored_edges_refine [label="Refine" fillcolor="#0c041c"];  colored_edges_refine -> point_refine [color="#dd80a8"];  group_colored_edges -> colored_edges_refine [color="#ebf2ff"];
 }

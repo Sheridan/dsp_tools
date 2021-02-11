@@ -1,0 +1,2 @@
+  {group_name}_{node_name} [label="{flag_icon}: {flag_description}" fillcolor="{color}"];
+  group_{group_name} -> {group_name}_{node_name} [color="{group_edge_color}"];

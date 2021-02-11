@@ -1,24 +1,4 @@
 {
-  "flags":
-  {
-    "canBuild": {"name": "Building", "icon": "🏠"},
-    "isFluid": {"name": "Fluid", "icon": "💧"},
-    "heatValue": {"name": "Fuel", "icon": "🔥"},
-    "handcraft": {"name": "Hand craft", "icon": "🤚"},
-    "Logistics": {"name": "Logistics", "icon": "🚚"},
-    "Natural resource": {"name": "Natural resource", "icon": "🎲"},
-    "Power storage": {"name": "Power storage", "icon": "🔋"},
-    "Power transmission": {"name": "Power transmission", "icon": "⚡️"},
-    "Power facility": {"name": "Power facility", "icon": "🌪️"},
-    "End product": {"name": "End product", "icon": "🧊"},
-    "hasAudio": {"name": "Voiced", "icon": "🔊"},
-    "isPowerConsumer": {"name": "Consumer", "icon": "🔌"},
-    "isAssembler": {"name": "Assembler", "icon": "🛠"},
-    "isStorage": {"name": "Storage", "icon": "📦"},
-    "isTank": {"name": "Storage", "icon": "📦"},
-    "isSplitter": {"name": "Splitter", "icon": "🔀"},
-    "minerPeriod": {"name": "Miner", "icon": "⛏"}
-  },
   "mapping":
   {
     "icons":

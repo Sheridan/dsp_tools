@@ -1,0 +1,4 @@
+  point_{node_name} [label="" shape="point"];
+  {group_name}_{node_name} [label="{title}" fillcolor="{node_color}"];
+  {group_name}_{node_name} -> point_{node_name} [color="{color}"];
+  group_{group_name} -> {group_name}_{node_name} [color="{group_edge_color}"];

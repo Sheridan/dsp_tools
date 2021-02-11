@@ -11,7 +11,7 @@
         "splines": "ortho",
         "ratio": "0.5625",
         "rankdir": "TB",
-        "fontcolor": "font",
+        "fontcolor": "foreground",
         "bgcolor": "background",
         "fillcolor": "background"
       },
@@ -21,15 +21,15 @@
         "fontsize": 16,
         "shape": "box",
         "style": "rounded,filled",
-        "fontcolor": "font",
-        "color": "font"
+        "fontcolor": "foreground",
+        "color": "foreground"
       },
       "edge":
       {
         "fontname": "Roboto",
         "fontsize": 16,
-        "fontcolor": "font",
-        "color": "font",
+        "fontcolor": "foreground",
+        "color": "foreground",
         "penwidth": 3,
         "minlen": 1
       }
@@ -62,10 +62,15 @@
       }
     }
   },
+  "icons":
+  {
+    "main_icon_size": 128,
+    "list_icon_size": 48
+  },
   "colors":
   {
       "background"             : "#0c041c",
-      "font"                   : "#ebf2ff",
+      "foreground"             : "#ebf2ff",
 
       "Technology"             : "#4b1c57",
       "Technology relation"    : "#36325b",
@@ -100,6 +105,30 @@
       "Research"               : "#80bdc9",
       "Smelt"                  : "#c6aa8c",
       "Unlock"                 : "#e4724b",
-      "Research resource"      : "#76c78f"
+      "Research resource"      : "#76c78f",
+
+      "icon_text_fill_color"   : "#c8fad5",
+      "icon_text_stroke_color" : "#09002b"
+  },
+  "flags":
+  {
+    "default"           : {"name": "default", "icon"           : "🛑"},
+    "canBuild"          : {"name": "Building", "icon"          : "🏠"},
+    "isFluid"           : {"name": "Fluid", "icon"             : "💧"},
+    "heatValue"         : {"name": "Fuel", "icon"              : "🔥"},
+    "handcraft"         : {"name": "Hand craft", "icon"        : "🤚"},
+    "Logistics"         : {"name": "Logistics", "icon"         : "🚚"},
+    "Natural resource"  : {"name": "Natural resource", "icon"  : "🎲"},
+    "Power storage"     : {"name": "Power storage", "icon"     : "🔋"},
+    "Power transmission": {"name": "Power transmission", "icon": "⚡️"},
+    "Power facility"    : {"name": "Power facility", "icon"    : "🌪️"},
+    "End product"       : {"name": "End product", "icon"       : "🧊"},
+    "hasAudio"          : {"name": "Voiced", "icon"            : "🔊"},
+    "isPowerConsumer"   : {"name": "Consumer", "icon"          : "🔌"},
+    "isAssembler"       : {"name": "Assembler", "icon"         : "🛠"},
+    "isStorage"         : {"name": "Storage", "icon"           : "📦"},
+    "isTank"            : {"name": "Storage", "icon"           : "📦"},
+    "isSplitter"        : {"name": "Splitter", "icon"          : "🔀"},
+    "minerPeriod"       : {"name": "Miner", "icon"             : "⛏"}
   }
 }
