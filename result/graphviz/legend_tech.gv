@@ -1,0 +1,11 @@
+digraph g {
+  graph [ overlap="false"  fontname="AnonymousPro-Bold"  fontsize="16"  splines="ortho"  ratio="auto"  rankdir="TB"  fontcolor="#ebf2ff"  bgcolor="#0c041c"  fillcolor="#0c041c" ];
+  node [ fontname="AnonymousPro-Bold"  fontsize="16"  shape="box"  style="rounded,filled"  fontcolor="#ebf2ff"  color="#ebf2ff" ];
+  edge [ fontname="AnonymousPro-Bold"  fontsize="16"  fontcolor="#ebf2ff"  color="#ebf2ff"  penwidth="2"  minlen="2" ];
+  group_colored_nodes [label="Nodes colors" fillcolor="#0c041c"];
+  colored_nodes_technology [label="Technology" fillcolor="#4b1c57"];  group_colored_nodes -> colored_nodes_technology [color="#ebf2ff"];
+  group_flag_nodes [label="Flags" fillcolor="#0c041c"];
+  flag_nodes_hand_research [label="🤚: Hand research" fillcolor="#0c041c"];  group_flag_nodes -> flag_nodes_hand_research [color="#ebf2ff"];
+  group_colored_edges [label="Arrows colors" fillcolor="#0c041c"];
+  point_technology_relation [label="" shape="point"];  colored_edges_technology_relation [label="Technology relation" fillcolor="#0c041c"];  colored_edges_technology_relation -> point_technology_relation [color="#36325b"];  group_colored_edges -> colored_edges_technology_relation [color="#ebf2ff"];
+}
