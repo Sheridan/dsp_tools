@@ -1,3 +1,2 @@
-result/icons/generated/*png
-result/icons/original/*png
+result/*
 __pycache__

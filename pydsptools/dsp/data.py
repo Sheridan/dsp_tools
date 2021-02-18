@@ -18,15 +18,15 @@ class Data:
   def __get_icon_url(self, key):
     return self.__data['mapping']['icons'][key]
 
-  def __get_assembler(self, name):
+  def __get_assemblers(self, name):
     return {
-        'Assemble': self.get_item('assembler-1'),
-        'Chemical': self.get_item('chemical-plant'),
-        'Fractionate': self.get_item('fractionator'),
-        'Particle': self.get_item('hadron-collider'),
-        'Refine': self.get_item('oil-refinery'),
-        'Research': self.get_item('lab'),
-        'Smelt': self.get_item('smelter')
+        'Assemble'   : [ self.get_item('assembler-1'), self.get_item('assembler-2'), self.get_item('assembler-3') ],
+        'Chemical'   : [ self.get_item('chemical-plant') ],
+        'Fractionate': [ self.get_item('fractionator')   ],
+        'Particle'   : [ self.get_item('hadron-collider')],
+        'Refine'     : [ self.get_item('oil-refinery')   ],
+        'Research'   : [ self.get_item('lab')            ],
+        'Smelt'      : [ self.get_item('smelter')        ]
     }[name]
 
   def get_item_recipes(self, item_key):
@@ -40,7 +40,7 @@ class Data:
               recipe.add_source(self.get_item(src_item_key), recipe_data['items'][src_item_key])
             for res_item_key in recipe_data['results']:
               recipe.add_result(self.get_item(res_item_key), recipe_data['results'][res_item_key])
-            recipe.set_assembler(self.__get_assembler(recipe_data['type']))
+            recipe.set_assemblers(self.__get_assemblers(recipe_data['type']))
             recipes.append(recipe)
       return recipes
 
@@ -72,11 +72,10 @@ class Data:
   def get_item(self, item_key):
     if item_key not in self.__items:
       print('Loading item {0}'.format(item_key))
-      self.__items[item_key] = Item(item_key, self.__get_icon_url(item_key), self.__dump['item'][item_key])
+      self.__items[item_key] = Item(item_key, self.__get_icon_url(item_key), self.__dump['item'][item_key], self.__dump['prefab'][item_key] if item_key in self.__dump['prefab'] else {})
       self.__items[item_key].set_recipes(self.get_item_recipes(item_key))
       self.__items[item_key].set_used_in(self.get_item_used_in(item_key))
       self.__items[item_key].set_tech(self.get_item_tech(item_key))
-      self.__items[item_key].set_prefab(self.get_item_prefab(item_key))
     return self.__items[item_key]
 
   def get_tech_parents(self, tech_key):

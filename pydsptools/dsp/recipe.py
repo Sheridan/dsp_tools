@@ -4,7 +4,7 @@ class Recipe:
     self.__data = data
     self.__sources = []
     self.__results = []
-    self.__assembler = None
+    self.__assemblers = []
 
   def add_source(self, item, count):
     self.__sources.append({'item': item, 'count': count})
@@ -18,17 +18,23 @@ class Recipe:
   def results(self):
     return self.__results
 
+  def item_result(self, item_key):
+    for result in self.__results:
+      if result['item'].key() == item_key:
+        return result
+    return None
+
   def type(self):
     return self.__data["type"]
 
   def time(self):
     return self.__data["timeSpend"]/60
 
-  def set_assembler(self, assembler):
-    self.__assembler = assembler
+  def set_assemblers(self, assemblers):
+    self.__assemblers = assemblers
 
-  def assembler(self):
-    return self.__assembler
+  def assemblers(self):
+    return self.__assemblers
 
   def flags(self):
     flags = []

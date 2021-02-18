@@ -1,6 +1,6 @@
 from pydsptools.options import options
 from pydsptools.graphviz.entity import Entity
-
+from pydsptools.dsp.data import dsp_data
 
 class Node(Entity):
   def __init__(self, name, icon, caption, color="background"):
@@ -128,14 +128,36 @@ class Node(Entity):
         items_list = "".join(items)
       )
 
+  def __compile_recipe_assembler_belt_list(self, assembler):
+    items = []
+    for belt in assembler.belts():
+      items.append(self.load_template('main/node_recipe_assembler_belt.html').format(
+        belt_icon = belt.icon().resized(options["icons"]['assembler_icon_size']),
+        assemblers_count = belt.assemblers_count()
+      ))
+    return self.load_template('main/node_recipe_assembler_belts_list.html').format(
+        belts = "".join(items),
+      )
+
+  def __compile_recipe_assemblers_list(self, recipe):
+    items = []
+    for assembler in recipe.assemblers():
+      items.append(self.load_template('main/node_recipe_assembler.html').format(
+        time = assembler.time(),
+        assembler_icon = assembler.icon().resized(options["icons"]['assembler_icon_size']),
+        belts_list = self.__compile_recipe_assembler_belt_list(assembler)
+      ))
+    return self.load_template('main/node_recipe_assemblers_list.html').format(
+      asemblers = "".join(items),
+    )
+
   def __compile_recipes_items(self):
     items = []
     for recipe in self.recipes():
       items.append(self.load_template('main/node_recipe_list_item.html').format(
-        assembler_icon = recipe.assembler_icon().resized(options["icons"]['list_icon_size']),
         ingridients = self.__compile_recipes_ingridients(recipe),
-        results = self.__compile_recipes_results(recipe),
-        time = recipe.time()
+        assemblers_list = self.__compile_recipe_assemblers_list(recipe),
+        results = self.__compile_recipes_results(recipe)
       ))
     return "".join(items)
 

@@ -1,14 +1,14 @@
 from pydsptools.dsp.icon import Icon
 
 class Item:
-  def __init__(self, key, icon_url, data):
+  def __init__(self, key, icon_url, data, prefab):
     self.__key = key
     self.__data = data
     self.__icon = Icon(self.__key, icon_url)
     self.__recipes = []
     self.__used_in = []
     self.__tech = None
-    self.__prefab = {}
+    self.__prefab = prefab
 
   def __eq__(self, other):
     return self.__key == other.key()
@@ -27,12 +27,6 @@ class Item:
 
   def type(self):
     return self.__data["type"]
-
-  def set_prefab(self, prefab):
-    self.__prefab = prefab
-
-  def prefab(self):
-    return self.__prefab
 
   def has_pretech(self):
     return 'preTech' in self.__data
@@ -101,7 +95,8 @@ class Item:
     return self.__get_data('powerCoverRadius')
 
   def assembler_speed(self):
-    return self.__get_data('assemblerSpeed')
+    speed = self.__get_data('assemblerSpeed')
+    return 1 if self.__key in ['lab', 'fractionator'] else speed/10000
 
   def work_energy_per_tick(self):
     return self.__get_data('workEnergyPerTick')*60

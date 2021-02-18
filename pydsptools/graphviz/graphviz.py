@@ -1,8 +1,9 @@
+from math import ceil
 from pydsptools.dsp.data import dsp_data
 from pydsptools.graphviz.graph import Graph
 from pydsptools.graphviz.node.node import Node
 from pydsptools.graphviz.node.nodeinfo import NodeTextInfo, NodeIconInfo
-from pydsptools.graphviz.node.noderecipe import NodeRecipe
+from pydsptools.graphviz.node.noderecipe import NodeRecipe, NodeRecipeAssembler, NodeRecipeAssemblerBelt
 from pydsptools.graphviz.node.noderecipeingredient import NodeRecipeIngredient
 from pydsptools.graphviz.edge.edge import Edge
 from pydsptools.graphviz.legend import Legend
@@ -29,7 +30,7 @@ class Graphviz:
       node.append_info(NodeTextInfo("Cells", item.storage_cells()))
       node.append_info(NodeTextInfo("Power connect", item.power_connect_distance(), "m"))
       node.append_info(NodeTextInfo("Power radius", item.power_cover_radius(), "m"))
-      node.append_info(NodeTextInfo("Assembler speed", int(item.assembler_speed()/100), '%'))
+      node.append_info(NodeTextInfo("Assembler speed", int(item.assembler_speed()*100), '%'))
       node.append_info(NodeTextInfo("Work consumption", to_units(item.work_energy_per_tick()), 'w'))
       node.append_info(NodeTextInfo("Idle consumption", to_units(item.idle_energy_per_tick()), 'w'))
       node.append_info(NodeTextInfo("Generate energy", to_units(item.gen_energy_per_tick()), 'w'))
@@ -46,7 +47,13 @@ class Graphviz:
       for used_in in item.used_in():
         node.append_used_in(used_in.icon())
       for recipe in item.recipes():
-        node_recipe = NodeRecipe(recipe.assembler().icon(), recipe.time())
+        node_recipe = NodeRecipe()
+        for assembler in recipe.assemblers():
+          belts = []
+          for belt in [dsp_data.get_item('belt-1'), dsp_data.get_item('belt-2'), dsp_data.get_item('belt-3')]:
+            belts.append(NodeRecipeAssemblerBelt(belt.icon(), int(ceil(belt.belt_speed()/recipe.item_result(item.key())['count']/assembler.assembler_speed()*recipe.time())) ))
+
+          node_recipe.append_assembler(NodeRecipeAssembler(assembler.icon(), recipe.time()/assembler.assembler_speed(), belts))
         for src_item in recipe.sources():
           node_recipe.append_ingredient(NodeRecipeIngredient(src_item['item'].icon(), src_item['count']))
         for result_item in recipe.results():

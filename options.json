@@ -66,6 +66,7 @@
   {
     "main_icon_size": 128,
     "list_icon_size": 48,
+    "assembler_icon_size": 32,
     "font": "AnonymousPro-Bold",
     "text_fill_color": "#c8fad5",
     "text_stroke_color": "#09002b"
