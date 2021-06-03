@@ -6,4 +6,4 @@ Generates production graph
 
 # Thanks to
 
-* @alekslt
+* [@alekslt](https://github.com/alekslt/)
