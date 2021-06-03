@@ -14,6 +14,12 @@ class Options:
     print('Need to add color {0}'.format(color_name))
     return self.__options['colors']['background']
 
+  def weight(self, weight_name):
+    if weight_name in self.__options['weights']:
+      return self.__options['weights'][weight_name]
+    print('Need to add weight {0}'.format(weight_name))
+    return self.__options['weights']['default']
+
   def __flag(self, flag):
     if flag in self.__options['flags']:
       return self.__options['flags'][flag]

@@ -13,16 +13,32 @@
         "rankdir": "TB",
         "fontcolor": "foreground",
         "bgcolor": "background",
-        "fillcolor": "background"
+        "fillcolor": "background",
+        "concentrate": "true",
+        "pack": "true",
+        "packmode": "clust",
+        "outputorder": "edgesfirst",
+        "searchsize": 512,
+        "mode": "sgd",
+        "model": "subset",
+        "sep": "+32",
+        "esep": "+8",
+        "dim": 3,
+        "ranksep": 1,
+        "nodesep": 0.5,
+        "ordering": "in",
+        "compound": "true",
+        "remincross": "false"
       },
       "node":
       {
         "fontname": "AnonymousPro-Bold",
         "fontsize": 16,
         "shape": "box",
-        "style": "rounded,filled",
+        "style": "filled",
         "fontcolor": "foreground",
-        "color": "foreground"
+        "color": "foreground",
+        "margin": 0.1
       },
       "edge":
       {
@@ -30,8 +46,22 @@
         "fontsize": 16,
         "fontcolor": "foreground",
         "color": "foreground",
-        "penwidth": 3,
-        "minlen": 1
+        "style": "bold",
+        "penwidth": 2,
+        "tailport": "c",
+        "headport": "c",
+        "arrowhead": "vee",
+        "arrowtail": "dot",
+        "len": 3,
+        "minlen": 2
+      }
+    },
+    "items":
+    {
+      "graph":
+      {
+        "sep": "+2",
+        "esep": "+1"
       }
     },
     "tech":
@@ -53,11 +83,14 @@
       "graph":
       {
         "ratio": "auto",
-        "rankdir": "TB"
+        "rankdir": "TB",
+        "sep": "+8",
+        "esep": "+1"
       },
       "edge":
       {
         "minlen": 2,
+        "len": 2,
         "penwidth": 2
       }
     }
@@ -85,6 +118,8 @@
       "Logistics"              : "#361d32",
       "Material"               : "#20141f",
       "Natural resource"       : "#431025",
+      "Vein"                   : "#200000",
+      "FluidVein"              : "#221000",
 
       "Chemical facility"      : "#403088",
       "Fractionation facility" : "#3821b1",
@@ -109,7 +144,13 @@
       "Research"               : "#80bdc9",
       "Smelt"                  : "#c6aa8c",
       "Unlock"                 : "#e4724b",
-      "Research resource"      : "#76c78f"
+      "Research resource"      : "#76c78f",
+      "MineDrill"              : "#f5cb42",
+      "MineFluidExtractor"     : "#a442f5",
+      "PowerTransfer"          : "#57d47c",
+      "PhotonCatch"            : "#fffa99",
+      "OrbitCollector"         : "#ffdb99",
+      "Pump"                   : "#92eef7"
   },
   "flags":
   {
@@ -132,5 +173,60 @@
     "isTank"            : {"name": "Storage", "icon"           : "📦"},
     "isSplitter"        : {"name": "Splitter", "icon"          : "🔀"},
     "minerPeriod"       : {"name": "Miner", "icon"             : "⛏"}
-  }
+  },
+  "weights":
+  {
+    "default"           : 0,
+    "PhotonCatch"       : 5,
+    "Pump"              : 5,
+    "MineDrill"         : 5,
+    "MineFluidExtractor": 5,
+    "OrbitCollector"    : 5,
+    "PowerTransfer"     : 2,
+    "Particle"          : 3,
+    "Fractionate"       : 3,
+    "Smelt"             : 5,
+    "Assemble"          : 2,
+    "Refine"            : 4,
+    "Chemical"          : 3,
+    "Research"          : 7
+  },
+  "rank_order":
+  {
+    "Vein"                   : 0,
+    "FluidVein"              : 0,
+
+    "Natural resource"       : 1,
+
+    "Material"               : 2,
+
+    "Component"              : 3,
+
+    "Water pumping facility" : 4,
+    "Mining facility"        : 4,
+    "Oil extraction facility": 4,
+
+    "Refining facility"      : 5,
+    "Smelting facility"      : 5,
+
+    "Assembler"              : 6,
+    "Chemical facility"      : 6,
+    "Fractionation facility" : 6,
+    "Particle collider"      : 6,
+
+    "Production facility"    : 7,
+    "Research facility"      : 7,
+
+    "End product"            : 8,
+    "Science matrix"         : 8,
+
+    "Power transmission"     : 9,
+    "Power facility"         : 9,
+    "Power storage"          : 9,
+
+    "Logistics"              : 10,
+
+    "tech"                   : 11
+  },
+  "used_in_items_in_row": 4
 }

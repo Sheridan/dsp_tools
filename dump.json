@@ -94,7 +94,7 @@
             "canBuild": false,
             "description": "Antimatter can be made into a more stable fuel rod by using the strong restraint of annihilation constraint sphere. It will be safer in this way.",
             "fuelType": "Mass energy",
-            "heatValue": 7500000000,
+            "heatValue": 7200000000,
             "iconPath": "Icons/ItemRecipe/antimatter-energy-fuel",
             "isEntity": false,
             "isFluid": false,
@@ -108,7 +108,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "The basic assembler. Can process iron and copper ingot into more advanced products, but the speed will be slightly slower.",
+            "description": "The basic assembler. Can process iron and copper ingots into more advanced products.",
             "iconPath": "Icons/ItemRecipe/assembler-1",
             "isEntity": true,
             "isFluid": false,
@@ -178,7 +178,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Having a greater throughput of the conveyor belt and transport the cargo faster.",
+            "description": "An upgraded conveyor belt, with higher speed and consequently higher throughput.",
             "iconPath": "Icons/ItemRecipe/belt-2",
             "isEntity": true,
             "isFluid": false,
@@ -192,7 +192,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Maximize the speed and throughput of transporting cargo. Can design a more efficient production line with a reasonable combination of conveyor belts with different transport speed.",
+            "description": "Maximize the speed and throughput of transporting cargo.",
             "iconPath": "Icons/ItemRecipe/belt-3",
             "isEntity": true,
             "isFluid": false,
@@ -275,7 +275,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "The solid combustible ore. Gradually formed by plants through complex biochemical and physical, and chemical changes. It is energy source and raw material for smelting and chemical production.",
+            "description": "A solid combustible mineral. It's gradually formed by plants through complex biochemical, physical and chemical changes. It is raw material for smelting and chemical production as well as an energy source.",
             "fuelType": "Chemical",
             "heatValue": 2700000,
             "iconPath": "Icons/ItemRecipe/coal-ore",
@@ -283,7 +283,7 @@
             "isFluid": false,
             "isRaw": true,
             "miningFrom": "Coal veins",
-            "name": "Coal ore",
+            "name": "Coal",
             "stackSize": 100,
             "type": "Natural resource"
         },
@@ -337,7 +337,7 @@
             "canBuild": false,
             "description": "A stable isotope of hydrogen. Rarely exists under natural conditions. Most of them come from the reprocessing of hydrogen and the collection from the Gas giant.",
             "fuelType": "Chemical",
-            "heatValue": 8000000,
+            "heatValue": 9000000,
             "iconPath": "Icons/ItemRecipe/deuterium",
             "isEntity": false,
             "isFluid": true,
@@ -353,7 +353,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "Under a magnetic field, can make deuterium into deuteron fuel rod to obtain more powerful energy. It is a fuel source for small fusion systems.",
+            "description": "Under a magnetic field, it is possible to make deuterium into deuteron fuel rods as a better source of energy. These fuel rods are often used in small fusion systems.",
             "fuelType": "Nuclear energy",
             "heatValue": 600000000,
             "iconPath": "Icons/ItemRecipe/deuterium-energy-fuel",
@@ -385,7 +385,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "Rare ore. Directly crystallized from Kimberlite magma under CO₂ rich conditions, and diamond can obtain by further smelting.",
+            "description": "Rare ore. Directly crystallized from Kimberlite magma under CO₂ rich conditions, and diamond can be obtained by further smelting.",
             "iconPath": "Icons/ItemRecipe/diamond-ore",
             "isEntity": false,
             "isFluid": false,
@@ -441,7 +441,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Launch a large amount of solar sails into the orbit of the Dyson swarm to form a Dyson swarm.",
+            "description": "Launch a large amount of solar sails into the orbit of the system's star to form a Dyson Swarm.",
             "iconPath": "Icons/ItemRecipe/em-rail-ejector",
             "isEntity": true,
             "isFluid": false,
@@ -511,12 +511,12 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Facility that use combustible materials (such as coal) as fuel to generate electrical energy. Between the energy output and the calorific value of the consumed fuels has energy efficiency.",
+            "description": "Facility that uses combustible materials (such as coal) as fuel to generate electrical energy. Energy loss between the energy value of the provided fuel and the produced electricity is expected.",
             "iconPath": "Icons/ItemRecipe/fuel-plant",
             "isEntity": true,
             "isFluid": false,
             "isRaw": false,
-            "name": "Thermal power station",
+            "name": "Thermal power plant",
             "preTech": "Thermal power",
             "stackSize": 20,
             "type": "Power facility"
@@ -553,12 +553,12 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Under the action of a high-strength, high-density magnetic field, a facility that converts the huge energy released by the controlled fusion reaction of deuterons into electrical energy.",
+            "description": "Under the action of a high-strength, high-density magnetic field, this facility converts the huge energy released by the controlled fusion reaction of Deuteron fuel rods into electrical energy.",
             "iconPath": "Icons/ItemRecipe/fusion-power-station",
             "isEntity": true,
             "isFluid": false,
             "isRaw": false,
-            "name": "Mini fusion power station",
+            "name": "Mini fusion power plant",
             "preTech": "Mini fusion power generation",
             "stackSize": 20,
             "type": "Power facility"
@@ -638,7 +638,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "The double-layer graphenes will form a complex repeating structure, a superlattice by rotating when stack one layer of graphene on top of another.  After rotating to a certain Magic Angle, double-layer graphene will appear superconductivity. Graphene has become a new type of nano-superconducting material.",
+            "description": "The double-layer graphenes will form a complex repeating structure, a superlattice by rotating when stacking one layer of graphene on top of another. After rotating to a certain Magic Angle, double-layered graphene will gain superconductive properties. Graphene has become a new type of nano-superconducting material.",
             "fuelType": "Chemical",
             "heatValue": 96000,
             "iconPath": "Icons/ItemRecipe/graphene",
@@ -656,7 +656,7 @@
             "canBuild": false,
             "description": "Purify raw coal to obtain graphite, a more usable form of carbon. You can further compact graphite to create crystal diamonds that have more advanced applications.",
             "fuelType": "Chemical",
-            "heatValue": 6300000,
+            "heatValue": 6750000,
             "iconPath": "Icons/ItemRecipe/graphite",
             "isEntity": false,
             "isFluid": false,
@@ -714,7 +714,7 @@
             "canBuild": false,
             "description": "The most abundant element in the universe is the lightest gas.",
             "fuelType": "Chemical",
-            "heatValue": 8000000,
+            "heatValue": 9000000,
             "iconPath": "Icons/ItemRecipe/hydrogen",
             "isEntity": false,
             "isFluid": true,
@@ -729,9 +729,9 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "With further development of cryo-technology, we can liquefy hydrogen to make fuel rod with higher energy. The higher the energy of the fuel rod, the more increase of the mecha fuel power.",
+            "description": "With further development of cryo-technology hydrogen can be liquefied to make fuel rods for higher combustion efficiency. These higher energy Fuel Rods can greatly increase the mecha's fuel power generation.",
             "fuelType": "Chemical",
-            "heatValue": 40000000,
+            "heatValue": 54000000,
             "iconPath": "Icons/ItemRecipe/hydrogen-energy-fuel",
             "isEntity": false,
             "isFluid": false,
@@ -870,7 +870,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "CentreBrain's connector. Used to produce matrices and research technologies. The more the matrix labs, the faster the production and research speed.",
+            "description": "Connector to the CenterBrain. Used to both produce matrices and research technologies. The more matrix labs, the faster production or research speed can progress.",
             "iconPath": "Icons/ItemRecipe/lab",
             "isEntity": true,
             "isFluid": false,
@@ -966,7 +966,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "Microcrystalline component is the basis for processors to achieve high-speed computing functions. To make it requires carving and processing city-like three-dimensional nanostructures on high-purity silicon wafers.",
+            "description": "Microcrystalline component is the basis for processors to achieve high-speed computing functions. It requires carving and processing city-like three-dimensional nanostructures on high-purity silicon wafers to make.",
             "iconPath": "Icons/ItemRecipe/micro-component",
             "isEntity": false,
             "isFluid": false,
@@ -994,7 +994,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "Rare ore. Has a burned stone crystal lattice. After applying a magnetic field, we can affect the string's symmetry and direction, reduce the string network's density, and separating magnetic monopoles.",
+            "description": "Rare ore, Has a pyrochlore lattice. After applying a magnetic field, we can affect the string's symmetry and direction, reduce the string network's density, and separating magnetic monopoles.",
             "iconPath": "Icons/ItemRecipe/mono-mag-ore",
             "isEntity": false,
             "isFluid": false,
@@ -1026,7 +1026,7 @@
             "canBuild": false,
             "description": "Fossil formed by marine organisms can gather as a liquid mineral deposit. It contains the chemical energy marine organisms accumulated during their lifetime. Can as fuel or chemical raw material.",
             "fuelType": "Chemical",
-            "heatValue": 4000000,
+            "heatValue": 4050000,
             "iconPath": "Icons/ItemRecipe/oil",
             "isEntity": false,
             "isFluid": true,
@@ -1068,12 +1068,12 @@
         {
             "buildInGas": true,
             "canBuild": true,
-            "description": "Used to collect the resources of Gas giant, it needs to consume the collected fuel materials to maintain the energy required to work in orbit.",
+            "description": "Used to collect the resources of the gas giants, it needs to consume the collected fuel materials to maintain the energy required to work in orbit.",
             "iconPath": "Icons/ItemRecipe/orbital-collector",
             "isEntity": true,
             "isFluid": false,
             "isRaw": false,
-            "name": "Orbit collector",
+            "name": "Orbital Collector",
             "preTech": "Gas giants exploitation",
             "stackSize": 10,
             "type": "Logistics"
@@ -1082,7 +1082,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Wide-area power distribution facility. Can provide longer power transmission distances and larger power supply area.",
+            "description": "Wide-area power distribution facility. Provides longer range power transmission and a larger power supply area.",
             "iconPath": "Icons/ItemRecipe/orbital-substation",
             "isEntity": true,
             "isFluid": false,
@@ -1253,7 +1253,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Receiving high-energy rays transmitted from the Dyson swarm or Dyson sphere, the received energy can be directly output to the grid or stored as photons in a critical state.",
+            "description": "Receives high-energy rays transmitted from the Dyson swarm or Dyson sphere. The received energy can be directly outputted to the power grid, or stored as photons in a critical state.",
             "iconPath": "Icons/ItemRecipe/ray-receiver",
             "isEntity": true,
             "isFluid": false,
@@ -1269,7 +1269,7 @@
             "canBuild": false,
             "description": "The primary product of crude oil refining. A chemical fuel, can be used to produce various chemical products.",
             "fuelType": "Chemical",
-            "heatValue": 4400000,
+            "heatValue": 4500000,
             "iconPath": "Icons/ItemRecipe/refined-oil",
             "isEntity": false,
             "isFluid": true,
@@ -1326,7 +1326,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "After the crude silicon is melted and recrystallized, it can obtain analytically pure silicon crystals. The photovoltaic materials and semiconductor components made can meet most of the needs.",
+            "description": "After the crude silicon is melted and recrystallized, it can obtain analytically pure silicon crystals. The photovoltaic materials and semiconductor components made can fit a variety of needs.",
             "iconPath": "Icons/ItemRecipe/silicium-single-crystal",
             "isEntity": false,
             "isFluid": false,
@@ -1336,17 +1336,31 @@
             "stackSize": 100,
             "type": "Material"
         },
-        "smelter":
+        "smelter-1":
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "The high temperature smelting ore and metal produced by electrode arc can also be used for purification and crystal smelting.",
+            "description": "High temperature arc smelting can smelt ores and metals, and also be used for purification and crystal smelting.",
             "iconPath": "Icons/ItemRecipe/smelter",
             "isEntity": true,
             "isFluid": false,
             "isRaw": false,
-            "name": "Smelter",
+            "name": "Arc Smelter",
             "preTech": "Automatic metallurgy",
+            "stackSize": 50,
+            "type": "Smelting facility"
+        },
+        "smelter-2":
+        {
+            "buildInGas": false,
+            "canBuild": true,
+            "description": "When monopoles pass through the Plane Filter, they produce a quantum effect of self-organizing and can generate a thermodynamic negative temperature flow. Using this technology, the process of ores smelting or purification can be greatly accelerated.",
+            "iconPath": "Icons/ItemRecipe/smelter-2",
+            "isEntity": true,
+            "isFluid": false,
+            "isRaw": false,
+            "name": "Plane Smelter",
+            "preTech": "Plane-Filter Smelting Technology",
             "stackSize": 50,
             "type": "Smelting facility"
         },
@@ -1396,12 +1410,12 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Used to distribute cargo to different conveyor belts, or balance multiple conveyor belts, can set the filter and priority of input and output.",
+            "description": "Used to distribute cargo to different conveyor belts, or to balance multiple conveyor belts. Can set the filter and priority on any one port.",
             "iconPath": "Icons/ItemRecipe/splitter-4dir",
             "isEntity": true,
             "isFluid": false,
             "isRaw": false,
-            "name": "Splitter(4-direction)",
+            "name": "Splitter",
             "preTech": "Improved logistics system",
             "stackSize": 50,
             "type": "Logistics"
@@ -1443,7 +1457,7 @@
             "isEntity": false,
             "isFluid": false,
             "isRaw": false,
-            "name": "Stone",
+            "name": "Stone brick",
             "stackSize": 100,
             "type": "Material"
         },
@@ -1451,13 +1465,13 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "Common ore. It is a raw material which can be obtain from rocks.",
+            "description": "A common ore. It is a raw material which can be also obtained from rocks.",
             "iconPath": "Icons/ItemRecipe/stone-ore",
             "isEntity": false,
             "isFluid": false,
             "isRaw": true,
             "miningFrom": "Stone veins",
-            "name": "Stone ore",
+            "name": "Stone",
             "stackSize": 100,
             "type": "Natural resource"
         },
@@ -1479,7 +1493,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "It is twice the capacity of a Storage MK.I, but it needs to consume steel to produce.",
+            "description": "Has twice the capacity of a Storage Mk.I and requires steel to produce.",
             "iconPath": "Icons/ItemRecipe/storage-2",
             "isEntity": true,
             "isFluid": false,
@@ -1493,7 +1507,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "The Storage Tank has a larger capacity than the Storage for storing fluid. Dismantling a non-empty Storage Tank will lost any remaining fluid.",
+            "description": "The Storage Tank has a larger capacity than the Storage for storing fluid. When dismantling a non-empty Storage Tank any remaining fluid will be lost.",
             "iconPath": "Icons/ItemRecipe/storage-tank",
             "isEntity": true,
             "isFluid": false,
@@ -1606,7 +1620,7 @@
         {
             "buildInGas": false,
             "canBuild": false,
-            "description": "Under different temperatures, can utilize the characteristics of the titanium's lattice structure, adding precise proportions of alloying elements, will obtain a new type of alloy material that achieves a perfect balance of phase transition temperature and phase content. It has higher strength and better toughness.",
+            "description": "Under different temperatures, utilizing the characteristics of the titanium's lattice structure and adding precise proportions of alloying elements will produce a new type of alloy material that achieves a perfect balance of phase transition temperature and phase content. It has superior strength and toughness.",
             "iconPath": "Icons/ItemRecipe/titanium-alloy",
             "isEntity": false,
             "isFluid": false,
@@ -1690,7 +1704,7 @@
         {
             "buildInGas": false,
             "canBuild": true,
-            "description": "Facility used to directly extract liquid resources can collect sulfuric acid from the sulfuric acid ocean.",
+            "description": "Facility used to collect liquid resources from an ocean, including water and sulfuric acid.",
             "iconPath": "Icons/ItemRecipe/water-pump",
             "isEntity": true,
             "isFluid": false,
@@ -1734,7 +1748,7 @@
     "meta":
     {
         "build": 0,
-        "version": "0.6.15.5678"
+        "version": "0.7.18.6940"
     },
     "prefab":
     {
@@ -1781,24 +1795,24 @@
             "assemblerRecipeType": "Assemble",
             "assemblerSpeed": 10000,
             "hasAudio": true,
-            "idleEnergyPerTick": 250,
+            "idleEnergyPerTick": 300,
             "isAssembler": true,
             "isPowerConsumer": true,
             "minimapType": 4,
             "name": "Assembling machine Mk.II",
-            "workEnergyPerTick": 8000
+            "workEnergyPerTick": 9000
         },
         "assembler-3":
         {
             "assemblerRecipeType": "Assemble",
             "assemblerSpeed": 15000,
             "hasAudio": true,
-            "idleEnergyPerTick": 300,
+            "idleEnergyPerTick": 400,
             "isAssembler": true,
             "isPowerConsumer": true,
             "minimapType": 4,
             "name": "Assembling machine Mk.III",
-            "workEnergyPerTick": 13000
+            "workEnergyPerTick": 18000
         },
         "belt-1":
         {
@@ -1856,7 +1870,7 @@
             "isPowerConsumer": true,
             "minimapType": 4,
             "name": "EM-Rail Ejector",
-            "workEnergyPerTick": 20000
+            "workEnergyPerTick": 30000
         },
         "energy-exchanger":
         {
@@ -1896,7 +1910,7 @@
             "isPowerGen": true,
             "isPowerNode": true,
             "minimapType": 1,
-            "name": "Thermal power station",
+            "name": "Thermal power plant",
             "powerCatalystId": 0,
             "powerConnectDistance": 11.75,
             "powerCoverRadius": 4.5,
@@ -1912,7 +1926,7 @@
             "isPowerGen": true,
             "isPowerNode": true,
             "minimapType": 1,
-            "name": "Mini fusion power station",
+            "name": "Mini fusion power plant",
             "powerCatalystId": 0,
             "powerConnectDistance": 11.75,
             "powerCoverRadius": 4.5,
@@ -1923,7 +1937,7 @@
         "fusion-reactor":
         {
             "fuelMask": 4,
-            "genEnergyPerTick": 1250000,
+            "genEnergyPerTick": 1200000,
             "hasAudio": true,
             "isPowerGen": true,
             "isPowerNode": true,
@@ -1934,7 +1948,7 @@
             "powerCoverRadius": 5,
             "powerProductHeat": 0,
             "powerProductId": 0,
-            "useFuelPerTick": 1250000
+            "useFuelPerTick": 1200000
         },
         "hadron-collider":
         {
@@ -2008,11 +2022,8 @@
         },
         "lab":
         {
-            "assemblerRecipeType": "None",
-            "assemblerSpeed": 0,
-            "hasAudio": false,
+            "hasAudio": true,
             "idleEnergyPerTick": 200,
-            "isAssembler": false,
             "isLab": true,
             "isPowerConsumer": true,
             "labAssembleSpeed": 1,
@@ -2079,7 +2090,7 @@
             "isStation": true,
             "isStellarStation": true,
             "minimapType": 3,
-            "name": "Orbit collector",
+            "name": "Orbital Collector",
             "stationCollectSpeed": 8,
             "stationMaxDroneCount": 50,
             "stationMaxEnergyAcc": 8000000000,
@@ -2090,7 +2101,7 @@
         "orbital-substation":
         {
             "hasAudio": false,
-            "idleEnergyPerTick": 6000,
+            "idleEnergyPerTick": 12000,
             "isPowerCharger": false,
             "isPowerNode": true,
             "name": "Satellite substation",
@@ -2102,7 +2113,7 @@
         {
             "fuelMask": 0,
             "gammaRayReceiver": true,
-            "genEnergyPerTick": 83334,
+            "genEnergyPerTick": 100000,
             "hasAudio": true,
             "isPowerGen": true,
             "isPowerNode": true,
@@ -2111,21 +2122,33 @@
             "powerCatalystId": 1209,
             "powerConnectDistance": 22.5,
             "powerCoverRadius": 10.5,
-            "powerProductHeat": 750000000,
+            "powerProductHeat": 1200000000,
             "powerProductId": 1208,
             "useFuelPerTick": 0
         },
-        "smelter":
+        "smelter-1":
         {
             "assemblerRecipeType": "Smelt",
             "assemblerSpeed": 10000,
-            "hasAudio": false,
+            "hasAudio": true,
             "idleEnergyPerTick": 200,
             "isAssembler": true,
             "isPowerConsumer": true,
             "minimapType": 4,
-            "name": "Smelter",
+            "name": "Arc Smelter",
             "workEnergyPerTick": 6000
+        },
+        "smelter-2":
+        {
+            "assemblerRecipeType": "Smelt",
+            "assemblerSpeed": 20000,
+            "hasAudio": true,
+            "idleEnergyPerTick": 800,
+            "isAssembler": true,
+            "isPowerConsumer": true,
+            "minimapType": 4,
+            "name": "Plane Smelter",
+            "workEnergyPerTick": 24000
         },
         "solar-panel":
         {
@@ -2149,7 +2172,7 @@
             "hasAudio": false,
             "isSplitter": true,
             "minimapType": 3,
-            "name": "Splitter(4-direction)"
+            "name": "Splitter"
         },
         "spray-coater":
         {
@@ -2322,9 +2345,9 @@
             "type": "Assemble",
             "items":
             {
-                "anti-matter": 10,
+                "anti-matter": 6,
                 "fusion-capacitor": 1,
-                "hydrogen": 10,
+                "hydrogen": 6,
                 "titanium-alloy": 1
             },
             "results":
@@ -2867,7 +2890,7 @@
             "explicit": false,
             "handcraft": true,
             "madeFrom": "Assembler",
-            "name": "Thermal power station",
+            "name": "Thermal power plant",
             "preTech": "Thermal power",
             "timeSpend": 300,
             "type": "Assemble",
@@ -2926,7 +2949,7 @@
             "explicit": false,
             "handcraft": true,
             "madeFrom": "Assembler",
-            "name": "Mini fusion power station",
+            "name": "Mini fusion power plant",
             "preTech": "Mini fusion power generation",
             "timeSpend": 600,
             "type": "Assemble",
@@ -3547,7 +3570,7 @@
             "explicit": false,
             "handcraft": true,
             "madeFrom": "Assembler",
-            "name": "Orbit collector",
+            "name": "Orbital Collector",
             "preTech": "Gas giants exploitation",
             "timeSpend": 1800,
             "type": "Assemble",
@@ -3950,12 +3973,12 @@
                 "silicium-single-crystal": 1
             }
         },
-        "smelter":
+        "smelter-1":
         {
             "explicit": false,
             "handcraft": true,
             "madeFrom": "Assembler",
-            "name": "Smelter",
+            "name": "Arc Smelter",
             "preTech": "Automatic metallurgy",
             "timeSpend": 180,
             "type": "Assemble",
@@ -3968,7 +3991,28 @@
             },
             "results":
             {
-                "smelter": 1
+                "smelter-1": 1
+            }
+        },
+        "smelter-2":
+        {
+            "explicit": false,
+            "handcraft": true,
+            "madeFrom": "Assembler",
+            "name": "Plane Smelter",
+            "preTech": "Plane-Filter Smelting Technology",
+            "timeSpend": 300,
+            "type": "Assemble",
+            "items":
+            {
+                "frame-material": 5,
+                "mono-mag-ore": 15,
+                "plane-filter": 4,
+                "smelter-1": 1
+            },
+            "results":
+            {
+                "smelter-2": 1
             }
         },
         "solar-collector":
@@ -4052,7 +4096,7 @@
             "explicit": false,
             "handcraft": true,
             "madeFrom": "Assembler",
-            "name": "Splitter(4-direction)",
+            "name": "Splitter",
             "preTech": "Improved logistics system",
             "timeSpend": 120,
             "type": "Assemble",
@@ -4110,7 +4154,7 @@
             "explicit": false,
             "handcraft": true,
             "madeFrom": "Smelting facility",
-            "name": "Stone",
+            "name": "Stone brick",
             "timeSpend": 60,
             "type": "Smelt",
             "items":
@@ -4465,7 +4509,7 @@
     {
         "tech1":
         {
-            "description": "Welcome to join the Dyson Sphere Program!\nYou will start from scratch, from a small workshop, develop into a huge inter-galactic industrial empire, and finally build the great miracle of the universe: Dyson Sphere.",
+            "description": "Welcome to the Dyson Sphere Program!\nYou will start from scratch with a small workshop, develop into a huge intergalactic industrial empire, and finally build the great miracle of the universe: The Dyson Sphere.",
             "hashNeeded": 1,
             "iconPath": "Icons/Tech/1",
             "isLabTech": false,
@@ -4473,7 +4517,7 @@
         },
         "tech1001":
         {
-            "description": "The poetry-like Maxwell's equations shows the intertwinement between electricity and magnetism. With deep understanding, create a machine for acquiring and using electrical energy with high efficiency.",
+            "description": "Maxwell's equations poetically describe electricity and magnetism intertwining. With a deeper understanding, machines can be created for acquiring and using electrical energy with high efficiency.",
             "hashNeeded": 1200,
             "iconPath": "Icons/Tech/1001",
             "isLabTech": false,
@@ -4494,7 +4538,7 @@
         },
         "tech1002":
         {
-            "description": "As the foundation of all technology, Electromagnetic Matrix is one of basic source codes that keeps the CentreBrain simulating. Keep uploading it to the CentreBrain can activate more technology researches.",
+            "description": "The Electromagnetic Matrix is the foundation of all technologies and one of the basic source codes that keep the CentreBrain simulating. Use a Matrix Lab to create these matrices and use a separate lab for automating the research of new technologies.",
             "hashNeeded": 1800,
             "iconPath": "Icons/Tech/1002",
             "isLabTech": false,
@@ -4514,7 +4558,7 @@
         },
         "tech1101":
         {
-            "description": "Under the action of electric and magnetic fields, we can use plasma more efficiently. The improved plasma exciter is more stable and has better performance.",
+            "description": "Through the use of electric and magnetic fields, plasma can be utilized more efficiently. Plasma Exciters are very stable and effective.",
             "hashNeeded": 9000,
             "iconPath": "Icons/Tech/1101",
             "isLabTech": true,
@@ -4533,7 +4577,7 @@
         },
         "tech1102":
         {
-            "description": "The applied Plasma Technology greatly increases the crude oil refining efficiency, facilitating the industrial development rapidly.",
+            "description": "Applying new knowledge of plasma technology enables efficient gathering and refining of Crude Oil which will rapidly facilitate industrial development.",
             "hashNeeded": 36000,
             "iconPath": "Icons/Tech/1102",
             "isLabTech": true,
@@ -4549,7 +4593,7 @@
         },
         "tech1103":
         {
-            "description": "High-energy X-ray photocatalysis can crack the refined oil into more hydrogen, and produces the by-product energetic graphite.",
+            "description": "High-energy X-ray photocatalysis can crack refined oil into more hydrogen and process the byproducts into energetic graphite.",
             "hashNeeded": 72000,
             "iconPath": "Icons/Tech/1103",
             "isLabTech": true,
@@ -4566,7 +4610,7 @@
         },
         "tech1111":
         {
-            "description": "A key that opens the Energy Gate, and another basic source code that keep the CentreBrain simulating, the Energy Matrix is used for uploading and unlock more advanced energy technologies.",
+            "description": "One of the five basic source codes that keep the CentreBrain simulating. Continue uploading the Energy Matrix to unlock more advanced energy technologies.",
             "hashNeeded": 36000,
             "iconPath": "Icons/Tech/1111",
             "isLabTech": true,
@@ -4581,7 +4625,7 @@
         },
         "tech1112":
         {
-            "description": "With further development of cryo-technology you can now liquefy hydrogen to make fuel rods with higher energy. These higher energy fuel rods can greatly increase the mecha's fuel power.",
+            "description": "With further development of cryo-technology hydrogen can be liquefied to make fuel rods for higher combustion efficiency. These higher energy Fuel Rods can greatly increase the mecha's fuel power generation.",
             "hashNeeded": 72000,
             "iconPath": "Icons/Tech/1112",
             "isLabTech": true,
@@ -4596,7 +4640,7 @@
         },
         "tech1113":
         {
-            "description": "A high effeciency engine that operates hyperspeed plasma jet as working substance to create counterforce, which can drive logistics drone to transport goods between planetary logistic stations.",
+            "description": "A high efficiency engine that operates plasma jets at hyperspeed to create a strong counterforce which can drive logistics drones to transport cargo between planetary logistic stations.",
             "hashNeeded": 180000,
             "iconPath": "Icons/Tech/1113",
             "isLabTech": true,
@@ -4661,7 +4705,7 @@
         },
         "tech1122":
         {
-            "description": "Processing refined oil and plastic through new polymer synthesis techonology will obtain a new material: Organic crystal.",
+            "description": "Processing refined oil and plastic with a new polymer synthesis technology will create a new material: Organic Crystal.",
             "hashNeeded": 72000,
             "iconPath": "Icons/Tech/1122",
             "isLabTech": true,
@@ -4677,7 +4721,7 @@
         },
         "tech1123":
         {
-            "description": "To obtain a titanium spar with higher strength, you can strengthened the crystal lattice structure of titanium atom by mixing precise proportion of organic crystal into titanium.",
+            "description": "To obtain a titanium spar with higher strength, you can strengthen the crystal lattice structure of the titanium atoms by mixing a precise proportion of organic crystal into the titanium.",
             "hashNeeded": 108000,
             "iconPath": "Icons/Tech/1123",
             "isLabTech": true,
@@ -4693,7 +4737,7 @@
         },
         "tech1124":
         {
-            "description": "One of the basic source codes that keep the CenterBrain simulating, and uploading more structure matrices, we can understand the structure of matter more thoroughly.",
+            "description": "The Structure Matrix is one of the basic source codes that keep the CentreBrain simulating. Continue uploading these matrices to better understand the structure of matter and to unlock new technologies.",
             "hashNeeded": 240000,
             "iconPath": "Icons/Tech/1124",
             "isLabTech": true,
@@ -4709,7 +4753,7 @@
         },
         "tech1125":
         {
-            "description": "Under the action of a strong electric field, a spatial ring crystal is formed by the Coulomb repulsion between particles. In a weak static magnetic field, the Casimir effect can be observed.",
+            "description": "Using the force of a strong electric field, a spatial ring crystal can be formed by the Coulomb repulsion between particles. In a weak, static magnetic field the Casimir effect can be observed.",
             "hashNeeded": 240000,
             "iconPath": "Icons/Tech/1125",
             "isLabTech": true,
@@ -4726,7 +4770,7 @@
         },
         "tech1126":
         {
-            "description": "Incorporating a certain proportion of titanium and organic crystals into the molten glass can obtain high-strength glass, which is suitable for more complex and intense industrial production.",
+            "description": "Incorporating a specific proportion of titanium and organic crystals into molten glass can create high-strength Titanium Glass which is suitable for more complex industrial production.",
             "hashNeeded": 240000,
             "iconPath": "Icons/Tech/1126",
             "isLabTech": true,
@@ -4742,7 +4786,7 @@
         },
         "tech1131":
         {
-            "description": "In the field of materials, the emergence of graphene is a great breakthrough. When stack one layer of graphene on top of another, and rotate the above to a certain Magic Angle, the superconductivity take place.",
+            "description": "In the field of materials, the emergence of graphene is a great breakthrough. When one layer of graphene is stacked on top of another, rotated to a certain Magic Angle, superconductivity takes place.",
             "hashNeeded": 72000,
             "iconPath": "Icons/Tech/1131",
             "isLabTech": true,
@@ -4757,7 +4801,7 @@
         },
         "tech1132":
         {
-            "description": "Objects made of carbon nanotubes that are harder than diamond can maintain structural integrity better when subjected to greater pressure, which is very practical for industrial production that needs to withstand high pressure.",
+            "description": "Objects made of Carbon Nanotubes that are harder than diamond can maintain structural integrity better when subjected to greater pressure. This is very practical for industrial production that requires withstanding extremely high pressure.",
             "hashNeeded": 135000,
             "iconPath": "Icons/Tech/1132",
             "isLabTech": true,
@@ -4773,7 +4817,7 @@
         },
         "tech1133":
         {
-            "description": "Although it is profound and complicated, it is of great benefit to master Particle Controllable technology. Under certain conditions, make the particles to have certain regularity, and when they had, everything is much easier to control.",
+            "description": "Although it is profound and complicated, it is of great benefit to master particle control technology. Under certain conditions, particles can be made to have a certain regularity, making everything much easier to control.",
             "hashNeeded": 180000,
             "iconPath": "Icons/Tech/1133",
             "isLabTech": true,
@@ -4790,7 +4834,7 @@
         },
         "tech1134":
         {
-            "description": "At a certain tempreture, taking advantage of the high vapour pressure ratio between liquid hydrogen and liquid deuterium, deuterium is fractionated from liquid hydrogen with a considerable separation efficiency.",
+            "description": "At a certain temperature it is possible to take advantage of the high vapor pressure ratio between liquid hydrogen and liquid deuterium. Deuterium can be fractionated from liquid hydrogen with a considerable separation efficiency.",
             "hashNeeded": 36000,
             "iconPath": "Icons/Tech/1134",
             "isLabTech": true,
@@ -4807,7 +4851,7 @@
         },
         "tech1141":
         {
-            "description": "Mastering the regularity of the probability change in the quantum transition process can execute a series of reverse interference to the wave function of the particle, thereby increasing the certainty of its collapse. Making good use of this technology may be a good thing for cats.",
+            "description": "Mastering the regularity of the probability change in the quantum transition process can execute a series of reverse interference to the wave function of the particle thereby increasing the certainty of its collapse. Making good use of this technology may be a good thing for cats.",
             "hashNeeded": 360000,
             "iconPath": "Icons/Tech/1141",
             "isLabTech": true,
@@ -4825,7 +4869,7 @@
         },
         "tech1142":
         {
-            "description": "The construction of a miniature particle collider requires advanced materials and a huge energy supply. It is expensive, while it is worthy.",
+            "description": "The construction of a Miniature Particle Collider requires advanced materials and a huge energy supply. It is expensive, but it is worth it.",
             "hashNeeded": 240000,
             "iconPath": "Icons/Tech/1142",
             "isLabTech": true,
@@ -4842,7 +4886,7 @@
         },
         "tech1143":
         {
-            "description": "Under the powerful energy of deuterium fusion, the iron vapor is compressed to an extremely small point, making the iron core quark changes and instantly becomes a degenerate strange matter.",
+            "description": "Under the powerful energy of deuterium fusion, iron vapor is compressed to an extremely small size which causes the quark's of the iron core to change and instantly degenerate into strange matter.",
             "hashNeeded": 300000,
             "iconPath": "Icons/Tech/1143",
             "isLabTech": true,
@@ -4859,7 +4903,7 @@
         },
         "tech1144":
         {
-            "description": "Under the guidance of the annihilation restraint sphere, the energy generated by the annihilation of positive matter and antimatter can be output to the power grid more stably. The high energy utilization rate of this technology makes the core radiation stable in the visible light band, which looks like a burning mini sun.",
+            "description": "Energy generated from the destruction caused by colliding positive matter and antimatter can be output to the power grid more stably by containing the reaction inside of an annihilation constraint sphere. The high energy production of this technology makes the core radiation stable in the visible light band which causes the reaction to look like a burning sun.",
             "hashNeeded": 432000,
             "iconPath": "Icons/Tech/1144",
             "isLabTech": true,
@@ -4878,7 +4922,7 @@
         },
         "tech1145":
         {
-            "description": "When the matter and antimatter meet, they will annihilate mutually and generate tremendous energy. As long as the annihilation process becomes more controllable, we will utilize these energy more steadily.",
+            "description": "When matter and antimatter meet, they annihilate and generate tremendous energy. So long as the annihilation process is controllable, we can steadily utilise the energy.",
             "hashNeeded": 600000,
             "iconPath": "Icons/Tech/1145",
             "isLabTech": true,
@@ -4894,7 +4938,7 @@
         },
         "tech1151":
         {
-            "description": "The invention of accelerant is so exciting! Spray on cargo, substantially improving industrial production efficiency, don't forget.",
+            "description": "The invention of Accelerant is incredibly useful! Just spray it on cargo to substantially improve industrial production efficiency.",
             "hashNeeded": 36000,
             "iconPath": "Icons/Tech/1151",
             "isLabTech": true,
@@ -4909,7 +4953,7 @@
         },
         "tech1152":
         {
-            "description": "If the accelerant Mk.I is not fast enough for you, try accelerant Mk.II!",
+            "description": "If the accelerant MK.I is not fast enough for you, then try Accelerant MK.II!",
             "hashNeeded": 180000,
             "iconPath": "Icons/Tech/1152",
             "isLabTech": true,
@@ -4925,7 +4969,7 @@
         },
         "tech1153":
         {
-            "description": "Accelerant Mk. III greatly maximizes the production speed and has higher requirements for the design of the whole production line.",
+            "description": "Accelerant MK. III greatly maximizes the production speed and has higher requirements for the design of the entire production line.",
             "hashNeeded": 360000,
             "iconPath": "Icons/Tech/1153",
             "isLabTech": true,
@@ -4942,7 +4986,7 @@
         },
         "tech1201":
         {
-            "description": "The basic assembler uses traditional mechanical technology to process primary items into more advanced, at a slightly slower speed.",
+            "description": "The basic assembler uses traditional mechanical technology to process primary items into more advanced ones.",
             "hashNeeded": 1800,
             "iconPath": "Icons/Tech/1201",
             "isLabTech": false,
@@ -5031,7 +5075,7 @@
         },
         "tech1311":
         {
-            "description": "Microcrystalline component with semiconductive properties is an excellent material for manufacturing processor.",
+            "description": "Microcrystalline components with semiconductive properties are the excellent materials for manufacturing processors.",
             "hashNeeded": 18000,
             "iconPath": "Icons/Tech/1311",
             "isLabTech": true,
@@ -5046,7 +5090,7 @@
         },
         "tech1312":
         {
-            "description": "Immediate and effective information transmission can greatly optimize the industrial production process. By uploading the Information Matrix to obtain more technologies, it is helpful to improve the information management of the automated production line.",
+            "description": "Immediate and effective information transmission can greatly optimize the industrial production process. By uploading the Information Matrix to obtain more technologies, the information management of the automated production line can be improved.",
             "hashNeeded": 288000,
             "iconPath": "Icons/Tech/1312",
             "isLabTech": true,
@@ -5063,7 +5107,7 @@
         },
         "tech1401":
         {
-            "description": "The invention of Smelter has greatly promoted the development of metallurgical technology. Using smelter for automated smelting can improve production efficiency.",
+            "description": "The invention of the Smelter has greatly promoted the development of metallurgical technology. Using the smelter for automated smelting will improve production efficiency.",
             "hashNeeded": 1800,
             "iconPath": "Icons/Tech/1401",
             "isLabTech": false,
@@ -5073,7 +5117,7 @@
             ],
             "addItems":
             {
-                "smelter": 3
+                "smelter-1": 3
             },
             "items":
             {
@@ -5083,7 +5127,7 @@
         },
         "tech1402":
         {
-            "description": "The development of smelting process has given rise to ore purification technology, which can help to obtain purer and more advanced products.",
+            "description": "The development of the smelting process has given rise to ore purification technology, which can help to obtain purer and more advanced products.",
             "hashNeeded": 18000,
             "iconPath": "Icons/Tech/1402",
             "isLabTech": true,
@@ -5114,7 +5158,7 @@
         },
         "tech1411":
         {
-            "description": "Under extremely strict and controllable temperature conditions, using a smelter to smelt iron ingots will improve the crystal form of materials further, can obtain better mechanical properties.",
+            "description": "Under extremely strict and controlled temperature conditions, using a smelter to smelt iron ingots will improve the crystal form of material further, producing better mechanical properties.",
             "hashNeeded": 21600,
             "iconPath": "Icons/Tech/1411",
             "isLabTech": true,
@@ -5148,7 +5192,7 @@
         },
         "tech1413":
         {
-            "description": "The advancement in mining and smelting technology have made ore control easier. Titanium can now be mined and utilized.",
+            "description": "The Advancements in mining and smelting technology have made ore control easier. Titanium can now be mined and utilized.",
             "hashNeeded": 36000,
             "iconPath": "Icons/Tech/1413",
             "isLabTech": true,
@@ -5164,7 +5208,7 @@
         },
         "tech1414":
         {
-            "description": "Taking advantage of the characteristics of the lattice structure of titanium at different temperatures, adding precise proportions of alloy elements during the smelting process, will produce a new type of alloy material that with higher strength and better toughness.",
+            "description": "Taking advantage of the characteristics of the lattice structure of titanium at different temperatures, adding precise proportions of alloy elements during the smelting process, will produce a new type of alloy material that has higher strength and toughness.",
             "hashNeeded": 144000,
             "iconPath": "Icons/Tech/1414",
             "isLabTech": true,
@@ -5196,7 +5240,7 @@
         },
         "tech1416":
         {
-            "description": "By using stellarator structure to confine static high-tempreture plasma reactor core, the new generation of controlled nuclear fusion technology put standard fuel rod to supply deuterium; these technological breakthroughs promote the miniaturization of reactor miniaturization.",
+            "description": "By using a stellarator to confine high-temperature plasma, the new generation of controlled nuclear fusion technology can make use of Deuteron fuel rods, these technological breakthroughs promote the miniaturization of fusion reactors.",
             "hashNeeded": 180000,
             "iconPath": "Icons/Tech/1416",
             "isLabTech": true,
@@ -5211,9 +5255,27 @@
                 "t-matrix": 20
             }
         },
+        "tech1417":
+        {
+            "description": "Research shows that a thermodynamic negative temperature flow can be generated if the quantum state of monopoles is filtered by Wave Function Interference Technology. Using this technology, the process of ores smelting or purification can be greatly accelerated.",
+            "hashNeeded": 360000,
+            "iconPath": "Icons/Tech/1417",
+            "isLabTech": true,
+            "name": "Plane-Filter Smelting Technology",
+            "preTechs": [
+                "tech1141"
+            ],
+            "items":
+            {
+                "c-matrix": 10,
+                "e-matrix": 10,
+                "i-matrix": 10,
+                "t-matrix": 10
+            }
+        },
         "tech1501":
         {
-            "description": "The sun continuously radiates energy outwards in the form of electromagnetic waves. Laying solar panels can collect these radiant energy, but it is a small part. We need a more efficient way.",
+            "description": "The sun continuously radiates energy outwards in the form of electromagnetic waves. By laying solar panels we can collect this radiant energy, but only a small part. We need a more efficient way.",
             "hashNeeded": 18000,
             "iconPath": "Icons/Tech/1501",
             "isLabTech": true,
@@ -5250,7 +5312,7 @@
         },
         "tech1503":
         {
-            "description": "Use <color=\"#FD965ECC\">EM-Rail Ejector</color> to projectile <color=\"#FD965ECC\">Solar sails</color> will form a Dyson swarm to absorb radiation energy from the star more effectively.",
+            "description": "Use the <color=\"#FD965ECC\">EM-Rail Ejector</color> to launch <color=\"#FD965ECC\">Solar sails</color> to form a Dyson swarm to absorb radiation energy from the star more effectively.",
             "hashNeeded": 54000,
             "iconPath": "Icons/Tech/1503",
             "isLabTech": true,
@@ -5300,7 +5362,7 @@
         },
         "tech1506":
         {
-            "description": "During the research of the Dirac equation in reverse, it discovers that a large number of gamma rays can create an open string in a critical vibration state, and they will easily split into proton and antiproton pairs when they collide mutually. Mastering this technology will improve the ray receiver's efficiency, store the energy of stars as antimatter.",
+            "description": "During the research of the Dirac equation in reverse, it discovers that a large number of gamma rays can create an open string in a critical vibration state, and they will easily split into proton and antiproton pairs when they collide mutually. Mastering this technology will improve the ray receiver's efficiency, by storing the energy of stars as antimatter.",
             "hashNeeded": 540000,
             "iconPath": "Icons/Tech/1506",
             "isLabTech": true,
@@ -5462,7 +5524,7 @@
         },
         "tech1602":
         {
-            "description": "<color=\"#FD965ECC\">Splitter(4-direction)</color> can diverge cargo or balance multiple conveyor belts, making the automated production lines more diverse.\nUse TAB key to switch styles.",
+            "description": "<color=\"#FD965ECC\">Splitter</color> can diverge cargo or balance multiple conveyor belts, making the automated production lines more diverse.\nUse TAB key to switch styles.",
             "hashNeeded": 18000,
             "iconPath": "Icons/Tech/1602",
             "isLabTech": true,
@@ -5482,7 +5544,7 @@
         },
         "tech1603":
         {
-            "description": "Sorter MK.II can sort cargo even faster, very useful when resources in great demand.",
+            "description": "Sorter MK.III can sort cargo even faster, very useful when resources are in great demand.",
             "hashNeeded": 72000,
             "iconPath": "Icons/Tech/1603",
             "isLabTech": true,
@@ -5498,7 +5560,7 @@
         },
         "tech1604":
         {
-            "description": "The planetary transportation can be realized through Logistics Station and Logistic drone after the materials technology reaches a certain level. The logistics drones will automatically transport the items after the supply-demand data is setup.",
+            "description": "Transportation of materials around a planet can be realized through Planetary Logistics Stations and Logistics Drones after the materials technology reaches a certain level. The logistics drones will automatically transport the items after the supply-demand data is setup.",
             "hashNeeded": 144000,
             "iconPath": "Icons/Tech/1604",
             "isLabTech": true,
@@ -5550,7 +5612,7 @@
         },
         "tech1701":
         {
-            "description": "Unlocked the basic power system component: Electric Motor.",
+            "description": "Unlocks the basic power system component: Electric Motor.",
             "hashNeeded": 9000,
             "iconPath": "Icons/Tech/1701",
             "isLabTech": true,
@@ -5897,7 +5959,7 @@
         },
         "tech2301":
         {
-            "description": "Increase the inventory capacity, allow the mecha to carry more items.",
+            "description": "Increase the inventory capacity, allowing the mecha to carry more items.",
             "hashNeeded": 7200,
             "iconPath": "Icons/Tech/2301",
             "isLabTech": false,
@@ -5910,7 +5972,7 @@
         },
         "tech2302":
         {
-            "description": "Increase the inventory capacity, allow the mecha to carry more items.",
+            "description": "Increase the inventory capacity, allowing the mecha to carry more items.",
             "hashNeeded": 36000,
             "iconPath": "Icons/Tech/2302",
             "isLabTech": true,
@@ -5926,7 +5988,7 @@
         },
         "tech2303":
         {
-            "description": "Increase the inventory capacity, allow the mecha to carry more items.",
+            "description": "Increase the inventory capacity, allowing the mecha to carry more items.",
             "hashNeeded": 72000,
             "iconPath": "Icons/Tech/2303",
             "isLabTech": true,
@@ -5943,7 +6005,7 @@
         },
         "tech2304":
         {
-            "description": "Increase the inventory capacity, allow the mecha to carry more items.",
+            "description": "Increase the inventory capacity, allowing the mecha to carry more items.",
             "hashNeeded": 180000,
             "iconPath": "Icons/Tech/2304",
             "isLabTech": true,
@@ -5960,7 +6022,7 @@
         },
         "tech2305":
         {
-            "description": "Increase the inventory capacity, allow the mecha to carry more items.",
+            "description": "Increase the inventory capacity, allowing the mecha to carry more items.",
             "hashNeeded": 240000,
             "iconPath": "Icons/Tech/2305",
             "isLabTech": true,
@@ -5977,7 +6039,7 @@
         },
         "tech2306":
         {
-            "description": "Increase the inventory capacity, allow the mecha to carry more items.",
+            "description": "Increase the inventory capacity, allowing the mecha to carry more items.",
             "hashNeeded": 600000,
             "iconPath": "Icons/Tech/2306",
             "isLabTech": true,
@@ -6363,6 +6425,39 @@
                 "c-matrix": 10,
                 "e-matrix": 10,
                 "t-matrix": 10
+            }
+        },
+        "tech2905":
+        {
+            "description": "Increase the Max Warp Speed of the mecha in space, but it will greatly increase energy consumption. \nUse [<color=\"#FD965ECC\">SHIFT</color>], [<color=\"#FD965ECC\">S</color>] to control the warp speed.",
+            "hashNeeded": 1080000,
+            "iconPath": "Icons/Tech/2904",
+            "isLabTech": true,
+            "name": "Drive engine",
+            "preTechs": [
+                "tech2904"
+            ],
+            "items":
+            {
+                "c-matrix": 10,
+                "e-matrix": 10,
+                "g-matrix": 10,
+                "t-matrix": 10
+            }
+        },
+        "tech2906":
+        {
+            "description": "Increase the Max Warp Speed of the mecha in space, but it will greatly increase energy consumption. \nUse [<color=\"#FD965ECC\">SHIFT</color>], [<color=\"#FD965ECC\">S</color>] to control the warp speed.",
+            "hashNeeded": 0,
+            "iconPath": "Icons/Tech/2904",
+            "isLabTech": true,
+            "name": "Drive engine",
+            "preTechs": [
+                "tech2905"
+            ],
+            "items":
+            {
+                "u-matrix": 10
             }
         },
         "tech3101":
@@ -6946,7 +7041,7 @@
         },
         "tech3601":
         {
-            "description": "Maximizing the utilization of resources, which can greatly reduce the ores consumed in each mining operation and increase the mining speed.",
+            "description": "Maximizes the utilization of resources, which can greatly reduce the ores consumed in each mining operation and increase the mining speed.",
             "hashNeeded": 36000,
             "iconPath": "Icons/Tech/3601",
             "isLabTech": true,

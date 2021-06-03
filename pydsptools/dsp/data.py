@@ -9,8 +9,19 @@ class Data:
       self.__data = json.load(json_file)
     with open('dump.json') as json_file:
       self.__dump = json.load(json_file)
+    self.__dump = self.__merge(self.__dump, self.__data['dump-extends'])
+    # print(self.__dump['item'])
     self.__items = {}
     self.__techs = {}
+
+  def __merge(self, source, destination):
+    for key, value in source.items():
+        if isinstance(value, dict):
+            node = destination.setdefault(key, {})
+            self.__merge(value, node)
+        else:
+            destination[key] = value
+    return destination
 
   def __has_icon(self, key):
     return key in self.__data['mapping']['icons']
@@ -20,13 +31,19 @@ class Data:
 
   def __get_assemblers(self, name):
     return {
-        'Assemble'   : [ self.get_item('assembler-1'), self.get_item('assembler-2'), self.get_item('assembler-3') ],
-        'Chemical'   : [ self.get_item('chemical-plant') ],
-        'Fractionate': [ self.get_item('fractionator')   ],
-        'Particle'   : [ self.get_item('hadron-collider')],
-        'Refine'     : [ self.get_item('oil-refinery')   ],
-        'Research'   : [ self.get_item('lab')            ],
-        'Smelt'      : [ self.get_item('smelter')        ]
+        'Assemble'            : [ self.get_item('assembler-1'), self.get_item('assembler-2'), self.get_item('assembler-3') ],
+        'Chemical'            : [ self.get_item('chemical-plant')   ],
+        'Fractionate'         : [ self.get_item('fractionator')     ],
+        'Particle'            : [ self.get_item('hadron-collider')  ],
+        'Refine'              : [ self.get_item('oil-refinery')     ],
+        'Research'            : [ self.get_item('lab')              ],
+        'Smelt'               : [ self.get_item('smelter-1'), self.get_item('smelter-2')          ],
+        'MineDrill'           : [ self.get_item('mining-drill')     ],
+        'MineFluidExtractor'  : [ self.get_item('oil-extractor')    ],
+        'PowerTransfer'       : [ self.get_item('energy-exchanger') ],
+        'PhotonCatch'         : [ self.get_item('ray-receiver')     ],
+        'OrbitCollector'      : [ self.get_item('orbital-collector')],
+        'Pump'                : [ self.get_item('water-pump')       ],
     }[name]
 
   def get_item_recipes(self, item_key):
@@ -72,7 +89,10 @@ class Data:
   def get_item(self, item_key):
     if item_key not in self.__items:
       print('Loading item {0}'.format(item_key))
-      self.__items[item_key] = Item(item_key, self.__get_icon_url(item_key), self.__dump['item'][item_key], self.__dump['prefab'][item_key] if item_key in self.__dump['prefab'] else {})
+      prefab = {}
+      if item_key in self.__dump['prefab']:
+        prefab = self.__dump['prefab'][item_key]
+      self.__items[item_key] = Item(item_key, self.__get_icon_url(item_key), self.__dump['item'][item_key], prefab)
       self.__items[item_key].set_recipes(self.get_item_recipes(item_key))
       self.__items[item_key].set_used_in(self.get_item_used_in(item_key))
       self.__items[item_key].set_tech(self.get_item_tech(item_key))

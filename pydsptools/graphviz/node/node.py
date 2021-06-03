@@ -3,11 +3,12 @@ from pydsptools.graphviz.entity import Entity
 from pydsptools.dsp.data import dsp_data
 
 class Node(Entity):
-  def __init__(self, name, icon, caption, color="background"):
+  def __init__(self, name, type, icon, caption, color="background"):
     super().__init__(color)
     self.__name = self.normalize_name(name)
     self.__icon = icon
     self.__caption = caption
+    self.__type = type
     self.__flags = []
     self.__info = []
     self.__recipes = []
@@ -17,6 +18,9 @@ class Node(Entity):
 
   def name(self):
     return self.__name
+
+  def type(self):
+    return self.__type
 
   def icon(self):
     return self.__icon
@@ -65,7 +69,7 @@ class Node(Entity):
     if len(self.used_in()) == 0:
       return ""
     items = []
-    count = 5
+    count = options["used_in_items_in_row"];
     delimiter = self.load_template('main/node_used_in_delimiter.html')
     for used_in in self.used_in():
       count-=1
@@ -73,7 +77,7 @@ class Node(Entity):
         icon = used_in.resized(options["icons"]['list_icon_size'])
       ))
       if count == 0:
-        count = 5
+        count = options["used_in_items_in_row"];
         items.append(delimiter)
     if items[-1] == delimiter:
       items.pop()
@@ -136,7 +140,7 @@ class Node(Entity):
         assemblers_count = belt.assemblers_count()
       ))
     return self.load_template('main/node_recipe_assembler_belts_list.html').format(
-        belts = "".join(items),
+        belts = "".join(items if len(items) > 0 else [self.load_template('main/node_recipe_assembler_belt_empty.html')]),
       )
 
   def __compile_recipe_assemblers_list(self, recipe):
@@ -214,5 +218,6 @@ class Node(Entity):
     return self.load_template('main/node.gv').format(
       name = self.name(),
       color = self.color(),
+      type = self.type(),
       html = self.__compile_html()
     ) + '\n'

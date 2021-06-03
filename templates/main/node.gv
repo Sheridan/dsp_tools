@@ -1,1 +1,1 @@
-  {name} [label=<{html}> fillcolor="{color}"];
+    {name} [label=<{html}> fillcolor="{color}" group="{type}"];

@@ -8,7 +8,7 @@ from pydsptools.graphviz.node.noderecipeingredient import NodeRecipeIngredient
 from pydsptools.graphviz.edge.edge import Edge
 from pydsptools.graphviz.legend import Legend
 from pydsptools.options import options
-from pydsptools.math import to_units
+from pydsptools.math import to_units, string_similarity
 
 class Graphviz:
   def __init__(self, graph_list):
@@ -20,7 +20,7 @@ class Graphviz:
   def __generate_items_nodes(self):
     print("Generating items nodes")
     for item in dsp_data.item_list():
-      node = Node(item.node_name(), item.icon(), item.name(), item.type())
+      node = Node(item.node_name(), item.type(), item.icon(), item.name(), item.type())
       self.__legend.append_node_color(item.type(), item.type())
       for flag in item.flags():
         node.append_flag(flag)
@@ -50,9 +50,9 @@ class Graphviz:
         node_recipe = NodeRecipe()
         for assembler in recipe.assemblers():
           belts = []
-          for belt in [dsp_data.get_item('belt-1'), dsp_data.get_item('belt-2'), dsp_data.get_item('belt-3')]:
-            belts.append(NodeRecipeAssemblerBelt(belt.icon(), int(ceil(belt.belt_speed()/recipe.item_result(item.key())['count']/assembler.assembler_speed()*recipe.time())) ))
-
+          if assembler.key() != 'orbital-collector':
+            for belt in [dsp_data.get_item('belt-1'), dsp_data.get_item('belt-2'), dsp_data.get_item('belt-3')]:
+              belts.append(NodeRecipeAssemblerBelt(belt.icon(), int(ceil(belt.belt_speed()/recipe.item_result(item.key())['count']/assembler.assembler_speed()*recipe.time())) ))
           node_recipe.append_assembler(NodeRecipeAssembler(assembler.icon(), recipe.time()/assembler.assembler_speed(), belts))
         for src_item in recipe.sources():
           node_recipe.append_ingredient(NodeRecipeIngredient(src_item['item'].icon(), src_item['count']))
@@ -66,7 +66,13 @@ class Graphviz:
     for item_to in dsp_data.item_list():
       for recipe in item_to.recipes():
         for item_from in recipe.sources():
-          edge = Edge(item_from['item'].node_name(), item_to.node_name(), recipe.type())
+          weight = options.weight(recipe.type())
+          if string_similarity(item_from['item'].key(), item_to.key()) >= 0.7:
+            weight = weight * weight
+          if item_from['item'].type() == item_to.type():
+            weight = weight * weight
+          print("Weight: {0} -> {1} == {2}".format(item_from['item'].key(), item_to.key(), weight))
+          edge = Edge(item_from['item'].node_name(), item_to.node_name(), recipe.type(), weight)
           self.__legend.append_edge_color(recipe.type(), recipe.type())
           self.__graph.append_edge(edge)
 
@@ -74,7 +80,7 @@ class Graphviz:
     print("Generating tech nodes")
     self.__legend.append_node_color("Technology", "Technology")
     for tech in dsp_data.tech_list():
-      node = Node(tech.node_name(), tech.icon(), tech.name(), "Technology")
+      node = Node(tech.node_name(), "tech", tech.icon(), tech.name(), "Technology")
       node.append_info(NodeTextInfo("Hashes", to_units(tech.haches())))
       for resource in tech.resources():
         node.append_resource(NodeRecipeIngredient(resource['item'].icon(), resource['count']))
@@ -92,7 +98,7 @@ class Graphviz:
     self.__legend.append_edge_color("Technology relation", "Technology relation")
     for tech_to in dsp_data.tech_list():
       for tech_from in tech_to.parents():
-        edge = Edge(tech_from.node_name(), tech_to.node_name(), "Technology relation")
+        edge = Edge(tech_from.node_name(), tech_to.node_name(), "Technology relation", options.weight("Technology relation"))
         self.__graph.append_edge(edge)
 
   def __generate_tech_items_edges(self):
@@ -101,10 +107,10 @@ class Graphviz:
     self.__legend.append_edge_color("Research resource", "Research resource")
     for tech in dsp_data.tech_list():
       for unlock in tech.unlocks():
-        edge = Edge(tech.node_name(), unlock.node_name(), "Unlock")
+        edge = Edge(tech.node_name(), unlock.node_name(), "Unlock", options.weight("Unlock"))
         self.__graph.append_edge(edge)
       for resource in tech.resources():
-        edge = Edge(resource['item'].node_name(), tech.node_name(), "Research resource")
+        edge = Edge(resource['item'].node_name(), tech.node_name(), "Research resource", options.weight("Research resource"))
         self.__graph.append_edge(edge)
 
   def main(self):
@@ -116,3 +122,4 @@ class Graphviz:
       self.__generate_tech_edges()
     if "items" in self.__graph_list and "tech" in self.__graph_list:
       self.__generate_tech_items_edges()
+    self.__graph.compile()

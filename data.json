@@ -1,8 +1,379 @@
 {
+  "dump-extends":
+  {
+    "item":
+    {
+      "fire-ice-vein":
+      {
+          "isVein": true,
+          "name": "Fire ice vein",
+          "type": "Vein"
+      },
+      "coal-vein":
+      {
+          "isVein": true,
+          "name": "Coal vein",
+          "type": "Vein"
+      },
+      "optical-grating-rock-vein":
+      {
+          "isVein": true,
+          "name": "Optical grating rock vein",
+          "type": "Vein"
+      },
+      "silicon-vein":
+      {
+          "isVein": true,
+          "name": "Silicon vein",
+          "type": "Vein"
+      },
+      "crude-oil-vein":
+      {
+          "isVein": true,
+          "name": "Crude oil vein",
+          "type": "FluidVein"
+      },
+      "organic-crystal-vein":
+      {
+          "isVein": true,
+          "name": "Organic crystal vein",
+          "type": "Vein"
+      },
+      "fractal-silicon-vein":
+      {
+          "isVein": true,
+          "name": "Fractal silicon vein",
+          "type": "Vein"
+      },
+      "copper-vein":
+      {
+          "isVein": true,
+          "name": "Copper vein",
+          "type": "Vein"
+      },
+      "iron-vein":
+      {
+          "isVein": true,
+          "name": "Iron vein",
+          "type": "Vein"
+      },
+      "spiniform-stalagmite-crystal-vein":
+      {
+          "isVein": true,
+          "name": "Spiniform stalagmite crystal vein",
+          "type": "Vein"
+      },
+      "titanium-vein":
+      {
+          "isVein": true,
+          "name": "Titanium vein",
+          "type": "Vein"
+      },
+      "kimberlite-vein":
+      {
+          "isVein": true,
+          "name": "Kimberlite vein",
+          "type": "Vein"
+      },
+      "stone-vein":
+      {
+          "isVein": true,
+          "name": "Stone vein",
+          "type": "Vein"
+      },
+      "star":
+      {
+          "isVein": true,
+          "name": "Star",
+          "type": "Vein"
+      },
+      "gas-giant":
+      {
+          "isVein": true,
+          "name": "Gas giant",
+          "type": "Vein"
+      },
+      "ice-giant":
+      {
+          "isVein": true,
+          "name": "Ice giant",
+          "type": "Vein"
+      },
+      "water-sea":
+      {
+          "isVein": true,
+          "name": "Water sea",
+          "type": "Vein"
+      },
+      "sulfur-sea":
+      {
+          "isVein": true,
+          "name": "Sulfur sea",
+          "type": "Vein"
+      }
+    },
+    "prefab":
+    {
+      "oil-extractor":
+      {
+        "assemblerSpeed": 10000
+      },
+      "mining-drill":
+      {
+        "assemblerSpeed": 10000
+      },
+      "energy-exchanger":
+      {
+          "assemblerSpeed": 10000
+      },
+      "ray-receiver":
+      {
+          "assemblerSpeed": 10000
+      },
+      "orbital-collector":
+      {
+          "assemblerSpeed": 10000
+      },
+      "water-pump":
+      {
+          "assemblerSpeed": 10000
+      }
+    },
+    "recipe":
+    {
+      "fire-ice-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "fire-ice-vein": 1 },
+        "results": { "gas-hydrate": 1 }
+      },
+      "fire-ice-orbit-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "OrbitCollector",
+        "items": { "ice-giant": "." },
+        "results": { "gas-hydrate": 1 }
+      },
+      "hydrogen-orbit-mine-gas":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "OrbitCollector",
+        "items": { "gas-giant": "." },
+        "results": { "hydrogen": 1 }
+      },
+      "hydrogen-orbit-mine-ice":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "OrbitCollector",
+        "items": { "ice-giant": "." },
+        "results": { "hydrogen": 1 }
+      },
+      "deuterium-orbit-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "OrbitCollector",
+        "items": { "gas-giant": "." },
+        "results": { "deuterium": 1 }
+      },
+      "coal-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "coal-vein": 1 },
+        "results": { "coal-ore": 1 }
+      },
+      "optical-grating-rock-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "optical-grating-rock-vein": 1 },
+        "results": { "grating-ore": 1 }
+      },
+      "silicon-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "silicon-vein": 1 },
+        "results": { "silicium-ore": 1 }
+      },
+      "crude-oil-vein-mine":
+      {
+        "handcraft": false,
+        "madeFrom": "Oil extractor",
+        "timeSpend": 60,
+        "type": "MineFluidExtractor",
+        "items": { "crude-oil-vein": 1 },
+        "results": { "oil": 1 }
+      },
+      "organic-crystal-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "organic-crystal-vein": 1 },
+        "results": { "crystal-rubber": 1 }
+      },
+      "fractal-silicon-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "fractal-silicon-vein": 1 },
+        "results": { "fractal-silica": 1 }
+      },
+      "copper-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "copper-vein": 1 },
+        "results": { "copper-ore": 1 }
+      },
+      "iron-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "iron-vein": 1 },
+        "results": { "iron-ore": 1 }
+      },
+      "spiniform-stalagmite-crystal-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "spiniform-stalagmite-crystal-vein": 1 },
+        "results": { "bamboo-crystal": 1 }
+      },
+      "titanium-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "titanium-vein": 1 },
+        "results": { "titanium-ore": 1 }
+      },
+      "kimberlite-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "kimberlite-vein": 1 },
+        "results": { "diamond-ore": 1 }
+      },
+      "stone-vein-mine":
+      {
+        "handcraft": true,
+        "madeFrom": "Mining machine",
+        "timeSpend": 60,
+        "type": "MineDrill",
+        "items": { "stone-vein": 1 },
+        "results": { "stone-ore": 1 }
+      },
+      "accumulator-charge":
+      {
+        "handcraft": false,
+        "madeFrom": "Energy exchanger",
+        "timeSpend": 120,
+        "type": "PowerTransfer",
+        "items": { "accumulator": 1 },
+        "results": { "accumulator-full": 1 }
+      },
+      "accumulator-discharge":
+      {
+        "handcraft": false,
+        "madeFrom": "Energy exchanger",
+        "timeSpend": 120,
+        "type": "PowerTransfer",
+        "items": { "accumulator-full": 1 },
+        "results": { "accumulator": 1 }
+      },
+      "critical-photon-catch":
+      {
+        "handcraft": false,
+        "madeFrom": "Ray receiver",
+        "timeSpend": 720,
+        "type": "PhotonCatch",
+        "items": { "star": "." },
+        "results": { "photon-capacitor-full": 1 }
+      },
+      "critical-photon-catch-gravity-lens":
+      {
+        "handcraft": false,
+        "madeFrom": "Ray receiver",
+        "timeSpend": 360,
+        "type": "PhotonCatch",
+        "items": { "star": ".", "gravity-lens": 1 },
+        "results": { "photon-capacitor-full": 1 }
+      },
+      "water-pump-mine":
+      {
+        "handcraft": false,
+        "madeFrom": "Water pump",
+        "timeSpend": 50,
+        "type": "Pump",
+        "items": { "water-sea": "." },
+        "results": { "water": 1 }
+      },
+      "acid-pump-mine":
+      {
+        "handcraft": false,
+        "madeFrom": "Water pump",
+        "timeSpend": 50,
+        "type": "Pump",
+        "items": { "sulfur-sea": "." },
+        "results": { "sulphuric-acid": 1 }
+      }
+    }
+  },
   "mapping":
   {
     "icons":
     {
+        "star": "https://dsp-wiki.com/images/5/56/Neutron_star.png",
+        "gas-giant": "https://dsp-wiki.com/images/a/aa/Gas_Giant_planet_view.PNG",
+        "ice-giant": "https://dsp-wiki.com/images/8/88/Ice_Giant_planet_view.PNG",
+        "water-sea": "https://dsp-wiki.com/images/b/b1/Ocean_planet_view.PNG",
+        "sulfur-sea": "https://dsp-wiki.com/images/a/a9/Volcanic_Ash_planet_view.PNG",
+
+        "fire-ice-vein": "https://dsp-wiki.com/images/b/b8/Icon_Fire_Ice_Vein.png",
+        "coal-vein": "https://dsp-wiki.com/images/1/19/Icon_Coal_Vein.png",
+        "optical-grating-rock-vein": "https://dsp-wiki.com/images/5/56/Icon_Optical_Grating_Rock.png",
+        "silicon-vein": "https://dsp-wiki.com/images/e/e8/Icon_Silicon_Ore_Vein.png",
+        "crude-oil-vein": "https://dsp-wiki.com/images/5/51/Icon_Crude_Oil_Vein.png",
+        "organic-crystal-vein": "https://dsp-wiki.com/images/2/2d/Icon_Organic_Crystal_Vein.png",
+        "fractal-silicon-vein": "https://dsp-wiki.com/images/8/8a/Icon_Fractal_Silicon_Vein.png",
+        "copper-vein": "https://dsp-wiki.com/images/1/1d/Icon_Copper_Vein.png",
+        "iron-vein": "https://dsp-wiki.com/images/d/df/Icon_Iron_Ore_Vein.png",
+        "spiniform-stalagmite-crystal-vein": "https://dsp-wiki.com/images/2/25/Icon_Spiniform_Stalagmite_Crystal_Vein.png",
+        "titanium-vein": "https://dsp-wiki.com/images/5/5a/Icon_Titanium_Ore_Vein.png",
+        "kimberlite-vein": "https://dsp-wiki.com/images/4/4d/Icon_Kimberlite_Ore_Vein.png",
+        "stone-vein": "https://dsp-wiki.com/images/c/c7/Icon_Stone_Ore_Vein.png",
+
         "unknown": "https://dsp-wiki.com/images/1/10/Icon_Unknown.png",
         "accumulator-full": "https://dsp-wiki.com/images/6/67/Icon_Full_Accumulator.png",
         "accumulator": "https://dsp-wiki.com/images/7/71/Icon_Accumulator.png",
@@ -94,7 +465,8 @@
         "silicium-high-purity": "https://dsp-wiki.com/images/2/2a/Icon_Crystal_Silicon.png",
         "silicium-ore": "https://dsp-wiki.com/images/d/d4/Icon_Silicon_Ore.png",
         "silicium-single-crystal": "https://dsp-wiki.com/images/8/8a/Icon_High-Purity_Silicon.png",
-        "smelter": "https://dsp-wiki.com/images/e/e6/Icon_Smelter.png",
+        "smelter-1": "https://dsp-wiki.com/images/6/60/Icon_Arc_Smelter.png",
+        "smelter-2": "https://dsp-wiki.com/images/1/13/Icon_Plane_Smelter.png",
         "solar-collector": "https://dsp-wiki.com/images/5/50/Icon_Solar_Sail.png",
         "solar-panel": "https://dsp-wiki.com/images/7/77/Icon_Solar_Panel.png",
         "space-warper": "https://dsp-wiki.com/images/c/cb/Icon_Space_Warper.png",
